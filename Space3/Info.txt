@@ -1,0 +1,21 @@
+- Look into the function 'bsxfun' in MATLAB for certain vectorised computations. Try to avoid loops at places where you can vectorise the computations.
+- Look into function handles and function closures. It could help a lot in organising your code.
+- For animations, look into ways to update your plots easily, such as 'refreshdata' and 'drawnow'. Understand how plot handles work and be careful of the different ways plot handles are used between 2D and 3D plots. Look into ways to plot and update multiple things simultaneously if you wish to make your animations very informative and descriptive.
+- Automate the parts that save the results you are going to put into your report properly. Make it easy for you to update your report results automatically without needing to manually do it. You will need this someday, such as on March 24th... 
+- Pay attention to pre-allocating and caching your intermediate results. It can make your code run smoother and potentially much faster, especially later on.
+
+1)
+A general note: In my function stubs I have carelessly been using height and altitude interchangeably. This is inaccurate in a general setting, in our applications they are both assumed to indicate altitude above sea level. My apologies for that.
+
+2)
+Regarding the conversion of an ECEF-vector into an LGC/LGD-vector, given the latitude, longitude, height of an observer location (ecef2lg(X_ECEF, LLH)):
+All this function does is take the ECEF-representation of a vector and transform it into a LGC/LGD-vector. This is equivalent to simply a rotation around the longitude and latitude angles of the coordinate frame defined by an observer location. This is also why it does not matter whether the input latitude is from a geocentric or geodetic definition. Note also that the height/altitude of an observer location does not alter the result (as it only results from a rotation of the ECEF-vector).
+
+3)
+As you may have noticed I supplied you with the body of the function [ X_LLH_GD ] = ecef2llh_lgd( X_ECEF ), which takes an ECEF-vector and returns geodetic latitude, longitude and altitude.
+
+4)
+Similarly, in the function [ X_LLH_GC ] = ecef2llh_lgc( X_ECEF ), you are asked to compute lat, long and alt in a geocentric frame. The longitude and latitude should be straight forward, while the altitude is rather tricky and we haven’t even provided a definition in the lecture. However, (see 2)), we are usually not even interested in the altitude as all we need is to transform coordinates according to rotations. In order to still output an altitude you can simply use an approximate earth radius, for example just take the semi-major axis a as given in the lecture slides. Again, my bad for not making this clear.
+
+5)
+The very last question in the preliminaries is a bit tricky when taking into account the earth ellipsoid-model. We have agreed to give one point for a solution for a sphere-model.

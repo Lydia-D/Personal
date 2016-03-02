@@ -4,8 +4,10 @@
 % ECEF: Earth Centered Earth Fixed Frame
 % LG  : Local Geocentric Vertical Frame OR Local Geodetic Vertical Frame
 %
-% Input  : ???
-% Output : ???
+% Inputs:   ->  X_ECEF                  = [x, y, z]' in ECEF frame
+%           ->  LLH                     = [lat, lon, h]'|Observer Centric
+%
+% Outputs:  ->  X_LGDV                  = [x, y, z]' in LGV frame
 %
 % Kelvin Hsu
 % AERO4701, 2016
