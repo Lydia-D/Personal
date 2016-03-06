@@ -5,13 +5,12 @@
 % ECEF: Earth Centered Earth Fixed Frame
 %
 % Input  : [lat,long,h]'
-% Output : ???
+% Output : [x,y,z]'
 %
 % Kelvin Hsu
 % AERO4701, 2016
 
 function Pos_ECEF = llhgc2ecef(X_LLHGC)
-    
     % Earth's radius
     global r_earth;
     

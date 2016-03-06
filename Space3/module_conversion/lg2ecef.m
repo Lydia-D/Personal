@@ -16,7 +16,20 @@
 % then about z (-ve) by phi
 % 2) transform Obs_LLH to Obs_ECEF using llhgc2ecef
 % 3) get position vector Pos_ECEF=Obs_ECEF+Sat_ECEF
-function pos_ecef = lg2ecef(pos_lg, pos_llh_ground)
+function Pos_ECEF = lg2ecef(Sat_LG, Obs_LLH,frame)
+    
+    Sat_ECEF = rot('z',-Obs_LLH(2,1))*rot('y',pi-Obs_LLH(1,1))*Sat_LG;
+    
+    switch frame
+        case 'd'
+            Obs_ECEF = llhgd2ecef(Obs_LLH);  % detic
+        case 'c'
+            Obs_ECEF = llhgc2ecef(Obs_LLH);  % centric
+        otherwise
+            fprintf('error with frame definition');
+    end
+    Pos_ECEF = Obs_ECEF+Sat_ECEF;
+    
     
 
 end

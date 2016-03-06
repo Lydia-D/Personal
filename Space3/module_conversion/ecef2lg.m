@@ -17,17 +17,24 @@
 % 3) convert Obs_ECEF to polar coordinates [phi,theta,R]' ?? can just use
 % long lat?
 % 4) rotate Pos_ECEF using fixed angles about z by phi (Rz) then about y by -(pi-theta) (Ry) 
-function Pos_LG = ecef2lg(Sat_ECEF, Obs_LLH)
+function Pos_LG = ecef2lg(Sat_ECEF, Obs_LLH,frame)
         % Earth's radius
 
     % step 1
-    Obs_ECEF = llhgc2ecef(Obs_LLH)
+    switch frame
+        case 'd'
+            Obs_ECEF = llhgd2ecef(Obs_LLH);   % detic not centric
+        case 'c'
+            Obs_ECEF = llhgc2ecef(Obs_LLH);   % detic not centric
+        otherwise
+            fprintf('error with frame definition');            
+    end
     
     % step 2
     Pos_ECEF = Sat_ECEF-Obs_ECEF;
     
     % step 4
     
-    Pos_LG = rot('y',Obs_LLH(2,1)-pi)*rot('z',Obs_LLH(1,1))*Pos_ECEF; 
+    Pos_LG = rot('y',Obs_LLH(1,1)-pi)*rot('z',Obs_LLH(2,1))*Pos_ECEF; 
     
 end

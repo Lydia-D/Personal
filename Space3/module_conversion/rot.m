@@ -17,6 +17,9 @@ function Rout = rot(axis,angle)
             Rout = [cos(angle),-sin(angle),0;...
                 sin(angle),cos(angle),0;...
                 0,0,1];
+        otherwise
+            Rout = NaN;
+            fprintf('Error in function rot, case not called correctly');
     end
 end
 
