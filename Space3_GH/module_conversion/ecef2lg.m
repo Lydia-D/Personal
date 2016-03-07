@@ -35,6 +35,6 @@ function Pos_LG = ecef2lg(Sat_ECEF, Obs_LLH,frame)
     
     % step 4
     
-    Pos_LG = rot('y',Obs_LLH(1,1)-pi)*rot('z',Obs_LLH(2,1))*Pos_ECEF; 
+    Pos_LG = rot('y',-(pi/2+Obs_LLH(1,1)))*rot('z',Obs_LLH(2,1))*Pos_ECEF; 
     
 end

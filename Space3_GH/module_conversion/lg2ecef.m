@@ -12,13 +12,16 @@
 % Kelvin Hsu
 % AERO4701, 2016
 %% Edited: Lydia Drabsch 6/3/16
+% NOTE: radius of earth included in llhgx2ecef
 % 1) transform Sat_LG to Sat_ECEF by rotating about y (+ve)  by pi-theta
 % then about z (-ve) by phi
 % 2) transform Obs_LLH to Obs_ECEF using llhgc2ecef
 % 3) get position vector Pos_ECEF=Obs_ECEF+Sat_ECEF
 function Pos_ECEF = lg2ecef(Sat_LG, Obs_LLH,frame)
     
-    Sat_ECEF = rot('z',-Obs_LLH(2,1))*rot('y',pi-Obs_LLH(1,1))*Sat_LG;
+% euler angles
+    Sat_ECEF = rot('z',-Obs_LLH(2,1))*rot('y',pi/2+Obs_LLH(1,1))*Sat_LG;
+%     Sat_ECEF = rot('y',pi-Obs_LLH(1,1))*rot('z',-Obs_LLH(2,1))*Sat_LG;
     
     switch frame
         case 'd'
