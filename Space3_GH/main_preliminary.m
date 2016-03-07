@@ -53,20 +53,20 @@ pos_ecef_ground = llhgd2ecef(pos_llhgd_ground);
 pos_ecef_obs = pos_ecef - pos_ecef_ground;
 
 % Convert it to LLHGD
-pos_lgdv_obs = ecef2lg(pos_ecef_obs, pos_llhgd_ground,'d');
+pos_lgdv_obs = ecef2lg(pos_ecef_obs, pos_llhgd_ground);
 
 % Test: ECEF to LGDV
-assert_allclose(pos_ecef_obs, lg2ecef(pos_lgdv_obs, pos_llhgd_ground,'d'), 'quantity1 = ''ECEF''', 'quantity2 = ''ECEF from LGDV''');
+assert_allclose(pos_ecef_obs, lg2ecef(pos_lgdv_obs, pos_llhgd_ground), 'quantity1 = ''ECEF''', 'quantity2 = ''ECEF from LGDV''');
 
 %% Testing Centric LGtoECEF
 % Convert the ground station coordinates to LLHGC
 pos_llhgc_ground = ecef2llhgc(pos_ecef_ground);
 
 % Convert the relative satellite position to LGCV
-pos_lgcv_obs = ecef2lg(pos_ecef_obs, pos_llhgc_ground,'c');
+pos_lgcv_obs = ecef2lg(pos_ecef_obs, pos_llhgc_ground);
 
 % Test: ECEF to LGCV
-assert_allclose(pos_ecef_obs, lg2ecef(pos_lgcv_obs, pos_llhgc_ground,'c'), 'quantity1 = ''ECEF''', 'quantity2 = ''ECEF from LGCV''');
+assert_allclose(pos_ecef_obs, lg2ecef(pos_lgcv_obs, pos_llhgc_ground), 'quantity1 = ''ECEF''', 'quantity2 = ''ECEF from LGCV''');
 
 % Convert the relative satellite position to polar coordinates
 pos_lgcv_obs_polar = cartesian2polar(pos_lgcv_obs);
