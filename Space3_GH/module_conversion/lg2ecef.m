@@ -4,7 +4,7 @@
 % LG  : Local Geocentric Vertical Frame OR Local Geodetic Vertical Frame
 % ECEF: Earth Centered Earth Fixed Frame
 %
-% Inputs:   ->  Sat_LG              = [N, E, D]' in LG frame of Observer
+% Inputs:   ->  Sat_LG            = [N, E, D]' catesian in LG frame of Observer
 %           ->  Obs_LLH           = [lat, lon, h]'|Observer
 %
 % Outputs:  ->  Pos_ECEF            = [x, y, z]' in ECEF frame
