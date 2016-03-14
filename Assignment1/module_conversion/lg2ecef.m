@@ -20,19 +20,14 @@
 function Vec_ECEF = lg2ecef(Sat_LG, Obs_LLH)
     
 % euler angles
-    Vec_ECEF = rot('z',-Obs_LLH(2,1))*rot('y',pi/2+Obs_LLH(1,1))*Sat_LG;
-%     Sat_ECEF = rot('y',pi-Obs_LLH(1,1))*rot('z',-Obs_LLH(2,1))*Sat_LG;
+%     Vec_ECEF = rot('z',-Obs_LLH(2,1))*rot('y',pi/2+Obs_LLH(1,1))*Sat_LG;
+
+    lambda = Obs_LLH(1,:);
+    phi = Obs_LLH(2,:);
+    X = -sin(lambda).*cos(phi).*Sat_LG(1,:) - sin(phi).*Sat_LG(2,:) - cos(lambda).*cos(phi).*Sat_LG(3,:);
+    Y = -sin(lambda).*sin(phi).*Sat_LG(1,:) + cos(phi).*Sat_LG(2,:) - cos(lambda).*sin(phi).*Sat_LG(3,:);
+    Z = cos(lambda).*Sat_LG(1,:) - sin(lambda).*Sat_LG(3,:);
     
-%     switch frame
-%         case 'd'
-%             Obs_ECEF = llhgd2ecef(Obs_LLH);  % detic
-%         case 'c'
-%             Obs_ECEF = llhgc2ecef(Obs_LLH);  % centric
-%         otherwise
-%             fprintf('error with frame definition');
-%     end
-%     Pos_ECEF = Obs_ECEF+Sat_ECEF;
-    
-    
+    Vec_ECEF = [X;Y;Z];
 
 end
