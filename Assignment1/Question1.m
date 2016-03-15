@@ -32,30 +32,22 @@ p = a*(1-e^2);% semilatus rectum
 n = sqrt(mu_earth/a^3);  % mean motion
 
         
-%% 3D time solution
-% figure(1)
-% clf
-% grid on
-% % axis equal
-% hold on
-% [A,R] = CreateNasa();
-% geoshow(A, R)
-% pltgrd = scatter(NaN,NaN,'filled','XDatasource','X_LLHdeg(2,1)','YDataSource','X_LLHdeg(1,1)');
-% 
-% fig2.h = figure(2);
-% clf
+%% 3D Simulation Setup
+load VanAllen
 figsim.globe = Earthplot();
 grid on
 hold on
-axis equal
+set(VanAllenAxes);
 figsim.sat = scatter3(NaN,NaN,NaN,'filled','XDatasource','X_ECI(1,1)','YDataSource','X_ECI(2,1)','ZDataSource','X_ECI(3,1)');
 figsim.orbit = plot3(NaN,NaN,NaN,'k','XDatasource','X_ECIstore(1,:)','YDatasource','X_ECIstore(2,:)','ZDatasource','X_ECIstore(3,:)');
-T_ECI = (r_earth+4*10^6).*eye(4);
-T_ECEF = (r_earth+4*10^6).*eye(4);
+T_ECI = (r_earth+6*10^6).*eye(4);
+T_ECEF = (r_earth+6*10^6).*eye(4);
 figsim.ECIframe = hggroup;
 plotcoord(T_ECI,'k',figsim.ECIframe);
 figsim.ECEFframe = hggroup;
 plotcoord(T_ECEF,'r',figsim.ECEFframe);
+%% 3D time solution
+
 i = 1; % store index
 
 for t = 0:dt:24*60*60
@@ -63,46 +55,37 @@ for t = 0:dt:24*60*60
         % solve kepler equation
         E = Mt; % initialise
         while abs(E-e*sin(E)-Mt) > 10^-3      % solve for f = 0
-                E_next = E - (E-e*sin(E) - Mt)/(1-e*cos(E)); % E_next
+                E_next = E - (E-e*sin(E) - Mt)/(1-e*cos(E)); 
                 E=E_next;
         end
 
         % solve for theta using true anomaly
         theta = 2*atan(sqrt(1+e)/sqrt(1-e)*tan(E/2));
 %         thetastore(i) = theta;
+
         % solve for r
         r = p/(1+e*cos(theta));
 %         rstore(i) = r;
-        % resolve in state space in the perifocal frame
+
+        % resolve in state space in the perifocal frame 
         % X = [x,y,z,vx,vy,vz]'
         X_orbit = [r*cos(theta);r*sin(theta);0;-sqrt(mu_earth/p)*sin(theta);sqrt(mu_earth/p)*(e-cos(theta));0];
         %X_orbitstore(1:3,i) = X_orbit(1:3);
+        
         % transform to ECI orbit
-
         X_ECI = orbit2ECI(X_orbit,Rasc,inc,omega);
-        X_ECIstore(1:3,i) = X_ECI(1:3);
+        X_ECIstore(1:3,i) = X_ECI(1:3);  % to plot orbit from beginning
+        
         refreshdata(figsim.sat,'caller');
         refreshdata(figsim.orbit,'caller');
         drawnow;
         rotate(figsim.globe,[0,0,1],360.*dt./(24*60*60),[0,0,0]);% continuous
         rotate(figsim.ECEFframe.Children,[0,0,1],360.*dt./(24*60*60),[0,0,0]);
         
-        %         X_LLH(1:3,i) = ecef2llhgc(eci2ecef(X_ECI(1:3,1),t));
-%         X_LLH = ecef2llhgc(eci2ecef(X_ECI(1:3,1),t));        
-%         X_LLHdeg = rad2deg(ecef2llhgc(eci2ecef(X_ECI(1:3,1),t)));
-%         refreshdata(pltgrd,'caller');
-%         drawnow;
-        
         i = i+1;
-        % plot
-%         plot3(X_ECI(1),X_ECI(2),X_ECI(3),'d')
+
 end
 
-        X_ECI = orbit2ECI(X_orbit,Rasc,inc,omega);
+%         X_ECI = orbit2ECI(X_orbit,Rasc,inc,omega);
 
 
-% plot LLH data
-% figure(2)
-% clf
-% geoshow('landareas.shp', 'FaceColor', [0.5 1.0 0.5]);
-% geoshow(rad2deg(X_LLH(1,10:20)),rad2deg(X_LLH(2,10:20)),'DisplayType','Multipoint')
