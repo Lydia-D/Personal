@@ -21,7 +21,7 @@ dt = 1; % seconds
 % X = state vector 
 
 %% Van Allen Probes NORAD ID: 38752 Constants
-i = deg2rad(10.1687);
+inc = deg2rad(10.1687);
 Rasc = deg2rad(46.5607);
 e = 0.6813430;
 omega =deg2rad(77.2770);
@@ -73,7 +73,7 @@ for t = 0:dt:24*60*60
         X_orbitstore(1:3,i) = X_orbit(1:3);
         % transform to ECI orbit
 
-        X_ECI = orbit2ECI(X_orbit,Rasc,i,omega);
+        X_ECI = orbit2ECI(X_orbit,Rasc,inc,omega);
 %         X_ECIstore(1:3,i) = X_ECI(1:3);
 %         refreshdata(pltglobe,'caller');
 %         drawnow;
