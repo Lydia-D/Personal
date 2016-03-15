@@ -1,9 +1,9 @@
 
-function [A,R] = CreateNasa()
+function [Nasa_A,Nasa_R] = CreateNasa()
 nasa = wmsfind('nasa', 'SearchField', 'serverurl');
 layer = nasa.refine('bluemarbleng',  'SearchField', 'layername', ...
    'MatchType', 'exact');
-[A, R] = wmsread(layer);
+[Nasa_A, Nasa_R] = wmsread(layer);
 % figure
 % axesm globe
 % axis off

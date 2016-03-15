@@ -1,13 +1,12 @@
 %% by Lydia Drabsch 11/3/16
 % plot coordinate frame about a point
 % inputs: T = 4x4 Homogeneous Transformation matrix 
-%               T(1:3,4) = postion of 
-function plotcoord(T)
-    clf
-    hold on
+%               T(1:3,4) = postion of origin
+%               c = colour of axis
+function plotcoord(T,c,parent)
     
     % plot global axis
-    normvector(eye(3),zeros(3),['x';'y';'z'],['k';'k';'k']); 
+%     fighandle = normvector(eye(3),zeros(3),['x';'y';'z'],['k';'k';'k']); 
 
     % new origin
     O = [0;0;0;1];
@@ -17,16 +16,16 @@ function plotcoord(T)
     % plot Xnew [x,y,z,1] 
     X = [1;0;0;1];
     Xnew = T*X;
-    normvector(Xnew(1:3),Onew(1:3),'xN','c')
+    normvector(Xnew(1:3),Onew(1:3),'xN',c,parent);
     
     Y = [0;1;0;1];
     Ynew = T*Y;
-    normvector(Ynew(1:3),Onew(1:3),'yN','m')
+    normvector(Ynew(1:3),Onew(1:3),'yN',c,parent);
     
     Z = [0;0;1;1];
     Znew = T*Z;
-    normvector(Znew(1:3),Onew(1:3),'zN','g')
+    normvector(Znew(1:3),Onew(1:3),'zN',c,parent);
 
-    axis square
+    axis equal
     grid on
 end
