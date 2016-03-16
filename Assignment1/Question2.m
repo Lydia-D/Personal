@@ -73,9 +73,10 @@ figgnd.orbit = plot(NaN,NaN,'-c','XDatasource','X_LLHGCstore(2,:)','YDatasource'
 %% Integration
 i = 1; % index
 for t = 0:dt:24*60*60*1
-    X_perifocal(1:6,i) = Xi;
+%     X_equin(1:6,i) = Xi;
     Xnext = RungeKutta('J2statemodel',Xi,dt);
 
+    %X_classical = 
     X_ECI = equin2eci(Xi); % plot from 0?
     X_ECIstore(1:6,i) = X_ECI(1:6,1); 
     
@@ -85,6 +86,7 @@ for t = 0:dt:24*60*60*1
     rotate(figsim.ECEFframe.Children,[0,0,1],360.*dt./(24*60*60),[0,0,0]);
         
     X_ECEF = eci2ecef(X_ECI(1:3,1),t); % only position
+    X_ECEFstore(1:3,i) = X_ECEF;
     X_LLHGC = rad2deg(ecef2llhgc(X_ECEF(1:3,1)));
     X_LLHGCstore(1:3,i) = X_LLHGC;
     refreshdata(figgnd.sat,'caller');

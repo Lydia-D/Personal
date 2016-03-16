@@ -12,9 +12,11 @@
 % Notes: z points down, elevation defined as positive upwards from horizon
 %       euler angles, radians
 
-function pos_polar = cartesian2polar(pos_cartesian)
-    pos_polar(1,1) = norm(pos_cartesian(:,1));
-    pos_polar(2,1) = atan2(pos_cartesian(2,1),pos_cartesian(1,1));
-    pos_polar(3,1) = atan2(-pos_cartesian(3,1),norm(pos_cartesian(1:2,1)));
+function pos_polar = cartesian2polar(pos_cart)
+    magnitude = sqrt(pos_cart(1,:).^2+pos_cart(2,:).^2+pos_cart(3,:).^2);
+    anglemag = sqrt(pos_cart(1,:).^2+pos_cart(2,:).^2);
+    pos_polar(1,:) = magnitude;
+    pos_polar(2,:) = atan2(pos_cart(2,:),pos_cart(1,:));
+    pos_polar(3,:) = atan2(-pos_cart(3,:),anglemag);
 
 end
