@@ -15,6 +15,11 @@ Gnd_ECEF = llhgd2ecef(Gnd_LLH);
 Sat_ECEF_global = Sat_ECEF_local + Gnd_ECEF;
 Sat_ECI = ecef2eci(Sat_ECEF_global,Sat_time);
 
-v2_ECI = Sat_ECI*v2_Rframe;   % matrix multiplication
+% only local vector? pg12
+v2_ECI_local = Sat_ECI*v2_Rframe;   % matrix multiplication
+v2_ECI_global = v2_ECI_
+
+
 
 % use v2_ECI and Sat_ECI(:,2) to find orbital parameters
+% pg13-16 or orbit determination
