@@ -1,27 +1,21 @@
-%% L Drabsch 16/3/16
-% Question 3 simulation with grnd trace from gnd station
+%% L Drabsch 17/3/16
+% Question 3.2 Orbit determination Herrick-Gibbs method
+% 1) take three obervations in LGDV close in time WITH ERRORS
+% 2) convert to ECI
+% 3) calculate velocity vector
+
+% From fundamentals of astrodynamics and applications
+% Notes: ensure coplanar? 7.27
+% alpha = pi/2 - acos((Z23 dot r1)/(|Z23|*|r1|)) = 0 +- 3 deg for coplanar
+% angle determination 7.25 - use cosine rule dot product of r1,r2 and r2,r3
+
 clc
 clear
 RunMe();
 close all % figures
 dt  = 100;
-% figure(4)
-% % gnd station location
-% Gnd_LLH = [deg2rad(2);deg2rad(-62);0];
-% 
-% Gnd_ECEF = llhgc2ecef(Gnd_LLH);
-% 
-% Sat_ECEF = X_ECEFstore(1:3,:) - Gnd_ECEF*ones(1,865);
-% Sat_LG_cart = ecef2lg(Sat_ECEF,Gnd_LLH);
-% Sat_LG_polar= cartesian2polar(Sat_LG_cart);
-% 
-% subplot(1,3,1), plot(time,Sat_LG_polar(1,:))
-% title('Range')
-% subplot(1,3,2), plot(time,Sat_LG_polar(2,:))
-% title('Azimuth')
-% subplot(1,3,3), plot(time,Sat_LG_polar(3,:))
-% title('Elevation')
-
+days = 1;
+%% Ground Station Parameters
     Gnd_LLH = [deg2rad(2);deg2rad(-62);0];
     Gnd_ECEF = llhgd2ecef(Gnd_LLH);
 
@@ -56,7 +50,7 @@ figgnd.trace = plot(NaN,NaN,'-m','LineWidth',2,'XDatasource','X_LLHGCtrace(2,:)'
 
 i = 1; % store index
 
-for t = 0:dt:24*60*60*1
+for t = 0:dt:24*60*60*days
         Mt = M0 + n*(t-t0);
         % solve kepler equation
         E_true = newtown(Mt,e);
@@ -91,6 +85,11 @@ for t = 0:dt:24*60*60*1
             X_LLHGCtrace(1:3,i) = [NaN;NaN;NaN];
         end
         
+        
+        
+        
+        
+        
         % Update 3D sim
         refreshdata(figsim.sat,'caller');
         refreshdata(figsim.orbit,'caller');
@@ -108,3 +107,5 @@ for t = 0:dt:24*60*60*1
         i = i+1;
 
 end
+
+

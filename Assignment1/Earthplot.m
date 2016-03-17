@@ -19,5 +19,6 @@ function fighandle=Earthplot()
     % Plot Earth
     axes('dataaspectratio',[1 1 1],'visible','on')
     hold on
+    grid on
     fighandle = surface(x,y,z,props);
 end
