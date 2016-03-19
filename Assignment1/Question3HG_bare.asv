@@ -26,7 +26,7 @@ v2_ECI_global = v2_ECI_lo
 % pg13-16 or orbit determination
 
 %% orbital parameters
-Vmag = norm(V2);
+Vmag = norm(V2)
 Rmag = norm(Sat_ECI_global);
 
 a = mu_earth*Rmag/(2*mu_earth-Vmag.^2.*Rmag);
@@ -36,6 +36,5 @@ e_vec = 1/mu_earth.*((Vmag.^2-mu_earth/Rmag).*Sat_ECI_global - (dot(Sat_ECI_glob
 e = norm(e_vec);
 N = cross([0;0;1],W)/norm(cross([0;0;1],W));
 Rasc = atan2(dot(cross([1;0;0],N),[0;0;1]),dot([1;0;0],N));
-omega = atan2(dot(cross(N,e_vec)./e,W),dot(N,e_vec)/e);
-theta = atan2(dot(cross(e_vec,Sat_ECI_global)./(e.*Rmag),W) , dot(e_vec,Sat_ECI_global)./(e.*Rmag));
+omega = atan2(dot(cross(N,e_vec)./e,W)
 

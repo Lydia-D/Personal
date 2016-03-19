@@ -36,15 +36,9 @@ n = sqrt(mu_earth/a^3);  % mean motion
 dt = 100; % time step seconds
 
 
-% initalise
-p = a.*(1-e.^2);
-f = e.*cos(omega+Rasc);
-g = e.*sin(omega+Rasc);
-h = tan(inc/2).*cos(Rasc);
-k = tan(inc/2).*sin(Rasc);
-L = Rasc + omega + theta;
-
-Xi = [p,f,g,h,k,L]';
+% initalise and convert to equinoctial elements
+X_c = [Rasc,omega,inc,a,e,theta]';
+Xi = class2equin(X_c);
 
 %% 3D Simulation Setup
 load VanAllen  % for axes
