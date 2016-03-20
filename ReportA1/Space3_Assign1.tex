@@ -49,6 +49,10 @@
 \renewcommand{\thepage}{\roman{page}}
 
 \newcommand{\myparagraph}[1]{\paragraph{#1}\mbox{}\newline\indent}
+% vectors
+\newcommand{\dv}[1]{\textbf{\textit{#1}}}
+\newcommand{\vv}[1]{\dot{\textbf{\textit{#1}}}}
+\newcommand{\av}[1]{\ddot{\textbf{\textit{#1}}}}
 
 \newlength{\normalparindent}
 \AtBeginDocument{\setlength{\normalparindent}{\parindent}}
@@ -89,7 +93,7 @@
 }
 
 % Matlab Code
-%\usepackage[framed]{mcode}
+\usepackage[framed]{mcode}
 
 \begin{document}
 \newgeometry{top=3.7cm, bottom=4cm, left=3cm, right=3cm}

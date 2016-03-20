@@ -23,7 +23,28 @@ To solve for the eccentric anomaly, newtons method was used
 E_{i+1} &=& E_i - \frac{f(E_i)}{f'(E_i)}\\
 E_{i+1} &=& E_i - \frac{E-e\sin(E_i)-M_t}{1-e\cos(E_i)}
 \end{eqnarray}
-
+The true anomaly was calculated using
+\begin{equation}
+\theta = 2\tan^{-1}\left(\sqrt{\frac{1+e}{1-e}}\tan\left(\frac{E}{2}\right)\right)
+\end{equation} 
+The general equation for the radius of an ellipse
+\begin{eqnarray}
+r = \frac{p}{1+e\cos\theta}
+\end{eqnarray}
+The two parameters, $\theta$ and r can completely define the orbit in the perifocal frame as polar coordinates. The conversion to cartesian coordinates in the perifocal frame are as follows:
+\begin{eqnarray}
+\left[ \begin{array}{c}
+x\\y\\z
+\end{array} \right]_{perifocal} &=& \left[ \begin{array}{c}
+r\cos\theta \\ r\sin \theta \\ 0
+\end{array} \right] \\
+\left[ \begin{array}{c}
+v_x\\v_y\\v_z
+\end{array} \right]_{perifocal} &=& \left[ \begin{array}{c}
+-\sqrt{\frac{\mu}{p}}\sin\theta \\\sqrt{\frac{\mu}{p}}(e+\cos\theta) \\ 0
+\end{array} \right] \\
+\end{eqnarray}
+The perifocal parameters were transformed to the ECI frame to animate the 3D model of the satellite orbit around the Earth using the function \textit{\textbf{orbit2ECI}}. From the ECI coordinates, the ECEF and LLHGD coordinates were calculated for the ground trace.
 
 \subsection{Results/Discussion}
 \subsubsection{Van Allen Probes}

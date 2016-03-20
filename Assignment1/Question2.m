@@ -5,9 +5,9 @@ clc
 close all
 clear
 RunMe();
-Animations = 1; % 1 for one, 0 for off
+Animations = 0; % 1 for one, 0 for off
 StatePlots = 1;
-
+days = 12;
 %% Van Allen Probes NORAD ID: 38752 Constants
 % inc = deg2rad(10.1687);
 % Rasc = deg2rad(46.5607);
@@ -18,7 +18,7 @@ StatePlots = 1;
 % a = 21887*10^3; % m from N2YO.com (RBSP A) 
 % % p = a*(1-e^2);% semilatus rectum
 % n = sqrt(mu_earth/a^3);  % mean motion
-load VanAllenepoch1
+load VanAllenepoch1;
 % solve for initial theta at t = t0
     t = t0;
     Mt = M0 + n*(t-t0);
@@ -38,7 +38,7 @@ X_e = class2equin(X_c);
 
 %% 3D Simulation Setup
 if Animations == 1
-    load VanAllenAxes  % for axes
+    load VanAllenAxes;  % for axes
     figsim.globe = Earthplot();
     grid on
     hold on
@@ -60,14 +60,14 @@ if Animations == 1
     figgnd.map = geoshow(Nasa_A,Nasa_R);
     hold on
     figgnd.sat = plot(NaN,NaN,'bo','MarkerFaceColor','b','XDatasource','X_LLHGD(2,1)','YDataSource','X_LLHGD(1,1)');
-    figgnd.orbit = plot(NaN,NaN,'-c','XDatasource','X_LLHGDstore(2,:)','YDatasource','X_LLHGDstore(1,:)');
+    figgnd.orbit = plot(NaN,NaN,'.c','XDatasource','X_LLHGDstore(2,:)','YDatasource','X_LLHGDstore(1,:)');
 end
 
 %% Integration
 i = 1; % index
 for t = t0:dt:t0+secs_per_day*days
-    % integrate to next time step
-    Xnext = RungeKutta('J2statemodel',X_e,dt);
+    % store current X
+    X_estore(1:6,i) = X_e;
     
     % transform to ECI and store current timestep 
     X_ECI = equin2eci(X_e); % plot from 0?
@@ -81,6 +81,7 @@ for t = t0:dt:t0+secs_per_day*days
     X_LLHGD = rad2deg(ecef2llhgd(X_ECEF(1:3,1)));
     X_LLHGDstore(1:3,i) = X_LLHGD;
     
+    % plot current 
     if Animations == 1
         refreshdata(figsim.sat,'caller');
         refreshdata(figsim.orbit,'caller');
@@ -91,18 +92,30 @@ for t = t0:dt:t0+secs_per_day*days
         refreshdata(figgnd.orbit,'caller');
         drawnow;
     end
+    
+    % integrate to next time step
+    Xnext = RungeKutta('J2statemodel',X_e,dt);
     X_e = Xnext;
     i = i+1;
 end
 
 %% State plots
 if StatePlots == 1
+    
+    X_c = equin2class(X_estore);
+    
   figstate.Q1 = figure(3);
   title('ECI States')
-  time = 0:dt:secs_per_day*days;
-  Stateplot(X_ECIstore,time,figstate.Q1);
-  figstate.perifocal = figure(4);
-  title('Perifocal States')
-  Stateplot(X_perifocal,time,figstate.perifocal);
+  time = t0:dt:t0+secs_per_day*days;
+  Stateplot(X_ECIstore,time,figstate.Q1,{},'-k');
+  
+  figstate.classical = figure(4);
+  title('Classical States')
+  Stateplot(X_c,time,figstate.classical.Number,{'Rasc','omega','inc','a','e','theta'},'-k');
 %         X_ECI = orbit2ECI(X_orbit,Rasc,inc,omega);
 end
+
+%% Compare later in time
+load VanAllenepoch2
+hold on
+Stateplot(X_c2,t02,figstate.classical.Number,{'Rasc','omega','inc','a','e','theta'},'xr');

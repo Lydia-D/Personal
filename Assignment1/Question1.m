@@ -46,8 +46,8 @@ if Animations == 1
     figgnd.map = geoshow(Nasa_A,Nasa_R);
     title('Ground Trace of Van Allen Probe')
     hold on
-    figgnd.sat = plot(NaN,NaN,'bo','MarkerFaceColor','b','XDatasource','X_LLHGC(2,1)','YDataSource','X_LLHGC(1,1)');
-    figgnd.orbit = plot(NaN,NaN,'.c','XDatasource','X_LLHGCstore(2,:)','YDatasource','X_LLHGCstore(1,:)');
+    figgnd.sat = plot(NaN,NaN,'bo','MarkerFaceColor','b','XDatasource','X_LLHGD(2,1)','YDataSource','X_LLHGD(1,1)');
+    figgnd.orbit = plot(NaN,NaN,'.c','XDatasource','X_LLHGDstore(2,:)','YDatasource','X_LLHGDstore(1,:)');
 end
 %% 3D time solution
 
@@ -58,7 +58,7 @@ for t = t0:dt:t0+secs_per_day*days
         % solve kepler equation
         E = newtown(Mt,e);
 
-        % solve for theta using true anomaly
+        % solve for theta (true anomaly) using eccentric anomaly
         theta = 2*atan(sqrt(1+e)/sqrt(1-e)*tan(E/2));
 
         % solve for r
@@ -74,8 +74,8 @@ for t = t0:dt:t0+secs_per_day*days
         X_ECIstore(1:6,i) = X_ECI(1:6,1);  % to plot orbit from beginning
         
         X_ECEF = eci2ecef(X_ECI(1:3,1),t); % only position
-        X_LLHGC = rad2deg(ecef2llhgc(X_ECEF));
-        X_LLHGCstore(1:3,i) = X_LLHGC;
+        X_LLHGD = rad2deg(ecef2llhgd(X_ECEF));
+        X_LLHGDstore(1:3,i) = X_LLHGD;
        
         if Animantions == 1
             refreshdata(figsim.sat,'caller');
