@@ -93,21 +93,20 @@ for t = 0:dt:24*60*60*1
             X_LLHGCtrace(1:3,i) = [NaN;NaN;NaN];
         end
         
-        if Animation == 1
-            % Update 3D sim
-            refreshdata(figsim.sat,'caller');
-            refreshdata(figsim.orbit,'caller');
-            refreshdata(figsim.trace,'caller');
+        % Update 3D sim
+        refreshdata(figsim.sat,'caller');
+        refreshdata(figsim.orbit,'caller');
+        refreshdata(figsim.trace,'caller');
 
-            rotate(figsim.globe,[0,0,1],360.*dt./(24*60*60),[0,0,0]);% continuous
-            rotate(figsim.ECEFframe.Children,[0,0,1],360.*dt./(24*60*60),[0,0,0]);
-
-            % Update Ground Trace
-            refreshdata(figgnd.sat,'caller');
-            refreshdata(figgnd.orbit,'caller');
-            refreshdata(figgnd.trace,'caller');
-            drawnow; 
-        end
+        rotate(figsim.globe,[0,0,1],360.*dt./(24*60*60),[0,0,0]);% continuous
+        rotate(figsim.ECEFframe.Children,[0,0,1],360.*dt./(24*60*60),[0,0,0]);
+        
+        % Update Ground Trace
+        refreshdata(figgnd.sat,'caller');
+        refreshdata(figgnd.orbit,'caller');
+        refreshdata(figgnd.trace,'caller');
+       
+        drawnow;     
         i = i+1;
 
 end

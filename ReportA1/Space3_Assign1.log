@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.3.10)  19 MAR 2016 19:32
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.3.10)  20 MAR 2016 18:05
 entering extended mode
 **./Space3_Assign1.tex
 (Space3_Assign1.tex
@@ -905,7 +905,7 @@ Package caption Info: End \AtBeginDocument code.
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 
-<./IMAGEtitle2f.jpg, id=58, 181.6386pt x 542.025pt>
+<./IMAGEtitle2f.jpg, id=70, 181.6386pt x 542.025pt>
 File: ./IMAGEtitle2f.jpg Graphic file (type jpg)
  <use ./IMAGEtitle2f.jpg>
 Package pdftex.def Info: ./IMAGEtitle2f.jpg used on input line 98.
@@ -957,12 +957,12 @@ e2f.jpg>]
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
- <./Plag.pdf, id=69, 597.55246pt x 845.07718pt>
+ <./Plag.pdf, id=81, 597.55246pt x 845.07718pt>
 File: ./Plag.pdf Graphic file (type pdf)
  <use ./Plag.pdf>
 Package pdftex.def Info: ./Plag.pdf used on input line 134.
 (pdftex.def)             Requested size: 478.86255pt x 677.2361pt.
-LaTeX Font Info:    Font shape `OT1/cmr/bx/sc' in size <20.74> not available
+LaTeX Font Info:    Font shape `OT1/cmr/bx/sc' in size <17.28> not available
 (Font)              Font shape `OT1/cmr/b/sc' tried instead on input line 140.
 
 (Space3_Assign1.toc
@@ -992,35 +992,34 @@ l.2 ...rline {1.1}Introduction}{1}{subsection.1.1}
 \tf@lot=\write7
 \openout7 = `Space3_Assign1.lot'.
 
- [2] (Ques1.tex) (Ques2.tex)
-(Ques3.tex) [1]
-No file Space3_Assign1.bbl.
-[2]
+ [2] (Ques1.tex
+Underfull \hbox (badness 10000) in paragraph at lines 7--13
+
+ []
+
+) [1] (Ques2.tex) [2] (Ques3.tex) [3] (Space3_Assign1.bbl
+
+LaTeX Warning: Empty `thebibliography' environment on input line 24.
+
+) [4] [5]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 174.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 174.
  (Space3_Assign1.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 174.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 174.
-
-
-Package rerunfilecheck Warning: File `Space3_Assign1.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `Space3_Assign1.out':
-(rerunfilecheck)             Before: 2BC1642EB5D2BEB81578E8DA245ACEE2;780
-(rerunfilecheck)             After:  055E2C59BA2E47CBF35BE3DC7B1FDED1;842.
+Package rerunfilecheck Info: File `Space3_Assign1.out' has not changed.
+(rerunfilecheck)             Checksum: 879693878FE206D313E53ABE6F40F265;1022.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 174.
  ) 
 Here is how much of TeX's memory you used:
- 23872 strings out of 493634
- 512817 string characters out of 3135239
- 657365 words of memory out of 3000000
- 26839 multiletter control sequences out of 15000+200000
- 16868 words of font info for 63 fonts, out of 3000000 for 9000
+ 23899 strings out of 493634
+ 513281 string characters out of 3135239
+ 659365 words of memory out of 3000000
+ 26857 multiletter control sequences out of 15000+200000
+ 17177 words of font info for 64 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
  55i,12n,54p,426b,610s stack positions out of 5000i,500n,10000p,200000b,50000s
- <C:\Users\Lydia\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\public\cm\dpi1244\c
+ <C:\Users\Lydia\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\public\cm\dpi1037\c
 mbcsc10.pk> <C:\Users\Lydia\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\public\cm\
 dpi1493\cmbcsc10.pk><C:/Users/Lydia/AppData/Local/Programs/MiKTeX 2.9/fonts/typ
 e1/public/amsfonts/cm/cmbx10.pfb><C:/Users/Lydia/AppData/Local/Programs/MiKTeX 
@@ -1034,12 +1033,13 @@ onts/cm/cmr10.pfb><C:/Users/Lydia/AppData/Local/Programs/MiKTeX 2.9/fonts/type1
 /fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/Lydia/AppData/Local/Program
 s/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/Lydia/AppData/Lo
 cal/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Lyd
-ia/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-<C:/Users/Lydia/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/c
-m/cmtt12.pfb>
-Output written on Space3_Assign1.pdf (5 pages, 341616 bytes).
+ia/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><
+C:/Users/Lydia/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm
+/cmti10.pfb><C:/Users/Lydia/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/publi
+c/amsfonts/cm/cmtt12.pfb>
+Output written on Space3_Assign1.pdf (8 pages, 360496 bytes).
 PDF statistics:
- 231 PDF objects out of 1000 (max. 8388607)
- 21 named destinations out of 1000 (max. 500000)
- 127 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 271 PDF objects out of 1000 (max. 8388607)
+ 28 named destinations out of 1000 (max. 500000)
+ 151 words of extra memory for PDF output out of 10000 (max. 10000000)
 

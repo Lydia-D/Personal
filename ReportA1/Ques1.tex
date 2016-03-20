@@ -2,21 +2,48 @@
 
 \begin{document}
 
-\section{Simulation of Orbits}
+\section{Simulation of Orbits with Classical Elements}
 \subsection{Introduction}
 - keplers three laws\\
 - perifocal frame\\
 - The true anomaly $\theta$ is the angle taken at the focus of the perifocal frame to the satellite from the perigee. The eccentric anomaly $\textit{E}$ is the angle taken at the centre of perifocal frame to the satellite from the perigee.\\
-The mean anomaly \textit{$M_t$} is the mean number of orbits per day.
+-The mean anomaly \textit{$M_t$} is the mean number of orbits per day.\\
+- LEO,MEO\\
+-TLE's \\
+
+
 
 \subsection{Methodology}
-From Kepler's second law, the mean anomaly at time $\textit{t}$ is calculated using the mean motion $\textit{n}$, 
-
+From Kepler's second law, the mean anomaly at time $\textit{t}$ is calculated using the mean motion $\textit{n}$ from an epoch time described by $M_0(t_0)$. 
 \begin{eqnarray}
 M_t = M_0 + n(t-t_0)
 \end{eqnarray}
+To solve for the eccentric anomaly, newtons method was used
+\begin{eqnarray}
+E_{i+1} &=& E_i - \frac{f(E_i)}{f'(E_i)}\\
+E_{i+1} &=& E_i - \frac{E-e\sin(E_i)-M_t}{1-e\cos(E_i)}
+\end{eqnarray}
+
 
 \subsection{Results/Discussion}
+\subsubsection{Van Allen Probes}
+The satellite RBSP-A, also known as the Van Allen Probes, is in a highly eccentric orbit. RBSP-A has a perigee in LEO at an altitude of 596 km and an apogee in MEO at an altitude of 30421 km assuming a spherical Earth. 
+
+
+\subsubsection{Orbital Properties}
+\begin{table}[h]
+\centering
+\caption{Orbital Properties - maybe put in classical parameters}
+\begin{tabular}{|c|c|c|}
+\hline
+Orbital Properties & Van Allen Probe & Other sat \\\hline
+Period & & \\\hline
+Altitude at Perigee & & \\\hline
+Altitude at Apogee & & \\\hline
+
+\end{tabular}
+\end{table}
+
 
 
 \end{document}
