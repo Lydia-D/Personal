@@ -1,5 +1,8 @@
 %% Question 3 HG start from 3 observations
 
+% TO DEBUG: PROBLEM WITH PASSING IN R, NEED TO PASS IN OBS NOT LLH
+% REORDER: DO ECI TRANSFORMS FIRST
+
 % inputs: Sat_LG_polar = [R1,R2,R3;az1,az2,az3;,el1,el2,el3];
 %         Sat_time    = [t1,t2,t3]
 %         Gnd_LLH = [lat,long,height] of gnd station

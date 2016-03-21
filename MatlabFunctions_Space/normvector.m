@@ -11,8 +11,8 @@ i = 1;
 while i <= Columns
     %Abs = sqrt(coord_to(1,i)^2+coord_to(2,i)^2+coord_to(3,i)^2); % normalise
     Abs = 1;
-    plot3([coord_from(1,i),coord_to(1,i)/Abs],[coord_from(2,i),coord_to(2,i)/Abs],[coord_from(3,i),coord_to(3,i)/Abs],c(i),'Parent',parent);
-    text('Position',[coord_to(1,i)/Abs,coord_to(2,i)/Abs,coord_to(3,i)/Abs],'String',n(i),'color',c,'Parent',parent);
+    plot3([coord_from(1,i),coord_to(1,i)/Abs],[coord_from(2,i),coord_to(2,i)/Abs],[coord_from(3,i),coord_to(3,i)/Abs],c(i),'Parent',parent); 
+    text('Position',[coord_to(1,i)/Abs,coord_to(2,i)/Abs,coord_to(3,i)/Abs],'String',n(i),'color',c(i),'Parent',parent);
     i = i+1;
 end
 end

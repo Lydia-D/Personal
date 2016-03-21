@@ -5,7 +5,7 @@ clc
 close all
 clear
 RunMe();
-Animations = 0; % 1 for one, 0 for off
+Animations = 1; % 1 for one, 0 for off
 StatePlots = 1;
 days = 12;
 %% Van Allen Probes NORAD ID: 38752 Constants
@@ -117,7 +117,8 @@ if StatePlots == 1
 
   figstate.equin = figure(5);
   title('Equinoctial states')
-  Stateplot(X_estore,time,figstate.equin.Number,{'p','f','g','h','k','L'},'-k')
+  Lwrap = wrapToPi(X_estore(6,:));
+  Stateplot([X_estore(1:5,:);Lwrap],time,figstate.equin.Number,{'p','f','g','h','k','L'},'-k')
   %         X_ECI = orbit2ECI(X_orbit,Rasc,inc,omega);
 end
 
