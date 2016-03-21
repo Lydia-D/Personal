@@ -25,11 +25,14 @@ if Animation == 1
     figsim.orbit = plot3(NaN,NaN,NaN,'k','XDatasource','X_ECIstore(1,:)','YDatasource','X_ECIstore(2,:)','ZDatasource','X_ECIstore(3,:)');
     figsim.sat = scatter3(NaN,NaN,NaN,'filled','XDatasource','X_ECI(1,1)','YDataSource','X_ECI(2,1)','ZDataSource','X_ECI(3,1)');
 
-    % corrdinate frame axes
+    % ECI coordinate frame axes
     T_ECI = (r_earth+6*10^6).*eye(4);
-    T_ECEF = (r_earth+6*10^6).*eye(4);
     figsim.ECIframe = hggroup;
     plotcoord(T_ECI,'k',figsim.ECIframe);
+    
+    % position of ECEF frame at t0 rel to ECI
+    ECEFframe = ecef2eci(eye(3),t0);
+    T_ECEF = (r_earth+6*10^6).*[ECEFframe,[0;0;0];[0,0,0,1]];
     figsim.ECEFframe = hggroup;
     plotcoord(T_ECEF,'r',figsim.ECEFframe);
 
@@ -38,7 +41,7 @@ if Animation == 1
     figgnd.map = geoshow(Nasa_A,Nasa_R);
     hold on
     figgnd.sat = plot(NaN,NaN,'bo','MarkerFaceColor','b','XDatasource','X_LLHGD(2,1)','YDataSource','X_LLHGD(1,1)');
-    figgnd.orbit = plot(NaN,NaN,'-c','XDatasource','X_LLHGDstore(2,:)','YDatasource','X_LLHGDstore(1,:)');
+    figgnd.orbit = plot(NaN,NaN,'.c','XDatasource','X_LLHGDstore(2,:)','YDatasource','X_LLHGDstore(1,:)');
     figgnd.trace = plot(NaN,NaN,'-m','LineWidth',2,'XDatasource','X_LLHGDtrace(2,:)','YDatasource','X_LLHGDtrace(1,:)');
 end
 %% 3D time solution

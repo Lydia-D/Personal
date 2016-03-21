@@ -8,7 +8,7 @@ function v2 = HG_velvector(R,t)
     
     dt32 = t(2)-t(3);
     dt21 = t(1)-t(2);
-    dt31 = t(1)-t(39);
+    dt31 = t(1)-t(3);
     
     % components 
     v2(1,1) = -dt32.*(1./(dt21.*dt31) + mu_earth/(12.*R(1).^3));

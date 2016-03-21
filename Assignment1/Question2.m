@@ -45,6 +45,8 @@ if Animations == 1
     set(VanAllenAxes);
     figsim.sat = scatter3(NaN,NaN,NaN,'filled','XDatasource','X_ECI(1,1)','YDataSource','X_ECI(2,1)','ZDataSource','X_ECI(3,1)');
     figsim.orbit = plot3(NaN,NaN,NaN,'k','XDatasource','X_ECIstore(1,:)','YDatasource','X_ECIstore(2,:)','ZDatasource','X_ECIstore(3,:)');
+    
+    % ECI coorrdinate frame axes
     T_ECI = (r_earth+6*10^6).*eye(4);
     figsim.ECIframe = hggroup;
     plotcoord(T_ECI,'k',figsim.ECIframe);
