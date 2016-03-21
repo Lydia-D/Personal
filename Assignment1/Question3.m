@@ -27,13 +27,14 @@ dt  = 100;
     Gnd_ECEF = llhgd2ecef(Gnd_LLH);
 
 %% Van Allen Probes NORAD ID: 38752 Constants
-load VanAllen
+load VanAllenepoch1
         
 %% 3D Simulation Setup
 if Animation == 1
+    load VanAllenAxes;
     figure(1)
     figsim.globe = Earthplot();
-    figsim.axes = set(VanAllenAxes);
+    figsim.axes = set(VanAllenAxes2);
     figsim.trace = plot3(NaN,NaN,NaN,'m','LineWidth',2,'XDatasource','X_ECItrace(1,:)','YDatasource','X_ECItrace(2,:)','ZDatasource','X_ECItrace(3,:)');
     figsim.orbit = plot3(NaN,NaN,NaN,'k','XDatasource','X_ECIstore(1,:)','YDatasource','X_ECIstore(2,:)','ZDatasource','X_ECIstore(3,:)');
     figsim.sat = scatter3(NaN,NaN,NaN,'filled','XDatasource','X_ECI(1,1)','YDataSource','X_ECI(2,1)','ZDataSource','X_ECI(3,1)');
@@ -51,14 +52,14 @@ if Animation == 1
     figgnd.map = geoshow(Nasa_A,Nasa_R);
     hold on
     figgnd.sat = plot(NaN,NaN,'bo','MarkerFaceColor','b','XDatasource','X_LLHGC(2,1)','YDataSource','X_LLHGC(1,1)');
-    figgnd.orbit = plot(NaN,NaN,'-c','XDatasource','X_LLHGCstore(2,:)','YDatasource','X_LLHGCstore(1,:)');
+    figgnd.orbit = plot(NaN,NaN,'.c','XDatasource','X_LLHGCstore(2,:)','YDatasource','X_LLHGCstore(1,:)');
     figgnd.trace = plot(NaN,NaN,'-m','LineWidth',2,'XDatasource','X_LLHGCtrace(2,:)','YDatasource','X_LLHGCtrace(1,:)');
 end
 %% 3D time solution
 
 i = 1; % store index
 
-for t = 0:dt:24*60*60*1
+for t = 0:dt:24*60*60*days
         Mt = M0 + n*(t-t0);
         % solve kepler equation
         E_true = newtown(Mt,e);

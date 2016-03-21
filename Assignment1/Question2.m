@@ -112,10 +112,19 @@ if StatePlots == 1
   figstate.classical = figure(4);
   title('Classical States')
   Stateplot(X_c,time,figstate.classical.Number,{'Rasc','omega','inc','a','e','theta'},'-k');
-%         X_ECI = orbit2ECI(X_orbit,Rasc,inc,omega);
+
+  figstate.equin = figure(5);
+  title('Equinoctial states')
+  Stateplot(X_estore,time,figstate.equin.Number,{'p','f','g','h','k','L'},'-k')
+  %         X_ECI = orbit2ECI(X_orbit,Rasc,inc,omega);
 end
 
 %% Compare later in time
-load VanAllenepoch2
+load RBSPA
+[RealData_c,RD_time] = TLEinput(RBSPA);
+RealData_e = class2equin(RealData_c);
 hold on
-Stateplot(X_c2,t02,figstate.classical.Number,{'Rasc','omega','inc','a','e','theta'},'xr');
+Stateplot(RealData_c,RD_time,figstate.classical.Number,{'Rasc','omega','inc','a','e','theta'},'xr');
+Stateplot(RealData_e,RD_time,figstate.equin.Number,{'p','f','g','h','k','L'},'xr');
+
+% Stateplot(X_c2,t02,figstate.classical.Number,{'Rasc','omega','inc','a','e','theta'},'xr');

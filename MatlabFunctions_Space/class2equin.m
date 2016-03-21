@@ -4,12 +4,12 @@
 % outputs: X_e = [p,f,g,h,k,L]'
 function X_e = class2equin(X_c)
 
-    Rasc = X_c(1,1);
-    omega = X_c(2,1);
-    inc = X_c(3,1);
-    a = X_c(4,1);
-    e = X_c(5,1);
-    theta = X_c(6,1);
+    Rasc = X_c(1,:);
+    omega = X_c(2,:);
+    inc = X_c(3,:);
+    a = X_c(4,:);
+    e = X_c(5,:);
+    theta = X_c(6,:);
     
     p = a.*(1-e.^2);
     f = e.*cos(omega+Rasc);
