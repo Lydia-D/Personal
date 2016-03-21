@@ -18,6 +18,6 @@ function X_e = class2equin(X_c)
     k = tan(inc/2).*sin(Rasc);
     L = Rasc + omega + theta;
 
-    X_e = [p,f,g,h,k,L]';
+    X_e = [p;f;g;h;k;L];
 
 end
