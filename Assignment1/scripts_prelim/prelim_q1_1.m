@@ -3,7 +3,7 @@
 %  Author: Lydia Drabsch 6/3/16
 function Sat_ECEF_global = prelim_q1_1()
     % location of Sydney    
-    Obs_LLH = [-deg2rad(33.8681),deg2rad(151.2075),0]';   % lat long height (assume sea level)
+    Obs_LLH = [-deg2rad(33.8650),deg2rad(151.2094),0]';   % lat long height (assume sea level)
     
     % satellite observation
     Sat_LG_polar = [1970*10^3,deg2rad(27.5),deg2rad(72.1)]';  % R, az, el,   not including rad of earth

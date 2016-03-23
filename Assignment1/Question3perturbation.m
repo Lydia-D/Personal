@@ -9,7 +9,7 @@ dt  = 100;
 days =1;
 
 % Ground station
-Gnd_LLH = [deg2rad(2);deg2rad(-62);0];
+Gnd_LLH = [deg2rad(19.0);deg2rad(-155.6);367]; %http://www.sscspace.com/south-point-satellite-station-4
 Gnd_ECEF = llhgd2ecef(Gnd_LLH);
 
 %% Van Allen Probes NORAD ID: 38752 Constants
@@ -42,7 +42,7 @@ if Animation == 1
     hold on
     figgnd.sat = plot(NaN,NaN,'bo','MarkerFaceColor','b','XDatasource','X_LLHGD(2,1)','YDataSource','X_LLHGD(1,1)');
     figgnd.orbit = plot(NaN,NaN,'.c','XDatasource','X_LLHGDstore(2,:)','YDatasource','X_LLHGDstore(1,:)');
-    figgnd.trace = plot(NaN,NaN,'-m','LineWidth',2,'XDatasource','X_LLHGDtrace(2,:)','YDatasource','X_LLHGDtrace(1,:)');
+    figgnd.trace = plot(NaN,NaN,'.m','LineWidth',2,'XDatasource','X_LLHGDtrace(2,:)','YDatasource','X_LLHGDtrace(1,:)');
 end
 %% 3D time solution
 
@@ -62,12 +62,14 @@ for t = t0:dt:t0+secs_per_day*days
     X_ECEFstore(1:3,i) = X_ECEF;
     
     % transform to LLHGD
-    X_LLHGD = rad2deg(ecef2llhgd(X_ECEF(1:3,1)));
+    X_LLHGD_rad = ecef2llhgd(X_ECEF(1:3,1));
+    X_LLHGD     = [rad2deg(X_LLHGD_rad(1:2,1));X_LLHGD_rad(3,1)]; % degrees to plot
     X_LLHGDstore(1:3,i) = X_LLHGD;
     
     
         
     % Test if in view of Gnd Station
+    TimeVec(1,i) = t;
     Obs(1:3,i) = gndstation(X_ECEF,Gnd_LLH,Gnd_ECEF);
     if ~isnan(Obs(1:3,i))
         X_ECItrace(1:3,i) = X_ECIstore(1:3,i);

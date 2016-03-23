@@ -5,9 +5,15 @@
 
 clc
 clear
-RunMe();
-close all % figures
-dt = 100; % seconds
+addpath('./MatlabFunctions_Space','./Assignment1','./Assignment1/module_conversion','./Assignment1/module_testing','./Assignment1/scripts_general','./Assignment1/scripts_prelim')
+constants();
+global Nasa_A;
+global Nasa_R;
+load NASAdata; % precreated Nasa_A and Nasa_R from CreateNasa()close all % figures
+dt = 50; % seconds
+Animations = 1;
+StatePlots = 0;
+days = 2;
 % Parameters a,e,i,Omega,omega
 % a = semimajor axis = (ra+rp)/2
 % e = eccentricity = (ra-rp)/(ra+rp)
@@ -19,7 +25,7 @@ dt = 100; % seconds
 % X = state vector 
 
 %% Van Allen Probes NORAD ID: 38752 Constants
-load VanAllenepoch2;  % created from fn 'createorbitpar.m'
+load VanAllenepoch1;  % created from fn 'createorbitpar.m'
         
 %% 3D Simulation Setup
 if Animations == 1
@@ -77,7 +83,7 @@ for t = t0:dt:t0+secs_per_day*days
         X_LLHGD = rad2deg(ecef2llhgd(X_ECEF));
         X_LLHGDstore(1:3,i) = X_LLHGD;
        
-        if Animantions == 1
+        if Animations == 1
             refreshdata(figsim.sat,'caller');
             refreshdata(figsim.orbit,'caller');
             rotate(figsim.globe,[0,0,1],360.*dt./(24*60*60),[0,0,0]);% continuous
@@ -95,12 +101,12 @@ end
 %% State plots
 if StatePlots == 1
   figstate.Q1 = figure(3);
-  time = 0:dt:24*60*60*1;
+  time = t0:dt:t0+secs_per_day*days;
   % ECI states
-  Stateplot(X_ECIstore,time,figstate.Q1,{});
+  Stateplot(X_ECIstore,time,figstate.Q1,{},'b');
   
   % Perifocal states
   figstate.perifocal = figure(4);
-  Stateplot(X_orbitstore,time,figstate.perifocal,{});
+  Stateplot(X_orbitstore,time,figstate.perifocal,{},'r');
 
 end

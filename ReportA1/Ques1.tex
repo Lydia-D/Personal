@@ -46,25 +46,45 @@ v_x\\v_y\\v_z
 \end{eqnarray}
 The perifocal parameters were transformed to the ECI frame to animate the 3D model of the satellite orbit around the Earth using the function \textit{\textbf{orbit2ECI}}. From the ECI coordinates, the ECEF and LLHGD coordinates were calculated for the ground trace.
 
+\subsubsection{Calculation of Period}
+autocorrelation based on Wiener-Khinchin Theorem
+
+
 \subsection{Results/Discussion}
 \subsubsection{Van Allen Probes}
-The satellite Van Allen Probes, previously known as the Radiation Belt Storm Probes (RBSP-A), is in a highly eccentric orbit. RBSP-A has a perigee in LEO at an altitude of 596 km and an apogee in MEO at an altitude of 30421 km assuming a spherical Earth. 
+The satellites Van Allen Probes, previously known as the Radiation Belt Storm Probes (RBSP A and B), are in a highly eccentric orbit. RBSP-A was modelled based on TLEs from spacetrack.com, see Table \ref{Q1.orbitprop}. It was launched on 30th August 2012 
 
+The Van Allen Belts are regions of plasma that surround the Earth that are contained by the Earth's magnetic field. The highly energetic particles become trapped in the Earth's magnetic field by travelling along the field lines to a pole and being reflected back and travelling to the opposite pole. This phenomenon is called a magnetic mirror, and is the reason the Van Allen belts have a torus shape about the Earth's magnetic axis. Therefore, the radiation is at the highest intensity about the magnetic equatorial plane, currently at 11.5$^{\circ}$ inclination. The satellite was put in an orbit close to this inclination at about 10$^{\circ}$, with the mission objective to be in an orbit of no greater than 18$^{\circ}$. The inclination has fluctuated between 9-11$^{\circ}$ over the course of it's mission.
+
+The orbit was highly eccentric in order to cover the entire radiation belt region. The perigee altitude is 500 km, which is below the inner radiation belt and the apogee altitude is 30600 km, which is above the outer edge of the outer radiation belt.
+
+\subsubsection{TDRS-12}
 
 \subsubsection{Orbital Properties}
 \begin{table}[h]
 \centering
-\caption{Orbital Properties - maybe put in classical parameters}
-\begin{tabular}{|c|c|c|}
-\hline
-Orbital Properties & Van Allen Probe & Other sat \\\hline
-Period & & \\\hline
-Altitude at Perigee & & \\\hline
-Altitude at Apogee & & \\\hline
-
+\caption{Orbital properties of simulated satellites. (* indicates data taken directly from TLEs)}
+\label{Q1.orbitprop}
+\begin{tabular}{|l|c|c|c|c|}
+	\hline
+	Orbital Properties              & Variable Name &     Units      & Van Allen Probe A &     TDRS-12      \\ \hline
+	NORAD ID                        &               &                &                   &      39504       \\ \hline
+	*Julian year/day data was taken &      t0       &    year/day    & 2016 68.37507029  & 2016 82.54758936 \\ \hline
+	Semimajor axis                  &       a       &       m        &                   &  \\ \hline
+	*Eccentricity                   &       e       &       -        &     0.6813430     &    0.0001458     \\ \hline
+	*Inclination angle              &      inc      &    degrees     &      10.1687      &      6.4245      \\ \hline
+	*Right ascension of the node    &     Rasc      &    degrees     &      46.5607      &     336.8061     \\ \hline
+	*Argument of Perigee            &     omega     &    degrees     &      77.2770      &     330.7916     \\ \hline
+	*Mean Anomaly                   &      Mt       &    degrees     &     346.0491      &     29.1253      \\\hline
+	*Mean Motion             &      MM       & orbits per day &    2.681033090    &     29.1253      \\ \hline
+	Analytical Period               &               &                &                   &  \\ \hline
+	Computational Period            &               &                &                   &  \\ \hline
+	Altitude at Perigee             &               &                &                   &  \\ \hline
+	Altitude at Apogee              &               &                &                   &  \\ \hline
 \end{tabular}
 \end{table}
 
-
-
+% The Van Allen Probes Mission
+%Nicola Fox, James L. Burch
+%Springer Science & Business Media, 10Jan.,2014 - Science - 647 pages
 \end{document}

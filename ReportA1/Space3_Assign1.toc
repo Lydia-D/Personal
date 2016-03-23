@@ -1,12 +1,15 @@
 \contentsline {section}{\numberline {1}Simulation of Orbits with Classical Elements}{1}{section.1}
 \contentsline {subsection}{\numberline {1.1}Introduction}{1}{subsection.1.1}
 \contentsline {subsection}{\numberline {1.2}Methodology}{1}{subsection.1.2}
+\contentsline {subsubsection}{\numberline {1.2.1}Calculation of Period}{2}{subsubsection.1.2.1}
 \contentsline {subsection}{\numberline {1.3}Results/Discussion}{2}{subsection.1.3}
 \contentsline {subsubsection}{\numberline {1.3.1}Van Allen Probes}{2}{subsubsection.1.3.1}
-\contentsline {subsubsection}{\numberline {1.3.2}Orbital Properties}{2}{subsubsection.1.3.2}
+\contentsline {subsubsection}{\numberline {1.3.2}TDRS-12}{2}{subsubsection.1.3.2}
+\contentsline {subsubsection}{\numberline {1.3.3}Orbital Properties}{2}{subsubsection.1.3.3}
 \contentsline {section}{\numberline {2}Simulating Perturbations}{3}{section.2}
 \contentsline {subsection}{\numberline {2.1}Introduction}{3}{subsection.2.1}
-\contentsline {subsubsection}{\numberline {2.1.1}Earth oblateness}{3}{subsubsection.2.1.1}
+\contentsline {subsubsection}{\numberline {2.1.1}Non-Spherical Earth}{3}{subsubsection.2.1.1}
+\contentsline {subsubsection}{\numberline {2.1.2}Earth oblateness}{3}{subsubsection.2.1.2}
 \contentsline {subsection}{\numberline {2.2}Methodology}{3}{subsection.2.2}
 \contentsline {subsection}{\numberline {2.3}Results/Discussion}{3}{subsection.2.3}
 \contentsline {section}{\numberline {3}Orbital Determination}{4}{section.3}
