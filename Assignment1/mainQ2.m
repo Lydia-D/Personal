@@ -9,9 +9,9 @@ constants();
 
 %% User Input
 dt = 100; % time step seconds
-days = 12;
-Animations = 0; % 1 for one, 0 for off
-StatePlots = 1;
+days = 1;
+Animations =0; % 1 for one, 0 for off
+StatePlots = 0;
 %% Van Allen Probes NORAD ID: 38752 Constants
 % inc = deg2rad(10.1687);
 % Rasc = deg2rad(46.5607);
@@ -47,7 +47,7 @@ if Animations == 1
     hold on
     set(VanAllenAxes);
     figsim.sat = scatter3(NaN,NaN,NaN,'filled','XDatasource','X_ECI(1,1)','YDataSource','X_ECI(2,1)','ZDataSource','X_ECI(3,1)');
-    figsim.orbit = plot3(NaN,NaN,NaN,'k','XDatasource','X_ECIstore(1,:)','YDatasource','X_ECIstore(2,:)','ZDatasource','X_ECIstore(3,:)');
+    figsim.orbit = plot3(NaN,NaN,NaN,'k','XDatasource','X_ECIstore(1,1:i)','YDatasource','X_ECIstore(2,1:i)','ZDatasource','X_ECIstore(3,1:i)');
     
     % ECI coorrdinate frame axes
     T_ECI = (r_earth+6*10^6).*eye(4);
@@ -65,7 +65,7 @@ if Animations == 1
     figgnd.map = geoshow(Nasa_A,Nasa_R);
     hold on
     figgnd.sat = plot(NaN,NaN,'bo','MarkerFaceColor','b','XDatasource','X_LLHGD(2,1)','YDataSource','X_LLHGD(1,1)');
-    figgnd.orbit = plot(NaN,NaN,'.c','XDatasource','X_LLHGDstore(2,:)','YDatasource','X_LLHGDstore(1,:)');
+    figgnd.orbit = plot(NaN,NaN,'.c','XDatasource','X_LLHGDstore(2,1:i)','YDatasource','X_LLHGDstore(1,1:i)');
 end
 
 %% Integration

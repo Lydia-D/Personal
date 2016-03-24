@@ -20,13 +20,26 @@ constants();
 
 %% User Input
 dt = 100; % seconds
-Animations = 0;
+Animations = 1;
 StatePlots = 0;
 days = 1;
 
+% comment out parameters
 %% Van Allen Probes NORAD ID: 38752 Constants
 load VanAllenepoch1;  % created from fn 'createorbitpar.m'
         
+%% ISS
+% inc = deg2rad(51.6429);
+% Rasc = deg2rad(123.7637);
+% e = 0.0002017;
+% omega = deg2rad(351.0445);
+% M0 = 342.5794; % mean anomaly
+% MM = 15.54235390; % mean number of orbits per day
+% t0 = 83.8256713*secs_per_day; % time at epoch
+% a = (mu_earth/(MM*2*pi/secs_per_day).^2).^(1/3); % m from mean motion TLE 
+% p = a*(1-e^2);% semilatus rectum
+% n = sqrt(mu_earth/a^3);  % mean motion
+
 %% 3D Simulation Setup
 if Animations == 1
     load VanAllenAxes;
@@ -35,7 +48,7 @@ if Animations == 1
     hold on
     figsim.axes = set(VanAllenAxes);
     figsim.sat = scatter3(NaN,NaN,NaN,'filled','XDatasource','X_ECI(1,1)','YDataSource','X_ECI(2,1)','ZDataSource','X_ECI(3,1)');
-    figsim.orbit = plot3(NaN,NaN,NaN,'k','XDatasource','X_ECIstore(1,:)','YDatasource','X_ECIstore(2,:)','ZDatasource','X_ECIstore(3,:)');
+    figsim.orbit = plot3(NaN,NaN,NaN,'k','XDatasource','X_ECIstore(1,1:i)','YDatasource','X_ECIstore(2,1:i)','ZDatasource','X_ECIstore(3,1:i)');
     T_ECI = (r_earth+6*10^6).*eye(4);
 
     % position of ECEF frame at t0 rel to ECI
@@ -53,7 +66,7 @@ if Animations == 1
     title('Ground Trace of Van Allen Probe')
     hold on
     figgnd.sat = plot(NaN,NaN,'bo','MarkerFaceColor','b','XDatasource','X_LLHGD(2,1)','YDataSource','X_LLHGD(1,1)');
-    figgnd.orbit = plot(NaN,NaN,'.c','XDatasource','X_LLHGDstore(2,:)','YDatasource','X_LLHGDstore(1,:)');
+    figgnd.orbit = plot(NaN,NaN,'.c','XDatasource','X_LLHGDstore(2,1:i)','YDatasource','X_LLHGDstore(1,1:i)');
 end
 %% 3D time solution
 
@@ -62,6 +75,7 @@ timevec = t0:dt:t0+secs_per_day*days;
 % preallocation for speed
 X_orbitstore(6,length(timevec)) = 0;
 X_ECIstore(6,length(timevec)) = 0;
+X_ECEFstore(3,length(timevec)) = 0;
 X_LLHGDstore(3,length(timevec)) = 0;
 
 for t = t0:dt:t0+secs_per_day*days
@@ -86,6 +100,7 @@ for t = t0:dt:t0+secs_per_day*days
         X_ECIstore(1:6,i) = X_ECI(1:6,1);  % to plot orbit from beginning
         
         X_ECEF = eci2ecef(X_ECI(1:3,1),t); % only position
+        X_ECEFstore(1:3,i) = X_ECEF;
         X_LLHGD = rad2deg(ecef2llhgd(X_ECEF));
         X_LLHGDstore(1:3,i) = X_LLHGD;
        
@@ -102,19 +117,24 @@ for t = t0:dt:t0+secs_per_day*days
         i = i+1;
 
 end
-    
+
+%% Calculate Period
+P_kep = Period_AC(X_ECIstore(1,:),dt);
+fprintf('The calculated period for the keplerian model is %.4e hours\nand the analytical period is %.4e hours\n',P_kep,24/MM)
 
 %% State plots
 if StatePlots == 1
   figstate.Q1 = figure(3);
   % ECI states
-  Stateplot(X_ECIstore,timevec,figstate.Q1,{},{'m','m','m','m/s','m/s','m/s'},'b');
+  Stateplot(X_ECIstore,timevec,figstate.Q1,{},{'m','m','m','m/s','m/s','m/s'},'b',{});
   
   % Perifocal states
   figstate.perifocal = figure(4);
-  Stateplot(X_orbitstore,timevec,figstate.perifocal,{},{'m','m','m','m/s','m/s','m/s'},'r');
+  Stateplot(X_orbitstore,timevec,figstate.perifocal,{},{'m','m','m','m/s','m/s','m/s'},'r',{});
 
 end
 
 %% save to use with Q2
-X_ECIstore_kep = X_ECIstore
+% X_ECIstore_kep = X_ECIstore;
+% timevec1day = timevec;
+% save Keplerian X_ECIstore_kep timevec1day

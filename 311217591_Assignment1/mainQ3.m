@@ -8,12 +8,12 @@ constants();
 
 %% User Input
 dt = 100; % seconds
-Animation = 1;
-StatePlots = 0;
+Animation = 0;
+StatePlots = 1;
 days = 1;
 
 % Ground station position
-Gnd_LLH = [deg2rad(19.0);deg2rad(-155.6);367]; %http://www.sscspace.com/south-point-satellite-station-4
+Gnd_LLH = [deg2rad(39.10);deg2rad(-76.53);140]; %http://www.sscspace.com/south-point-satellite-station-4
 Gnd_ECEF = llhgd2ecef(Gnd_LLH);
 
 %% Van Allen Probes NORAD ID: 38752 Constants
@@ -56,7 +56,7 @@ timevec = t0:dt:t0+secs_per_day*days;
 X_ECIstore(6,length(timevec)) = 0;  % [x,y,z,vx,vy,vz]'
 X_ECEFstore(3,length(timevec)) = 0; % [x,y,z]'
 X_LLHGDstore(3,length(timevec)) = 0;% [lat,long,height]'
-Obs(3,length(timevec)) = 0;         % [R,az,el]'
+Obs(4,length(timevec)) = 0;         % [R,az,el]'
 X_ECItrace(3,length(timevec)) = 0;  % [x,y,z]' viewed by gnd station    
 X_LLHGDtrace(3,length(timevec)) = 0;% [lat,long,height]' viewed by gnd station 
  
@@ -79,7 +79,8 @@ for t = t0:dt:t0+secs_per_day*days
     X_LLHGDstore(1:3,i) = X_LLHGD;
     
     % Test if in view of Gnd Station
-    Obs(1:3,i) = gndstation(X_ECEF,Gnd_LLH,Gnd_ECEF);
+    Obs(1:3,i) = gndstation(X_ECEF,Gnd_LLH,Gnd_ECEF,deg2rad(10));
+    Obs(4,i) = timevec(i);
     if ~isnan(Obs(1:3,i))
         X_ECItrace(1:3,i) = X_ECIstore(1:3,i);
         X_LLHGDtrace(1:3,i) = X_LLHGDstore(1:3,i);
@@ -107,5 +108,55 @@ for t = t0:dt:t0+secs_per_day*days
     X_e = Xnext;
 end
 
-%% Herrick-Gibbs
+% delete out of sight observations
+OutOfSight = any(isnan(Obs),1);
+Obs(:,OutOfSight) = []; 
 
+%% Max elevation and percentage of time
+MaxEl = max(Obs(3,:));
+PerTime = size(Obs,2)./length(timevec)*100;
+fprintf('The maximum elevation was %.2f deg\nand the percentage of time the satellite was in view was %2.f percent\n',rad2deg(MaxEl),PerTime);
+
+%% No noise
+HG_determine_disp(Obs(1:3,1:3),Obs(4,1:3),Gnd_LLH);
+
+%% Herrick-Gibbs
+% Obs = [R,az,el,t]
+
+% add gaussian white noise
+NoisyObs(4,:) = Obs(4,:); % any error on time?
+SNR = [3:1:40];  % signal to noise ratios dB
+NumSamples = 50;  % take 50 sets of measurements per noise ratio
+DiffSamples = [0,7,18]; % wait 5*dt and 10*dt before next observation
+
+% preallocate vector of classical elements calculated from HG
+X_class_noise(1:6,NumSamples) = 0; 
+Emean(6,length(SNR)) = 0;
+Estd(6,length(SNR)) = 0;
+
+
+% last possible valid measurement 10 from end
+for j = 1:1:length(SNR)
+    RandSet = randi(length(Obs)-20,[1,NumSamples]);  
+    NoisyObs(1,:) = awgn(Obs(1,:),SNR(j));
+    NoisyObs(2:3,:) = awgn(Obs(2:3,:),SNR(j));
+    for i = 1:1:NumSamples
+        X_class_noise(1:6,i) = HG_determine(NoisyObs(1:3,RandSet(i)+DiffSamples),NoisyObs(4,RandSet(i):RandSet(i)+2),Gnd_LLH);
+    end
+        Error = abs(X_class_noise - X_c*ones(1,NumSamples));
+        Emean(1:6,j) = mean(X_class_noise,2);
+        Estd(1:6,j) = std(X_class_noise');
+end
+
+% X_c: vector of classical elements with true values, loaded from VanAllenepoch1
+
+FigNoiseErrors = figure(3);
+Stateplot(Emean,SNR,FigNoiseErrors.Number,{'Rasc','omega','inc','a','e','theta'},{'degrees','degrees','degrees','m','','degrees'},'x',{})
+
+
+
+% figure(3)
+% clf
+% plot(Obs(4,:),Obs(2:3,:),'b')
+% hold on
+% plot(NoisyObs(4,:),NoisyObs(2:3,:),'r')

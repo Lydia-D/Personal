@@ -20,13 +20,26 @@ constants();
 
 %% User Input
 dt = 100; % seconds
-Animations = 0;
-StatePlots = 1;
+Animations = 1;
+StatePlots = 0;
 days = 1;
 
+% comment out parameters
 %% Van Allen Probes NORAD ID: 38752 Constants
 load VanAllenepoch1;  % created from fn 'createorbitpar.m'
         
+%% ISS
+% inc = deg2rad(51.6429);
+% Rasc = deg2rad(123.7637);
+% e = 0.0002017;
+% omega = deg2rad(351.0445);
+% M0 = 342.5794; % mean anomaly
+% MM = 15.54235390; % mean number of orbits per day
+% t0 = 83.8256713*secs_per_day; % time at epoch
+% a = (mu_earth/(MM*2*pi/secs_per_day).^2).^(1/3); % m from mean motion TLE 
+% p = a*(1-e^2);% semilatus rectum
+% n = sqrt(mu_earth/a^3);  % mean motion
+
 %% 3D Simulation Setup
 if Animations == 1
     load VanAllenAxes;
@@ -35,7 +48,7 @@ if Animations == 1
     hold on
     figsim.axes = set(VanAllenAxes);
     figsim.sat = scatter3(NaN,NaN,NaN,'filled','XDatasource','X_ECI(1,1)','YDataSource','X_ECI(2,1)','ZDataSource','X_ECI(3,1)');
-    figsim.orbit = plot3(NaN,NaN,NaN,'k','XDatasource','X_ECIstore(1,:)','YDatasource','X_ECIstore(2,:)','ZDatasource','X_ECIstore(3,:)');
+    figsim.orbit = plot3(NaN,NaN,NaN,'k','XDatasource','X_ECIstore(1,1:i)','YDatasource','X_ECIstore(2,1:i)','ZDatasource','X_ECIstore(3,1:i)');
     T_ECI = (r_earth+6*10^6).*eye(4);
 
     % position of ECEF frame at t0 rel to ECI
@@ -53,7 +66,7 @@ if Animations == 1
     title('Ground Trace of Van Allen Probe')
     hold on
     figgnd.sat = plot(NaN,NaN,'bo','MarkerFaceColor','b','XDatasource','X_LLHGD(2,1)','YDataSource','X_LLHGD(1,1)');
-    figgnd.orbit = plot(NaN,NaN,'.c','XDatasource','X_LLHGDstore(2,:)','YDatasource','X_LLHGDstore(1,:)');
+    figgnd.orbit = plot(NaN,NaN,'.c','XDatasource','X_LLHGDstore(2,1:i)','YDatasource','X_LLHGDstore(1,1:i)');
 end
 %% 3D time solution
 

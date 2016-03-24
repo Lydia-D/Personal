@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.3.10)  24 MAR 2016 12:59
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.3.10)  24 MAR 2016 16:54
 entering extended mode
 **./Space3_Assign1.tex
 (Space3_Assign1.tex
@@ -1046,7 +1046,7 @@ Package caption Info: End \AtBeginDocument code.
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 
-<./IMAGEtitle2f.jpg, id=86, 181.6386pt x 542.025pt>
+<./IMAGEtitle2f.jpg, id=90, 181.6386pt x 542.025pt>
 File: ./IMAGEtitle2f.jpg Graphic file (type jpg)
  <use ./IMAGEtitle2f.jpg>
 Package pdftex.def Info: ./IMAGEtitle2f.jpg used on input line 104.
@@ -1098,11 +1098,11 @@ e2f.jpg>]
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
- <./Plag.pdf, id=97, 597.55246pt x 845.07718pt>
+ <./Plag.pdf, id=101, 597.19112pt x 845.19763pt>
 File: ./Plag.pdf Graphic file (type pdf)
  <use ./Plag.pdf>
 Package pdftex.def Info: ./Plag.pdf used on input line 140.
-(pdftex.def)             Requested size: 478.86255pt x 677.2361pt.
+(pdftex.def)             Requested size: 478.86255pt x 677.71953pt.
 LaTeX Font Info:    Font shape `OT1/cmr/bx/sc' in size <17.28> not available
 (Font)              Font shape `OT1/cmr/b/sc' tried instead on input line 146.
 
@@ -1158,20 +1158,49 @@ File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 LaTeX Font Info:    Try loading font information for TS1+ptm on input line 11.
 ("C:\Users\Lydia\AppData\Local\Programs\MiKTeX 2.9\tex\latex\psnfss\ts1ptm.fd"
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
-)) <VanAllenNASA.jpg, id=178, 506.89375pt x 253.94875pt>
+)) <VanAllenNASA.jpg, id=197, 506.89375pt x 253.94875pt>
 File: VanAllenNASA.jpg Graphic file (type jpg)
  <use VanAllenNASA.jpg>
 Package pdftex.def Info: VanAllenNASA.jpg used on input line 64.
 (pdftex.def)             Requested size: 338.58632pt x 169.63327pt.
 
-Overfull \hbox (46.51482pt too wide) in paragraph at lines 79--96
+Overfull \hbox (41.03981pt too wide) in paragraph at lines 79--94
  [][] 
  []
 
 
-LaTeX Warning: `h' float specifier changed to `ht'.
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-) (Ques2.tex [2] [3 <./VanAllenNASA.jpg>]
+<Q2_sim_top.png, id=200, 421.575pt x 316.18124pt>
+File: Q2_sim_top.png Graphic file (type png)
+ <use Q2_sim_top.png>
+Package pdftex.def Info: Q2_sim_top.png used on input line 100.
+(pdftex.def)             Requested size: 338.58632pt x 253.944pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<Q2_sim_side.png, id=201, 421.575pt x 316.18124pt>
+File: Q2_sim_side.png Graphic file (type png)
+ <use Q2_sim_side.png>
+Package pdftex.def Info: Q2_sim_side.png used on input line 106.
+(pdftex.def)             Requested size: 338.58632pt x 253.944pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+) (Ques2.tex [2]
+
+LaTeX Warning: Text page 3 contains only floats.
+
+[3 <./VanAllenNASA.jpg> <./Q2_sim_top.png (PNG copy)>] [4 <./Q2_sim_side.png (P
+NG copy)>] <Q2_gnd.png, id=233, 421.575pt x 316.18124pt>
+File: Q2_gnd.png Graphic file (type png)
+ <use Q2_gnd.png>
+Package pdftex.def Info: Q2_gnd.png used on input line 39.
+(pdftex.def)             Requested size: 483.69687pt x 362.78061pt.
+
+[5 <./Q2_gnd.png (PNG copy)>]
 Package epstopdf Info: Source file: <Q2classical_overtime.eps>
 (epstopdf)                    date: 2016-03-24 11:21:34
 (epstopdf)                    size: 1426268 bytes
@@ -1181,16 +1210,16 @@ Package epstopdf Info: Source file: <Q2classical_overtime.eps>
 (epstopdf)                    size: 346963 bytes
 (epstopdf)             Command: <epstopdf --outfile=Q2classical_overtime-eps-co
 nverted-to.pdf Q2classical_overtime.eps>
-(epstopdf)             \includegraphics on input line 39.
+(epstopdf)             \includegraphics on input line 54.
 Package epstopdf Info: Output file is already uptodate.
 
-<Q2classical_overtime-eps-converted-to.pdf, id=205, 1028.84375pt x 489.83pt>
+<Q2classical_overtime-eps-converted-to.pdf, id=243, 1028.84375pt x 489.83pt>
 File: Q2classical_overtime-eps-converted-to.pdf Graphic file (type pdf)
 
 <use Q2classical_overtime-eps-converted-to.pdf>
 Package pdftex.def Info: Q2classical_overtime-eps-converted-to.pdf used on inpu
-t line 39.
-(pdftex.def)             Requested size: 483.69687pt x 285.574pt.
+t line 54.
+(pdftex.def)             Requested size: 483.69687pt x 276.09673pt.
 Package epstopdf Info: Source file: <Q2equinoctial_overtime.eps>
 (epstopdf)                    date: 2016-03-24 11:22:34
 (epstopdf)                    size: 1425302 bytes
@@ -1200,43 +1229,87 @@ f>
 (epstopdf)                    size: 321153 bytes
 (epstopdf)             Command: <epstopdf --outfile=Q2equinoctial_overtime-eps-
 converted-to.pdf Q2equinoctial_overtime.eps>
-(epstopdf)             \includegraphics on input line 45.
+(epstopdf)             \includegraphics on input line 60.
 Package epstopdf Info: Output file is already uptodate.
 
-<Q2equinoctial_overtime-eps-converted-to.pdf, id=207, 1028.84375pt x 489.83pt>
+<Q2equinoctial_overtime-eps-converted-to.pdf, id=245, 1028.84375pt x 489.83pt>
 File: Q2equinoctial_overtime-eps-converted-to.pdf Graphic file (type pdf)
 
 <use Q2equinoctial_overtime-eps-converted-to.pdf>
 Package pdftex.def Info: Q2equinoctial_overtime-eps-converted-to.pdf used on in
-put line 45.
-(pdftex.def)             Requested size: 483.69687pt x 285.574pt.
+put line 60.
+(pdftex.def)             Requested size: 483.69687pt x 276.09673pt.
+) (Ques3.tex [6 <./Q2classical_overtime-eps-converted-to.pdf> <./Q2equinoctial_
+overtime-eps-converted-to.pdf>] <Q3_gnd.png, id=269, 421.575pt x 316.18124pt>
+File: Q3_gnd.png Graphic file (type png)
+ <use Q3_gnd.png>
+Package pdftex.def Info: Q3_gnd.png used on input line 19.
+(pdftex.def)             Requested size: 483.69687pt x 362.78061pt.
+
+<Q3_sim_top.png, id=270, 421.575pt x 316.18124pt>
+File: Q3_sim_top.png Graphic file (type png)
+ <use Q3_sim_top.png>
+Package pdftex.def Info: Q3_sim_top.png used on input line 24.
+(pdftex.def)             Requested size: 338.58632pt x 253.944pt.
 
 
-LaTeX Warning: `h' float specifier changed to `ht'.
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-) (Ques3.tex [4 <./Q2classical_overtime-eps-converted-to.pdf>]) [5 <./Q2equinoc
-tial_overtime-eps-converted-to.pdf>] (Space3_Assign1.bbl
+[7 <./Q3_gnd.png (PNG copy)>] <nonoise.png, id=275, 553.31718pt x 167.12437pt>
+File: nonoise.png Graphic file (type png)
 
-LaTeX Warning: Empty `thebibliography' environment on input line 24.
+<use nonoise.png>
+Package pdftex.def Info: nonoise.png used on input line 39.
+(pdftex.def)             Requested size: 483.69687pt x 146.09573pt.
+ <NOISE.png, id=277, 421.575pt x 316.18124pt>
+File: NOISE.png Graphic file (type png)
+ <use NOISE.png>
+Package pdftex.def Info: NOISE.png used on input line 48.
+(pdftex.def)             Requested size: 483.69687pt x 362.78061pt.
 
-) [6] [7]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 179.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 179.
- (Space3_Assign1.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 179.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 179.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+) [8 <./Q3_sim_top.png (PNG copy)> <./nonoise.png>] [9 <./NOISE.png (PNG copy)>
+] <Q1_gnd_ISS.png, id=287, 421.575pt x 316.18124pt>
+File: Q1_gnd_ISS.png Graphic file (type png)
+ <use Q1_gnd_ISS.png>
+Package pdftex.def Info: Q1_gnd_ISS.png used on input line 185.
+(pdftex.def)             Requested size: 483.69687pt x 362.78061pt.
+
+<Q1_sim_ISS.png, id=288, 421.575pt x 316.18124pt>
+File: Q1_sim_ISS.png Graphic file (type png)
+ <use Q1_sim_ISS.png>
+Package pdftex.def Info: Q1_sim_ISS.png used on input line 192.
+(pdftex.def)             Requested size: 580.43475pt x 435.33673pt.
+
+Overfull \hbox (96.73788pt too wide) in paragraph at lines 192--193
+ [][] 
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[10 <./Q1_gnd_ISS.png (PNG copy)>]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 200.
+ [11 <./Q1_sim_ISS.png (PNG copy)>]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 200.
+
+(Space3_Assign1.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 200.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 200.
 Package rerunfilecheck Info: File `Space3_Assign1.out' has not changed.
-(rerunfilecheck)             Checksum: 0440E7CA9982C2E132871009DFF72222;1360.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 179.
+(rerunfilecheck)             Checksum: 85C8A0FB55B535C4D71301E908FECB7C;1440.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 200.
  ) 
 Here is how much of TeX's memory you used:
- 25899 strings out of 493634
- 544125 string characters out of 3135239
- 698747 words of memory out of 3000000
- 28764 multiletter control sequences out of 15000+200000
+ 25960 strings out of 493634
+ 545066 string characters out of 3135239
+ 699376 words of memory out of 3000000
+ 28805 multiletter control sequences out of 15000+200000
  22139 words of font info for 77 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
- 55i,13n,54p,906b,1308s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 55i,13n,54p,1137b,1308s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\Lydia\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\
 tcrm1095.pk>{C:/Users/Lydia/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/f
 ontname/8r.enc} <C:\Users\Lydia\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\public
@@ -1261,9 +1334,9 @@ MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/Lydia/AppData/Lo
 cal/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt12.pfb><C:/Users/Lyd
 ia/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/courier/ucrr8a.pfb><C:/Use
 rs/Lydia/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb>
-Output written on Space3_Assign1.pdf (10 pages, 1125122 bytes).
+Output written on Space3_Assign1.pdf (14 pages, 1592826 bytes).
 PDF statistics:
- 377 PDF objects out of 1000 (max. 8388607)
- 55 named destinations out of 1000 (max. 500000)
- 210 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 430 PDF objects out of 1000 (max. 8388607)
+ 69 named destinations out of 1000 (max. 500000)
+ 263 words of extra memory for PDF output out of 10000 (max. 10000000)
 

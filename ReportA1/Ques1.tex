@@ -25,7 +25,7 @@ E_{i+1} &=& E_i - \frac{E-e\sin(E_i)-M_t}{1-e\cos(E_i)}
 \end{eqnarray}
 The true anomaly was calculated using
 \begin{equation}
-\theta = 2\tan^{-1}\left(\sqrt{\frac{1+e}{1-e}}\tan\left(\frac{E}{2}\right)\right)
+\theta = 2\tan^{-1}\left(\sqrt{\frac{1+e}{1-e}}\tan\left(\frac{E}{2}\right)\right) \label{trueanom}
 \end{equation} 
 The general equation for the radius of an ellipse
 \begin{eqnarray}
@@ -67,33 +67,44 @@ The orbit was highly eccentric in order to cover the entire radiation belt regio
 \end{figure}
 
 % http://www.scf.jhuapl.edu/
-\subsubsection{Solar Radiation and Climate Experiment (SORCE)}
-- long term measurements of total solar irradiance in UV and VNIR
-- how and why variability occurs at the sun and how it affects our atmosphere and climate
-- launched in 2003
+\subsubsection{International Space Station}
+See Figure \ref{fig:Q1_gnd_ISS} and \ref{fig:Q1_sim_ISS} in the appendix. The ISS needs to stay below the Inner Van Allen belt for the astronauts safety, which required a very low orbit and an almost perfect circle.
+
+
 \subsubsection{Orbital Properties}
-\begin{table}[h]
+\begin{table}[h!]
 \centering
 \caption{Orbital properties of simulated satellites. (* indicates data taken directly from TLEs)}
 \label{Q1.orbitprop}
 \begin{tabular}{|l|c|c|c|c|}
 	\hline
-	Orbital Properties              & Variable Name &     Units      & Van Allen Probe A &     SORCE      \\ \hline
-	NORAD ID                        &               &                &                   &      27651       \\ \hline
-	*Julian year/day data was taken &      t0       &    year/day    & 2016 68.37507029  & 2016 82.69823837 \\ \hline
-	Semimajor axis                  &       a       &       m        &                   &  \\ \hline
-	*Eccentricity                   &       e       &       -        &     0.6813430     &    0.0024311     \\ \hline
-	*Inclination angle              &      inc      &    degrees     &      10.1687      &      39.9961      \\ \hline
-	*Right ascension of the node    &     Rasc      &    degrees     &      46.5607      &     317.0592     \\ \hline
-	*Argument of Perigee            &     omega     &    degrees     &      77.2770      &     301.6655     \\ \hline
-	*Mean Anomaly                   &      Mt       &    degrees     &     346.0491      &     58.1763      \\\hline
-	*Mean Motion             &      MM       & orbits per day &    2.681033090    &     14.88275952      \\ \hline
-	Analytical Period               &               &                &                   &  \\ \hline
-	Computational Period            &               &                &                   &  \\ \hline
-	Altitude at Perigee             &               &                &                   &  \\ \hline
-	Altitude at Apogee              &               &                &                   &  \\ \hline
+	Orbital Properties              & Variable Name &     Units      & Van Allen Probe A &     ISS      \\ \hline
+	NORAD ID                        &               &                &                   &      25544       \\ \hline
+	*Julian year/day data was taken &      t0       &    year/day    & 2016 68.37507029  & 2016 83.8256713 \\ \hline
+	Semimajor axis                  &       a       &       m        &                   &    \\ \hline
+	*Eccentricity                   &       e       &       -        &     0.6813430     &    0.0002017     \\ \hline
+	*Inclination angle              &      inc      &    degrees     &      10.1687      &      51.6429      \\ \hline
+	*Right ascension of the node    &     Rasc      &    degrees     &      46.5607      &     123.7637     \\ \hline
+	*Argument of Perigee            &     omega     &    degrees     &      77.2770      &     351.0445     \\ \hline
+	*Mean Anomaly                   &      Mt       &    degrees     &     346.0491      &     342.5794      \\\hline
+	*Mean Motion             &      MM       & orbits per day &    2.681033090    &     15.54235390      \\ \hline
+	Analytical Period               &     P          &        hours        &        8.500         & 1.5556 \\ \hline
+	Computational Period            &  Pc             &            hours    &   8.9518                & 1.5442 \\ \hline
 \end{tabular}
 \end{table}
+
+\begin{figure}[h!]
+\centering
+\caption{Top View of keplerian orbit simulation}
+\label{fig:Q2_sim_top}
+\includegraphics[width=0.7\linewidth]{Q2_sim_top}
+\end{figure}
+\begin{figure}[h!]
+\centering
+\caption{SIde view of keplerian orbit simulation}
+\label{fig:Q2_sim_side}
+\includegraphics[width=0.7\linewidth]{Q2_sim_side}
+\end{figure}
 
 % The Van Allen Probes Mission
 %Nicola Fox, James L. Burch
