@@ -17,7 +17,7 @@ function X_c = equin2class(X_e)
     inc = atan2(2.*sqrt(h.^2+k.^2),(1-h.^2-k.^2));
     omega = atan2(g.*h-f.*k,f.*h+g.*k);
     Rasc = atan2(k,h);
-    theta = wrapToPi(L - atan2(g,f));
+    theta = L - atan2(g,f);
     
     X_c = [Rasc;omega;inc;a;e;theta];
 end

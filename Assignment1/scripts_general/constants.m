@@ -6,6 +6,10 @@
 %  to be modified anywhere else, so that all references to these variables
 %  will always return the same values everytime as defined here.
 
+global Nasa_A;
+global Nasa_R;
+load NASAdata; % precreated Nasa_A and Nasa_R from CreateNasa()close all % figures
+
 % This is mu = GM for the Earth (m^3/s^2)
 global mu_earth;
 mu_earth = 398600.4418e9;

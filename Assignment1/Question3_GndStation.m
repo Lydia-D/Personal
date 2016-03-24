@@ -2,26 +2,15 @@
 % Question 3 simulation with grnd trace from gnd station
 clc
 clear
-RunMe();
-close all % figures
-Animation = 1;
-dt  = 100;
-% figure(4)
-% % gnd station location
-% Gnd_LLH = [deg2rad(2);deg2rad(-62);0];
-% 
-% Gnd_ECEF = llhgc2ecef(Gnd_LLH);
-% 
-% Sat_ECEF = X_ECEFstore(1:3,:) - Gnd_ECEF*ones(1,865);
-% Sat_LG_cart = ecef2lg(Sat_ECEF,Gnd_LLH);
-% Sat_LG_polar= cartesian2polar(Sat_LG_cart);
-% 
-% subplot(1,3,1), plot(time,Sat_LG_polar(1,:))
-% title('Range')
-% subplot(1,3,2), plot(time,Sat_LG_polar(2,:))
-% title('Azimuth')
-% subplot(1,3,3), plot(time,Sat_LG_polar(3,:))
-% title('Elevation')
+close all
+addpath('./module_conversion','./module_testing','./scripts_general','./scripts_prelim','./Data','./module_plot','./Subfns')
+constants();
+
+%% User Input
+dt = 100; % seconds
+Animations = 1;
+StatePlots = 0;
+days = 2;
 
     Gnd_LLH = [deg2rad(2);deg2rad(-62);0];
     Gnd_ECEF = llhgd2ecef(Gnd_LLH);

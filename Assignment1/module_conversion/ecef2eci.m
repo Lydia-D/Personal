@@ -17,11 +17,8 @@ function pos_eci = ecef2eci(pos_ecef, times)
     % This is the rotation rate of Earth (rad/s)
     global w_earth;  
     pos_eci(1,:) = cos(w_earth.*times).*pos_ecef(1,:) - sin(w_earth.*times).*pos_ecef(2,:);
-    pos_eci(2,:) = sin(w_earth.*times).*pos_ecef(1,:) + cos(w_earth.*times).*pos_ecef(2,:);
+    pos_eci(2,:) =  sin(w_earth.*times).*pos_ecef(1,:) + cos(w_earth.*times).*pos_ecef(2,:);
     pos_eci(3,:) = pos_ecef(3,:);
     
-%     C = [cos(w_earth*times),sin(w_earth*times),0;...
-%         -sin(w_earth*times),cos(w_earth*times),0;...
-%         0,0,1];                                         % transform matrix
-%     pos_eci = C*pos_ecef;
+
 end

@@ -2,13 +2,17 @@
 % Question 3 simulation with grnd trace from gnd station
 clc
 clear
-RunMe();
-close all % figures
-Animation = 1;
-dt  = 100;
-days =1;
+close all
+addpath('./module_conversion','./module_testing','./scripts_general','./scripts_prelim','./Data','./module_plot','./Subfns')
+constants();
 
-% Ground station
+%% User Input
+dt = 100; % seconds
+Animation = 1;
+StatePlots = 0;
+days = 1;
+
+% Ground station position
 Gnd_LLH = [deg2rad(19.0);deg2rad(-155.6);367]; %http://www.sscspace.com/south-point-satellite-station-4
 Gnd_ECEF = llhgd2ecef(Gnd_LLH);
 
@@ -21,8 +25,8 @@ if Animation == 1
     figure(1)
     figsim.globe = Earthplot();
     figsim.axes = set(VanAllenAxes);
-    figsim.trace = plot3(NaN,NaN,NaN,'m','LineWidth',2,'XDatasource','X_ECItrace(1,:)','YDatasource','X_ECItrace(2,:)','ZDatasource','X_ECItrace(3,:)');
-    figsim.orbit = plot3(NaN,NaN,NaN,'k','XDatasource','X_ECIstore(1,:)','YDatasource','X_ECIstore(2,:)','ZDatasource','X_ECIstore(3,:)');
+    figsim.trace = plot3(NaN,NaN,NaN,'m','LineWidth',2,'XDatasource','X_ECItrace(1,1:i)','YDatasource','X_ECItrace(2,1:i)','ZDatasource','X_ECItrace(3,1:i)');
+    figsim.orbit = plot3(NaN,NaN,NaN,'k','XDatasource','X_ECIstore(1,1:i)','YDatasource','X_ECIstore(2,1:i)','ZDatasource','X_ECIstore(3,1:i)');
     figsim.sat = scatter3(NaN,NaN,NaN,'filled','XDatasource','X_ECI(1,1)','YDataSource','X_ECI(2,1)','ZDataSource','X_ECI(3,1)');
 
     % ECI coordinate frame axes
@@ -41,13 +45,21 @@ if Animation == 1
     figgnd.map = geoshow(Nasa_A,Nasa_R);
     hold on
     figgnd.sat = plot(NaN,NaN,'bo','MarkerFaceColor','b','XDatasource','X_LLHGD(2,1)','YDataSource','X_LLHGD(1,1)');
-    figgnd.orbit = plot(NaN,NaN,'.c','XDatasource','X_LLHGDstore(2,:)','YDatasource','X_LLHGDstore(1,:)');
-    figgnd.trace = plot(NaN,NaN,'.m','LineWidth',2,'XDatasource','X_LLHGDtrace(2,:)','YDatasource','X_LLHGDtrace(1,:)');
+    figgnd.orbit = plot(NaN,NaN,'.c','XDatasource','X_LLHGDstore(2,1:i)','YDatasource','X_LLHGDstore(1,1:i)');
+    figgnd.trace = plot(NaN,NaN,'.m','LineWidth',2,'XDatasource','X_LLHGDtrace(2,1:i)','YDatasource','X_LLHGDtrace(1,1:i)');
 end
 %% 3D time solution
 
 i = 1; % store index
-
+timevec = t0:dt:t0+secs_per_day*days;
+% preallocation for speed
+X_ECIstore(6,length(timevec)) = 0;  % [x,y,z,vx,vy,vz]'
+X_ECEFstore(3,length(timevec)) = 0; % [x,y,z]'
+X_LLHGDstore(3,length(timevec)) = 0;% [lat,long,height]'
+Obs(3,length(timevec)) = 0;         % [R,az,el]'
+X_ECItrace(3,length(timevec)) = 0;  % [x,y,z]' viewed by gnd station    
+X_LLHGDtrace(3,length(timevec)) = 0;% [lat,long,height]' viewed by gnd station 
+ 
 for t = t0:dt:t0+secs_per_day*days
     
     % integrate to next time step
@@ -66,10 +78,7 @@ for t = t0:dt:t0+secs_per_day*days
     X_LLHGD     = [rad2deg(X_LLHGD_rad(1:2,1));X_LLHGD_rad(3,1)]; % degrees to plot
     X_LLHGDstore(1:3,i) = X_LLHGD;
     
-    
-        
     % Test if in view of Gnd Station
-    TimeVec(1,i) = t;
     Obs(1:3,i) = gndstation(X_ECEF,Gnd_LLH,Gnd_ECEF);
     if ~isnan(Obs(1:3,i))
         X_ECItrace(1:3,i) = X_ECIstore(1:3,i);
@@ -98,5 +107,5 @@ for t = t0:dt:t0+secs_per_day*days
     X_e = Xnext;
 end
 
-
+%% Herrick-Gibbs
 

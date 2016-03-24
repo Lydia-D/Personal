@@ -14,6 +14,7 @@ function X_ECI = orbit2ECI(X_orbit,Rasc,i,omega)
     X_ECI(1,:) =  (cos(Rasc).*cos(omega)-sin(Rasc).*sin(omega).*cos(i)).*X_orbit(1,:) +(-cos(Rasc).*sin(omega)-sin(Rasc).*cos(omega).*cos(i)).*X_orbit(2,:) + sin(Rasc).*sin(i).*X_orbit(3,:);
     X_ECI(2,:) = (sin(Rasc).*cos(omega)+cos(Rasc).*sin(omega).*cos(i)).*X_orbit(1,:) + (-sin(Rasc).*sin(omega)+cos(Rasc).*cos(omega).*cos(i)).*X_orbit(2,:) -cos(Rasc).*sin(i).*X_orbit(3,:);
     X_ECI(3,:) = sin(omega).*sin(i).*X_orbit(1,:) + cos(omega).*sin(i).*X_orbit(2,:) + cos(i).*X_orbit(3,:);
+
     X_ECI(4,:) =  (cos(Rasc).*cos(omega)-sin(Rasc).*sin(omega).*cos(i)).*X_orbit(4,:) +(-cos(Rasc).*sin(omega)-sin(Rasc).*cos(omega).*cos(i)).*X_orbit(5,:) + sin(Rasc).*sin(i).*X_orbit(6,:);
     X_ECI(5,:) = (sin(Rasc).*cos(omega)+cos(Rasc).*sin(omega).*cos(i)).*X_orbit(4,:) + (-sin(Rasc).*sin(omega)+cos(Rasc).*cos(omega).*cos(i)).*X_orbit(5,:) -cos(Rasc).*sin(i).*X_orbit(6,:);
     X_ECI(6,:) = sin(omega).*sin(i).*X_orbit(4,:) + cos(omega).*sin(i).*X_orbit(5,:) + cos(i).*X_orbit(6,:);               

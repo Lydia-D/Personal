@@ -1,20 +1,8 @@
 %% Assignment 1 Question 1 AERO4701
-% By Lydia Drabsch
-% Created 10/3/16
+% By Lydia Drabsch Created 10/3/16
 % Simulation of orbits
 
-clc
-clear
-addpath('./MatlabFunctions_Space','./Assignment1','./Assignment1/module_conversion','./Assignment1/module_testing','./Assignment1/scripts_general','./Assignment1/scripts_prelim')
-constants();
-global Nasa_A;
-global Nasa_R;
-load NASAdata; % precreated Nasa_A and Nasa_R from CreateNasa()close all % figures
-dt = 50; % seconds
-Animations = 1;
-StatePlots = 0;
-days = 2;
-% Parameters a,e,i,Omega,omega
+% Parameters a,e,i,Rasc,omega
 % a = semimajor axis = (ra+rp)/2
 % e = eccentricity = (ra-rp)/(ra+rp)
 % i = inclination angle- angle between orbit and earths equator
@@ -23,6 +11,18 @@ days = 2;
 % omega = Argument of perigee - north-south crossing and perigee from
 % orbital plane
 % X = state vector 
+
+clc
+clear
+close all
+addpath('./module_conversion','./module_testing','./scripts_general','./scripts_prelim','./Data','./module_plot','./Subfns')
+constants();
+
+%% User Input
+dt = 100; % seconds
+Animations = 0;
+StatePlots = 0;
+days = 1;
 
 %% Van Allen Probes NORAD ID: 38752 Constants
 load VanAllenepoch1;  % created from fn 'createorbitpar.m'
@@ -58,6 +58,11 @@ end
 %% 3D time solution
 
 i = 1; % store index
+timevec = t0:dt:t0+secs_per_day*days;
+% preallocation for speed
+X_orbitstore(6,length(timevec)) = 0;
+X_ECIstore(6,length(timevec)) = 0;
+X_LLHGDstore(3,length(timevec)) = 0;
 
 for t = t0:dt:t0+secs_per_day*days
         Mt = M0 + n*(t-t0);
@@ -72,7 +77,8 @@ for t = t0:dt:t0+secs_per_day*days
 
         % resolve in state space in the perifocal frame 
         % X = [x,y,z,vx,vy,vz]'
-        X_orbit = [r*cos(theta);r*sin(theta);0;-sqrt(mu_earth/p)*sin(theta);sqrt(mu_earth/p)*(e-cos(theta));0];
+        X_orbit = [r*cos(theta);r*sin(theta);0;...
+            -sqrt(mu_earth/p)*sin(theta);sqrt(mu_earth/p)*(e+cos(theta));0];
         X_orbitstore(1:6,i) = X_orbit(1:6,1);
         
         % transform to ECI orbit
@@ -101,12 +107,14 @@ end
 %% State plots
 if StatePlots == 1
   figstate.Q1 = figure(3);
-  time = t0:dt:t0+secs_per_day*days;
   % ECI states
-  Stateplot(X_ECIstore,time,figstate.Q1,{},'b');
+  Stateplot(X_ECIstore,timevec,figstate.Q1,{},{'m','m','m','m/s','m/s','m/s'},'b');
   
   % Perifocal states
   figstate.perifocal = figure(4);
-  Stateplot(X_orbitstore,time,figstate.perifocal,{},'r');
+  Stateplot(X_orbitstore,timevec,figstate.perifocal,{},{'m','m','m','m/s','m/s','m/s'},'r');
 
 end
+
+%% save to use with Q2
+X_ECIstore_kep = X_ECIstore

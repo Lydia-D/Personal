@@ -2,12 +2,16 @@
 % Question 2 Space 3 - Orbit Perturbations
 % Modified equinol elements model with numerical integration by runge kutta
 clc
-close all
 clear
-RunMe();
-Animations = 1; % 1 for one, 0 for off
-StatePlots = 1;
+close all
+addpath('./module_conversion','./module_testing','./scripts_general','./scripts_prelim','./Data','./module_plot','./Subfns')
+constants();
+
+%% User Input
+dt = 100; % time step seconds
 days = 12;
+Animations = 0; % 1 for one, 0 for off
+StatePlots = 1;
 %% Van Allen Probes NORAD ID: 38752 Constants
 % inc = deg2rad(10.1687);
 % Rasc = deg2rad(46.5607);
@@ -30,7 +34,6 @@ load VanAllenepoch1;
 %% State model parameters
 % x = [p,f,g,h,k,L]'
 % Xdot = dx/dt
-dt = 100; % time step seconds
 
 % initalise and convert to equinoctial elements
 X_c = [Rasc,omega,inc,a,e,theta]';
@@ -67,6 +70,13 @@ end
 
 %% Integration
 i = 1; % index
+timevec = t0:dt:t0+secs_per_day*days;
+% preallocation for speed
+X_estore(6,length(timevec)) = 0;
+X_ECIstore(6,length(timevec)) = 0;
+X_ECEFstore(6,length(timevec)) = 0;
+X_LLHGDstore(3,length(timevec)) = 0;
+
 for t = t0:dt:t0+secs_per_day*days
     % store current X
     X_estore(1:6,i) = X_e;
@@ -101,33 +111,52 @@ for t = t0:dt:t0+secs_per_day*days
     i = i+1;
 end
 
+%% Calculate Period
+P_kep = Period_AC(X_ECIstore(1,:),dt);
+fprintf('The calculated period for the J2 Perturbation model is %.4e hours\n',P_kep);
+
+
 %% State plots
 if StatePlots == 1
     
     X_c = equin2class(X_estore);
     
+  % Plot ECI states and compare to Keplerian model 
   figstate.Q1 = figure(3);
-  title('ECI States')
-  time = t0:dt:t0+secs_per_day*days;
-  Stateplot(X_ECIstore,time,figstate.Q1,{},'-k');
+  hold on
+  load Keplerian
+  Stateplot(X_ECIstore_kep,timevec1day/secs_per_day,figstate.Q1,{},{},'-r',{});
   
+  title('ECI States')
+  Stateplot(X_ECIstore(1:6,1:length(timevec1day)),timevec1day/secs_per_day,figstate.Q1,{},{},'--k',{});
+  legend('Keplerian Model','J2 Perturnation Model')
+  
+  % Plot orbital parameters
   figstate.classical = figure(4);
   title('Classical States')
-  Stateplot(X_c,time,figstate.classical.Number,{'Rasc','omega','inc','a','e','theta'},'-k');
+  Stateplot([rad2deg(X_c(1:3,:));X_c(4:5,:);rad2deg(X_c(6,:))],timevec/secs_per_day,figstate.classical.Number,{'Rasc','omega','inc','a','e','theta'},{'degrees','degrees','degrees','m','','degrees'},'-k',{});
 
   figstate.equin = figure(5);
   title('Equinoctial states')
-  Lwrap = wrapToPi(X_estore(6,:));
-  Stateplot([X_estore(1:5,:);Lwrap],time,figstate.equin.Number,{'p','f','g','h','k','L'},'-k')
-  %         X_ECI = orbit2ECI(X_orbit,Rasc,inc,omega);
+  Stateplot(X_estore(1:6,:),timevec/secs_per_day,figstate.equin.Number,{'p','f','g','h','k','L'},{},'-k',{'tight'})
+
+
+    % Compare with TLEs
+    % plot inital TLE parameters used in perturbation model
+    load VanAllenepoch1
+    Stateplot([rad2deg(X_c(1:3,:));X_c(4:5,:);rad2deg(X_c(6,:))],t0/secs_per_day,figstate.classical.Number,{'Rasc','omega','inc','a','e','theta'},{'degrees','degrees','degrees','m','','degrees'},'ob',{});
+    Stateplot(X_e,t0/secs_per_day,figstate.equin.Number,{'p','f','g','h','k','L'},{},'ob',{});
+
+    % later in time with real TLEs
+    load RBSPA  % Van Allen data
+    [VA_classical,VA_extra,VA_time] = TLEinput(RBSPA);
+    % adjust theta so no wrapping
+    Theta_nowrap = 2.*pi.*(VA_extra.Rev(1,:)-VA_extra.Rev(1,1))+VA_classical(6,:);
+
+    VA_equin = class2equin([VA_classical(1:5,:);Theta_nowrap]);
+    hold on
+    Stateplot([rad2deg(VA_classical(1:3,:));VA_classical(4:5,:);rad2deg(Theta_nowrap)],VA_time/secs_per_day,figstate.classical.Number,{'Rasc','omega','inc','a','e','theta'},{'degrees','degrees','degrees','m','','degrees'},'xr',{});
+    legend('Peturbation Model','Inital Data used for Perturbation Model','Real TLEs')
+    Stateplot(VA_equin,VA_time/secs_per_day,figstate.equin.Number,{'p','f','g','h','k','L'},{},'xr',{});
+    legend('Peturbation Model','Inital Data used for Perturbation Model','Real TLEs')
 end
-
-%% Compare later in time
-load RBSPA
-[RealData_c,RD_time] = TLEinput(RBSPA);
-RealData_e = class2equin(RealData_c);
-hold on
-Stateplot(RealData_c,RD_time,figstate.classical.Number,{'Rasc','omega','inc','a','e','theta'},'xr');
-Stateplot(RealData_e,RD_time,figstate.equin.Number,{'p','f','g','h','k','L'},'xr');
-
-% Stateplot(X_c2,t02,figstate.classical.Number,{'Rasc','omega','inc','a','e','theta'},'xr');

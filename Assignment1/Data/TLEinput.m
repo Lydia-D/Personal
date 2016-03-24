@@ -5,7 +5,7 @@
 % der, drag term, ephemeris, element number and check sum
 % line 2: line number, sat number, inclination, Rasc, e, omega, M0, MM,
 % revolution number and check sum
-function [Output,times] = TLEinput(TLE)
+function [X,extra,times] = TLEinput(TLE)
 
     global secs_per_day mu_earth
 
@@ -24,6 +24,7 @@ function [Output,times] = TLEinput(TLE)
                 omega = deg2rad(TLE(index,6));
                 M0 = deg2rad(TLE(index,7));
                 MM = TLE(index,8);
+                extra.Rev(index/2) = floor(TLE(index,9)/10); % revolution number, checksum removed
             else
                 fprintf('Error with TLE, next line isnt sync at index %f',index);
                 break;
@@ -44,9 +45,10 @@ function [Output,times] = TLEinput(TLE)
         % solve kepler equation
         E = newtown(Mt,e);
         % solve for true anomaly using eccentric anomaly
-        theta = 2*atan(sqrt(1+e)/sqrt(1-e)*tan(E/2));
-
-        Output(:,index/2) = [Rasc;omega;inc;a;e;theta];
+        theta = wrapTo2Pi(2*atan2(sqrt(1+e),sqrt(1-e)*tan(E/2)));
+        % add the number of revolutions
+        extra.thetaRev(index/2) = 2*pi*extra.Rev(index/2)+theta;
+        X(:,index/2) = [Rasc;omega;inc;a;e;theta];
         
         times(1,index/2) = t0;
 %         eval(['Output.X_c' num2str(index/2) ' = [Rasc,omega,inc,a,e,theta]'';'])
