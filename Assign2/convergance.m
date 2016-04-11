@@ -4,22 +4,21 @@
 % Inputs: PosSat = [xrow;yrow;zrow] at time t for all sats in range
 %         PosVar = [x0;y0;z0] current itteration 
 %         Rsat = column vector of real ranges from satellites
-
+% Outputs: 
 %% 
-function convergance(X0,PosSat,Rsat)
+function X = convergance(X0,PosSat,Rsat)
     % weighted 
-    W = eye(size(PosSat(2))); % something to do with dilution of precision?
+    W = eye(size(PosSat,3)); % something to do with dilution of precision?
    
     % initialise X0 (gnd station location or previous time step position)
     X = X0;
-    dX = Inf;
+    dX = Inf;    
+        % while convergance
+    while norm(dX) > 10^-3 
+        H = Jacobian(PosSat,X);
+        drho = Rsat - rangecalc(PosSat,X); % error in range
+        dX = (H'*W*H)\H'*W*drho; % minimise
+        X = X+dX;   % update new X    
+    end
 
-    % while convergance
-while norm(dX) < 10^-3 
-    H = Jacobian(PosSat,X);
-    drho = Rsat - rangecalc(PosSat,X); % error in range
-    dX = (H'*W*H)\H'*W*drho; % minimise
-    X = X+dX;   % update new X
-    
 end
-

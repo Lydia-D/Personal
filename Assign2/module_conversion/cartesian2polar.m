@@ -6,8 +6,6 @@
 % Input  : pos_cartesian = [x,  y,  z]' in cartesian coordinates [m, m, m]
 % Output : pos_polar     = [R, az, el]' in polar coordinates [m, rad, rad]
 %
-% Kelvin Hsu
-% AERO4701, 2016
 %% Edited 29/2/16 by Lydia Drabsch
 % Notes: z points down, elevation defined as positive upwards from horizon
 %       euler angles, radians

@@ -1,12 +1,12 @@
 %% Function that calculates ECEF and ECI coords
 % L Drabsch 11/4/16
 
-% Input: ClassPara =  [Rasc;omega;inc;a;e;M0,t0];
+% Input: ClassPara = [Rasc;omega;inc;a;e;M0,t0];
 %        t   = current time   column vec?
 
 % have multiple time/multiple sats?.
 
-function [X_ECI,X_ECEF] = keplerorbit(ClassPara,t)
+function [X_ECI,X_ECEF] = keplerorbit3D(ClassPara,t)
         
         numofSats = size(ClassPara,2);
         
@@ -37,14 +37,19 @@ function [X_ECI,X_ECEF] = keplerorbit(ClassPara,t)
 
         % resolve in state space in the perifocal frame 
         % X = [x,y,z,vx,vy,vz]' not partially dependent on time
-        X_orbit = [r.*cos(theta);r.*sin(theta);zeros(size(theta));...
-            -sqrt(mu_earth./p).*sin(theta);sqrt(mu_earth./p).*(e+cos(theta));zeros(size(theta))];
+        X_orbit(1,:,:) = r.*cos(theta);
+        X_orbit(2,:,:) = r.*sin(theta);
+        X_orbit(3,:,:) = zeros(size(theta));
+        X_orbit(4,:,:) = -sqrt(mu_earth./ones(length(t),1)*p).*sin(theta);
+        X_orbit(5,:,:) = sqrt(mu_earth./ones(length(t),1)*p).*(ones(length(t),1)*e+cos(theta));
+        X_orbit(6,:,:) = zeros(size(theta));
+            
         
         % transform to ECI 
-        X_ECI = orbit2ECI(X_orbit,Rasc,inc,omega);
+        X_ECI = orbit2ECI3D(X_orbit,Rasc,inc,omega);
         
         % transform to ECEF
-        X_ECEF = eci2ecef(X_ECI(1:3,1),t); % only position
+        X_ECEF = eci2ecef3D(X_ECI(1:3,:,:),t); % only position
 
         
 end

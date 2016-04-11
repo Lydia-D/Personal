@@ -25,7 +25,7 @@
     T_ECI = (r_earth+6*10^6).*eye(4);
 
     % position of ECEF frame at t0 rel to ECI
-    ECEFframe = ecef2eci(eye(3),t0(1));
+    ECEFframe = ecef2eci(eye(3),timestart);
     T_ECEF = (r_earth+6*10^6).*[ECEFframe,[0;0;0];[0,0,0,1]];
 
     % plot ECI and ECEF axes
