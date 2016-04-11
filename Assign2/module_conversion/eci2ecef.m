@@ -1,5 +1,6 @@
-%% function 'eci2ecef_multitime'
-%
+%% function 'eci2ecef'
+% can have multiple time for single position or multiple positions for
+% single time
 % Transforms coordinates in ECI to coordinates in ECEF
 % ECI : Earth Centered Inertial Frame
 % ECEF: Earth Centered Earth Fixed Frame
@@ -8,8 +9,7 @@
 %          times    = times since vernal equinox alignment [s]
 % Output : pos_ecef = [x; y; z] | ECEF                     [m]
 %
-% Kelvin Hsu
-% AERO4701, 2016
+% 
 
 function pos_ecef = eci2ecef(pos_eci, times)
 
@@ -20,8 +20,5 @@ function pos_ecef = eci2ecef(pos_eci, times)
     pos_ecef(2,:) = - sin(w_earth.*times).*pos_eci(1,:) + cos(w_earth.*times).*pos_eci(2,:);
     pos_ecef(3,:) = pos_eci(3,:);
     
-    C = [cos(w_earth*times),sin(w_earth*times),0;...
-        -sin(w_earth*times),cos(w_earth*times),0;...
-        0,0,1];                                         % transform matrix
-    pos_ecef = C*pos_eci;
+
 end

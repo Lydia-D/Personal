@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.3.10)  24 MAR 2016 16:54
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.3.10)  11 APR 2016 11:18
 entering extended mode
 **./Space3_Assign1.tex
 (Space3_Assign1.tex
@@ -1046,7 +1046,7 @@ Package caption Info: End \AtBeginDocument code.
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 
-<./IMAGEtitle2f.jpg, id=90, 181.6386pt x 542.025pt>
+<./IMAGEtitle2f.jpg, id=18, 181.6386pt x 542.025pt>
 File: ./IMAGEtitle2f.jpg Graphic file (type jpg)
  <use ./IMAGEtitle2f.jpg>
 Package pdftex.def Info: ./IMAGEtitle2f.jpg used on input line 104.
@@ -1098,7 +1098,7 @@ e2f.jpg>]
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
- <./Plag.pdf, id=101, 597.19112pt x 845.19763pt>
+ <./Plag.pdf, id=29, 597.19112pt x 845.19763pt>
 File: ./Plag.pdf Graphic file (type pdf)
  <use ./Plag.pdf>
 Package pdftex.def Info: ./Plag.pdf used on input line 140.
@@ -1106,7 +1106,11 @@ Package pdftex.def Info: ./Plag.pdf used on input line 140.
 LaTeX Font Info:    Font shape `OT1/cmr/bx/sc' in size <17.28> not available
 (Font)              Font shape `OT1/cmr/b/sc' tried instead on input line 146.
 
-(Space3_Assign1.toc
+(Space3_Assign1.toc)
+\tf@toc=\write5
+\openout5 = `Space3_Assign1.toc'.
+
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
@@ -1117,15 +1121,10 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.i}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.2 ...rline {1.1}Introduction}{1}{subsection.1.1}
-                                                   [1
+l.147 \listoffigures
+                     [1
 
- <./Plag.pdf>])
-\tf@toc=\write5
-\openout5 = `Space3_Assign1.toc'.
-
-
-(Space3_Assign1.lof)
+ <./Plag.pdf>] (Space3_Assign1.lof)
 \tf@lof=\write6
 \openout6 = `Space3_Assign1.lof'.
 
@@ -1133,210 +1132,34 @@ l.2 ...rline {1.1}Introduction}{1}{subsection.1.1}
 \tf@lot=\write7
 \openout7 = `Space3_Assign1.lot'.
 
- [2] (Ques1.tex
+[2] (Ques1.tex
 Underfull \hbox (badness 10000) in paragraph at lines 7--13
 
  []
 
 [1]
-Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
-nput line 53.
-LaTeX Font Info:    Try loading font information for OT1+pcr on input line 53.
 
-("C:\Users\Lydia\AppData\Local\Programs\MiKTeX 2.9\tex\latex\psnfss\ot1pcr.fd"
-File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
-) (../Assignment1/Subfns/Period_AC.m
-LaTeX Font Info:    Try loading font information for TS1+pcr on input line 9.
-
-("C:\Users\Lydia\AppData\Local\Programs\MiKTeX 2.9\tex\latex\psnfss\ts1pcr.fd"
-File: ts1pcr.fd 2001/06/04 font definitions for TS1/pcr.
-)
-LaTeX Font Info:    Try loading font information for OT1+ptm on input line 11.
-("C:\Users\Lydia\AppData\Local\Programs\MiKTeX 2.9\tex\latex\psnfss\ot1ptm.fd"
-File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
-)
-LaTeX Font Info:    Try loading font information for TS1+ptm on input line 11.
-("C:\Users\Lydia\AppData\Local\Programs\MiKTeX 2.9\tex\latex\psnfss\ts1ptm.fd"
-File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
-)) <VanAllenNASA.jpg, id=197, 506.89375pt x 253.94875pt>
-File: VanAllenNASA.jpg Graphic file (type jpg)
- <use VanAllenNASA.jpg>
-Package pdftex.def Info: VanAllenNASA.jpg used on input line 64.
-(pdftex.def)             Requested size: 338.58632pt x 169.63327pt.
-
-Overfull \hbox (41.03981pt too wide) in paragraph at lines 79--94
- [][] 
- []
+! Package Listings Error: File `../Assignment1/Subfns/Period_AC(.m)' not found.
 
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
+Type X to quit or <RETURN> to proceed,
+or enter new name. (Default extension: m)
 
-<Q2_sim_top.png, id=200, 421.575pt x 316.18124pt>
-File: Q2_sim_top.png Graphic file (type png)
- <use Q2_sim_top.png>
-Package pdftex.def Info: Q2_sim_top.png used on input line 100.
-(pdftex.def)             Requested size: 338.58632pt x 253.944pt.
+Enter file name: 
+! Emergency stop.
+<read *> 
+         
+l.53 ...listing{../Assignment1/Subfns/Period_AC.m}
+                                                  
+*** (cannot \read from terminal in nonstop modes)
 
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-<Q2_sim_side.png, id=201, 421.575pt x 316.18124pt>
-File: Q2_sim_side.png Graphic file (type png)
- <use Q2_sim_side.png>
-Package pdftex.def Info: Q2_sim_side.png used on input line 106.
-(pdftex.def)             Requested size: 338.58632pt x 253.944pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-) (Ques2.tex [2]
-
-LaTeX Warning: Text page 3 contains only floats.
-
-[3 <./VanAllenNASA.jpg> <./Q2_sim_top.png (PNG copy)>] [4 <./Q2_sim_side.png (P
-NG copy)>] <Q2_gnd.png, id=233, 421.575pt x 316.18124pt>
-File: Q2_gnd.png Graphic file (type png)
- <use Q2_gnd.png>
-Package pdftex.def Info: Q2_gnd.png used on input line 39.
-(pdftex.def)             Requested size: 483.69687pt x 362.78061pt.
-
-[5 <./Q2_gnd.png (PNG copy)>]
-Package epstopdf Info: Source file: <Q2classical_overtime.eps>
-(epstopdf)                    date: 2016-03-24 11:21:34
-(epstopdf)                    size: 1426268 bytes
-(epstopdf)             Output file: <Q2classical_overtime-eps-converted-to.pdf>
-
-(epstopdf)                    date: 2016-03-24 12:54:04
-(epstopdf)                    size: 346963 bytes
-(epstopdf)             Command: <epstopdf --outfile=Q2classical_overtime-eps-co
-nverted-to.pdf Q2classical_overtime.eps>
-(epstopdf)             \includegraphics on input line 54.
-Package epstopdf Info: Output file is already uptodate.
-
-<Q2classical_overtime-eps-converted-to.pdf, id=243, 1028.84375pt x 489.83pt>
-File: Q2classical_overtime-eps-converted-to.pdf Graphic file (type pdf)
-
-<use Q2classical_overtime-eps-converted-to.pdf>
-Package pdftex.def Info: Q2classical_overtime-eps-converted-to.pdf used on inpu
-t line 54.
-(pdftex.def)             Requested size: 483.69687pt x 276.09673pt.
-Package epstopdf Info: Source file: <Q2equinoctial_overtime.eps>
-(epstopdf)                    date: 2016-03-24 11:22:34
-(epstopdf)                    size: 1425302 bytes
-(epstopdf)             Output file: <Q2equinoctial_overtime-eps-converted-to.pd
-f>
-(epstopdf)                    date: 2016-03-24 12:54:06
-(epstopdf)                    size: 321153 bytes
-(epstopdf)             Command: <epstopdf --outfile=Q2equinoctial_overtime-eps-
-converted-to.pdf Q2equinoctial_overtime.eps>
-(epstopdf)             \includegraphics on input line 60.
-Package epstopdf Info: Output file is already uptodate.
-
-<Q2equinoctial_overtime-eps-converted-to.pdf, id=245, 1028.84375pt x 489.83pt>
-File: Q2equinoctial_overtime-eps-converted-to.pdf Graphic file (type pdf)
-
-<use Q2equinoctial_overtime-eps-converted-to.pdf>
-Package pdftex.def Info: Q2equinoctial_overtime-eps-converted-to.pdf used on in
-put line 60.
-(pdftex.def)             Requested size: 483.69687pt x 276.09673pt.
-) (Ques3.tex [6 <./Q2classical_overtime-eps-converted-to.pdf> <./Q2equinoctial_
-overtime-eps-converted-to.pdf>] <Q3_gnd.png, id=269, 421.575pt x 316.18124pt>
-File: Q3_gnd.png Graphic file (type png)
- <use Q3_gnd.png>
-Package pdftex.def Info: Q3_gnd.png used on input line 19.
-(pdftex.def)             Requested size: 483.69687pt x 362.78061pt.
-
-<Q3_sim_top.png, id=270, 421.575pt x 316.18124pt>
-File: Q3_sim_top.png Graphic file (type png)
- <use Q3_sim_top.png>
-Package pdftex.def Info: Q3_sim_top.png used on input line 24.
-(pdftex.def)             Requested size: 338.58632pt x 253.944pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[7 <./Q3_gnd.png (PNG copy)>] <nonoise.png, id=275, 553.31718pt x 167.12437pt>
-File: nonoise.png Graphic file (type png)
-
-<use nonoise.png>
-Package pdftex.def Info: nonoise.png used on input line 39.
-(pdftex.def)             Requested size: 483.69687pt x 146.09573pt.
- <NOISE.png, id=277, 421.575pt x 316.18124pt>
-File: NOISE.png Graphic file (type png)
- <use NOISE.png>
-Package pdftex.def Info: NOISE.png used on input line 48.
-(pdftex.def)             Requested size: 483.69687pt x 362.78061pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-) [8 <./Q3_sim_top.png (PNG copy)> <./nonoise.png>] [9 <./NOISE.png (PNG copy)>
-] <Q1_gnd_ISS.png, id=287, 421.575pt x 316.18124pt>
-File: Q1_gnd_ISS.png Graphic file (type png)
- <use Q1_gnd_ISS.png>
-Package pdftex.def Info: Q1_gnd_ISS.png used on input line 185.
-(pdftex.def)             Requested size: 483.69687pt x 362.78061pt.
-
-<Q1_sim_ISS.png, id=288, 421.575pt x 316.18124pt>
-File: Q1_sim_ISS.png Graphic file (type png)
- <use Q1_sim_ISS.png>
-Package pdftex.def Info: Q1_sim_ISS.png used on input line 192.
-(pdftex.def)             Requested size: 580.43475pt x 435.33673pt.
-
-Overfull \hbox (96.73788pt too wide) in paragraph at lines 192--193
- [][] 
- []
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[10 <./Q1_gnd_ISS.png (PNG copy)>]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 200.
- [11 <./Q1_sim_ISS.png (PNG copy)>]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 200.
-
-(Space3_Assign1.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 200.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 200.
-Package rerunfilecheck Info: File `Space3_Assign1.out' has not changed.
-(rerunfilecheck)             Checksum: 85C8A0FB55B535C4D71301E908FECB7C;1440.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 200.
- ) 
+ 
 Here is how much of TeX's memory you used:
- 25960 strings out of 493634
- 545066 string characters out of 3135239
- 699376 words of memory out of 3000000
- 28805 multiletter control sequences out of 15000+200000
- 22139 words of font info for 77 fonts, out of 3000000 for 9000
+ 25613 strings out of 493634
+ 539754 string characters out of 3135239
+ 685502 words of memory out of 3000000
+ 28560 multiletter control sequences out of 15000+200000
+ 17228 words of font info for 64 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
- 55i,13n,54p,1137b,1308s stack positions out of 5000i,500n,10000p,200000b,50000s
- <C:\Users\Lydia\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\
-tcrm1095.pk>{C:/Users/Lydia/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/f
-ontname/8r.enc} <C:\Users\Lydia\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\public
-\cm\dpi1037\cmbcsc10.pk> <C:\Users\Lydia\AppData\Local\MiKTeX\2.9\fonts\pk\ljfo
-ur\public\cm\dpi1493\cmbcsc10.pk><C:/Users/Lydia/AppData/Local/Programs/MiKTeX 
-2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/Lydia/AppData/Local/Pro
-grams/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/Lydia/AppD
-ata/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbxti10.pfb><C:/U
-sers/Lydia/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmc
-sc10.pfb><C:/Users/Lydia/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/a
-msfonts/cm/cmex10.pfb><C:/Users/Lydia/AppData/Local/Programs/MiKTeX 2.9/fonts/t
-ype1/public/amsfonts/cm/cmmi10.pfb><C:/Users/Lydia/AppData/Local/Programs/MiKTe
-X 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/Lydia/AppData/Local/Pr
-ograms/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Lydia/AppD
-ata/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/User
-s/Lydia/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.
-pfb><C:/Users/Lydia/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfon
-ts/cm/cmr8.pfb><C:/Users/Lydia/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/pu
-blic/amsfonts/cm/cmsy10.pfb><C:/Users/Lydia/AppData/Local/Programs/MiKTeX 2.9/f
-onts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/Lydia/AppData/Local/Programs/
-MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/Lydia/AppData/Lo
-cal/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt12.pfb><C:/Users/Lyd
-ia/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/courier/ucrr8a.pfb><C:/Use
-rs/Lydia/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb>
-Output written on Space3_Assign1.pdf (14 pages, 1592826 bytes).
-PDF statistics:
- 430 PDF objects out of 1000 (max. 8388607)
- 69 named destinations out of 1000 (max. 500000)
- 263 words of extra memory for PDF output out of 10000 (max. 10000000)
-
+ 55i,13n,54p,480b,612s stack positions out of 5000i,500n,10000p,200000b,50000s
+!  ==> Fatal error occurred, no output PDF file produced!

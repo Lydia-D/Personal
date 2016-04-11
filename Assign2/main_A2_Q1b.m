@@ -8,8 +8,12 @@
 % To Do:
 %       Trajectory wrt ground station
 %           - divide up data in time sections?
-%               - identify which satellite to which data
-%    done   - use NLLS to calculate [x,y,z] ECEF coordinates
+%    done       - identify which satellite to which data
+%    done       - ECEF coords of satellites at time t
+%                    - take emperical parameters and time t to output ECEF
+%                    coords (Part A)
+%                    - start with keplerian model, maybe do J2 model?
+%    done   - use NLLS to calculate [x,y,z] ECEF coordinates of UAV
 %           - convert ECEF to LGCV 
 %           - plot polar 
 %           - compare with UAVPosition_F1
@@ -32,16 +36,17 @@ F1_sat = GPS_pseudorange_F1(:,2);
 F1_R = GPS_pseudorange_F1(:,3);
 
 %% isolate different times
-% have row vector of single times
+% have row vector of single times Timevec
 % have matrix of obervable sats, row = time , columns of sat numbers 
-Observables(31,1) = 0;
 startindex = 1;
 i = 1;
 while startindex <= length(F1_time)
     index = F1_time == F1_time(startindex);
-    Observables(:,i) = [F1_sat(index):;
+    Timevec(1,i) = F1_time(startindex);
+    Observables(1:length(F1_sat(index)),i) = F1_sat(index);
     startindex = startindex+length(index(index));
     i = i+1;
 end
 
-
+% 
+[X_ECI,X_ECEF] = keplerorbit(ClassPara(:,Observables),Timevec);
