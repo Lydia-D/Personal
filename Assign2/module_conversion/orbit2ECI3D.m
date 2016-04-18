@@ -4,6 +4,7 @@
 %           Rasc = right ascentionn of the ascending node in radians
 %           i = inclination angle in radians
 %           omega = argument of perigee in radians
+% NOTE: doesnt work with only 1 sat or 1 time? - use orbit2ECI fn
 
 function X_ECI = orbit2ECI3D(X_orbit,Rasc,inc,omega)
     

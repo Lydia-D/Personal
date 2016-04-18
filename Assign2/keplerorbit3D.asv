@@ -47,7 +47,7 @@ function [X_ECI,X_ECEF] = keplerorbit3D(ClassPara,t)
         
         % transform to ECI 
         X_ECI = orbit2ECI3D(X_orbit,Rasc,inc,omega);
-        X_ECItest = orbit2ECI(reshape(X_orbit(:,1,:),[6,31]),Rasc,inc,omega);
+        X_ECItest = orbit2ECI(X_orbit(:,1,:),Rasc,inc,omega);
         
         % transform to ECEF
         X_ECEF = eci2ecef3D(X_ECI(1:3,:,:),t); % only position
