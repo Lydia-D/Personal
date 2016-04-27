@@ -18,7 +18,15 @@
 % setup each satellite
     for satindex = 1:1:length(SatNo)
         Sat = SatNo(satindex);
-        eval(['figsim.Sat' num2str(Sat) '.sat = scatter3(NaN,NaN,NaN,''filled'',''XDatasource'',''X_ECIstore(1,i,Sat)'',''YDataSource'',''X_ECIstore(2,i,Sat)'',''ZDataSource'',''X_ECIstore(3,i,Sat)'');'])
+        %   WHAT WAS i??
+%         eval(['figsim.Sat' num2str(Sat) '.sat = scatter3(NaN,NaN,NaN,''filled'',''XDatasource'',''X_ECIstore(1,i,Sat)'',''YDataSource'',''X_ECIstore(2,i,Sat)'',''ZDataSource'',''X_ECIstore(3,i,Sat)'');'])
+        eval(['figsim.Sat' num2str(Sat) '.sat = scatter3(NaN,NaN,NaN,''filled'',''XDatasource'',''X_ECIstore(1,Sat)'',''YDataSource'',''X_ECIstore(2,Sat)'',''ZDataSource'',''X_ECIstore(3,Sat)'');'])
+
+        
+        % currently editing HERE - adding sat numbers to plots
+%         text('Position',[X_ECIstore(1,i,Sat),X_ECIstore(2,i,Sat),X_ECIstore(3,i,Sat)],'String',num2str(Sat),'color','k');
+%         text('Position',[X_ECIstore(1,i,Sat),X_ECIstore(2,i,Sat),X_ECIstore(3,i,Sat)],'String',num2str(Sat),'color','k');
+
         eval(['figsim.Sat' num2str(Sat) '.orbit = plot3(NaN,NaN,NaN,''k'',''XDatasource'',''X_ECIstore(1,1:i,Sat)'',''YDatasource'',''X_ECIstore(2,1:i,Sat)'',''ZDatasource'',''X_ECIstore(3,1:i,Sat)'');'])
     end
 

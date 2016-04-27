@@ -6,7 +6,7 @@
 
 % have multiple time/multiple sats?.
 
-function [X_ECI,X_ECEF] = keplerorbit3D(ClassPara,t)
+function [X_ECI,X_ECEF] = keplerorbit3D(ClassPara,t,T_equ)
         
         numofSats = size(ClassPara,2);
         
@@ -30,7 +30,7 @@ function [X_ECI,X_ECEF] = keplerorbit3D(ClassPara,t)
         E = newtown(Mt,e);
 
         % solve for theta (true anomaly) using eccentric anomaly
-        theta = 2.*atan(sqrt(1+ones(length(t),1)*e)./sqrt(1-ones(length(t),1)*e).*tan(E/2));
+        theta = 2.*atan2(sqrt(1+ones(length(t),1)*e)./sqrt(1-ones(length(t),1)*e).*sin(E/2),cos(E/2));
 
         % solve for r
         r = ones(length(t),1)*p./(1+ones(length(t),1)*e.*cos(theta));
@@ -47,11 +47,11 @@ function [X_ECI,X_ECEF] = keplerorbit3D(ClassPara,t)
         
         % transform to ECI 
         X_ECI = orbit2ECI3D(X_orbit,Rasc,inc,omega);
-        X_ECItest = orbit2ECI(reshape(X_orbit(:,1,:),[6,31]),Rasc,inc,omega);
+%         X_ECItest = orbit2ECI(reshape(X_orbit(:,1,:),[6,31]),Rasc,inc,omega);
         
         % transform to ECEF
-        X_ECEF = eci2ecef3D(X_ECI(1:3,:,:),t); % only position
-        X_ECEFtest = eci2ecef(X_ECItest,t(1));
+        X_ECEF = eci2ecef3D(X_ECI(1:3,:,:),t-T_equ); % only position
+%         X_ECEFtest = eci2ecef(X_ECItest,t(1));
         
 end
 

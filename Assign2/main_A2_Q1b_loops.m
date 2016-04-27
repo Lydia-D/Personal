@@ -38,9 +38,17 @@ F1_time = GPS_pseudorange_F1(:,1);
 F1_sat = GPS_pseudorange_F1(:,2);   % what satellites are observed
 F1_R = GPS_pseudorange_F1(:,3);     % range of satellites 
 
-load GPSsat_ephem
-ClassPara = [deg2rad(Rasc)';deg2rad(omega)';deg2rad(inc)';a';e';deg2rad(M0)';t0']; % for all 31 sats
-
+%load GPSsat_ephem
+GPSsat_ephem = dlmread('GPSsat_ephem.txt');
+SatNo = GPSsat_ephem(:,1)';
+semimajor = GPSsat_ephem(:,2)';
+eccentricity = GPSsat_ephem(:,3)';
+inc_deg = GPSsat_ephem(:,4)';
+Rasc_deg = GPSsat_ephem(:,5)';
+omega_deg = GPSsat_ephem(:,6)';
+M0_deg = GPSsat_ephem(:,7)';% mean anomaly at epoch
+t0 = GPSsat_ephem(:,8)';
+ClassPara = [deg2rad(Rasc_deg);deg2rad(omega_deg);deg2rad(inc_deg);semimajor;eccentricity;deg2rad(M0_deg);t0]; % for all 31 sats
 
 
 %% isolate different times
@@ -56,20 +64,21 @@ while startindex <= length(F1_time)
     startindex = startindex+length(index(index));
     i = i+1;
 end
-Timevec_eq = Timevec - 7347737.336;
+T_equ = 7347737.336;        % equinox time
+Timevec_eq = Timevec - T_equ;
 % Timevec_eq = Timevec - Timevec(1);
 timestart = Timevec_eq(1);
 animation3D();
 
-% Positions for all satellites for all time
-[X_ECIstore,X_ECEFstore] = keplerorbit3D(ClassPara,Timevec_eq');
+% Positions for all satellites for all time - just loop through
+% [X_ECIstore,X_ECEFstore] = keplerorbit3D(ClassPara,Timevec_eq');
 
 % use NLLS for each time step to calculate ECEF coords of UAC
 GndStation_LLH = [deg2rad(-34.76);deg2rad(150.03);680];
 GndStation_ECEF =  llhgc2ecef(GndStation_LLH);
 % GuessLoc = GndStation_ECEF; % use gnd station location as guess of location
-GuessLoc = ecef2eci(GndStation_ECEF,Timevec_eq(1));
-for tindex = 1:1:length(Timevec_eq)
+GuessLoc = ecef2eci(GndStation_ECEF,Timevec(1));
+for tindex = 1:1:length(Timevec)
     % remove trailing zeros
     Obs_t = Observables(:,tindex);
     Obs_t = Obs_t(Obs_t~=0);        % satellites that are observable now
@@ -78,12 +87,15 @@ for tindex = 1:1:length(Timevec_eq)
     
     % only look at position of sats for this point in time for the
     % observable satellites
-    X_ECEF = reshape(X_ECEFstore(:,tindex,Obs_t),[3,length(Obs_t)]);
-    X_ECI = reshape(X_ECIstore(1:3,tindex,Obs_t),[3,length(Obs_t)]);
+    [X_ECIstore,X_ECEFstore] = keplerorbit3Dloop(ClassPara,Timevec(tindex));
+    X_ECEF = X_ECEFstore(:,Obs_t);
+    X_ECI = X_ECIstore(:,Obs_t);
+%     X_ECEF = reshape(X_ECEFstore(:,tindex,Obs_t),[3,length(Obs_t)]);
+%     X_ECI = reshape(X_ECIstore(1:3,tindex,Obs_t),[3,length(Obs_t)]);
     for obsindex = 1:1:length(Obs_t)
         scatter3(X_ECI(1,obsindex),X_ECI(2,obsindex),X_ECI(3,obsindex))
     end
-    GndStation_ECI(:,tindex) = ecef2eci(GndStation_ECEF,Timevec_eq(tindex));
+    GndStation_ECI(:,tindex) = ecef2eci(GndStation_ECEF,Timevec(tindex));
     scatter3(GndStation_ECI(1,tindex),GndStation_ECI(2,tindex),GndStation_ECI(3,tindex),'filled')
     drawnow;
     
@@ -105,7 +117,7 @@ end
 % UAV_ECI_local = UAV_ECI_global - GndStation_ECI*ones(1,size(UAV_ECEF_global,2));
 UAV_ECI_local = UAV_ECI_global - GndStation_ECI;
 
-UAV_ECEF_local = eci2ecef(UAV_ECI_local,Timevec_eq);
+UAV_ECEF_local = eci2ecef(UAV_ECI_local,Timevec);
 UAV_LG_cart = ecef2lg(UAV_ECEF_local,GndStation_LLH);
 UAV_LG_pol = cartesian2polar(UAV_LG_cart);
 

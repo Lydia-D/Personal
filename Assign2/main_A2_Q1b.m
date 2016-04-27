@@ -56,19 +56,21 @@ while startindex <= length(F1_time)
     startindex = startindex+length(index(index));
     i = i+1;
 end
-Timevec_eq = Timevec - 7347737.336;
+T_equ = 7347737.336;        % equinox time
+Timevec_eq = Timevec - T_equ;
 % Timevec_eq = Timevec - Timevec(1);
 timestart = Timevec_eq(1);
 animation3D();
 
 % Positions for all satellites for all time
-[X_ECIstore,X_ECEFstore] = keplerorbit3D(ClassPara,Timevec_eq');
+[X_ECIstore,X_ECEFstore] = keplerorbit3D(ClassPara,Timevec',T_equ);
 
 % use NLLS for each time step to calculate ECEF coords of UAC
 GndStation_LLH = [deg2rad(-34.76);deg2rad(150.03);680];
 GndStation_ECEF =  llhgc2ecef(GndStation_LLH);
 % GuessLoc = GndStation_ECEF; % use gnd station location as guess of location
-GuessLoc = ecef2eci(GndStation_ECEF,Timevec_eq(1));
+GuessLoc = [ecef2eci(GndStation_ECEF,Timevec_eq(1));0]; % clock bias
+%GuessLoc = [0;0;0;0];
 for tindex = 1:1:length(Timevec_eq)
     % remove trailing zeros
     Obs_t = Observables(:,tindex);
@@ -78,34 +80,43 @@ for tindex = 1:1:length(Timevec_eq)
     
     % only look at position of sats for this point in time for the
     % observable satellites
-    X_ECEF = reshape(X_ECEFstore(:,tindex,Obs_t),[3,length(Obs_t)]);
-    X_ECI = reshape(X_ECIstore(1:3,tindex,Obs_t),[3,length(Obs_t)]);
-    for obsindex = 1:1:length(Obs_t)
-        scatter3(X_ECI(1,obsindex),X_ECI(2,obsindex),X_ECI(3,obsindex))
-    end
-    GndStation_ECI(:,tindex) = ecef2eci(GndStation_ECEF,Timevec_eq(tindex));
-    scatter3(GndStation_ECI(1,tindex),GndStation_ECI(2,tindex),GndStation_ECI(3,tindex),'filled')
-    drawnow;
+    X_ECEF = squeeze(X_ECEFstore(:,tindex,Obs_t));
+    X_ECI = squeeze(X_ECIstore(1:3,tindex,Obs_t));
     
-    % NLLS
-    UAV_ECEF_global(1:3,tindex) = convergance(GuessLoc,X_ECEF,Range_t);
+%     X_ECEF = reshape(X_ECEFstore(:,tindex,Obs_t),[3,length(Obs_t)]);
+%     X_ECI = reshape(X_ECIstore(1:3,tindex,Obs_t),[3,length(Obs_t)]);
+
+    
+    %     for obsindex = 1:1:length(Obs_t)
+%         scatter3(X_ECI(1,obsindex),X_ECI(2,obsindex),X_ECI(3,obsindex))
+%     end
+%     GndStation_ECI(:,tindex) = ecef2eci(GndStation_ECEF,Timevec_eq(tindex));
+%     scatter3(GndStation_ECI(1,tindex),GndStation_ECI(2,tindex),GndStation_ECI(3,tindex),'filled')
+%     drawnow;
+    
+    % NLLS (with clock bias)
+    UAV_ECEF_global(1:4,tindex) = convergance(GuessLoc,X_ECEF,Range_t);
     UAV_ECEF_local(1:3,tindex) = UAV_ECEF_global(1:3,tindex) - GndStation_ECEF;
     UAV_LG_cart(1:3,tindex) = ecef2lg(UAV_ECEF_local(1:3,tindex),GndStation_LLH);
 
 %     UAV_ECI_global(1:3,tindex) = convergance(GuessLoc,X_ECI,Range_t);
 %     UAV_ECI_global = ecef2eci(UAV_ECEF_global,Timevec_eq(tindex));
 %     scatter3(UAV_ECI_global(1,tindex),UAV_ECI_global(2,tindex),UAV_ECI_global(3,tindex),'x')
-    GuessLoc = UAV_ECEF_global(1:3,tindex); % use previous timestep for guess of next location
+%     GuessLoc = UAV_ECEF_global(1:3,tindex); % use previous timestep for guess of next location
 end
+
+%% Plot cartesian 
+figure;
+plot3(UAV_LG_cart(1,:),UAV_LG_cart(2,:),UAV_LG_cart(3,:))
 
 
 %% polar plots
 
 
 % UAV_ECI_local = UAV_ECI_global - GndStation_ECI*ones(1,size(UAV_ECEF_global,2));
-UAV_ECI_local = UAV_ECI_global - GndStation_ECI;
+% UAV_ECI_local = UAV_ECI_global - GndStation_ECI;
 
-UAV_ECEF_local = eci2ecef(UAV_ECI_local,Timevec_eq);
+% UAV_ECEF_local = eci2ecef(UAV_ECI_local,Timevec_eq);
 UAV_LG_cart = ecef2lg(UAV_ECEF_local,GndStation_LLH);
 UAV_LG_pol = cartesian2polar(UAV_LG_cart);
 

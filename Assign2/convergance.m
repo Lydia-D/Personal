@@ -8,17 +8,25 @@
 %% 
 function X = convergance(X0,PosSat,Rsat)
     % weighted 
-    W = eye(size(PosSat,3)); % something to do with dilution of precision?
+    W = eye(size(PosSat,4)); % something to do with dilution of precision?
    
     % initialise X0 (gnd station location or previous time step position)
     X = X0;
     dX = Inf;    
+    maxiterations = 100;
+    iter = 0;
         % while convergance
-    while norm(dX) > 10^-3 
+    while max(abs(dX)) > 10^-8 
         H = Jacobian(PosSat,X);
-        drho = Rsat - rangecalc(PosSat,X); % error in range
-        dX = (H'*W*H)\H'*W*drho; % minimise
-        X = X+dX;   % update new X    
+        drho = Rsat - (rangecalc(PosSat,X(1:3))+X(4)); % error in range
+%         dX = (H'*W*H)\H'*W*drho; % minimise
+        dX = (H'*H)\H'*drho;
+        X = X+dX;   % update new X 
+        if iter< maxiterations
+            break
+        else
+            iter = iter+1;
+        end
     end
 
 end

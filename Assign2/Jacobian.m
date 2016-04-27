@@ -9,7 +9,7 @@ function H = Jacobian(PosSat, PosVar)
     df_dy = (PosVar(2)-PosSat(2,:)')./rangeVar;
     df_dz = (PosVar(3)-PosSat(3,:)')./rangeVar;
 
-    H = [df_dx,df_dy,df_dz];
+    H = [df_dx,df_dy,df_dz,ones(length(df_dx),1)];
     
     
 end

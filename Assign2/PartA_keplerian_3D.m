@@ -22,7 +22,7 @@ dt = 100; % seconds
 Animations = 1;
 StatePlots = 0;
 days = 1;
-
+equinox = 7347737.336;
 %% Input data - use as fn?
 %ClassPara =  [Rasc;omega;inc;a;e;M0,t0];        
 load GPSsat_ephem
@@ -30,7 +30,7 @@ ClassPara = [deg2rad(Rasc)';deg2rad(omega)';deg2rad(inc)';a';e';deg2rad(M0)';t0'
 
 %% 3D Simulation Setup
 if Animations == 1
-   
+   timestart = 0;
     animation3D();
 %     animationGT();
 
@@ -38,7 +38,7 @@ end
 %% 3D time solution
 
 i = 1; % store index
-timevec = t0:dt:t0+secs_per_day*days;
+timevec = 0:dt:0+secs_per_day*days;
 
     % calculate position for all time for each sat, store in multidim array
         [X_ECIstore,X_ECEFstore] = keplerorbit3D(ClassPara,timevec');
@@ -50,6 +50,8 @@ if Animations == 1
         for satindex = 1:1:length(SatNo)
             Sat = SatNo(satindex);
             eval(['refreshdata(figsim.Sat' num2str(Sat) '.sat,''caller'');'])
+            text('Position',[coord_to(1,i)/Abs,coord_to(2,i)/Abs,coord_to(3,i)/Abs],'String',n(i),'color',c(i),'Parent',parent);
+
             eval(['refreshdata(figsim.Sat' num2str(Sat) '.orbit,''caller'');'])
         end
             rotate(figsim.globe,[0,0,1],360.*dt./(24*60*60),[0,0,0]);% continuous
