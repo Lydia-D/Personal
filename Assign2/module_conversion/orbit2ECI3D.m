@@ -17,9 +17,9 @@ function X_ECI = orbit2ECI3D(X_orbit,Rasc,inc,omega)
     X_ECI(2,:,:) = (sin(RascM).*cos(omegaM)+cos(RascM).*sin(omegaM).*cos(incM)).*X_orbit(1,:,:) + (-sin(RascM).*sin(omegaM)+cos(RascM).*cos(omegaM).*cos(incM)).*X_orbit(2,:,:) -cos(RascM).*sin(incM).*X_orbit(3,:,:);
     X_ECI(3,:,:) = sin(omegaM).*sin(incM).*X_orbit(1,:,:) + cos(omegaM).*sin(incM).*X_orbit(2,:,:) + cos(incM).*X_orbit(3,:,:);
 
-    X_ECI(4,:,:) =  (cos(RascM).*cos(omegaM)-sin(RascM).*sin(omegaM).*cos(incM)).*X_orbit(4,:,:) +(-cos(RascM).*sin(omegaM)-sin(RascM).*cos(omegaM).*cos(incM)).*X_orbit(5,:,:) + sin(RascM).*sin(incM).*X_orbit(6,:,:);
-    X_ECI(5,:,:) = (sin(RascM).*cos(omegaM)+cos(RascM).*sin(omegaM).*cos(incM)).*X_orbit(4,:,:) + (-sin(RascM).*sin(omegaM)+cos(RascM).*cos(omegaM).*cos(incM)).*X_orbit(5,:,:) -cos(RascM).*sin(incM).*X_orbit(6,:,:);
-    X_ECI(6,:,:) = sin(omegaM).*sin(incM).*X_orbit(4,:,:) + cos(omegaM).*sin(incM).*X_orbit(5,:,:) + cos(incM).*X_orbit(6,:,:);               
+%     X_ECI(4,:,:) =  (cos(RascM).*cos(omegaM)-sin(RascM).*sin(omegaM).*cos(incM)).*X_orbit(4,:,:) +(-cos(RascM).*sin(omegaM)-sin(RascM).*cos(omegaM).*cos(incM)).*X_orbit(5,:,:) + sin(RascM).*sin(incM).*X_orbit(6,:,:);
+%     X_ECI(5,:,:) = (sin(RascM).*cos(omegaM)+cos(RascM).*sin(omegaM).*cos(incM)).*X_orbit(4,:,:) + (-sin(RascM).*sin(omegaM)+cos(RascM).*cos(omegaM).*cos(incM)).*X_orbit(5,:,:) -cos(RascM).*sin(incM).*X_orbit(6,:,:);
+%     X_ECI(6,:,:) = sin(omegaM).*sin(incM).*X_orbit(4,:,:) + cos(omegaM).*sin(incM).*X_orbit(5,:,:) + cos(incM).*X_orbit(6,:,:);               
                
 end
 

@@ -68,9 +68,9 @@ animation3D();
 % use NLLS for each time step to calculate ECEF coords of UAC
 GndStation_LLH = [deg2rad(-34.76);deg2rad(150.03);680];
 GndStation_ECEF =  llhgc2ecef(GndStation_LLH);
-% GuessLoc = GndStation_ECEF; % use gnd station location as guess of location
-GuessLoc = [ecef2eci(GndStation_ECEF,Timevec_eq(1));0]; % clock bias
-%GuessLoc = [0;0;0;0];
+GuessLoc = [GndStation_ECEF;0]; % use gnd station location as guess of location
+% GuessLoc = [ecef2eci(GndStation_ECEF,Timevec_eq(1));0]; % clock bias
+% GuessLoc = [0;0;0;0];
 for tindex = 1:1:length(Timevec_eq)
     % remove trailing zeros
     Obs_t = Observables(:,tindex);
@@ -83,11 +83,7 @@ for tindex = 1:1:length(Timevec_eq)
     X_ECEF = squeeze(X_ECEFstore(:,tindex,Obs_t));
     X_ECI = squeeze(X_ECIstore(1:3,tindex,Obs_t));
     
-%     X_ECEF = reshape(X_ECEFstore(:,tindex,Obs_t),[3,length(Obs_t)]);
-%     X_ECI = reshape(X_ECIstore(1:3,tindex,Obs_t),[3,length(Obs_t)]);
-
-    
-    %     for obsindex = 1:1:length(Obs_t)
+%     for obsindex = 1:1:length(Obs_t)
 %         scatter3(X_ECI(1,obsindex),X_ECI(2,obsindex),X_ECI(3,obsindex))
 %     end
 %     GndStation_ECI(:,tindex) = ecef2eci(GndStation_ECEF,Timevec_eq(tindex));
@@ -95,14 +91,16 @@ for tindex = 1:1:length(Timevec_eq)
 %     drawnow;
     
     % NLLS (with clock bias)
-    UAV_ECEF_global(1:4,tindex) = convergance(GuessLoc,X_ECEF,Range_t);
+    [UAV_ECEF_global(1:4,tindex),DOP(1:5,tindex)] = convergance(GuessLoc,X_ECEF,Range_t);
+%     [UAV_ECEF_global(1:4,tindex)] = convergance(GuessLoc,X_ECEF,Range_t);
+
     UAV_ECEF_local(1:3,tindex) = UAV_ECEF_global(1:3,tindex) - GndStation_ECEF;
     UAV_LG_cart(1:3,tindex) = ecef2lg(UAV_ECEF_local(1:3,tindex),GndStation_LLH);
 
 %     UAV_ECI_global(1:3,tindex) = convergance(GuessLoc,X_ECI,Range_t);
 %     UAV_ECI_global = ecef2eci(UAV_ECEF_global,Timevec_eq(tindex));
 %     scatter3(UAV_ECI_global(1,tindex),UAV_ECI_global(2,tindex),UAV_ECI_global(3,tindex),'x')
-%     GuessLoc = UAV_ECEF_global(1:3,tindex); % use previous timestep for guess of next location
+    GuessLoc = [UAV_ECEF_global(1:3,tindex);0]; % use previous timestep for guess of next location
 end
 
 %% Plot cartesian 
@@ -120,10 +118,22 @@ plot3(UAV_LG_cart(1,:),UAV_LG_cart(2,:),UAV_LG_cart(3,:))
 UAV_LG_cart = ecef2lg(UAV_ECEF_local,GndStation_LLH);
 UAV_LG_pol = cartesian2polar(UAV_LG_cart);
 
-angle = UAV_LG_pol(2,:);
-radius = UAV_LG_pol(1,:).*cos(UAV_LG_pol(3,:));
-figure
-figpol.UAVtrack = polar(rad2deg(angle),radius);
+figpol.base = PolarPlot();
+[UAVtrack.x,UAVtrack.y] = polar2plot(UAV_LG_pol(2,:),UAV_LG_pol(3,:));
+figure(figpol.base)
+plot(UAVtrack.x,UAVtrack.y)
+
+%% Identify error: limit crazy dynamics of UAV - use UAV_LG_cart
+dt = Timevec(2)-Timevec(1);
+vel_vec = (UAV_LG_cart(:,2:end)-UAV_LG_cart(:,1:end-1))./dt;
+
+vel_norm = sqrt(vel_vec(1,:).^2+vel_vec(2,:).^2+vel_vec(3,:).^2);
+vel_mean = mean(vel_norm);
+vel_std = std(vel_norm);
+
+vel_error = find(vel_norm>(vel_mean+vel_std));
+
+
 
 
 

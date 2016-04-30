@@ -40,6 +40,10 @@ w_earth = 7.292115e-5;
 global secs_per_day;
 secs_per_day = 24 * 60 * 60;
 
+% This is the number of seconds per hour
+global secs_per_hour;
+secs_per_hour = 60 * 60;
+
 % This is the number of seconds per minute
 global secs_per_min;
 secs_per_min = 60;

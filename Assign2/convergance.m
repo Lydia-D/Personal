@@ -6,7 +6,7 @@
 %         Rsat = column vector of real ranges from satellites
 % Outputs: 
 %% 
-function X = convergance(X0,PosSat,Rsat)
+function [X,DOP] = convergance(X0,PosSat,Rsat)
     % weighted 
     W = eye(size(PosSat,4)); % something to do with dilution of precision?
    
@@ -28,5 +28,9 @@ function X = convergance(X0,PosSat,Rsat)
             iter = iter+1;
         end
     end
+    
+    %% DOPs
+    DOP = DOPs(H);
+    
 
 end

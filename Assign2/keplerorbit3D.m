@@ -6,7 +6,7 @@
 
 % have multiple time/multiple sats?.
 
-function [X_ECI,X_ECEF] = keplerorbit3D(ClassPara,t,T_equ)
+function [X_ECI,X_ECEF,X_LLHGC] = keplerorbit3D(ClassPara,t,T_equ)
         
         numofSats = size(ClassPara,2);
         
@@ -52,6 +52,8 @@ function [X_ECI,X_ECEF] = keplerorbit3D(ClassPara,t,T_equ)
         % transform to ECEF
         X_ECEF = eci2ecef3D(X_ECI(1:3,:,:),t-T_equ); % only position
 %         X_ECEFtest = eci2ecef(X_ECItest,t(1));
+        
+        X_LLHGC = ecef2llhgc3D(X_ECEF);
         
 end
 

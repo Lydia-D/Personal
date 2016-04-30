@@ -5,6 +5,7 @@ function fighandle=Earthplot()
     global Nasa_A
     global r_earth
 
+    fighandle = figure;
     % Create a sphere, make it earth sized (in meters)
     [x,y,z] = sphere(50);
     x = x.*r_earth;
@@ -20,5 +21,5 @@ function fighandle=Earthplot()
     axes('dataaspectratio',[1 1 1],'visible','on')
     hold on
     grid on
-    fighandle = surface(x,y,z,props);
+    surface(x,y,z,props);
 end
