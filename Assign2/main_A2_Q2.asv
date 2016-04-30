@@ -44,7 +44,8 @@ obs_time(length(long_vec),length(lat_vec)) = 0;
 obs_sats(length(long_vec),length(lat_vec)) = 0;
 
 % initalise elevation data storage
-el_store = zeros(length(long_vec),length(lat_vec),
+el_store = zeros(length(long_vec),length(lat_vec),size(X_ECIstore,2),size(X_ECIstore,3));
+el_store = logical(el_store); % make binary matrix
 
 for lat_i = 1:1:length(lat_vec)
     for long_i = 1:1:length(long_vec)
@@ -57,9 +58,9 @@ for lat_i = 1:1:length(lat_vec)
             Sat_LG_pol = cartesian2polar(Sat_LG_cart);
             
             % Store elevation data
-            el_store
+            el_store(long_i,lat_i,:,Sat) = Sat_LG_pol(3,:)>=deg2rad(5);
             
-            obs_time(long_i,lat_i) = obs_time(long_i,lat_i) + sum(Sat_LG_pol(3,:)>=deg2rad(5)); % number of observable points in time? for this sat
+            obs_time(long_i,lat_i) = obs_time(long_i,lat_i) + sum(el_store(long_i,lat_i,:,Sat)); % number of observable points in time? for this sat
 
             if sum(Sat_LG_pol(3,:)>=deg2rad(5)) > 0
                 obs_sats(long_i,lat_i) = obs_sats(long_i,lat_i)+1;
@@ -73,45 +74,30 @@ end
 % remove times it sees with the satellites, then replot areas it doesnt
 % see?
 [maxt.time,maxt.index] = max(obs_time(:));
-[GroundStations.long,GroundStations.lat]  = ind2sub(size(obs_time),maxt.index);
+[GS.long,GS.lat]  = ind2sub(size(obs_time),maxt.index);
 
-GS_LLH = [GroundStations.lat;GroundStations.long;0];
+GS_LLH = [GS.lat;GS.long;0];
 GS_ECEF = llhgc2ecef(GS_LLH);
-UNSEEN = ones(size(X_ECIstore,3),size(X_ECIstore,2));
-for Sat = 1:1:size(X_ECIstore,3)
-            Sat_ECEF_local = X_ECIstore(:,:,Sat)-GS_ECEF*ones(1,length(timevec)); %all time - gs
-            Sat_LG_cart = ecef2lg(Sat_ECEF_local,GS_LLH);
-            Sat_LG_pol = cartesian2polar(Sat_LG_cart);
-            
-            % set to 0 if seen by GS
-            UNSEEN(Sat,:) = ~(Sat_LG_pol(3,:)>=deg2rad(5));
-end
 
-%% redo: Optimisation
-lat_vec = acos(2*linspace(1,0,50)-1)-pi/2;  % [-pi/2 to pi/2]
-long_vec = 2*pi*linspace(0,1,70);
-[GS_Lat,GS_Long] = meshgrid(lat_vec,long_vec);
-obs_time(length(long_vec),length(lat_vec)) = 0;
-obs_sats(length(long_vec),length(lat_vec)) = 0;
-
+Seen = el_store(GS.long,GS.lat,:,:);
+Unseen = ~Seen;
+el_store_next = el_store; % initalise size
 for lat_i = 1:1:length(lat_vec)
     for long_i = 1:1:length(long_vec)
-        GS_LLH = [lat_vec(lat_i);long_vec(long_i);0];
-        GS_ECEF = llhgc2ecef(GS_LLH);
-
-         for Sat = 1:1:size(X_ECIstore,3)
-            Sat_ECEF_local = X_ECIstore(:,:,Sat)-GS_ECEF*ones(1,length(timevec)); %all time - gs
-            Sat_LG_cart = ecef2lg(Sat_ECEF_local,GS_LLH);
-            Sat_LG_pol = cartesian2polar(Sat_LG_cart);
-            obs_time(long_i,lat_i) = obs_time(long_i,lat_i) + sum(Sat_LG_pol(3,:).*UNSEEN(Sat,:)>=deg2rad(5)); % number of observable points in time? for this sat
-
-            if sum(Sat_LG_pol(3,:)>=deg2rad(5)) > 0
-                obs_sats(long_i,lat_i) = obs_sats(long_i,lat_i)+1;
-            end
-
-         end
+        % at a point in space test if unseen through all time for all
+        % satellites
+        el_store_next(long_i,lat_i,:,:) = el_store(long_i,lat_i,:,:) & Unseen;  
     end
 end
+% sum through time for each location and sat
+timesum = sum(el_store_next,3);
+satsum = sum(timesum,4);
+figure
+mesh(rad2deg(GS_Lat),rad2deg(GS_Long),squeeze(satsum))
+
+% select next max
+[maxt.time,maxt.index] = max(obs_time(:));
+[GS.long(2),GS.lat(2)]  = ind2sub(size(obs_time),maxt.index);
 
 %%
 figure
