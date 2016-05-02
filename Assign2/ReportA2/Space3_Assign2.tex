@@ -13,10 +13,13 @@
 \usepackage{chngcntr}
 \counterwithin{figure}{section}
 \counterwithin{table}{section}
-\usepackage{multirow}
 \setcounter{tocdepth}{5}
 \usepackage{subfiles}
 \usepackage{epstopdf}
+\usepackage{tabularx, booktabs}
+\newcolumntype{Y}{>{\centering\arraybackslash}X}
+\usepackage[section]{placeins}
+
 
 
 % pseudocode
@@ -71,9 +74,12 @@
 \titleformat{\subsection}
 {\color{sscolour}\normalfont\Large\bfseries}
 {\color{sscolour}\thesubsection}{2em}{}
+%\titleformat{\subsubsection}
+%{\color{ssscolour}\normalfont\large\bfseries}
+%{\hspace*{\normalparindent}\color{ssscolour}\thesubsubsection}{1em}{}
 \titleformat{\subsubsection}
 {\color{ssscolour}\normalfont\large\bfseries}
-{\hspace*{\normalparindent}\color{ssscolour}\thesubsubsection}{1em}{}
+{\color{ssscolour}\thesubsubsection}{2em}{}
 \titleformat{\paragraph}
 {\color{paracolour}\normalfont\large\bfseries}
 {\hspace*{\normalparindent}\color{paracolour}\theparagraph}{1em}{}
@@ -163,8 +169,10 @@ Each mainQN.m file has a section called 'User Input' where the animations and st
 
 \subfile{Ques2}
 
-
-
+\section{Appendix A: Question 1}
+\subfile{AppendixA}
+\section{Appendix B: Question 2}
+\subfile{AppendixB}
 
 
 

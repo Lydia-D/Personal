@@ -51,3 +51,11 @@ secs_per_min = 60;
 % This is the amount of radians per revolution
 global rads_per_rev;
 rads_per_rev = 2 * pi;
+
+% Radians to degrees
+global r2d
+r2d = 180/pi;
+
+% degrees to radians
+global d2r
+d2r = pi/180;

@@ -9,8 +9,11 @@
     %global Nasa_R Nasa_A
     figgnd.handle = figure;
     figgnd.map = geoshow(Nasa_A,Nasa_R);
-    title('Ground Trace of Van Allen Probe')
+    title('Ground Trace')
     hold on
     figgnd.Sat = plot(NaN,NaN,'bo','MarkerFaceColor','b','XDatasource','X_LLHGD(2,1)','YDataSource','X_LLHGD(1,1)');
     figgnd.orbit = plot(NaN,NaN,'.c','XDatasource','X_LLHGDstore(2,1:i)','YDatasource','X_LLHGDstore(1,1:i)');
-% end
+    axis equal
+    axis([-180 180 -90 90])
+
+    % end

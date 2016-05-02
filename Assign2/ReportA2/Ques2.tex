@@ -3,13 +3,59 @@
 \begin{document}
 
 \section{GLONASS Orbital Determination}
-
+\subsection{Introduction}
 The Russian GNSS is called GLONASS, a system that requires 24 satellites in three orbital planes to have full global coverage. The satellites are in nearly circular orbits at an average altitude of 19130 km, approximate period of 11 hrs and 15 min and an inclination of 65\Deg. Each orbital plane is separated by 120\Deg in the ascending node and consists of eight satellites. There is currently 28 satellites in orbit with 23 operational. For the following analysis, only the operational satellites are used.
+\subsection{Methodology}
 
+Done:\\
+TLEs for GLONASS and simulated - 3d and ground trace\\
+brute force characterisation of the time \\
+optimisation of ground stations \\
+
+next:
+simulate ground station readings?\\
+
+
+\subsubsection{Optimisation of Ground Station Locations}
+The ground station locations were chosen based on a brute force recursion algorithm that ensures all satellites are visible to a ground station (5\Deg mask) at all times. A 4-D logical matrix was created with the dimensions (longitude,latitude,time,satellite) where the element was set if the satellite was visible at that point in time from that location. Only locations that are on land were considered using \textbf{landmask.m} (Chad Greene, 2014) and the altitude was estimated using \textbf{ITU\_P1511.m} (Luis Emiliani, 2009). For each location the total observed time of all satellites was summed and the location with the maximum observations was chosen as a ground station. For the satellites that were observed over certain times from the new ground station, the observations were removed from all other locations in the 4-D matrix. The function was called again with the unobserved satellites and the next maximum point set as a new ground station. The function \textbf{optimise.m} continues to call itself until all the satellites are always observed by at least one ground station. 
+
+The latitude grid was divided up uniformly across the spherical surface by the function $lat = \cos^{-1}(2x-1)-\pi/2$, where $x = [0:dx:1]$. If there are multiple locations with the same maximum value, the centre of the largest area is selected using \textbf{regionprops.m}.
+
+The fact that GLONASS belongs to Russia and that it would be desirable to have a ground station in Russia was not considered, nor was global politics or structural feasibility of the location. 
+
+\subsubsection{Model the observation of a satellite}
+- sensor model\\
+- error model \\
+
+\subsubsection{Calculating Orbital Parameters from Observations}
+- herrick gibbs method to calculate the velocity vector from three position measurements
+
+
+
+\subsection{Results}
+\subsubsection{Optimisation of Ground Station Locations}
+
+
+It was found that four ground stations located as in Table \ref{Table:gs}
+\begin{table}
+\centering\caption{Ground stations in the order chosen by the optimisation algorithm (Latitude grid size = 100, Longitude grid size = 200, Duration = 1 day, Time step = 100 sec)}\label{Table:gs}
+\begin{tabularx}{\linewidth}{c*6{Y}}
+\toprule\toprule
+\textbf{Number} & \textbf{Location} & \textbf{Latitude} & \textbf{Longitude} & \textbf{Altitude (m)} & \textbf{Unique Timesteps} \\\midrule
+1& Antarctica &  -90\Deg & 0\Deg & 2805 & 7584 \\
+2& Svalbard, Norway  &  78\Deg & 14 \Deg & 251 & 7553 \\
+3& Hawaii &  19\Deg & -156\Deg & 166 & 2263 \\
+4& Kenya &  -2\Deg & 38\Deg & 849 & 1585 \\
+5& Brazil &  -12\Deg & -62 \Deg & 366 & 589 \\
+6& China &  30\Deg & 105\Deg & 352 &  321 \\ \bottomrule
+\end{tabularx}
+\end{table}
 % Vernial equinox data
 %http://earthsky.org/astronomy-essentials/everything-you-need-to-know-vernal-or-spring-equinox
 %http://science.nasa.gov/iSat/?group=glo-ops&satellite=40001
  % data all TLE https://www.celestrak.com/NORAD/elements/glo-ops.txt but used tle from SpaceTrack
+% status of sats https://www.glonass-iac.ru/en/GLONASS/index.php
+% http://www.novatel.com/assets/Documents/Papers/GLONASSOverview.pdf
 
 %On high latitudes (north or south), GLONASS' accuracy is better than that of GPS due to the orbital position of the satellites
 \end{document}

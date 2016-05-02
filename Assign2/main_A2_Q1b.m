@@ -1,4 +1,5 @@
 %% Question 1 Part 2
+% L Drabsch
 % position trajectory of UAV
 % Data: GPSsat_ephem - orbital parameters of satellites
 %       GPS_pseudorange_F1 - logged data of UAV as [time,SatNo,Psrange] in
@@ -22,7 +23,38 @@ close all
 addpath('./module_conversion','./Data','./module_plot','./Subfns')
 clc
 constants();
-
+colours = [0.75 0.06 1;...  % magenta
+           0.06 0.93 1;...
+           0.06 1 0.1;...
+           1   0.01 0.01;...
+           1 0.85 0.06;...
+           0.6 0.3 0.2;...
+           0.35 0.63 0.93;...
+           0.5 0.1 0.9;...
+           0.9 0.5 0.2;...
+           0.9 0.01 0.6;...
+           0.1 0.1 1;...  % magenta
+           0.5 0.93 1;...
+           0.06 1 .6;...
+           1   0.7 0.01;...
+           0.1 0.85 0.06;...
+           0.6 0.3 0.9;...
+           0.35 0.01 0.93;...
+           0.5 0.5 0.9;...
+           0.3 0.5 0.2;...
+           0.0 0.01 0.6;...
+           0.75 0.06 0.5;...  % magenta
+           0.06 0.93 0.5;...
+           0.06 0 0.1;...
+           04   0.71 0.01;...
+           0.5 0.85 0.06;...
+           0.25 0.3 0.2;...
+           0.35 0.23 0.93;...
+           0.5 0.0 0.6;...
+           0.9 0.05 0.2;...
+           0.7 0.01 0.6;...
+           0.9 0.6 0.6;...
+           ];
 %% Identify sat data
 % ideaA: function that takes in time and vector of satellite numbers and
 % outputs PosSat = [xrow;yrow;zrow] only for the sats in range then loop
@@ -37,6 +69,12 @@ GPS_pseudorange_F1 = dlmread('GPS_pseudorange_F1.txt');
 F1_time = GPS_pseudorange_F1(:,1);
 F1_sat = GPS_pseudorange_F1(:,2);   % what satellites are observed
 F1_R = GPS_pseudorange_F1(:,3);     % range of satellites 
+
+UAVPosition_F1 = dlmread('UAVPosition_F1.txt');
+UAV_time = UAVPosition_F1(:,1);
+UAV_N = UAVPosition_F1(:,2);   % what satellites are observed
+UAV_E = UAVPosition_F1(:,3);     % range of satellites 
+UAV_D = UAVPosition_F1(:,4); 
 
 load GPSsat_ephem
 ClassPara = [deg2rad(Rasc)';deg2rad(omega)';deg2rad(inc)';a';e';deg2rad(M0)';t0']; % for all 31 sats
@@ -56,21 +94,26 @@ while startindex <= length(F1_time)
     startindex = startindex+length(index(index));
     i = i+1;
 end
+
+SatObs = Satextract(Observables,Ranges,31,Timevec,colours);
+
 T_equ = 7347737.336;        % equinox time
 Timevec_eq = Timevec - T_equ;
 % Timevec_eq = Timevec - Timevec(1);
 timestart = Timevec_eq(1);
-animation3D();
+% animation3D();
 
 % Positions for all satellites for all time
-[X_ECIstore,X_ECEFstore] = keplerorbit3D(ClassPara,Timevec',T_equ);
+[X_ECIstore,X_ECEFstore,X_LLHGC] = keplerorbit3D(ClassPara,Timevec',T_equ);
 
 % use NLLS for each time step to calculate ECEF coords of UAC
 GndStation_LLH = [deg2rad(-34.76);deg2rad(150.03);680];
 GndStation_ECEF =  llhgc2ecef(GndStation_LLH);
 GuessLoc = [GndStation_ECEF;0]; % use gnd station location as guess of location
-% GuessLoc = [ecef2eci(GndStation_ECEF,Timevec_eq(1));0]; % clock bias
-% GuessLoc = [0;0;0;0];
+
+% Sat_Loc_LG = zeros(size(X_ECEFstore)); % initialise;
+figpol.base = PolarPlot();
+
 for tindex = 1:1:length(Timevec_eq)
     % remove trailing zeros
     Obs_t = Observables(:,tindex);
@@ -83,45 +126,61 @@ for tindex = 1:1:length(Timevec_eq)
     X_ECEF = squeeze(X_ECEFstore(:,tindex,Obs_t));
     X_ECI = squeeze(X_ECIstore(1:3,tindex,Obs_t));
     
-%     for obsindex = 1:1:length(Obs_t)
-%         scatter3(X_ECI(1,obsindex),X_ECI(2,obsindex),X_ECI(3,obsindex))
-%     end
-%     GndStation_ECI(:,tindex) = ecef2eci(GndStation_ECEF,Timevec_eq(tindex));
-%     scatter3(GndStation_ECI(1,tindex),GndStation_ECI(2,tindex),GndStation_ECI(3,tindex),'filled')
-%     drawnow;
-    
     % NLLS (with clock bias)
     [UAV_ECEF_global(1:4,tindex),DOP(1:5,tindex)] = convergance(GuessLoc,X_ECEF,Range_t);
-%     [UAV_ECEF_global(1:4,tindex)] = convergance(GuessLoc,X_ECEF,Range_t);
 
     UAV_ECEF_local(1:3,tindex) = UAV_ECEF_global(1:3,tindex) - GndStation_ECEF;
     UAV_LG_cart(1:3,tindex) = ecef2lg(UAV_ECEF_local(1:3,tindex),GndStation_LLH);
 
-%     UAV_ECI_global(1:3,tindex) = convergance(GuessLoc,X_ECI,Range_t);
-%     UAV_ECI_global = ecef2eci(UAV_ECEF_global,Timevec_eq(tindex));
-%     scatter3(UAV_ECI_global(1,tindex),UAV_ECI_global(2,tindex),UAV_ECI_global(3,tindex),'x')
     GuessLoc = [UAV_ECEF_global(1:3,tindex);0]; % use previous timestep for guess of next location
+
+    SatLoc_ECEF_local = X_ECEF - GndStation_ECEF*ones(1,size(X_ECEF,2));
+    Sat_Loc_LG = cartesian2polar(ecef2lg(SatLoc_ECEF_local,GndStation_LLH));
+    
+    figure(figpol.base)
+    [Sat_Locplot.x,Sat_Locplot.y] = polar2plot(Sat_Loc_LG(2,:),Sat_Loc_LG(3,:));
+    
+   
+    for p = 1:1:length(Sat_Locplot.x)
+        plot(Sat_Locplot.x(p),Sat_Locplot.y(p),'o','Color' ,colours(Obs_t(p),:))
+        
+        if tindex == 1 
+            text(Sat_Locplot.x(p)+0.03,Sat_Locplot.y(p),num2str(Obs_t(p)),'Color',colours(Obs_t(p),:),'FontSize',12)
+            done = Obs_t;
+        elseif sum(Obs_t(p)==done) == 0
+            text(Sat_Locplot.x(p)+0.03,Sat_Locplot.y(p),num2str(Obs_t(p)),'Color',colours(Obs_t(p),:),'FontSize',12)
+            done = [done; Obs_t(p)];
+        end
+    end
 end
+
+
 
 %% Plot cartesian 
 figure;
 plot3(UAV_LG_cart(1,:),UAV_LG_cart(2,:),UAV_LG_cart(3,:))
-
-
+grid on
+hold on
+plot3(UAV_N,UAV_E,UAV_D,'--k')
+legend('Measured','True')
+title('UAV trace in NED coordinates at the ground station')
+xlabel('N')
+ylabel('E')
+zlabel('D')
 %% polar plots
 
-
-% UAV_ECI_local = UAV_ECI_global - GndStation_ECI*ones(1,size(UAV_ECEF_global,2));
-% UAV_ECI_local = UAV_ECI_global - GndStation_ECI;
-
-% UAV_ECEF_local = eci2ecef(UAV_ECI_local,Timevec_eq);
 UAV_LG_cart = ecef2lg(UAV_ECEF_local,GndStation_LLH);
 UAV_LG_pol = cartesian2polar(UAV_LG_cart);
 
-figpol.base = PolarPlot();
+figure(figpol.base)
 [UAVtrack.x,UAVtrack.y] = polar2plot(UAV_LG_pol(2,:),UAV_LG_pol(3,:));
 figure(figpol.base)
 plot(UAVtrack.x,UAVtrack.y)
+
+%% DOPS
+
+plot(Timevec,DOP(1,:))
+numsats = sum(Observables>0,1);
 
 %% Identify error: limit crazy dynamics of UAV - use UAV_LG_cart
 dt = Timevec(2)-Timevec(1);
@@ -133,8 +192,11 @@ vel_std = std(vel_norm);
 
 vel_error = find(vel_norm>(vel_mean+vel_std));
 
+%% Error correction
+% assume that one satellite is wrong?
+% check if any point in time has less than 4 satellites (dont use al all)
 
-
-
+% plot psudorange with time
+% plot(
 
 

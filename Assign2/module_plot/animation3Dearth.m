@@ -8,6 +8,7 @@
 %         all time
 
     figsim.globe = Earthplot();
+    title('ECI frame')
     grid on
     hold on
 
@@ -22,3 +23,13 @@
     plotcoord(T_ECI,'k',figsim.ECIframe);
     figsim.ECEFframe = hggroup;
     plotcoord(T_ECEF,'r',figsim.ECEFframe);
+
+     figsim.globe2 = Earthplot();
+     title('ECEF frame')
+    grid on
+    hold on
+    % plot ECI and ECEF axes
+    figsim.ECIframe2 = hggroup;
+    plotcoord(T_ECI,'k',figsim.ECIframe2);
+    figsim.ECEFframe2 = hggroup;
+    plotcoord(T_ECEF,'r',figsim.ECEFframe2);

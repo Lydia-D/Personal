@@ -1,4 +1,4 @@
-%% function to calculate the ECEF cords from range 
+%% NLLS jacobian convergance
 % L Drabsch 4/4/16
 % 
 % Inputs: PosSat = [xrow;yrow;zrow] at time t for all sats in range
@@ -6,7 +6,7 @@
 %         Rsat = column vector of real ranges from satellites
 % Outputs: 
 %% 
-function [X,DOP] = convergance(X0,PosSat,Rsat)
+function [X,DOP,clockbias] = convergance(X0,PosSat,Rsat)
     % weighted 
     W = eye(size(PosSat,4)); % something to do with dilution of precision?
    
@@ -22,7 +22,7 @@ function [X,DOP] = convergance(X0,PosSat,Rsat)
 %         dX = (H'*W*H)\H'*W*drho; % minimise
         dX = (H'*H)\H'*drho;
         X = X+dX;   % update new X 
-        if iter< maxiterations
+        if iter > maxiterations
             break
         else
             iter = iter+1;
@@ -31,6 +31,6 @@ function [X,DOP] = convergance(X0,PosSat,Rsat)
     
     %% DOPs
     DOP = DOPs(H);
-    
+    clockbias = X(4);
 
 end

@@ -1,6 +1,25 @@
 \documentclass[Space3_Assign2]{subfile}
 
 \begin{document}
+\section{Tracking UAV from GPS}
+\subsection{Introduction}
+\subsubsection{GPS Simulation}
+The ephemeris data in keplerian orbital parameters was provided and used to simulate all of the satellites in the GPS constellation.
 
-hello
+
+
+
+\subsection{Methodology}
+\subsubsection{GPS Simulation}
+The satellites were simulated using the keplerian model. The positions in ECI, ECEF and LLH frames were calculated and stored in a 3D matrices with dimensions (position axis, time, satellite).  The orbits are sorted into colours by the value of the right ascending node in the ephemeris data. Kepler's method relates the mean and eccentric anomalies (Mt and E) and solved using newtowns method.
+
+
+
+\subsection{Results/Discussion}
+\subsubsection{GPS Simulation}
+See Figures \ref{Q1AECI} to \ref{Q1AGT} for the ECI frame, ECEF frame and ground trace of the 24 hour simulation. The GPS constellation was in 6 orbits with a period of 12 hrs. 
+\subsubsection{title}
+
+
+
 \end{document}
