@@ -3,22 +3,62 @@
 \begin{document}
 \section{Tracking UAV from GPS}
 \subsection{Introduction}
-\subsubsection{GPS Simulation}
-The ephemeris data in keplerian orbital parameters was provided and used to simulate all of the satellites in the GPS constellation.
+The ephemeris data in keplerian orbital parameters were provided and used to simulate all of the satellites in the GPS constellation. A UAV was flown along a path while receiving range data from observable satellites in the GPS constellation. The data was used to track the location of the UAV relative to a set ground station. The ground station also tracked the UAV, and the two sets of data are compared to analyse the accuracy of the GPS. 
+
 
 
 
 
 \subsection{Methodology}
 \subsubsection{GPS Simulation}
-The satellites were simulated using the keplerian model. The positions in ECI, ECEF and LLH frames were calculated and stored in a 3D matrices with dimensions (position axis, time, satellite).  The orbits are sorted into colours by the value of the right ascending node in the ephemeris data. Kepler's method relates the mean and eccentric anomalies (Mt and E) and solved using newtowns method.
+The satellites were simulated using the keplerian model. The positions in ECI, ECEF and LLH frames were calculated and stored in a 3D matrices with dimensions (position axis, time, satellite). The orbits are sorted into colours by the value of the right ascending node in the ephemeris data. Kepler's method relates the mean and eccentric anomalies (Mt and E) and solved using newtowns method.
+
+\subsubsection{UAV Tracking}
+A minimum of four satellites are required to be observed in order to solve for the 3D position of the UAV. The fourth satellite is necessary in order to account for clock bias. Clock bias is the error in the clock on the UAV, resulting in errors of the time that the signal was received. The signal carries information of when it was sent which is then transformed into distance. For more than four satellites, the system is overdetermined and must be solved approximately. The non-linear least squares (NLLS) formulation was implemented from the pseudorange measurements from the GPS.
+
+NLLS is applied in this context by using the residual errors $\Delta\rho_0$ between the measured pseudorange and the calculated pseudorange from a system model. The residual error is minimised by iteratively updating the estimate of the states $X_0 = [x_0,y_0,z_0,cb_0]^T$. The minimisation algorithm is characterised by the cost function $J = \frac{1}{2}\Delta\rho_0^TW\Delta\rho_0$ with a diagonal weighting matrix W which contains the measurement confidence and coupling errors. The state is progressed forward by the jacobian H of the system model and reevaluated about each stationary point due to the non-linearity of the system. The state X is updated $X = X_0+\Delta X$ by the least squares optimisation $\Delta X = (H^TWH)^{-1}H^TW\Delta \rho_0$ and. Iteration continues until convergence, when $\Delta X$ is small. The initial state for each timestep is guessed as the position calculated in the previous timestep. The location of the ground station is used as the initial guess for the first timestep.
+
+The NLLS algorithm was run for each step in time to solve for the position of the UAV. Dilution of precision values(DOPs) were calculate for each measurement using the diagonals of $V = (H^TH)^{-1}$. DOPs are a measurement of precision for that point in time. 
+
+\subsubsection{Error Detection and Correction}
+The error was detected by implementing constraints on the UAVs dynamics. If the UAV instantaneously accelerated at 100 m/s$^2$ in any direction that point in time was identified as an error. The velocity was calculated by the change in position over one time step, and similarly for the instantaneous acceleration. 
+
+The error correction method that was implemented consisted of linearly extrapolating missing ranges in the raw data based on the location where the error was from the previous detection method. The NLLS algorithm was run again and the error detection algorithm until no more extrapolating was done. However this did not work well because the range is not a linear relationship. Maybe with a weighting matrix on this measurement it may aid error correction, but it was not a robust method. This section of the code was not implemented in \textbf{main1C.m}, see \textbf{errorcorrection.m} for the extrapolating code.
 
 
 
 \subsection{Results/Discussion}
 \subsubsection{GPS Simulation}
-See Figures \ref{Q1AECI} to \ref{Q1AGT} for the ECI frame, ECEF frame and ground trace of the 24 hour simulation. The GPS constellation was in 6 orbits with a period of 12 hrs. 
-\subsubsection{title}
+The keplerian model was used for the analysis as the satellites are in MEO where the atmospheric affects are minimal. Also as the inclination of the satellites are at 55\Degs, there is only a slight affect on the argument of perigee from the oblateness of the Earth. The entire constellation is at the same inclination, therefore all of the satellites will have the same precession and is still able to have full Earth coverage. The analysis also used the simulation close to the time the TLEs were retrieved for a period of 24 hours (2 orbit periods), hence the keplerian model provides an accurate representation of the GPS constellation.
+
+See Figures \ref{Q1AECI} to \ref{Q1AGT} for the ECI frame, ECEF frame and ground trace of the 24 hour simulation, see Table \ref{Table:GPSinfo}. The mission of the GPS constellation was to provide consistent global coverage for the human population. GPS achieves that by having similar orbits with uniform altitudes eccentricities and inclinations. The geometric configuration is called a 'Walker delta' configuration with equally spaced planes and equally spaced phase shifts. This geometry results in a high number of satellites observable at the mid latitudes as satellites from different orbital planes overlap as seen by the ECEF frame Fig \ref{Q1AECEFside}. At the poles there is a low density of satellites as seen by the hole in the ECEF frame Fig \ref{Q1AECEF}. As the orbit is in MEO, the footprint of each satellite is large and can still provide coverage at the poles. 
+
+The orbital period is half a sidereal day, which means that each satellite returns to the original position. This improves network constancy and the location of the ground stations can be optimised for the long term.
+
+\begin{table}[h]
+\centering
+\caption{Summary of nominal orbital parameters}
+\label{Table:GPSinfo}
+\begin{tabularx}{0.6\textwidth}{cY}
+\toprule
+\textbf{Orbtial Parameter} & \textbf{Nominal Value} \\\midrule
+Semi Major Axis & 26 560 km \\ 
+Eccentricity & < 0.01 \\
+Period & 11.58 hrs \\
+Inclination & 55\Degs \\
+Phase Shift & 30\Degs \\
+Number of planes & 6 \\\bottomrule
+\end{tabularx}
+\end{table}
+
+\subsubsection{UAV Tracking}
+The UAV tracking results in LGCV from the ground station are in Fig \ref{Q1BF1LG} and the polar track in Fig \ref{Q1B_polartrack}. In general, there was a good agreement between the GPS tracking and the ground station tracking, however there were a few spikes of deviation. The N-E track was highly accurate, it was the D coordinate that shows the deviations. The vertical displacements must be GPS tracking errors as it is unreasonable for the UAV to accelerate that quickly. The vertical displacements line with with a spike in clock bias Fig \ref{fig:clockbias}. This may be due to signal noise and data corruption from satellite clock drift, atmospheric effects or multipath errors.
+
+The geometric dilution of precision Fig \ref{fig:DOPall} spikes when the number of satellites are low Fig \ref{fig:SatNo}. However, for some lower number of satellites there is not a spike in precision error. This is because a greater distribution of the satellites across the visible sky will result in a lower GDOP. See Fig \ref{fig:BestDOP4} for the best GDOP (37) with four satellites compared to the worst GDOP (3567) in Fig \ref{fig:WorstDOP}. The best GDOP (2.7) for the whole flight was Fig \ref{fig:BestDOP} with 9 satellites visible.
+
+\subsubsection{Error Detection and Correction}
+The error detection worked well, and it correlated with spikes in the clock bias as well, Fig \ref{fig:1cclockbias}. See Fig \ref{fig:1Cpolar} for the polar plot and Fig \ref{fig:1Ccart} for the cartesian plot of the GPS track. Dilution of precision Figures \ref{fig:1Cgopall}, \ref{fig:1Cbest}, \ref{fig:1Cbest4}, \ref{fig:1Cwrost}. The number of satellites that were visible is contained in Fig \ref{fig:1cnumsats}.
+
 
 
 

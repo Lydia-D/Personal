@@ -4,8 +4,10 @@
 
 \section{GLONASS Orbital Determination}
 \subsection{Introduction}
-The Russian GNSS is called GLONASS, a system that requires 24 satellites in three orbital planes to have full global coverage. The satellites are in nearly circular orbits at an average altitude of 19130 km, approximate period of 11 hrs and 15 min and an inclination of 65\Deg. Each orbital plane is separated by 120\Deg in the ascending node and consists of eight satellites. There is currently 28 satellites in orbit with 23 operational. For the following analysis, only the operational satellites are used.
+The Russian GNSS is called GLONASS, a system that requires 24 satellites in three orbital planes to have full global coverage. The satellites are in nearly circular orbits at an average altitude of 19130 km, period of 11 hrs and 15 min and an inclination of 65\Deg. Each orbital plane is separated by 120\Deg in the ascending node and consists of eight satellites. There is currently 28 satellites in orbit with 23 operational. For the following analysis, only the operational satellites are used. 
 \subsection{Methodology}
+The high
+
 
 Done:\\
 TLEs for GLONASS and simulated - 3d and ground trace\\
@@ -24,15 +26,18 @@ The latitude grid was divided up uniformly across the spherical surface by the f
 The fact that GLONASS belongs to Russia and that it would be desirable to have a ground station in Russia was not considered, nor was global politics or structural feasibility of the location. 
 
 \subsubsection{Model the observation of a satellite}
-- sensor model\\
-- error model \\
+Tried to implement three sensor model rho,az,el.
 
 \subsubsection{Calculating Orbital Parameters from Observations}
-- herrick gibbs method to calculate the velocity vector from three position measurements
+herrick gibbs method to calculate the velocity vector from three position measurements
 
 
 
 \subsection{Results}
+\subsubsection{Simulation}
+The period of the orbits line up so perfectly with the side real day of Earth, and the phase shift in the ascension node between orbital planes that the ground trace orbits perfectly align, see Figures in section 5. On high latitudes (north or south), GLONASS' accuracy is better than that of GPS due to the orbital position of the satellites.
+
+
 \subsubsection{Optimisation of Ground Station Locations}
 
 
@@ -47,15 +52,15 @@ It was found that four ground stations located as in Table \ref{Table:gs}
 3& Hawaii &  19\Deg & -156\Deg & 166 & 2263 \\
 4& Kenya &  -2\Deg & 38\Deg & 849 & 1585 \\
 5& Brazil &  -12\Deg & -62 \Deg & 366 & 589 \\
-6& China &  30\Deg & 105\Deg & 352 &  321 \\ \bottomrule
+6& China &  30\Deg & 105\Deg & 352 &  321 \\ 
 \end{tabularx}
 \end{table}
-% Vernial equinox data
-%http://earthsky.org/astronomy-essentials/everything-you-need-to-know-vernal-or-spring-equinox
+ Vernial equinox data
+\url{http://earthsky.org/astronomy-essentials/everything-you-need-to-know-vernal-or-spring-equinox}
 %http://science.nasa.gov/iSat/?group=glo-ops&satellite=40001
- % data all TLE https://www.celestrak.com/NORAD/elements/glo-ops.txt but used tle from SpaceTrack
+ data all TLE \url{https://www.celestrak.com/NORAD/elements/glo-ops.txt but used tle from SpaceTrack}
 % status of sats https://www.glonass-iac.ru/en/GLONASS/index.php
 % http://www.novatel.com/assets/Documents/Papers/GLONASSOverview.pdf
 
-%On high latitudes (north or south), GLONASS' accuracy is better than that of GPS due to the orbital position of the satellites
+%
 \end{document}
