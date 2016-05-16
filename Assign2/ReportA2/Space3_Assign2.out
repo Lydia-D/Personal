@@ -1,20 +1,22 @@
 \BOOKMARK [1][-]{section.1}{Introduction}{}% 1
 \BOOKMARK [1][-]{section.2}{Tracking UAV from GPS}{}% 2
 \BOOKMARK [2][-]{subsection.2.1}{Introduction}{section.2}% 3
-\BOOKMARK [3][-]{subsubsection.2.1.1}{GPS Simulation}{subsection.2.1}% 4
-\BOOKMARK [2][-]{subsection.2.2}{Methodology}{section.2}% 5
-\BOOKMARK [3][-]{subsubsection.2.2.1}{GPS Simulation}{subsection.2.2}% 6
-\BOOKMARK [2][-]{subsection.2.3}{Results/Discussion}{section.2}% 7
-\BOOKMARK [3][-]{subsubsection.2.3.1}{GPS Simulation}{subsection.2.3}% 8
-\BOOKMARK [3][-]{subsubsection.2.3.2}{title}{subsection.2.3}% 9
-\BOOKMARK [1][-]{section.3}{GLONASS Orbital Determination}{}% 10
-\BOOKMARK [2][-]{subsection.3.1}{Introduction}{section.3}% 11
-\BOOKMARK [2][-]{subsection.3.2}{Methodology}{section.3}% 12
-\BOOKMARK [3][-]{subsubsection.3.2.1}{Optimisation of Ground Station Locations}{subsection.3.2}% 13
-\BOOKMARK [3][-]{subsubsection.3.2.2}{Model the observation of a satellite}{subsection.3.2}% 14
-\BOOKMARK [3][-]{subsubsection.3.2.3}{Calculating Orbital Parameters from Observations}{subsection.3.2}% 15
-\BOOKMARK [2][-]{subsection.3.3}{Results}{section.3}% 16
-\BOOKMARK [3][-]{subsubsection.3.3.1}{Optimisation of Ground Station Locations}{subsection.3.3}% 17
-\BOOKMARK [1][-]{section.4}{Appendix A: Question 1}{}% 18
-\BOOKMARK [1][-]{section.5}{Appendix B: Question 2}{}% 19
-\BOOKMARK [2][-]{subsection.5.1}{Optimisation of Ground Station Locations}{section.5}% 20
+\BOOKMARK [2][-]{subsection.2.2}{Methodology}{section.2}% 4
+\BOOKMARK [3][-]{subsubsection.2.2.1}{GPS Simulation}{subsection.2.2}% 5
+\BOOKMARK [3][-]{subsubsection.2.2.2}{UAV Tracking}{subsection.2.2}% 6
+\BOOKMARK [3][-]{subsubsection.2.2.3}{Error Detection and Correction}{subsection.2.2}% 7
+\BOOKMARK [2][-]{subsection.2.3}{Results/Discussion}{section.2}% 8
+\BOOKMARK [3][-]{subsubsection.2.3.1}{GPS Simulation}{subsection.2.3}% 9
+\BOOKMARK [3][-]{subsubsection.2.3.2}{UAV Tracking}{subsection.2.3}% 10
+\BOOKMARK [3][-]{subsubsection.2.3.3}{Error Detection and Correction}{subsection.2.3}% 11
+\BOOKMARK [1][-]{section.3}{GLONASS Orbital Determination}{}% 12
+\BOOKMARK [2][-]{subsection.3.1}{Introduction}{section.3}% 13
+\BOOKMARK [2][-]{subsection.3.2}{Methodology}{section.3}% 14
+\BOOKMARK [3][-]{subsubsection.3.2.1}{Optimisation of Ground Station Locations}{subsection.3.2}% 15
+\BOOKMARK [3][-]{subsubsection.3.2.2}{Model the observation of a satellite}{subsection.3.2}% 16
+\BOOKMARK [3][-]{subsubsection.3.2.3}{Calculating Orbital Parameters from Observations}{subsection.3.2}% 17
+\BOOKMARK [2][-]{subsection.3.3}{Results}{section.3}% 18
+\BOOKMARK [3][-]{subsubsection.3.3.1}{Simulation}{subsection.3.3}% 19
+\BOOKMARK [3][-]{subsubsection.3.3.2}{Optimisation of Ground Station Locations}{subsection.3.3}% 20
+\BOOKMARK [1][-]{section.4}{Appendix A: Question 1}{}% 21
+\BOOKMARK [1][-]{section.5}{Appendix B: Question 2}{}% 22

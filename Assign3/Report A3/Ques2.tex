@@ -1,0 +1,64 @@
+\documentclass[Space3_Assign3.tex]{subfile}
+
+\begin{document}
+\section{Question 2}
+
+\section{Introduction}
+The final GEO orbit is defined as having a period of one sidereal day, 23 hours 56 minutes 4.0916 seconds. Using Kepler's third law Eq\eqref{kep3} and the vis-viva law Eq\eqref{visviva} the semi-major axis and velocity of the circular orbit were calculated, see Table \ref{Table:orbitpar}.
+
+\begin{eqnarray}
+a = \sqrt[1/3]{\frac{\mu\mathbb{P}^2}{4\pi^2}} \label{kep3}\\
+v = \sqrt{\frac{\mu}{a}} \label{visviva}
+\end{eqnarray}
+
+The satellite parameters in the park orbit are
+\begin{table}
+\centering
+\caption{text}
+\label{Table:orbitpar}
+\begin{tabularx}{0.75\linewidth}{YYY}
+\toprule\toprule
+\textbf{Orbital Parameter} & \textbf{Initial Value} & \textbf{Final Value} \\ \midrule
+Semi-major axis & 6655937 m & \\
+Period & & 86164.0916 s \\
+Velocity & & \\
+Eccentricity & 0 & 0 \\
+Inclination angle & -28.5\Deg & 0\Deg \\
+RAAN & 0\Deg & \\
+Argument of Perigee & 0\Deg & \\
+Mean Anomaly & 0\Deg & free \\
+Epoch & 0 s & free \\\bottomrule\bottomrule 
+\end{tabularx}
+\end{table}
+
+\subsection{Cost and Constraints}
+What are constraints - why are they important.\\
+The constraints on this optimisation problem defines the final GEO orbit. They are  The radius and velocity are enforced by requiring the ratio between the 
+\begin{eqnarray}
+J = |\Delta v_1 | + |\Delta v_2| \label{costfn}
+
+\end{eqnarray}
+
+
+
+\subsection{Methodology}
+
+
+
+
+
+
+The Hessian of the Lagrangian $H_\lag = \nabla^2_{xx}\lag$\\
+BFGS method. Approximation of the Hessian update
+
+\begin{eqnarray}
+\bm{H}_{k+1} &=& \bm{H}_k - \frac{\bm{H}_k s_k s_k^T \bm{H}_k}{s_k^T \bm{H}_k s_k} + \frac{\bm{y}_k\bm{y}_k^T}{\bm{y}_k^T s_k}\\
+s_k &=& x_{k+1} - x_k\\
+y_k &=& \nabla f_{k+1} - \nabla f_k
+\end{eqnarray}
+
+
+
+
+
+\end{document}

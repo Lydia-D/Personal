@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.3.10)  2 MAY 2016 00:04
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.3.10)  2 MAY 2016 23:55
 entering extended mode
 **./Space3_Assign2.tex
 (Space3_Assign2.tex
@@ -959,28 +959,28 @@ Package textcomp Info: Setting ptmj sub-encoding to TS1/4 on input line 409.
 )) (Space3_Assign2.aux)
 \openout1 = `Space3_Assign2.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 108.
-LaTeX Font Info:    ... okay on input line 108.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 108.
-LaTeX Font Info:    ... okay on input line 108.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 108.
-LaTeX Font Info:    ... okay on input line 108.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 108.
-LaTeX Font Info:    ... okay on input line 108.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 108.
-LaTeX Font Info:    ... okay on input line 108.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 108.
-LaTeX Font Info:    ... okay on input line 108.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 108.
-LaTeX Font Info:    ... okay on input line 108.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 108.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 108.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 109.
+LaTeX Font Info:    ... okay on input line 109.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 109.
+LaTeX Font Info:    ... okay on input line 109.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 109.
+LaTeX Font Info:    ... okay on input line 109.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 109.
+LaTeX Font Info:    ... okay on input line 109.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 109.
+LaTeX Font Info:    ... okay on input line 109.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 109.
+LaTeX Font Info:    ... okay on input line 109.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 109.
+LaTeX Font Info:    ... okay on input line 109.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 109.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 109.
 
 
 ("C:\Users\Lydia\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\ts1cmr.fd"
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 108.
+LaTeX Font Info:    ... okay on input line 109.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -1033,7 +1033,7 @@ ii"
 \everyMPtoPDFconversion=\toks43
 )
 \AtBeginShipoutBox=\box45
-Package hyperref Info: Link coloring OFF on input line 108.
+Package hyperref Info: Link coloring OFF on input line 109.
 
 ("C:\Users\Lydia\AppData\Local\Programs\MiKTeX 2.9\tex\latex\hyperref\nameref.s
 ty"
@@ -1045,9 +1045,9 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
 \c@section@level=\count163
 )
-LaTeX Info: Redefining \ref on input line 108.
-LaTeX Info: Redefining \pageref on input line 108.
-LaTeX Info: Redefining \nameref on input line 108.
+LaTeX Info: Redefining \ref on input line 109.
+LaTeX Info: Redefining \pageref on input line 109.
+LaTeX Info: Redefining \nameref on input line 109.
  (Space3_Assign2.out) (Space3_Assign2.out)
 \@outlinefile=\write4
 \openout4 = `Space3_Assign2.out'.
@@ -1090,19 +1090,19 @@ Package caption Info: End \AtBeginDocument code.
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 
-<./IMAGEtitle2f.jpg, id=86, 181.6386pt x 542.025pt>
+<./IMAGEtitle2f.jpg, id=94, 181.6386pt x 542.025pt>
 File: ./IMAGEtitle2f.jpg Graphic file (type jpg)
  <use ./IMAGEtitle2f.jpg>
-Package pdftex.def Info: ./IMAGEtitle2f.jpg used on input line 112.
+Package pdftex.def Info: ./IMAGEtitle2f.jpg used on input line 113.
 (pdftex.def)             Requested size: 283.19429pt x 845.04684pt.
 LaTeX Font Info:    Font shape `OT1/cmr/bx/sc' in size <24.88> not available
-(Font)              Font shape `OT1/cmr/b/sc' tried instead on input line 123.
-LaTeX Font Info:    Try loading font information for U+msa on input line 125.
+(Font)              Font shape `OT1/cmr/b/sc' tried instead on input line 124.
+LaTeX Font Info:    Try loading font information for U+msa on input line 126.
 
 ("C:\Users\Lydia\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 125.
+LaTeX Font Info:    Try loading font information for U+msb on input line 126.
 ("C:\Users\Lydia\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
@@ -1142,13 +1142,13 @@ e2f.jpg>]
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
- <./Plag.pdf, id=97, 597.19112pt x 845.19763pt>
+ <./Plag.pdf, id=105, 597.19112pt x 845.19763pt>
 File: ./Plag.pdf Graphic file (type pdf)
  <use ./Plag.pdf>
-Package pdftex.def Info: ./Plag.pdf used on input line 148.
+Package pdftex.def Info: ./Plag.pdf used on input line 149.
 (pdftex.def)             Requested size: 478.86255pt x 677.71953pt.
 LaTeX Font Info:    Font shape `OT1/cmr/bx/sc' in size <17.28> not available
-(Font)              Font shape `OT1/cmr/b/sc' tried instead on input line 154.
+(Font)              Font shape `OT1/cmr/b/sc' tried instead on input line 155.
 
 (Space3_Assign2.toc
 
@@ -1169,7 +1169,7 @@ l.2 ...ine {2}Tracking UAV from GPS}{1}{section.2}
 \openout5 = `Space3_Assign2.toc'.
 
 
-(Space3_Assign2.lof)
+(Space3_Assign2.lof [2])
 \tf@lof=\write6
 \openout6 = `Space3_Assign2.lof'.
 
@@ -1177,46 +1177,54 @@ l.2 ...ine {2}Tracking UAV from GPS}{1}{section.2}
 \tf@lot=\write7
 \openout7 = `Space3_Assign2.lot'.
 
- [2] (Ques1.tex) (Ques2.tex
-Underfull \hbox (badness 10000) in paragraph at lines 10--14
+ [3] (Ques1.tex [1] [2])
+(Ques2.tex
+Underfull \hbox (badness 10000) in paragraph at lines 12--16
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 15--17
+Underfull \hbox (badness 10000) in paragraph at lines 17--19
 
  []
 
-[1]
-Underfull \hbox (badness 10000) in paragraph at lines 27--29
-
+[3]
+Overfull \hbox (15.19028pt too wide) in paragraph at lines 44--64
+$\OT1/cmtt/m/n/10.95 earthsky . org / astronomy-[]essentials / everything-[]you
+-[]need-[]to-[]know-[]vernal-[]or-[]spring-[]equinox$[]
  []
 
-) (AppendixA.tex <./Q1AECI.jpg, id=189, 562.1pt x 421.575pt>
+
+Overfull \hbox (16.05644pt too wide) in paragraph at lines 44--64
+\OT1/cmr/m/n/10.95 data all TLE []$\OT1/cmtt/m/n/10.95 https : / / www . celest
+rak . com / NORAD / elements / glo-[]ops . txtbutusedtlefromSpaceTrack$[] 
+ []
+
+) (AppendixA.tex <./Q1AECI.jpg, id=279, 562.1pt x 421.575pt>
 File: ./Q1AECI.jpg Graphic file (type jpg)
 
 <use ./Q1AECI.jpg>
 Package pdftex.def Info: ./Q1AECI.jpg used on input line 9.
 (pdftex.def)             Requested size: 483.69687pt x 362.77257pt.
- <./Q1AECI_side.jpg, id=190, 725.71124pt x 507.8975pt>
+ <./Q1AECI_side.jpg, id=280, 725.71124pt x 507.8975pt>
 File: ./Q1AECI_side.jpg Graphic file (type jpg)
 
 <use ./Q1AECI_side.jpg>
 Package pdftex.def Info: ./Q1AECI_side.jpg used on input line 16.
 (pdftex.def)             Requested size: 483.69687pt x 338.53033pt.
- <./Q1AECEF.jpg, id=191, 562.1pt x 421.575pt>
+ <./Q1AECEF.jpg, id=281, 562.1pt x 421.575pt>
 File: ./Q1AECEF.jpg Graphic file (type jpg)
 
 <use ./Q1AECEF.jpg>
 Package pdftex.def Info: ./Q1AECEF.jpg used on input line 23.
 (pdftex.def)             Requested size: 483.69687pt x 362.77257pt.
- <./Q1AECEF_side.jpg, id=192, 562.1pt x 421.575pt>
+ <./Q1AECEF_side.jpg, id=282, 562.1pt x 421.575pt>
 File: ./Q1AECEF_side.jpg Graphic file (type jpg)
 
 <use ./Q1AECEF_side.jpg>
 Package pdftex.def Info: ./Q1AECEF_side.jpg used on input line 30.
 (pdftex.def)             Requested size: 483.69687pt x 362.77257pt.
- <./Q1AGT.jpg, id=193, 989.6975pt x 436.63126pt>
+ <./Q1AGT.jpg, id=283, 989.6975pt x 436.63126pt>
 File: ./Q1AGT.jpg Graphic file (type jpg)
 
 <use ./Q1AGT.jpg>
@@ -1233,7 +1241,7 @@ o.pdf ./Q1B_F1_LG.eps>
 (epstopdf)             \includegraphics on input line 44.
 Package epstopdf Info: Output file is already uptodate.
 
-<./Q1B_F1_LG-eps-converted-to.pdf, id=194, 679.53876pt x 362.35374pt>
+<./Q1B_F1_LG-eps-converted-to.pdf, id=284, 679.53876pt x 362.35374pt>
 File: ./Q1B_F1_LG-eps-converted-to.pdf Graphic file (type pdf)
 
 <use ./Q1B_F1_LG-eps-converted-to.pdf>
@@ -1251,17 +1259,291 @@ ted-to.pdf ./Q1B_polartrack.eps>
 (epstopdf)             \includegraphics on input line 51.
 Package epstopdf Info: Output file is already uptodate.
 
-<./Q1B_polartrack-eps-converted-to.pdf, id=195, 421.575pt x 316.18124pt>
+<./Q1B_polartrack-eps-converted-to.pdf, id=285, 421.575pt x 316.18124pt>
 File: ./Q1B_polartrack-eps-converted-to.pdf Graphic file (type pdf)
 
 <use ./Q1B_polartrack-eps-converted-to.pdf>
 Package pdftex.def Info: ./Q1B_polartrack-eps-converted-to.pdf used on input li
 ne 51.
 (pdftex.def)             Requested size: 483.69687pt x 362.78061pt.
-) [2] [3 <./Q1AECI.jpg>] [4 <./Q1AECI_side.jpg>] [5 <./Q1AECEF.jpg>] [6 <./Q1AE
-CEF_side.jpg> <./Q1AGT.jpg>]
-[7 <./Q1B_F1_LG-eps-converted-to.pdf> <./Q1B_polartrack-eps-converted-to.pdf>]
-(AppendixB.tex
+Package epstopdf Info: Source file: <DOPall.eps>
+(epstopdf)                    date: 2016-05-02 21:39:42
+(epstopdf)                    size: 22509 bytes
+(epstopdf)             Output file: <DOPall-eps-converted-to.pdf>
+(epstopdf)                    date: 2016-05-02 21:43:11
+(epstopdf)                    size: 4780 bytes
+(epstopdf)             Command: <epstopdf --outfile=DOPall-eps-converted-to.pdf
+ DOPall.eps>
+(epstopdf)             \includegraphics on input line 56.
+Package epstopdf Info: Output file is already uptodate.
+
+<DOPall-eps-converted-to.pdf, id=286, 421.575pt x 316.18124pt>
+File: DOPall-eps-converted-to.pdf Graphic file (type pdf)
+
+<use DOPall-eps-converted-to.pdf>
+Package pdftex.def Info: DOPall-eps-converted-to.pdf used on input line 56.
+(pdftex.def)             Requested size: 386.95897pt x 290.22449pt.
+Package epstopdf Info: Source file: <SatNo.eps>
+(epstopdf)                    date: 2016-05-02 21:39:28
+(epstopdf)                    size: 21154 bytes
+(epstopdf)             Output file: <SatNo-eps-converted-to.pdf>
+(epstopdf)                    date: 2016-05-02 21:43:14
+(epstopdf)                    size: 4156 bytes
+(epstopdf)             Command: <epstopdf --outfile=SatNo-eps-converted-to.pdf 
+SatNo.eps>
+(epstopdf)             \includegraphics on input line 62.
+Package epstopdf Info: Output file is already uptodate.
+
+<SatNo-eps-converted-to.pdf, id=287, 421.575pt x 316.18124pt>
+File: SatNo-eps-converted-to.pdf Graphic file (type pdf)
+
+<use SatNo-eps-converted-to.pdf>
+Package pdftex.def Info: SatNo-eps-converted-to.pdf used on input line 62.
+(pdftex.def)             Requested size: 386.95897pt x 290.22449pt.
+Package epstopdf Info: Source file: <BestDOP.eps>
+(epstopdf)                    date: 2016-05-02 21:25:15
+(epstopdf)                    size: 41330 bytes
+(epstopdf)             Output file: <BestDOP-eps-converted-to.pdf>
+(epstopdf)                    date: 2016-05-02 21:43:11
+(epstopdf)                    size: 10618 bytes
+(epstopdf)             Command: <epstopdf --outfile=BestDOP-eps-converted-to.pd
+f BestDOP.eps>
+(epstopdf)             \includegraphics on input line 68.
+Package epstopdf Info: Output file is already uptodate.
+
+<BestDOP-eps-converted-to.pdf, id=288, 421.575pt x 316.18124pt>
+File: BestDOP-eps-converted-to.pdf Graphic file (type pdf)
+
+<use BestDOP-eps-converted-to.pdf>
+Package pdftex.def Info: BestDOP-eps-converted-to.pdf used on input line 68.
+(pdftex.def)             Requested size: 386.95897pt x 290.22449pt.
+Package epstopdf Info: Source file: <WorstDOP.eps>
+(epstopdf)                    date: 2016-05-02 21:39:11
+(epstopdf)                    size: 39294 bytes
+(epstopdf)             Output file: <WorstDOP-eps-converted-to.pdf>
+(epstopdf)                    date: 2016-05-02 21:43:12
+(epstopdf)                    size: 10224 bytes
+(epstopdf)             Command: <epstopdf --outfile=WorstDOP-eps-converted-to.p
+df WorstDOP.eps>
+(epstopdf)             \includegraphics on input line 74.
+Package epstopdf Info: Output file is already uptodate.
+
+<WorstDOP-eps-converted-to.pdf, id=289, 421.575pt x 316.18124pt>
+File: WorstDOP-eps-converted-to.pdf Graphic file (type pdf)
+
+<use WorstDOP-eps-converted-to.pdf>
+Package pdftex.def Info: WorstDOP-eps-converted-to.pdf used on input line 74.
+(pdftex.def)             Requested size: 386.95897pt x 290.22449pt.
+Package epstopdf Info: Source file: <BestDOP4.eps>
+(epstopdf)                    date: 2016-05-02 21:39:01
+(epstopdf)                    size: 39270 bytes
+(epstopdf)             Output file: <BestDOP4-eps-converted-to.pdf>
+(epstopdf)                    date: 2016-05-02 21:43:13
+(epstopdf)                    size: 10213 bytes
+(epstopdf)             Command: <epstopdf --outfile=BestDOP4-eps-converted-to.p
+df BestDOP4.eps>
+(epstopdf)             \includegraphics on input line 80.
+Package epstopdf Info: Output file is already uptodate.
+
+<BestDOP4-eps-converted-to.pdf, id=290, 421.575pt x 316.18124pt>
+File: BestDOP4-eps-converted-to.pdf Graphic file (type pdf)
+
+<use BestDOP4-eps-converted-to.pdf>
+Package pdftex.def Info: BestDOP4-eps-converted-to.pdf used on input line 80.
+(pdftex.def)             Requested size: 386.95897pt x 290.22449pt.
+Package epstopdf Info: Source file: <clockbias.eps>
+(epstopdf)                    date: 2016-05-02 22:03:55
+(epstopdf)                    size: 21593 bytes
+(epstopdf)             Output file: <clockbias-eps-converted-to.pdf>
+(epstopdf)                    date: 2016-05-02 22:05:21
+(epstopdf)                    size: 5592 bytes
+(epstopdf)             Command: <epstopdf --outfile=clockbias-eps-converted-to.
+pdf clockbias.eps>
+(epstopdf)             \includegraphics on input line 87.
+Package epstopdf Info: Output file is already uptodate.
+
+<clockbias-eps-converted-to.pdf, id=291, 421.575pt x 316.18124pt>
+File: clockbias-eps-converted-to.pdf Graphic file (type pdf)
+
+<use clockbias-eps-converted-to.pdf>
+Package pdftex.def Info: clockbias-eps-converted-to.pdf used on input line 87.
+(pdftex.def)             Requested size: 386.95897pt x 290.22449pt.
+Package epstopdf Info: Source file: <1Cpolar.eps>
+(epstopdf)                    date: 2016-05-02 22:34:56
+(epstopdf)                    size: 615808 bytes
+(epstopdf)             Output file: <1Cpolar-eps-converted-to.pdf>
+(epstopdf)                    date: 2016-05-02 22:55:05
+(epstopdf)                    size: 19090 bytes
+(epstopdf)             Command: <epstopdf --outfile=1Cpolar-eps-converted-to.pd
+f 1Cpolar.eps>
+(epstopdf)             \includegraphics on input line 94.
+Package epstopdf Info: Output file is already uptodate.
+
+<1Cpolar-eps-converted-to.pdf, id=292, 421.575pt x 316.18124pt>
+File: 1Cpolar-eps-converted-to.pdf Graphic file (type pdf)
+
+<use 1Cpolar-eps-converted-to.pdf>
+Package pdftex.def Info: 1Cpolar-eps-converted-to.pdf used on input line 94.
+(pdftex.def)             Requested size: 386.95897pt x 290.22449pt.
+Package epstopdf Info: Source file: <1Ccart.eps>
+(epstopdf)                    date: 2016-05-02 22:35:15
+(epstopdf)                    size: 385455 bytes
+(epstopdf)             Output file: <1Ccart-eps-converted-to.pdf>
+(epstopdf)                    date: 2016-05-02 22:55:06
+(epstopdf)                    size: 39945 bytes
+(epstopdf)             Command: <epstopdf --outfile=1Ccart-eps-converted-to.pdf
+ 1Ccart.eps>
+(epstopdf)             \includegraphics on input line 100.
+Package epstopdf Info: Output file is already uptodate.
+
+<1Ccart-eps-converted-to.pdf, id=293, 421.575pt x 316.18124pt>
+File: 1Ccart-eps-converted-to.pdf Graphic file (type pdf)
+
+<use 1Ccart-eps-converted-to.pdf>
+Package pdftex.def Info: 1Ccart-eps-converted-to.pdf used on input line 100.
+(pdftex.def)             Requested size: 386.95897pt x 290.22449pt.
+Package epstopdf Info: Source file: <1Cgopall.eps>
+(epstopdf)                    date: 2016-05-02 22:58:35
+(epstopdf)                    size: 22923 bytes
+(epstopdf)             Output file: <1Cgopall-eps-converted-to.pdf>
+(epstopdf)                    date: 2016-05-02 23:00:34
+(epstopdf)                    size: 4668 bytes
+(epstopdf)             Command: <epstopdf --outfile=1Cgopall-eps-converted-to.p
+df 1Cgopall.eps>
+(epstopdf)             \includegraphics on input line 106.
+Package epstopdf Info: Output file is already uptodate.
+
+<1Cgopall-eps-converted-to.pdf, id=294, 421.575pt x 316.18124pt>
+File: 1Cgopall-eps-converted-to.pdf Graphic file (type pdf)
+
+<use 1Cgopall-eps-converted-to.pdf>
+Package pdftex.def Info: 1Cgopall-eps-converted-to.pdf used on input line 106.
+(pdftex.def)             Requested size: 386.95897pt x 290.22449pt.
+Package epstopdf Info: Source file: <1cnumsats.eps>
+(epstopdf)                    date: 2016-05-02 22:58:19
+(epstopdf)                    size: 21171 bytes
+(epstopdf)             Output file: <1cnumsats-eps-converted-to.pdf>
+(epstopdf)                    date: 2016-05-02 23:00:35
+(epstopdf)                    size: 4083 bytes
+(epstopdf)             Command: <epstopdf --outfile=1cnumsats-eps-converted-to.
+pdf 1cnumsats.eps>
+(epstopdf)             \includegraphics on input line 112.
+Package epstopdf Info: Output file is already uptodate.
+
+<1cnumsats-eps-converted-to.pdf, id=295, 421.575pt x 316.18124pt>
+File: 1cnumsats-eps-converted-to.pdf Graphic file (type pdf)
+
+<use 1cnumsats-eps-converted-to.pdf>
+Package pdftex.def Info: 1cnumsats-eps-converted-to.pdf used on input line 112.
+
+(pdftex.def)             Requested size: 386.95897pt x 290.22449pt.
+Package epstopdf Info: Source file: <1Cbest.eps>
+(epstopdf)                    date: 2016-05-02 22:57:47
+(epstopdf)                    size: 41330 bytes
+(epstopdf)             Output file: <1Cbest-eps-converted-to.pdf>
+(epstopdf)                    date: 2016-05-02 23:00:36
+(epstopdf)                    size: 10619 bytes
+(epstopdf)             Command: <epstopdf --outfile=1Cbest-eps-converted-to.pdf
+ 1Cbest.eps>
+(epstopdf)             \includegraphics on input line 118.
+Package epstopdf Info: Output file is already uptodate.
+
+<1Cbest-eps-converted-to.pdf, id=296, 421.575pt x 316.18124pt>
+File: 1Cbest-eps-converted-to.pdf Graphic file (type pdf)
+
+<use 1Cbest-eps-converted-to.pdf>
+Package pdftex.def Info: 1Cbest-eps-converted-to.pdf used on input line 118.
+(pdftex.def)             Requested size: 338.58632pt x 253.944pt.
+Package epstopdf Info: Source file: <1Cwrost.eps>
+(epstopdf)                    date: 2016-05-02 22:57:34
+(epstopdf)                    size: 39294 bytes
+(epstopdf)             Output file: <1Cwrost-eps-converted-to.pdf>
+(epstopdf)                    date: 2016-05-02 23:00:37
+(epstopdf)                    size: 10222 bytes
+(epstopdf)             Command: <epstopdf --outfile=1Cwrost-eps-converted-to.pd
+f 1Cwrost.eps>
+(epstopdf)             \includegraphics on input line 124.
+Package epstopdf Info: Output file is already uptodate.
+
+<1Cwrost-eps-converted-to.pdf, id=297, 421.575pt x 316.18124pt>
+File: 1Cwrost-eps-converted-to.pdf Graphic file (type pdf)
+
+<use 1Cwrost-eps-converted-to.pdf>
+Package pdftex.def Info: 1Cwrost-eps-converted-to.pdf used on input line 124.
+(pdftex.def)             Requested size: 338.58632pt x 253.944pt.
+Package epstopdf Info: Source file: <1Cbest4.eps>
+(epstopdf)                    date: 2016-05-02 22:57:22
+(epstopdf)                    size: 39294 bytes
+(epstopdf)             Output file: <1Cbest4-eps-converted-to.pdf>
+(epstopdf)                    date: 2016-05-02 23:00:38
+(epstopdf)                    size: 10229 bytes
+(epstopdf)             Command: <epstopdf --outfile=1Cbest4-eps-converted-to.pd
+f 1Cbest4.eps>
+(epstopdf)             \includegraphics on input line 130.
+Package epstopdf Info: Output file is already uptodate.
+
+<1Cbest4-eps-converted-to.pdf, id=298, 421.575pt x 316.18124pt>
+File: 1Cbest4-eps-converted-to.pdf Graphic file (type pdf)
+
+<use 1Cbest4-eps-converted-to.pdf>
+Package pdftex.def Info: 1Cbest4-eps-converted-to.pdf used on input line 130.
+(pdftex.def)             Requested size: 338.58632pt x 253.944pt.
+Package epstopdf Info: Source file: <1cerrorandclock.eps>
+(epstopdf)                    date: 2016-05-02 23:09:18
+(epstopdf)                    size: 36161 bytes
+(epstopdf)             Output file: <1cerrorandclock-eps-converted-to.pdf>
+(epstopdf)                    date: 2016-05-02 23:09:32
+(epstopdf)                    size: 6734 bytes
+(epstopdf)             Command: <epstopdf --outfile=1cerrorandclock-eps-convert
+ed-to.pdf 1cerrorandclock.eps>
+(epstopdf)             \includegraphics on input line 136.
+Package epstopdf Info: Output file is already uptodate.
+
+<1cerrorandclock-eps-converted-to.pdf, id=299, 421.575pt x 316.18124pt>
+File: 1cerrorandclock-eps-converted-to.pdf Graphic file (type pdf)
+
+<use 1cerrorandclock-eps-converted-to.pdf>
+Package pdftex.def Info: 1cerrorandclock-eps-converted-to.pdf used on input lin
+e 136.
+(pdftex.def)             Requested size: 338.58632pt x 253.944pt.
+) [4] [5 <./Q1AECI.jpg>] [6 <./Q1AECI_side.jpg>] [7 <./Q1AECEF.jpg>] [8 <./Q1AE
+CEF_side.jpg> <./Q1AGT.jpg>] [9 <./Q1B_F1_LG-eps-converted-to.pdf> <./Q1B_polar
+track-eps-converted-to.pdf>] [10 <./DOPall-eps-converted-to.pdf> <./SatNo-eps-c
+onverted-to.pdf>] [11 <./BestDOP-eps-converted-to.pdf> <./WorstDOP-eps-converte
+d-to.pdf>] [12 <./BestDOP4-eps-converted-to.pdf> <./clockbias-eps-converted-to.
+pdf>] [13 <./1Cpolar-eps-converted-to.pdf> <./1Ccart-eps-converted-to.pdf>] [14
+ <./1Cgopall-eps-converted-to.pdf> <./1cnumsats-eps-converted-to.pdf>] [15 <./1
+Cbest-eps-converted-to.pdf> <./1Cwrost-eps-converted-to.pdf>] [16 <./1Cbest4-ep
+s-converted-to.pdf> <./1cerrorandclock-eps-converted-to.pdf>] (AppendixB.tex
+<Q2ECI.jpg, id=420, 562.1pt x 421.575pt>
+File: Q2ECI.jpg Graphic file (type jpg)
+ <use Q2ECI.jpg>
+Package pdftex.def Info: Q2ECI.jpg used on input line 7.
+(pdftex.def)             Requested size: 386.95897pt x 290.21805pt.
+
+<Q2ECIside.jpg, id=421, 562.1pt x 421.575pt>
+File: Q2ECIside.jpg Graphic file (type jpg)
+ <use Q2ECIside.jpg>
+Package pdftex.def Info: Q2ECIside.jpg used on input line 13.
+(pdftex.def)             Requested size: 338.58632pt x 253.93758pt.
+
+<Q2ECEF.jpg, id=422, 562.1pt x 421.575pt>
+File: Q2ECEF.jpg Graphic file (type jpg)
+ <use Q2ECEF.jpg>
+Package pdftex.def Info: Q2ECEF.jpg used on input line 19.
+(pdftex.def)             Requested size: 338.58632pt x 253.93758pt.
+
+<Q2ECEFside.jpg, id=423, 562.1pt x 421.575pt>
+File: Q2ECEFside.jpg Graphic file (type jpg)
+ <use Q2ECEFside.jpg>
+Package pdftex.def Info: Q2ECEFside.jpg used on input line 25.
+(pdftex.def)             Requested size: 338.58632pt x 253.93758pt.
+
+<Q2gt.jpg, id=424, 562.1pt x 421.575pt>
+File: Q2gt.jpg Graphic file (type jpg)
+ <use Q2gt.jpg>
+Package pdftex.def Info: Q2gt.jpg used on input line 32.
+(pdftex.def)             Requested size: 483.69687pt x 362.77257pt.
 Package epstopdf Info: Source file: <./Optimisation1.eps>
 (epstopdf)                    date: 2016-05-01 13:04:24
 (epstopdf)                    size: 7925087 bytes
@@ -1270,15 +1552,15 @@ Package epstopdf Info: Source file: <./Optimisation1.eps>
 (epstopdf)                    size: 344796 bytes
 (epstopdf)             Command: <epstopdf --outfile=./Optimisation1-eps-convert
 ed-to.pdf ./Optimisation1.eps>
-(epstopdf)             \includegraphics on input line 9.
+(epstopdf)             \includegraphics on input line 43.
 Package epstopdf Info: Output file is already uptodate.
 
-<./Optimisation1-eps-converted-to.pdf, id=232, 483.8075pt x 209.78375pt>
+<./Optimisation1-eps-converted-to.pdf, id=425, 483.8075pt x 209.78375pt>
 File: ./Optimisation1-eps-converted-to.pdf Graphic file (type pdf)
 
 <use ./Optimisation1-eps-converted-to.pdf>
 Package pdftex.def Info: ./Optimisation1-eps-converted-to.pdf used on input lin
-e 9.
+e 43.
 (pdftex.def)             Requested size: 483.69687pt x 209.7448pt.
 Package epstopdf Info: Source file: <./Optimisation2.eps>
 (epstopdf)                    date: 2016-05-01 13:04:12
@@ -1288,15 +1570,15 @@ Package epstopdf Info: Source file: <./Optimisation2.eps>
 (epstopdf)                    size: 313058 bytes
 (epstopdf)             Command: <epstopdf --outfile=./Optimisation2-eps-convert
 ed-to.pdf ./Optimisation2.eps>
-(epstopdf)             \includegraphics on input line 16.
+(epstopdf)             \includegraphics on input line 50.
 Package epstopdf Info: Output file is already uptodate.
 
-<./Optimisation2-eps-converted-to.pdf, id=233, 482.80376pt x 208.78pt>
+<./Optimisation2-eps-converted-to.pdf, id=426, 482.80376pt x 208.78pt>
 File: ./Optimisation2-eps-converted-to.pdf Graphic file (type pdf)
 
 <use ./Optimisation2-eps-converted-to.pdf>
 Package pdftex.def Info: ./Optimisation2-eps-converted-to.pdf used on input lin
-e 16.
+e 50.
 (pdftex.def)             Requested size: 483.69687pt x 209.17448pt.
 Package epstopdf Info: Source file: <./Optimisation3.eps>
 (epstopdf)                    date: 2016-05-01 13:03:59
@@ -1306,15 +1588,15 @@ Package epstopdf Info: Source file: <./Optimisation3.eps>
 (epstopdf)                    size: 320881 bytes
 (epstopdf)             Command: <epstopdf --outfile=./Optimisation3-eps-convert
 ed-to.pdf ./Optimisation3.eps>
-(epstopdf)             \includegraphics on input line 22.
+(epstopdf)             \includegraphics on input line 56.
 Package epstopdf Info: Output file is already uptodate.
 
-<./Optimisation3-eps-converted-to.pdf, id=234, 480.79625pt x 210.7875pt>
+<./Optimisation3-eps-converted-to.pdf, id=427, 480.79625pt x 210.7875pt>
 File: ./Optimisation3-eps-converted-to.pdf Graphic file (type pdf)
 
 <use ./Optimisation3-eps-converted-to.pdf>
 Package pdftex.def Info: ./Optimisation3-eps-converted-to.pdf used on input lin
-e 22.
+e 56.
 (pdftex.def)             Requested size: 483.69687pt x 212.06387pt.
 Package epstopdf Info: Source file: <./Optimisation4.eps>
 (epstopdf)                    date: 2016-05-01 13:03:45
@@ -1324,15 +1606,15 @@ Package epstopdf Info: Source file: <./Optimisation4.eps>
 (epstopdf)                    size: 319998 bytes
 (epstopdf)             Command: <epstopdf --outfile=./Optimisation4-eps-convert
 ed-to.pdf ./Optimisation4.eps>
-(epstopdf)             \includegraphics on input line 28.
+(epstopdf)             \includegraphics on input line 62.
 Package epstopdf Info: Output file is already uptodate.
 
-<./Optimisation4-eps-converted-to.pdf, id=235, 480.79625pt x 209.78375pt>
+<./Optimisation4-eps-converted-to.pdf, id=428, 480.79625pt x 209.78375pt>
 File: ./Optimisation4-eps-converted-to.pdf Graphic file (type pdf)
 
 <use ./Optimisation4-eps-converted-to.pdf>
 Package pdftex.def Info: ./Optimisation4-eps-converted-to.pdf used on input lin
-e 28.
+e 62.
 (pdftex.def)             Requested size: 483.69687pt x 211.05402pt.
 Package epstopdf Info: Source file: <./Optimisation5.eps>
 (epstopdf)                    date: 2016-05-01 13:03:30
@@ -1342,15 +1624,15 @@ Package epstopdf Info: Source file: <./Optimisation5.eps>
 (epstopdf)                    size: 330446 bytes
 (epstopdf)             Command: <epstopdf --outfile=./Optimisation5-eps-convert
 ed-to.pdf ./Optimisation5.eps>
-(epstopdf)             \includegraphics on input line 34.
+(epstopdf)             \includegraphics on input line 68.
 Package epstopdf Info: Output file is already uptodate.
 
-<./Optimisation5-eps-converted-to.pdf, id=236, 482.80376pt x 208.78pt>
+<./Optimisation5-eps-converted-to.pdf, id=429, 482.80376pt x 208.78pt>
 File: ./Optimisation5-eps-converted-to.pdf Graphic file (type pdf)
 
 <use ./Optimisation5-eps-converted-to.pdf>
 Package pdftex.def Info: ./Optimisation5-eps-converted-to.pdf used on input lin
-e 34.
+e 68.
 (pdftex.def)             Requested size: 483.69687pt x 209.17448pt.
 Package epstopdf Info: Source file: <./Optimisation6.eps>
 (epstopdf)                    date: 2016-05-01 13:03:18
@@ -1360,42 +1642,42 @@ Package epstopdf Info: Source file: <./Optimisation6.eps>
 (epstopdf)                    size: 298870 bytes
 (epstopdf)             Command: <epstopdf --outfile=./Optimisation6-eps-convert
 ed-to.pdf ./Optimisation6.eps>
-(epstopdf)             \includegraphics on input line 40.
+(epstopdf)             \includegraphics on input line 74.
 Package epstopdf Info: Output file is already uptodate.
 
-<./Optimisation6-eps-converted-to.pdf, id=237, 482.80376pt x 211.79124pt>
+<./Optimisation6-eps-converted-to.pdf, id=430, 482.80376pt x 211.79124pt>
 File: ./Optimisation6-eps-converted-to.pdf Graphic file (type pdf)
 
 <use ./Optimisation6-eps-converted-to.pdf>
 Package pdftex.def Info: ./Optimisation6-eps-converted-to.pdf used on input lin
-e 40.
+e 74.
 (pdftex.def)             Requested size: 483.69687pt x 212.19145pt.
 
-<./GSLocations.jpg, id=238, 854.19125pt x 416.55624pt>
+<./GSLocations.jpg, id=431, 854.19125pt x 416.55624pt>
 File: ./GSLocations.jpg Graphic file (type jpg)
  <use ./GSLocations.jpg>
-Package pdftex.def Info: ./GSLocations.jpg used on input line 47.
+Package pdftex.def Info: ./GSLocations.jpg used on input line 81.
 (pdftex.def)             Requested size: 483.69687pt x 235.87592pt.
-) [8] [9 <./Optimisation1-eps-converted-to.pdf> <./Optimisation2-eps-converted-
-to.pdf>] [10 <./Optimisation3-eps-converted-to.pdf> <./Optimisation4-eps-conver
-ted-to.pdf>] [11 <./Optimisation5-eps-converted-to.pdf> <./Optimisation6-eps-co
-nverted-to.pdf>]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 187.
- [12 <./GSLocations.jpg>]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 187.
+) [17] [18 <./Q2ECI.jpg> <./Q2ECIside.jpg>] [19 <./Q2ECEF.jpg> <./Q2ECEFside.jp
+g>] [20 <./Q2gt.jpg> <./Optimisation1-eps-converted-to.pdf>] [21 <./Optimisatio
+n2-eps-converted-to.pdf> <./Optimisation3-eps-converted-to.pdf>] [22 <./Optimis
+ation4-eps-converted-to.pdf> <./Optimisation5-eps-converted-to.pdf>] [23 <./Opt
+imisation6-eps-converted-to.pdf> <./GSLocations.jpg>]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 188.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 188.
  (Space3_Assign2.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 187.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 187.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 188.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 188.
 Package rerunfilecheck Info: File `Space3_Assign2.out' has not changed.
-(rerunfilecheck)             Checksum: FA61B2F87BC2554D45483159EC39FFB4;1449.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 187.
+(rerunfilecheck)             Checksum: A4C3D50094D212877373108718282909;1616.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 188.
  ) 
 Here is how much of TeX's memory you used:
- 25923 strings out of 493634
- 545095 string characters out of 3135239
- 694312 words of memory out of 3000000
- 28799 multiletter control sequences out of 15000+200000
- 16130 words of font info for 61 fonts, out of 3000000 for 9000
+ 26087 strings out of 493634
+ 548353 string characters out of 3135239
+ 700786 words of memory out of 3000000
+ 28899 multiletter control sequences out of 15000+200000
+ 16298 words of font info for 62 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
  55i,13n,54p,1152b,612s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\Lydia\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\public\cm\dpi1037\c
@@ -1405,18 +1687,20 @@ e1/public/amsfonts/cm/cmbx10.pfb><C:/Users/Lydia/AppData/Local/Programs/MiKTeX
 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/Lydia/AppData/Local/Pro
 grams/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Users/Lydia/App
 Data/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Us
-ers/Lydia/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr1
-0.pfb><C:/Users/Lydia/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsf
-onts/cm/cmr12.pfb><C:/Users/Lydia/AppData/Local/Programs/MiKTeX 2.9/fonts/type1
-/public/amsfonts/cm/cmr17.pfb><C:/Users/Lydia/AppData/Local/Programs/MiKTeX 2.9
-/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/Lydia/AppData/Local/Programs
-/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Lydia/AppData/L
-ocal/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/Lyd
-ia/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-
-Output written on Space3_Assign2.pdf (15 pages, 2557556 bytes).
+ers/Lydia/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi
+8.pfb><C:/Users/Lydia/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsf
+onts/cm/cmr10.pfb><C:/Users/Lydia/AppData/Local/Programs/MiKTeX 2.9/fonts/type1
+/public/amsfonts/cm/cmr12.pfb><C:/Users/Lydia/AppData/Local/Programs/MiKTeX 2.9
+/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/Lydia/AppData/Local/Program
+s/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/Lydia/AppData/Lo
+cal/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Lyd
+ia/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><
+C:/Users/Lydia/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm
+/cmtt10.pfb><C:/Users/Lydia/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/publi
+c/amsfonts/cm/cmtt12.pfb>
+Output written on Space3_Assign2.pdf (27 pages, 2911588 bytes).
 PDF statistics:
- 396 PDF objects out of 1000 (max. 8388607)
- 51 named destinations out of 1000 (max. 500000)
- 253 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 611 PDF objects out of 1000 (max. 8388607)
+ 85 named destinations out of 1000 (max. 500000)
+ 364 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -1,14 +1,33 @@
-\contentsline {figure}{\numberline {4.1}{\ignorespaces GPS 24 hr simulation with dt = 100 in ECI frame\relax }}{3}{figure.caption.3}
-\contentsline {figure}{\numberline {4.2}{\ignorespaces GPS 24 hr simulation with dt = 100 in ECI frame\relax }}{4}{figure.caption.4}
-\contentsline {figure}{\numberline {4.3}{\ignorespaces GPS 24 hr simulation with dt = 100 in ECEF frame\relax }}{5}{figure.caption.5}
-\contentsline {figure}{\numberline {4.4}{\ignorespaces GPS 24 hr simulation with dt = 100 in ECEF frame\relax }}{6}{figure.caption.6}
-\contentsline {figure}{\numberline {4.5}{\ignorespaces GPS 24 hr simulation with dt = 100 Ground Trace\relax }}{6}{figure.caption.7}
-\contentsline {figure}{\numberline {4.6}{\ignorespaces UAV trace in NED coordinates from the ground station at [Lat 34.76{$^{\circ }$},Long: 150.03{$^{\circ }$}E, Alt: 680m]\relax }}{7}{figure.caption.8}
-\contentsline {figure}{\numberline {4.7}{\ignorespaces UAV polar trace of azimuth and elevation and location of observed satellites from ground station at [Lat 34.76{$^{\circ }$},Long: 150.03{$^{\circ }$}E, Alt: 680m]\relax }}{7}{figure.caption.9}
-\contentsline {figure}{\numberline {5.1}{\ignorespaces text\relax }}{9}{figure.caption.10}
-\contentsline {figure}{\numberline {5.2}{\ignorespaces text\relax }}{9}{figure.caption.11}
-\contentsline {figure}{\numberline {5.3}{\ignorespaces text\relax }}{10}{figure.caption.12}
-\contentsline {figure}{\numberline {5.4}{\ignorespaces text\relax }}{10}{figure.caption.13}
-\contentsline {figure}{\numberline {5.5}{\ignorespaces text\relax }}{11}{figure.caption.14}
-\contentsline {figure}{\numberline {5.6}{\ignorespaces text\relax }}{11}{figure.caption.15}
-\contentsline {figure}{\numberline {5.7}{\ignorespaces text\relax }}{12}{figure.caption.16}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces GPS 24 hr simulation with dt = 100 in ECI frame\relax }}{5}{figure.caption.4}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces GPS 24 hr simulation with dt = 100 in ECI frame\relax }}{6}{figure.caption.5}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces GPS 24 hr simulation with dt = 100 in ECEF frame\relax }}{7}{figure.caption.6}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces GPS 24 hr simulation with dt = 100 in ECEF frame\relax }}{8}{figure.caption.7}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces GPS 24 hr simulation with dt = 100 Ground Trace\relax }}{8}{figure.caption.8}
+\contentsline {figure}{\numberline {4.6}{\ignorespaces UAV Flight 1 trace in NED coordinates from the ground station at [Lat 34.76{$^{\circ }$},Long: 150.03{$^{\circ }$}E, Alt: 680m]\relax }}{9}{figure.caption.9}
+\contentsline {figure}{\numberline {4.7}{\ignorespaces UAV Flight 1 polar trace of azimuth and elevation and location of observed satellites from ground station at [Lat 34.76{$^{\circ }$},Long: 150.03{$^{\circ }$}E, Alt: 680m]\relax }}{9}{figure.caption.10}
+\contentsline {figure}{\numberline {4.8}{\ignorespaces Geometric Dilution of Precision for all time of Flight 1\relax }}{10}{figure.caption.11}
+\contentsline {figure}{\numberline {4.9}{\ignorespaces Number of Satellites observed of Flight 1\relax }}{10}{figure.caption.12}
+\contentsline {figure}{\numberline {4.10}{\ignorespaces Best GDOP of Flight 1 = 2.747\relax }}{11}{figure.caption.13}
+\contentsline {figure}{\numberline {4.11}{\ignorespaces Worst GOP of Flight 1 = 3567\relax }}{11}{figure.caption.14}
+\contentsline {figure}{\numberline {4.12}{\ignorespaces Best GOP with 4 satellites of Flight 1 = 36.96\relax }}{12}{figure.caption.15}
+\contentsline {figure}{\numberline {4.13}{\ignorespaces Clock Bias of Flight 1\relax }}{12}{figure.caption.16}
+\contentsline {figure}{\numberline {4.14}{\ignorespaces UAV Flight 2 polar trace of azimuth and elevation and location of observed satellites from ground station at [Lat 34.76{$^{\circ }$},Long: 150.03{$^{\circ }$}E, Alt: 680m]\relax }}{13}{figure.caption.17}
+\contentsline {figure}{\numberline {4.15}{\ignorespaces UAV Flight 2 trace in NED coordinates from the ground station at [Lat 34.76{$^{\circ }$},Long: 150.03{$^{\circ }$}E, Alt: 680m]\relax }}{13}{figure.caption.18}
+\contentsline {figure}{\numberline {4.16}{\ignorespaces Geometric DOP for all time Flight 2\relax }}{14}{figure.caption.19}
+\contentsline {figure}{\numberline {4.17}{\ignorespaces Number of satellites observed Flight 2\relax }}{14}{figure.caption.20}
+\contentsline {figure}{\numberline {4.18}{\ignorespaces Best GDOP of Flight 2 = 2.74\relax }}{15}{figure.caption.21}
+\contentsline {figure}{\numberline {4.19}{\ignorespaces Worst GDOP of Flight 2 = 4274\relax }}{15}{figure.caption.22}
+\contentsline {figure}{\numberline {4.20}{\ignorespaces Best GDOP with four satellites of Flight 2 = 77.5\relax }}{16}{figure.caption.23}
+\contentsline {figure}{\numberline {4.21}{\ignorespaces Clock Bias of Flight 2 with detection of errors\relax }}{16}{figure.caption.24}
+\contentsline {figure}{\numberline {5.1}{\ignorespaces \relax }}{18}{figure.caption.25}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces \relax }}{18}{figure.caption.26}
+\contentsline {figure}{\numberline {5.3}{\ignorespaces \relax }}{19}{figure.caption.27}
+\contentsline {figure}{\numberline {5.4}{\ignorespaces \relax }}{19}{figure.caption.28}
+\contentsline {figure}{\numberline {5.5}{\ignorespaces \relax }}{20}{figure.caption.29}
+\contentsline {figure}{\numberline {5.6}{\ignorespaces text\relax }}{20}{figure.caption.30}
+\contentsline {figure}{\numberline {5.7}{\ignorespaces text\relax }}{21}{figure.caption.31}
+\contentsline {figure}{\numberline {5.8}{\ignorespaces text\relax }}{21}{figure.caption.32}
+\contentsline {figure}{\numberline {5.9}{\ignorespaces text\relax }}{22}{figure.caption.33}
+\contentsline {figure}{\numberline {5.10}{\ignorespaces text\relax }}{22}{figure.caption.34}
+\contentsline {figure}{\numberline {5.11}{\ignorespaces text\relax }}{23}{figure.caption.35}
+\contentsline {figure}{\numberline {5.12}{\ignorespaces text\relax }}{23}{figure.caption.36}
