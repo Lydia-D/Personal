@@ -3,14 +3,35 @@
 % 14/5/16
 % Inputs -> Y = [dE1,dV1,el1,az1,dE2,dV2,el2,az2]'
 % 
-function C = constraints(Xfinal,Final)
-
+function C = constraints(X0,Y,Final)
+    
+    % propogate to the end
+    [Xall,t] = dynamics(Y,X0);  % final condition in Xall.X4
+    Xall.X4  = X;
+    
+    rmag = norm(X(1:3));
+    vmag = norm(X(4:6));
+    W = cross(X(1:3),X(4:6))/(rmag*vmag);
+    % N = k x W / (|k x W|) = [-Wj;Wi;0]/mag
+    N = [-W(2);W(1);0]./(norm(W(1:2)));
+    
+    % I x N = [0;0;Wi]
+    % tan(Rasc) = ((IxN).K)/(I.N)
+    tanRasc = -W(1)/W(2);
+    
+    % final radius constraint 
     C(1,1) = norm(Xfinal(1:3))/Final.r - 1;
-    C(2,1) = norm(Xfinal(4:6)/Final.v  - 1;
-    C(3,1) = Xfinal(1).*Xfinal(4)/(Final.r*FInal.v);
-    C(4,1) = Xfinal(2).*Xfinal(5)/(Final.r*FInal.v);
-    C(5,1) = Xfinal(3).*Xfinal(6)/(Final.r*FInal.v);
-    C(6,1) = Xfinal(6)/Final.v;
-    C(7,1) = Xfinal(3)/Final.v;
+    
+    % final velocity constraint
+    C(2,1) = norm(Xfinal(4:6))/Final.v  - 1;
+    
+    % final eccentricity constraint
+    
+    
+    % final inclination constraint
+    C(6,1) = cos(Final.i) - W(3);
+    
+    % final Rasc constraint
+    C(7,1) = tan(Final.Rasc) - tanRasc;
 
 end

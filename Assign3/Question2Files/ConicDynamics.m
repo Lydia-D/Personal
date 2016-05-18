@@ -10,7 +10,7 @@ function Xt = ConicDynamics(X0,timevec)
     % Univeral Conic Section - state space [r,v]
     dt = timevec-timevec(1);
     
-    fnhandle = UCSfns(X0,dt);
+    fnhandle = UCSfns(X0,dt,NaN);
     
     % Calculate change in eccentric anomoly -> need to solve for each point
     % in time seperatly 

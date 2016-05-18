@@ -7,10 +7,10 @@ function [Xt,dt] = Cruise(dE,X0)
     global mu_earth
     
     % Univeral Conic Section - state space [r,v]
-    a = (2/norm(X0(1:3)) - norm(X0(4:6)).^2./mu_earth)^(-1);
-    dt = (time.now - time.start);
-    
-    fnhandle = UCSfns(a,dt,X0);  % need to edit
+%     a = (2/norm(X0(1:3)) - norm(X0(4:6)).^2./mu_earth)^(-1);
+%     dt = (time.now - time.start);
+    dt = NaN;
+    fnhandle = UCSfns(X0,dt,dE);  % need to edit
     
     % Calculate time in orbit
     dt = fnhandle.dt(dE);

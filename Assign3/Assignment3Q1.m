@@ -38,10 +38,10 @@ clear; clc; close all;
 
 % Add your functions, utility functions, p_functions and the data set directories
 % to the path.
-addpath(genpath('p_functions'))
-addpath(genpath('student_functions'))
-addpath(genpath('utility_functions'))
-addpath(genpath('data_sets'))
+addpath(genpath('./Question1Files/p_functions'))
+addpath(genpath('./Question1Files/student_functions'))
+addpath(genpath('./Question1Files/utility_functions'))
+addpath(genpath('./Question1Files/data_sets'))
 
 %% Martian Terrain Map -- There are ZERO functions for you to write in this section.
 % Our first task is to define an occupancy grid over which we can plan a

@@ -59,3 +59,7 @@ r2d = 180/pi;
 % degrees to radians
 global d2r
 d2r = pi/180;
+
+% colours for plots
+global colours
+colours = 'rgbmyc';

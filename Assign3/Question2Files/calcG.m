@@ -5,16 +5,18 @@
 %           fnhandle = handle to function that the gradiant is being calculated for
 %           pert = perturbation size
 % outputs -> dYpert = gradient 
-function dYpert = calcG(Y,eps,X0,final)
+function G = calcG(Y,eps,X0,final)
 
     % central differencing
     
-    for each element
-        dcdx = constraints(X0,Y,final)
-
-
-
-
+    for i = 1:1:length(Y)
+        perturb = zeros(size(Y));
+        perturb(i) = eps;
+        c_p = constraints(X0,Y+perturb,final);
+        c_m = constraints(X0,Y-perturb,final);
+        dcdx{i} = (c_p - c_m)/(2*eps);
+    end
+        G = cat(2,dcdx{:});
 
 
 
