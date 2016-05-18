@@ -1,8 +1,20 @@
 \contentsline {section}{\numberline {1}Introduction}{1}{section.1}
-\contentsline {section}{\numberline {2}Question 1}{1}{section.2}
-\contentsline {section}{\numberline {3}Question 2}{1}{section.3}
-\contentsline {section}{\numberline {4}Introduction}{1}{section.4}
-\contentsline {subsection}{\numberline {4.1}Final orbital requirements}{1}{subsection.4.1}
-\contentsline {subsection}{\numberline {4.2}Methodology}{1}{subsection.4.2}
-\contentsline {section}{\numberline {5}Appendix A: Question 1}{2}{section.5}
-\contentsline {section}{\numberline {6}Appendix B: Question 2}{2}{section.6}
+\contentsline {section}{\numberline {2}Grid Based Robot Motion Planning}{1}{section.2}
+\contentsline {subsection}{\numberline {2.1}Introduction}{1}{subsection.2.1}
+\contentsline {subsection}{\numberline {2.2}Generate Grid}{1}{subsection.2.2}
+\contentsline {subsection}{\numberline {2.3}Generate Obstacles}{1}{subsection.2.3}
+\contentsline {subsection}{\numberline {2.4}Footprint Points}{2}{subsection.2.4}
+\contentsline {subsection}{\numberline {2.5}Least Squares Fit of Plane}{2}{subsection.2.5}
+\contentsline {subsection}{\numberline {2.6}Step Hazard Evaluation}{2}{subsection.2.6}
+\contentsline {subsection}{\numberline {2.7}Pitch Hazard Evaluation}{2}{subsection.2.7}
+\contentsline {subsection}{\numberline {2.8}Roughness Hazard Evaluation}{2}{subsection.2.8}
+\contentsline {subsection}{\numberline {2.9}Identify Neighbours}{2}{subsection.2.9}
+\contentsline {subsection}{\numberline {2.10}Dijkstra Algorithm}{2}{subsection.2.10}
+\contentsline {subsection}{\numberline {2.11}A* Algorithm}{2}{subsection.2.11}
+\contentsline {section}{\numberline {3}Question 2}{3}{section.3}
+\contentsline {subsection}{\numberline {3.1}Introduction}{3}{subsection.3.1}
+\contentsline {subsection}{\numberline {3.2}Cost and Constraints}{3}{subsection.3.2}
+\contentsline {subsection}{\numberline {3.3}Local frame of satellite}{3}{subsection.3.3}
+\contentsline {subsection}{\numberline {3.4}Methodology}{3}{subsection.3.4}
+\contentsline {section}{\numberline {4}Appendix A: \nameref {Sec:Question1}}{4}{section.4}
+\contentsline {section}{\numberline {5}Appendix B: \nameref {Sec:Question2}}{5}{section.5}

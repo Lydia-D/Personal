@@ -1,6 +1,8 @@
 %% AERO4701 Assignment 3 Question 1 -- Planning for the Orville Mars Rover
 %  Author: William Reid
-% 
+
+%  Edited and submitted: Lydia Drabsch
+
 %% Acknowledgements:
 % Some of the planning algorithm material provided in this m-file is
 % inspired by the Computational Motion Planning Course offered by CJ Taylor
@@ -42,6 +44,7 @@ addpath(genpath('./Question1Files/p_functions'))
 addpath(genpath('./Question1Files/student_functions'))
 addpath(genpath('./Question1Files/utility_functions'))
 addpath(genpath('./Question1Files/data_sets'))
+addpath(genpath('./Question1Files'))
 
 %% Martian Terrain Map -- There are ZERO functions for you to write in this section.
 % Our first task is to define an occupancy grid over which we can plan a

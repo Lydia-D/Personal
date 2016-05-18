@@ -1,8 +1,20 @@
 \BOOKMARK [1][-]{section.1}{Introduction}{}% 1
-\BOOKMARK [1][-]{section.2}{Question 1}{}% 2
-\BOOKMARK [1][-]{section.3}{Question 2}{}% 3
-\BOOKMARK [1][-]{section.4}{Introduction}{}% 4
-\BOOKMARK [2][-]{subsection.4.1}{Final orbital requirements}{section.4}% 5
-\BOOKMARK [2][-]{subsection.4.2}{Methodology}{section.4}% 6
-\BOOKMARK [1][-]{section.5}{Appendix A: Question 1}{}% 7
-\BOOKMARK [1][-]{section.6}{Appendix B: Question 2}{}% 8
+\BOOKMARK [1][-]{section.2}{Grid Based Robot Motion Planning}{}% 2
+\BOOKMARK [2][-]{subsection.2.1}{Introduction}{section.2}% 3
+\BOOKMARK [2][-]{subsection.2.2}{Generate Grid}{section.2}% 4
+\BOOKMARK [2][-]{subsection.2.3}{Generate Obstacles}{section.2}% 5
+\BOOKMARK [2][-]{subsection.2.4}{Footprint Points}{section.2}% 6
+\BOOKMARK [2][-]{subsection.2.5}{Least Squares Fit of Plane}{section.2}% 7
+\BOOKMARK [2][-]{subsection.2.6}{Step Hazard Evaluation}{section.2}% 8
+\BOOKMARK [2][-]{subsection.2.7}{Pitch Hazard Evaluation}{section.2}% 9
+\BOOKMARK [2][-]{subsection.2.8}{Roughness Hazard Evaluation}{section.2}% 10
+\BOOKMARK [2][-]{subsection.2.9}{Identify Neighbours}{section.2}% 11
+\BOOKMARK [2][-]{subsection.2.10}{Dijkstra Algorithm}{section.2}% 12
+\BOOKMARK [2][-]{subsection.2.11}{A* Algorithm}{section.2}% 13
+\BOOKMARK [1][-]{section.3}{Question 2}{}% 14
+\BOOKMARK [2][-]{subsection.3.1}{Introduction}{section.3}% 15
+\BOOKMARK [2][-]{subsection.3.2}{Cost and Constraints}{section.3}% 16
+\BOOKMARK [2][-]{subsection.3.3}{Local frame of satellite}{section.3}% 17
+\BOOKMARK [2][-]{subsection.3.4}{Methodology}{section.3}% 18
+\BOOKMARK [1][-]{section.4}{Appendix A: Grid Based Robot Motion Planning}{}% 19
+\BOOKMARK [1][-]{section.5}{Appendix B: Question 2}{}% 20

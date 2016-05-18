@@ -1,9 +1,9 @@
 \documentclass[Space3_Assign3.tex]{subfile}
 
 \begin{document}
-\section{Question 2}
+\section{Question 2}\label{Sec:Question2}
 
-\section{Introduction}
+\subsection{Introduction}
 The final GEO orbit is defined as having a period of one sidereal day, 23 hours 56 minutes 4.0916 seconds. Using Kepler's third law Eq\eqref{kep3} and the vis-viva law Eq\eqref{visviva} the semi-major axis and velocity of the circular orbit were calculated, see Table \ref{Table:orbitpar}.
 
 \begin{eqnarray}
@@ -12,7 +12,7 @@ v = \sqrt{\frac{\mu}{a}} \label{visviva}
 \end{eqnarray}
 
 The satellite parameters in the park orbit are
-\begin{table}
+\begin{table}[h]
 \centering
 \caption{text}
 \label{Table:orbitpar}
@@ -36,7 +36,6 @@ What are constraints - why are they important.\\
 The constraints on this optimisation problem defines the final GEO orbit. They are  The radius and velocity are enforced by requiring the ratio between the 
 \begin{eqnarray}
 J = |\Delta v_1 | + |\Delta v_2| \label{costfn}
-
 \end{eqnarray}
 
 \subsection{Local frame of satellite}

@@ -35,7 +35,7 @@ Park.t0 = 0;
 X_orbit = class2orbit(Park.a,Park.e,Park.M0,Park.t0,timestart);
 X0      = orbit2ECI(X_orbit,Park.Rasc,Park.inc,Park.omega);
 
-
+Yscale = [pi^(-1);1000^(-1);pi^(-1);pi^(-1);pi^(-1);1000^(-1);pi^(-1);pi^(-1)];
 
 %% plot park orbit - simulate with Universal Conic Section
 animation3Dearth();

@@ -1,7 +1,99 @@
 \documentclass[Space3_Assign3.tex]{subfile}
 
 \begin{document}
-\section{Question 1}
+\section{Grid Based Robot Motion Planning} \label{Sec:Question1}
+\subsection{Introduction}
+
+output of each function as well as a discussion of your understanding of each section and how
+you implemented the relevant algorithms.
+
+% % % % % % % % % % % % % % % % % % % %
+\subsection{Generate Grid}\label{Sec:gengrid}
+The function \textbf{generateGrid} calculates the size of the matrix that reflects the discretised map by \textit{mapDim}/\textit{cellDim} and creates the matrix as \textit{map}. The start and end node are calculated using the provided function \textit{pos2cell} and set in \textit{map}. The map is displayed by the predefined function \textbf{showmap}, see Figure \ref{Fig:gengrid}.\\\\
+\textbf{Inputs:}
+\begin{itemize}
+\item \textit{mapDim}: The width and height of the map in meters.
+\item \textit{cellDim}: The required width and height of each cell on the grid.
+\item \textit{startPos}: The x and y position of the start point in meters from the centre of the grid.
+\item \textit{goalPos}: The x and y position of the goal point in meters from the centre of the grid.
+\end{itemize}
+\textbf{Outputs:}
+\begin{itemize}
+\item \textit{map}: The discretised global map with start and goal node defined
+\end{itemize}
+
+% % % % % % % % % % % % % % % % % % %
+\subsection{Generate Obstacles} \label{Sec:genobs}
+The function \textbf{generateObstacles} defines the cells on the map where the rover cannot travel due to predefined obstacles. The map reflects the configuration space of the rover, therefore the radius of the rovers footprint was added to the radius of each obstacle. The x domain of each obstacle was defined in meters \dis by . Using the conic equation for a circle Eq\eqref{conic}, the x domain was to calculate the upper and lower edge of the obstacle in meters.
+\begin{eqnarray}
+y_i = y_c \pm \sqrt{r^2 - (x_i -x_c)^2} \label{conic}
+\end{eqnarray}
+Where $x_i$ is the \dis domain, $(x_c,y_c)$ is the centre of the obstacle, r is the new radius of the obstacle and $y_i$ is the \dis upper and lower edge of the obstacle. The coordinates ($x_i,y_i$) were converted to indices in \textit{map} by \textbf{pos2cell}. For each $x_i$ index, the coordinates between $y_i^+$ and $y_i^-$ were set as an obstacle in \textit{map}. The output \textit{map} is displayed using \textbf{showmap}, see Figure \ref{Fig:genobs}.\\\\
+\noindent\textbf{Inputs:}
+\begin{itemize}
+\item \textit{map}: The discretised global map from \textbf{generategrid}.
+\item \textit{obstacles}: The x,y coordinates and the radius of each obstacle
+\item \textit{cellDim}: The required width and height of each cell on the grid.
+\item \textit{mapDim}: The width and height of the map in meters.
+\item global \textit{ROVER\_FOOTPRINT\_RADIUS}: The radius of the footprint of the rover in meters.
+\end{itemize}
+\textbf{Outputs:}
+\begin{itemize}
+\item \textit{map}: The \dis global map with start node, goal node and obstacles defined.
+\end{itemize}
+
+% % % % % % % % % % % % % % % % % % % % % % %
+\subsection{Footprint Points}
+The function \textbf{getRoverFootprintPoints} uses the built-in function \textbf{rangesearch} to identify points in \textit{pointCloud} that fall within the rover's footprint radius from the centre of a cell.
+
+% % % % % % % % % % % % % % % % % % % %
+\subsection{Least Squares Fit of Plane}
+The function \textbf{fitplane} 
+
+\textbf{Inputs:}
+\begin{itemize}
+\item \textit{points}: 
+\end{itemize}
+\textbf{Outputs:}
+\begin{itemize}
+\item \textit{n}: vector normal to the plane
+\item \textit{p}: average vector
+\end{itemize}
+
+% % % % % % % % % % % % % % % % % % % % % % %
+\subsection{Step Hazard Evaluation}
+The function \textbf{stepHazardEval}
+
+
+% % % % % % % % % % % % % % % % % % %
+\subsection{Pitch Hazard Evaluation}
+The function \textbf{pitchHazardEval}
+
+
+% % % % % % % % % % % % % % % % % % %
+\subsection{Roughness Hazard Evaluation}
+The function \textbf{roughnessHazardEval}
+
+
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
+\subsection{Identify Neighbours}
+The function \textbf{getNeighbours}
+
+
+
+
+% % % % % % % % % % % % % % % % % % % % % % % % % %
+\subsection{Dijkstra Algorithm}
+The function \textbf{dijkstraBody}
+
+
+
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % %
+\subsection{A* Algorithm}
+The function \textbf{aStarBpdy}
+
+
+
 
 
 

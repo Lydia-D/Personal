@@ -106,6 +106,10 @@
 
 \newcommand{\Degs}{$^{\circ}$ }
 \newcommand{\lag}{\mathcal{L}}
+\newcommand*{\fullref}[1]{\hyperref[{#1}]{\ref*{#1} \nameref*{#1}}} % One single link
+\newcommand{\dis}{discretised }
+
+
 % Matlab Code
 \usepackage[framed]{mcode}
 
@@ -171,16 +175,13 @@ Each mainQN.m file has a section called 'User Input' where the animations and st
 
 \subfile{Ques1}
 
-\begin{eqnarray}
-\bm{H_k}=2
-\end{eqnarray}
 
 
 \subfile{Ques2}
-
-\section{Appendix A: Question 1}
+\newpage
+\section{Appendix A: \nameref{Sec:Question1}}
 \subfile{AppendixA}
-\section{Appendix B: Question 2}
+\section{Appendix B: \nameref{Sec:Question2}}
 \subfile{AppendixB}
 
 
