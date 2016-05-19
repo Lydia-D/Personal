@@ -12,6 +12,8 @@ function cell = pos2cell(posCoords,cellDim,mapDim)
     
     xg = (xm+cellWidth)/cellWidth;
     yg = (ym+cellHeight)/cellHeight;
+%     xg = (xm)/cellWidth;
+%     yg = (ym)/cellHeight;
     
     cell = [ceil(xg),ceil(yg)];
 

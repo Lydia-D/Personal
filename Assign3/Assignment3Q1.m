@@ -46,6 +46,9 @@ addpath(genpath('./Question1Files/utility_functions'))
 addpath(genpath('./Question1Files/data_sets'))
 addpath(genpath('./Question1Files'))
 
+% use stored mapTraverability?
+StoredTmap = 1;
+
 %% Martian Terrain Map -- There are ZERO functions for you to write in this section.
 % Our first task is to define an occupancy grid over which we can plan a
 % path for the rover. Each grid cell is to have a size of 20 cm by 20 cm,
@@ -128,8 +131,8 @@ map = generateGrid(mapDim,cellDim,startPos,goalPos);
 numCells = mapWidth*mapHeight;
 
 % centre of map
-X = [-MAP_WIDTH/2 MAP_WIDTH/2];
-Y = [-MAP_HEIGHT/2 MAP_HEIGHT/2];
+X = [-MAP_WIDTH/2 MAP_WIDTH/2-cellDim(1)];
+Y = [-MAP_HEIGHT/2 MAP_HEIGHT/2-cellDim(2)];
 
 showMap(3,'Gridded Map',X,Y,map,cMapOcc);
 
@@ -197,90 +200,93 @@ showMap(4,'Configuration Space',X,Y,map,cMapOcc);
 % traversability score of cell is taken as the minimum of the incline, roughness and step
 % scores. 
 
-ROVER_CLEARANCE_HEIGHT = 0.4;   %[m]
-ROVER_MAX_PITCH = 25;           %[deg]
-TRAVERSABILITY_THRESHOLD = 150; %[-]
+if StoredTmap == 1
+    load mapTraversability
+else
+    ROVER_CLEARANCE_HEIGHT = 0.4;   %[m]
+    ROVER_MAX_PITCH = 25;           %[deg]
+    TRAVERSABILITY_THRESHOLD = 150; %[-]
 
-mapStep = zeros(mapWidth,mapHeight);
-mapRoughness = zeros(mapWidth,mapHeight);
-mapPitch = zeros(mapWidth,mapHeight);
-mapTraversability = zeros(mapWidth,mapHeight);
+    mapStep = zeros(mapWidth,mapHeight);
+    mapRoughness = zeros(mapWidth,mapHeight);
+    mapPitch = zeros(mapWidth,mapHeight);
+    mapTraversability = zeros(mapWidth,mapHeight);
 
-global pointCloud
-load('localTerrainPointCloud.mat')  % variable called pointCloud
-wb = waitbar(0,'Creating Transversablility Map');
+    global pointCloud
+    load('localTerrainPointCloud.mat')  % variable called pointCloud
+    wb = waitbar(0,'Creating Transversablility Map');
 
-for i = 1:numCells
-    
-    %Get the cell coordinates.
-    [yC,xC] = ind2sub(size(map),i);
-    
-    %Get the position of the cell.
-    pos = cell2pos([xC,yC],cellDim,mapDim);
-    
-    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-    %YOUR GETROVERFOOTPRINTPOINTS FUNCTION GOES HERE.
-    %Get the indices of the points in the point cloud that are inside the
-    %footprint of the rover.
-    % coordinates not indicies
-    points = getRoverFootprintPoints(pos);
-    
-    %You may use the getRoverFootprintPoints_p function to see what a 'correct' output
-    %should look like.
-    %points = getRoverFootprintPoints_p(pos,ROVER_FOOTPRINT_RADIUS);
-    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-    
-    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-    %YOUR FITPLANE FUNCTION GOES HERE.
-    %Fit a plane to the points.
-    [n,p] = fitPlane(points);
-    
-    %p_function for getRoverFootprintPoints.
-%     [n,p] = fitPlane_p(points);
-    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-    
-    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-    %YOUR STEPHAZARDEVAL FUNCTION GOES HERE.
-    %Perform a step hazard evaluation over the patch of points.
-    mapStep(i) = stepHazardEval(points,ROVER_CLEARANCE_HEIGHT);
+    for i = 1:numCells
 
-    %p_function for stepHazardEval.
-%     mapStep(i) = stepHazardEval_p(points,ROVER_CLEARANCE_HEIGHT);
-    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-    
-    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-    %YOUR PITCHHAZARDEVAL FUNCTION GOES HERE.
-    %Perform a pitch hazard evaluation over the patch of points.
-%     mapPitch(i) = pitchHazardEval(n,ROVER_MAX_PITCH);
-    
-    %p_function for pitchHazardEval.
-    mapPitch(i) = pitchHazardEval_p(n,ROVER_MAX_PITCH);
-    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-    
-    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-    %YOUR ROUGHNESSHAZARDEVAL FUNCTION GOES HERE.
-    %Perform a roughness hazard evaluation over the patch of points.
-    mapRoughness(i) = roughnessHazardEval(points,n,p,ROVER_CLEARANCE_HEIGHT);
-    
-    %p_function for getRoverFootprintPoints.
-%     mapRoughness(i) = roughnessHazardEval_p(points,n,p,ROVER_CLEARANCE_HEIGHT);
-    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-    
-    %Use each of the hazard scores to find a traversability score for the
-    %cell.
-    mapTraversability(i) = max([mapStep(i) mapPitch(i) mapRoughness(i)]);
-    
-    waitbar(i/numCells,wb);
-    
-end
-close(wb)
-% Put the obstacles in the traversability map.
-for i = 1:numCells
-    if map(i) == 4 || mapTraversability(i) > TRAVERSABILITY_THRESHOLD
-        mapTraversability(i) = Inf; 
+        %Get the cell coordinates.
+        [yC,xC] = ind2sub(size(map),i);
+
+        %Get the position of the cell.
+        pos = cell2pos([xC,yC],cellDim,mapDim);
+
+        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+        %YOUR GETROVERFOOTPRINTPOINTS FUNCTION GOES HERE.
+        %Get the indices of the points in the point cloud that are inside the
+        %footprint of the rover.
+        % coordinates not indicies
+        points = getRoverFootprintPoints(pos);
+
+        %You may use the getRoverFootprintPoints_p function to see what a 'correct' output
+        %should look like.
+        %points = getRoverFootprintPoints_p(pos,ROVER_FOOTPRINT_RADIUS);
+        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+        %YOUR FITPLANE FUNCTION GOES HERE.
+        %Fit a plane to the points.
+        [n,p] = fitPlane(points);
+
+        %p_function for getRoverFootprintPoints.
+    %     [n,p] = fitPlane_p(points);
+        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+        %YOUR STEPHAZARDEVAL FUNCTION GOES HERE.
+        %Perform a step hazard evaluation over the patch of points.
+        mapStep(i) = stepHazardEval(points,ROVER_CLEARANCE_HEIGHT);
+
+        %p_function for stepHazardEval.
+    %     mapStep(i) = stepHazardEval_p(points,ROVER_CLEARANCE_HEIGHT);
+        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+        %YOUR PITCHHAZARDEVAL FUNCTION GOES HERE.
+        %Perform a pitch hazard evaluation over the patch of points.
+        mapPitch(i) = pitchHazardEval(n,ROVER_MAX_PITCH);
+
+        %p_function for pitchHazardEval.
+%         mapPitch(i) = pitchHazardEval_p(n,ROVER_MAX_PITCH);
+        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+        %YOUR ROUGHNESSHAZARDEVAL FUNCTION GOES HERE.
+        %Perform a roughness hazard evaluation over the patch of points.
+        mapRoughness(i) = roughnessHazardEval(points,n,p,ROVER_CLEARANCE_HEIGHT);
+
+        %p_function for getRoverFootprintPoints.
+    %     mapRoughness(i) = roughnessHazardEval_p(points,n,p,ROVER_CLEARANCE_HEIGHT);
+        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+        %Use each of the hazard scores to find a traversability score for the
+        %cell.
+        mapTraversability(i) = max([mapStep(i) mapPitch(i) mapRoughness(i)]);
+
+        waitbar(i/numCells,wb);
+
+    end
+    close(wb)
+    % Put the obstacles in the traversability map.
+    for i = 1:numCells
+        if map(i) == 4 || mapTraversability(i) > TRAVERSABILITY_THRESHOLD
+            mapTraversability(i) = Inf; 
+        end
     end
 end
-
 %Open a new figure so that the following colormap command doesn't change
 %the colormap of the of the figure from the previous section.
 showMap(5,'Traversability Map',X,Y,mapTraversability,cMapTrav);
@@ -304,7 +310,7 @@ if dijkstra
 
     %Make this flag true to enable visualisation of the planner on every
     %iteration of the planning loop.
-    drawMapEveryTime = true;
+    drawMapEveryTime = false;
 
     % Initialize the cost array
     distanceFromStart = Inf*ones(mapWidth,mapHeight);
@@ -407,17 +413,29 @@ if dijkstra
 
         fprintf('Dijkstra: Cost = %d\n',cost);
     end
+    fprintf('The number expanded by Dijkstra was %d\n',numExpanded)
 
     map(startNode) = 2;
     map(goalNode) = 3;
 
     showMap(6,fName,X,Y,map,cMapOcc);
 
+% store Dijstra path for comparision
+    [Dindexi,Dindexj] = find(map == 7);
+    posDij = cell2posvec([Dindexi,Dindexj],cellDim,mapDim);
+    costDij = cost;
+    neDij = numExpanded;
+    save Dij posDij costDij neDij
+    hold on
+    plot(posDij(:,2),posDij(:,1),'xk')
+    plot(-3.8, 4.6,'ok')
     
 %% A* Algorithm -- There is ONE function to write in this section.
 
 else
-
+    % load dijkstra for comparision
+    load Dij
+    
     %Transform the coordinates of the start and goal nodes into cell indices.
     startCell = pos2cell(fliplr(startPos),cellDim,mapDim);
     goalCell = pos2cell(fliplr(goalPos),cellDim,mapDim);
@@ -426,7 +444,7 @@ else
 
     %Make this flag true to enable visualisation of the planner on every
     %iteration of the planning loop.
-    drawMapEveryTime = true;
+    drawMapEveryTime = false;
 
     % Initialize the cost array
     minDist = 0;
@@ -452,13 +470,13 @@ else
     xd = goalCell(2);
     yd = goalCell(1);
     
-    %Manhattan distance heuristic
-    %heuristic = abs(XM - xd) + abs(YM - yd);
-    %Euclidean distance heuristic
-    
     % weight the greedy algorithm
-    weightgreedy =1;
-    heuristic = weightgreedy.*sqrt((XM-xd).^2 + (YM-yd).^2);
+    weightgreedy = 100;
+    
+    %Manhattan distance heuristic
+    heuristic = weightgreedy.*(abs(XM - xd) + abs(YM - yd));
+    %Euclidean distance heuristic
+%     heuristic = weightgreedy.*sqrt((XM-xd).^2 + (YM-yd).^2);
     
     fName = 'A* Algorithm'; 
 
@@ -513,7 +531,9 @@ else
         W(currentNode) = 1;
         H(currentNode) = Inf;
     end
-
+    %%
+    fprintf('The number expanded by A* was %d with greedy weighting %d\n',numExpanded,weightgreedy)
+    fprintf('Iteration percentage decrease %.2f%%\n', (numExpanded-neDij)/neDij*100)
     if (isinf(heuristic(goalNode)))
         route = [];
         cost = Inf;
@@ -531,15 +551,15 @@ else
             map(route(k)) = 7;
             showMap(6,fName,X,Y,map,cMapOcc);
         end
-
-        fprintf('Cost = %d\n',cost);
+        fprintf('Added cost compared to Dijsktra = %.0f\nPercentage cost increase = %.2f%%\n',cost-costDij,(cost-costDij)/costDij*100);
     end
 
     map(startNode) = 2;
     map(goalNode) = 3;
 
     showMap(6,fName,X,Y,map,cMapOcc);
-
+    hold on
+    plot(posDij(:,2),posDij(:,1),'xk')
 end
 
 %% Plot Path on Terrain

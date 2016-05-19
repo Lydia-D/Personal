@@ -1,7 +1,8 @@
+%% Get Neighbours
 % L Drabsch
 % 9/5/16
 % Inputs: i,j = index of current cell
-%         map = 
+%         map = map at current iteration 
 function [neighbours,neighbourInd,map] = getNeighbours(i,j,map,mapHeight,mapWidth,conn,mapTraversability)
 
     if conn == 8

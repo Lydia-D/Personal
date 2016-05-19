@@ -7,7 +7,7 @@ function C = constraints(X0,Y,Final)
     
     % propogate to the end
     [Xall,t] = dynamics(Y,X0);  % final condition in Xall.X4
-    Xall.X4  = X;
+    X = Xall.X4;
     
     rmag = norm(X(1:3));
     vmag = norm(X(4:6));
@@ -20,18 +20,21 @@ function C = constraints(X0,Y,Final)
     tanRasc = -W(1)/W(2);
     
     % final radius constraint 
-    C(1,1) = norm(Xfinal(1:3))/Final.r - 1;
+    C(1,1) = norm(X(1:3))/Final.a - 1;
     
     % final velocity constraint
-    C(2,1) = norm(Xfinal(4:6))/Final.v  - 1;
+    C(2,1) = norm(X(4:6))/Final.v  - 1;
     
-    % final eccentricity constraint
+    % final eccentricity constraint  FOR ZERO r dot v = 0
+        % normalised
+    C(3,1) = dot(X(1:3),X(4:6));
     
     
     % final inclination constraint
-    C(6,1) = cos(Final.i) - W(3);
+    C(4,1) = cos(Final.inc) - W(3);
     
-    % final Rasc constraint
-    C(7,1) = tan(Final.Rasc) - tanRasc;
-
+    if ~isnan(Final.Rasc)
+        % final Rasc constraint
+        C(5,1) = tan(Final.Rasc) - tanRasc;
+    end
 end

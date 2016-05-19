@@ -1,3 +1,4 @@
+%% Dijkstra Implementation
 % L Drabsch
 % 9/5/16
 
@@ -11,8 +12,7 @@ function [distanceFromStart,parent,H,map] = dijkstraBody(currentNode,distanceFro
            distanceFromStart(neighbours(i_n)) = currentcost + mapTraversability(neighbours(i_n));
            parent(neighbours(i_n)) = currentNode;
        end
-     % place neighbours in open list ?if not already closed? - neighbours
-     % list already takes out visited places in previous function
+     % place neighbours in open list
      H(neighbours(i_n)) = 1;
     end
     

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.3.10)  18 MAY 2016 17:46
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.3.10)  20 MAY 2016 01:14
 entering extended mode
 **./Space3_Assign3.tex
 (Space3_Assign3.tex
@@ -963,7 +963,11 @@ Package textcomp Info: Setting pplx sub-encoding to TS1/3 on input line 406.
 Package textcomp Info: Setting pplj sub-encoding to TS1/3 on input line 407.
 Package textcomp Info: Setting ptmx sub-encoding to TS1/4 on input line 408.
 Package textcomp Info: Setting ptmj sub-encoding to TS1/4 on input line 409.
-)) (Space3_Assign3.aux)
+)) (Space3_Assign3.aux
+
+LaTeX Warning: Label `Fig:A*eu' multiply defined.
+
+)
 \openout1 = `Space3_Assign3.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 117.
@@ -983,12 +987,10 @@ LaTeX Font Info:    ... okay on input line 117.
 LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 117.
 LaTeX Font Info:    Try loading font information for TS1+cmr on input line 117.
 
-
-("C:\Users\Lydia\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\ts1cmr.fd"
+ ("C:\Users\Lydia\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\ts1cmr.fd"
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    ... okay on input line 117.
-
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -1097,7 +1099,7 @@ Package caption Info: End \AtBeginDocument code.
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 
-<./IMAGEtitle2f.jpg, id=86, 181.6386pt x 542.025pt>
+<./IMAGEtitle2f.jpg, id=106, 181.6386pt x 542.025pt>
 File: ./IMAGEtitle2f.jpg Graphic file (type jpg)
  <use ./IMAGEtitle2f.jpg>
 Package pdftex.def Info: ./IMAGEtitle2f.jpg used on input line 121.
@@ -1149,7 +1151,7 @@ e2f.jpg>]
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
- <./Plag.pdf, id=97, 597.19112pt x 845.19763pt>
+ <./Plag.pdf, id=117, 597.19112pt x 845.19763pt>
 File: ./Plag.pdf Graphic file (type pdf)
  <use ./Plag.pdf>
 Package pdftex.def Info: ./Plag.pdf used on input line 157.
@@ -1168,7 +1170,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.i}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.2 ... Based Robot Motion Planning}{1}{section.2}
+l.2 ...rline {1.1}Introduction}{1}{subsection.1.1}
                                                    [1
 
  <./Plag.pdf>])
@@ -1176,7 +1178,28 @@ l.2 ... Based Robot Motion Planning}{1}{section.2}
 \openout5 = `Space3_Assign3.toc'.
 
 
-(Space3_Assign3.lof)
+(Space3_Assign3.lof
+
+LaTeX Warning: Hyper reference `Sec:trav' on page ii undefined on input line 3.
+
+
+
+LaTeX Warning: Reference `Sec:trav' on page ii undefined on input line 3.
+
+
+LaTeX Warning: Reference `Sec:trav' on page ii undefined on input line 3.
+
+
+LaTeX Warning: Hyper reference `Sec:terrain' on page ii undefined on input line
+ 7.
+
+
+LaTeX Warning: Reference `Sec:terrain' on page ii undefined on input line 7.
+
+
+LaTeX Warning: Reference `Sec:terrain' on page ii undefined on input line 7.
+
+)
 \tf@lof=\write6
 \openout6 = `Space3_Assign3.lof'.
 
@@ -1185,16 +1208,31 @@ l.2 ... Based Robot Motion Planning}{1}{section.2}
 \openout7 = `Space3_Assign3.lot'.
 
  [2] (Ques1.tex
-Underfull \hbox (badness 10000) in paragraph at lines 12--14
+Underfull \hbox (badness 10000) in paragraph at lines 16--18
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 30--33
+Underfull \hbox (badness 10000) in paragraph at lines 35--38
 
  []
 
-[1]) (Ques2.tex [2]) [3] (AppendixA.tex
+[1]
+Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
+put line 75.
+ [2]
+Overfull \hbox (10.00317pt too wide) in paragraph at lines 150--168
+ [][] 
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+) (Ques2.tex [3]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[4]) [5] (AppendixA.tex
 Package epstopdf Info: Source file: <generategrid.eps>
 (epstopdf)                    date: 2016-05-18 15:32:57
 (epstopdf)                    size: 21106 bytes
@@ -1206,7 +1244,7 @@ to.pdf generategrid.eps>
 (epstopdf)             \includegraphics on input line 9.
 Package epstopdf Info: Output file is already uptodate.
 
-<generategrid-eps-converted-to.pdf, id=197, 421.575pt x 316.18124pt>
+<generategrid-eps-converted-to.pdf, id=252, 421.575pt x 316.18124pt>
 File: generategrid-eps-converted-to.pdf Graphic file (type pdf)
 
 <use generategrid-eps-converted-to.pdf>
@@ -1224,7 +1262,7 @@ rted-to.pdf generateobstacles.eps>
 (epstopdf)             \includegraphics on input line 16.
 Package epstopdf Info: Output file is already uptodate.
 
-<generateobstacles-eps-converted-to.pdf, id=200, 421.575pt x 316.18124pt>
+<generateobstacles-eps-converted-to.pdf, id=255, 421.575pt x 316.18124pt>
 File: generateobstacles-eps-converted-to.pdf Graphic file (type pdf)
 
 <use generateobstacles-eps-converted-to.pdf>
@@ -1235,25 +1273,359 @@ ine 16.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-) [4 <./generategrid-eps-converted-to.pdf>] (AppendixB.tex) [5 <./generateobsta
-cles-eps-converted-to.pdf>]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 197.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 197.
+
+LaTeX Warning: Hyper reference `Sec:trav' on page 6 undefined on input line 21.
+
+
+
+LaTeX Warning: Reference `Sec:trav' on page 6 undefined on input line 21.
+
+
+LaTeX Warning: Reference `Sec:trav' on page 6 undefined on input line 21.
+
+
+LaTeX Warning: Hyper reference `Sec:trav' on page 6 undefined on input line 21.
+
+
+
+LaTeX Warning: Reference `Sec:trav' on page 6 undefined on input line 21.
+
+
+LaTeX Warning: Reference `Sec:trav' on page 6 undefined on input line 21.
+
+Package epstopdf Info: Source file: <trav.eps>
+(epstopdf)                    date: 2016-05-19 19:23:16
+(epstopdf)                    size: 28958 bytes
+(epstopdf)             Output file: <trav-eps-converted-to.pdf>
+(epstopdf)                    date: 2016-05-20 00:05:25
+(epstopdf)                    size: 7604 bytes
+(epstopdf)             Command: <epstopdf --outfile=trav-eps-converted-to.pdf t
+rav.eps>
+(epstopdf)             \includegraphics on input line 23.
+Package epstopdf Info: Output file is already uptodate.
+<trav-eps-converted-to.pdf, id=256, 421.575pt x 316.18124pt>
+File: trav-eps-converted-to.pdf Graphic file (type pdf)
+
+<use trav-eps-converted-to.pdf>
+Package pdftex.def Info: trav-eps-converted-to.pdf used on input line 23.
+(pdftex.def)             Requested size: 338.58632pt x 253.944pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+Package epstopdf Info: Source file: <DijkstraMap.eps>
+(epstopdf)                    date: 2016-05-19 19:18:06
+(epstopdf)                    size: 28047 bytes
+(epstopdf)             Output file: <DijkstraMap-eps-converted-to.pdf>
+(epstopdf)                    date: 2016-05-19 19:42:48
+(epstopdf)                    size: 4469 bytes
+(epstopdf)             Command: <epstopdf --outfile=DijkstraMap-eps-converted-t
+o.pdf DijkstraMap.eps>
+(epstopdf)             \includegraphics on input line 30.
+Package epstopdf Info: Output file is already uptodate.
+<DijkstraMap-eps-converted-to.pdf, id=259, 421.575pt x 316.18124pt>
+File: DijkstraMap-eps-converted-to.pdf Graphic file (type pdf)
+
+<use DijkstraMap-eps-converted-to.pdf>
+Package pdftex.def Info: DijkstraMap-eps-converted-to.pdf used on input line 30
+.
+(pdftex.def)             Requested size: 338.58632pt x 253.944pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: Hyper reference `Sec:terrain' on page 6 undefined on input line 
+35.
+
+
+LaTeX Warning: Reference `Sec:terrain' on page 6 undefined on input line 35.
+
+
+LaTeX Warning: Reference `Sec:terrain' on page 6 undefined on input line 35.
+
+
+LaTeX Warning: Hyper reference `Sec:terrain' on page 6 undefined on input line 
+35.
+
+
+LaTeX Warning: Reference `Sec:terrain' on page 6 undefined on input line 35.
+
+
+LaTeX Warning: Reference `Sec:terrain' on page 6 undefined on input line 35.
+
+Package epstopdf Info: Source file: <Dijstra_terrain.eps>
+(epstopdf)                    date: 2016-05-20 01:09:11
+(epstopdf)                    size: 821314 bytes
+(epstopdf)             Output file: <Dijstra_terrain-eps-converted-to.pdf>
+(epstopdf)                    date: 2016-05-20 01:14:23
+(epstopdf)                    size: 61375 bytes
+(epstopdf)             Command: <epstopdf --outfile=Dijstra_terrain-eps-convert
+ed-to.pdf Dijstra_terrain.eps>
+(epstopdf)             \includegraphics on input line 37.
+Package epstopdf Info: Output file is already uptodate.
+<Dijstra_terrain-eps-converted-to.pdf, id=260, 421.575pt x 316.18124pt>
+File: Dijstra_terrain-eps-converted-to.pdf Graphic file (type pdf)
+
+<use Dijstra_terrain-eps-converted-to.pdf>
+Package pdftex.def Info: Dijstra_terrain-eps-converted-to.pdf used on input lin
+e 37.
+(pdftex.def)             Requested size: 338.58632pt x 253.944pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+Package epstopdf Info: Source file: <Astar_euc_1.eps>
+(epstopdf)                    date: 2016-05-19 22:15:25
+(epstopdf)                    size: 34464 bytes
+(epstopdf)             Output file: <Astar_euc_1-eps-converted-to.pdf>
+(epstopdf)                    date: 2016-05-19 22:15:44
+(epstopdf)                    size: 5275 bytes
+(epstopdf)             Command: <epstopdf --outfile=Astar_euc_1-eps-converted-t
+o.pdf Astar_euc_1.eps>
+(epstopdf)             \includegraphics on input line 46.
+Package epstopdf Info: Output file is already uptodate.
+<Astar_euc_1-eps-converted-to.pdf, id=261, 421.575pt x 316.18124pt>
+File: Astar_euc_1-eps-converted-to.pdf Graphic file (type pdf)
+
+<use Astar_euc_1-eps-converted-to.pdf>
+Package pdftex.def Info: Astar_euc_1-eps-converted-to.pdf used on input line 46
+.
+(pdftex.def)             Requested size: 237.01411pt x 177.76466pt.
+Package epstopdf Info: Source file: <Astar_euc_10.eps>
+(epstopdf)                    date: 2016-05-19 22:14:55
+(epstopdf)                    size: 34095 bytes
+(epstopdf)             Output file: <Astar_euc_10-eps-converted-to.pdf>
+(epstopdf)                    date: 2016-05-19 22:15:45
+(epstopdf)                    size: 5249 bytes
+(epstopdf)             Command: <epstopdf --outfile=Astar_euc_10-eps-converted-
+to.pdf Astar_euc_10.eps>
+(epstopdf)             \includegraphics on input line 49.
+Package epstopdf Info: Output file is already uptodate.
+
+<Astar_euc_10-eps-converted-to.pdf, id=262, 421.575pt x 316.18124pt>
+File: Astar_euc_10-eps-converted-to.pdf Graphic file (type pdf)
+
+<use Astar_euc_10-eps-converted-to.pdf>
+Package pdftex.def Info: Astar_euc_10-eps-converted-to.pdf used on input line 4
+9.
+(pdftex.def)             Requested size: 237.01411pt x 177.76466pt.
+Package epstopdf Info: Source file: <Astar_euc_25.eps>
+(epstopdf)                    date: 2016-05-19 22:12:18
+(epstopdf)                    size: 33144 bytes
+(epstopdf)             Output file: <Astar_euc_25-eps-converted-to.pdf>
+(epstopdf)                    date: 2016-05-19 22:13:45
+(epstopdf)                    size: 5253 bytes
+(epstopdf)             Command: <epstopdf --outfile=Astar_euc_25-eps-converted-
+to.pdf Astar_euc_25.eps>
+(epstopdf)             \includegraphics on input line 52.
+Package epstopdf Info: Output file is already uptodate.
+
+<Astar_euc_25-eps-converted-to.pdf, id=263, 421.575pt x 316.18124pt>
+File: Astar_euc_25-eps-converted-to.pdf Graphic file (type pdf)
+
+<use Astar_euc_25-eps-converted-to.pdf>
+Package pdftex.def Info: Astar_euc_25-eps-converted-to.pdf used on input line 5
+2.
+(pdftex.def)             Requested size: 237.01411pt x 177.76466pt.
+Package epstopdf Info: Source file: <Astar_euc_50.eps>
+(epstopdf)                    date: 2016-05-19 22:14:25
+(epstopdf)                    size: 31642 bytes
+(epstopdf)             Output file: <Astar_euc_50-eps-converted-to.pdf>
+(epstopdf)                    date: 2016-05-19 22:15:45
+(epstopdf)                    size: 5222 bytes
+(epstopdf)             Command: <epstopdf --outfile=Astar_euc_50-eps-converted-
+to.pdf Astar_euc_50.eps>
+(epstopdf)             \includegraphics on input line 55.
+Package epstopdf Info: Output file is already uptodate.
+
+<Astar_euc_50-eps-converted-to.pdf, id=264, 421.575pt x 316.18124pt>
+File: Astar_euc_50-eps-converted-to.pdf Graphic file (type pdf)
+
+<use Astar_euc_50-eps-converted-to.pdf>
+Package pdftex.def Info: Astar_euc_50-eps-converted-to.pdf used on input line 5
+5.
+(pdftex.def)             Requested size: 237.01411pt x 177.76466pt.
+Package epstopdf Info: Source file: <Astar_euc_75.eps>
+(epstopdf)                    date: 2016-05-19 22:06:48
+(epstopdf)                    size: 28848 bytes
+(epstopdf)             Output file: <Astar_euc_75-eps-converted-to.pdf>
+(epstopdf)                    date: 2016-05-19 22:10:26
+(epstopdf)                    size: 5151 bytes
+(epstopdf)             Command: <epstopdf --outfile=Astar_euc_75-eps-converted-
+to.pdf Astar_euc_75.eps>
+(epstopdf)             \includegraphics on input line 58.
+Package epstopdf Info: Output file is already uptodate.
+
+<Astar_euc_75-eps-converted-to.pdf, id=265, 421.575pt x 316.18124pt>
+File: Astar_euc_75-eps-converted-to.pdf Graphic file (type pdf)
+
+<use Astar_euc_75-eps-converted-to.pdf>
+Package pdftex.def Info: Astar_euc_75-eps-converted-to.pdf used on input line 5
+8.
+(pdftex.def)             Requested size: 237.01411pt x 177.76466pt.
+Package epstopdf Info: Source file: <Astar_euc_100.eps>
+(epstopdf)                    date: 2016-05-19 22:08:57
+(epstopdf)                    size: 28471 bytes
+(epstopdf)             Output file: <Astar_euc_100-eps-converted-to.pdf>
+(epstopdf)                    date: 2016-05-19 22:10:26
+(epstopdf)                    size: 5119 bytes
+(epstopdf)             Command: <epstopdf --outfile=Astar_euc_100-eps-converted
+-to.pdf Astar_euc_100.eps>
+(epstopdf)             \includegraphics on input line 61.
+Package epstopdf Info: Output file is already uptodate.
+
+<Astar_euc_100-eps-converted-to.pdf, id=266, 421.575pt x 316.18124pt>
+File: Astar_euc_100-eps-converted-to.pdf Graphic file (type pdf)
+
+<use Astar_euc_100-eps-converted-to.pdf>
+Package pdftex.def Info: Astar_euc_100-eps-converted-to.pdf used on input line 
+61.
+(pdftex.def)             Requested size: 237.01411pt x 177.76466pt.
+Package epstopdf Info: Source file: <Astar_man_1.eps>
+(epstopdf)                    date: 2016-05-20 00:14:15
+(epstopdf)                    size: 34461 bytes
+(epstopdf)             Output file: <Astar_man_1-eps-converted-to.pdf>
+(epstopdf)                    date: 2016-05-20 00:31:41
+(epstopdf)                    size: 5278 bytes
+(epstopdf)             Command: <epstopdf --outfile=Astar_man_1-eps-converted-t
+o.pdf Astar_man_1.eps>
+(epstopdf)             \includegraphics on input line 70.
+Package epstopdf Info: Output file is already uptodate.
+
+<Astar_man_1-eps-converted-to.pdf, id=267, 421.575pt x 316.18124pt>
+File: Astar_man_1-eps-converted-to.pdf Graphic file (type pdf)
+
+<use Astar_man_1-eps-converted-to.pdf>
+Package pdftex.def Info: Astar_man_1-eps-converted-to.pdf used on input line 70
+.
+(pdftex.def)             Requested size: 237.01411pt x 177.76466pt.
+Package epstopdf Info: Source file: <Astar_man_10.eps>
+(epstopdf)                    date: 2016-05-20 00:14:48
+(epstopdf)                    size: 33975 bytes
+(epstopdf)             Output file: <Astar_man_10-eps-converted-to.pdf>
+(epstopdf)                    date: 2016-05-20 00:31:42
+(epstopdf)                    size: 5262 bytes
+(epstopdf)             Command: <epstopdf --outfile=Astar_man_10-eps-converted-
+to.pdf Astar_man_10.eps>
+(epstopdf)             \includegraphics on input line 73.
+Package epstopdf Info: Output file is already uptodate.
+
+<Astar_man_10-eps-converted-to.pdf, id=268, 421.575pt x 316.18124pt>
+File: Astar_man_10-eps-converted-to.pdf Graphic file (type pdf)
+
+<use Astar_man_10-eps-converted-to.pdf>
+Package pdftex.def Info: Astar_man_10-eps-converted-to.pdf used on input line 7
+3.
+(pdftex.def)             Requested size: 237.01411pt x 177.76466pt.
+Package epstopdf Info: Source file: <Astar_man_25.eps>
+(epstopdf)                    date: 2016-05-20 00:16:02
+(epstopdf)                    size: 32648 bytes
+(epstopdf)             Output file: <Astar_man_25-eps-converted-to.pdf>
+(epstopdf)                    date: 2016-05-20 00:31:43
+(epstopdf)                    size: 5228 bytes
+(epstopdf)             Command: <epstopdf --outfile=Astar_man_25-eps-converted-
+to.pdf Astar_man_25.eps>
+(epstopdf)             \includegraphics on input line 76.
+Package epstopdf Info: Output file is already uptodate.
+
+<Astar_man_25-eps-converted-to.pdf, id=269, 421.575pt x 316.18124pt>
+File: Astar_man_25-eps-converted-to.pdf Graphic file (type pdf)
+
+<use Astar_man_25-eps-converted-to.pdf>
+Package pdftex.def Info: Astar_man_25-eps-converted-to.pdf used on input line 7
+6.
+(pdftex.def)             Requested size: 237.01411pt x 177.76466pt.
+Package epstopdf Info: Source file: <Astar_man_50.eps>
+(epstopdf)                    date: 2016-05-20 00:18:52
+(epstopdf)                    size: 29321 bytes
+(epstopdf)             Output file: <Astar_man_50-eps-converted-to.pdf>
+(epstopdf)                    date: 2016-05-20 00:31:44
+(epstopdf)                    size: 5159 bytes
+(epstopdf)             Command: <epstopdf --outfile=Astar_man_50-eps-converted-
+to.pdf Astar_man_50.eps>
+(epstopdf)             \includegraphics on input line 79.
+Package epstopdf Info: Output file is already uptodate.
+
+<Astar_man_50-eps-converted-to.pdf, id=270, 421.575pt x 316.18124pt>
+File: Astar_man_50-eps-converted-to.pdf Graphic file (type pdf)
+
+<use Astar_man_50-eps-converted-to.pdf>
+Package pdftex.def Info: Astar_man_50-eps-converted-to.pdf used on input line 7
+9.
+(pdftex.def)             Requested size: 237.01411pt x 177.76466pt.
+Package epstopdf Info: Source file: <Astar_man_75.eps>
+(epstopdf)                    date: 2016-05-20 00:20:24
+(epstopdf)                    size: 28477 bytes
+(epstopdf)             Output file: <Astar_man_75-eps-converted-to.pdf>
+(epstopdf)                    date: 2016-05-20 00:31:44
+(epstopdf)                    size: 5113 bytes
+(epstopdf)             Command: <epstopdf --outfile=Astar_man_75-eps-converted-
+to.pdf Astar_man_75.eps>
+(epstopdf)             \includegraphics on input line 82.
+Package epstopdf Info: Output file is already uptodate.
+
+<Astar_man_75-eps-converted-to.pdf, id=271, 421.575pt x 316.18124pt>
+File: Astar_man_75-eps-converted-to.pdf Graphic file (type pdf)
+
+<use Astar_man_75-eps-converted-to.pdf>
+Package pdftex.def Info: Astar_man_75-eps-converted-to.pdf used on input line 8
+2.
+(pdftex.def)             Requested size: 237.01411pt x 177.76466pt.
+Package epstopdf Info: Source file: <Astar_man_100.eps>
+(epstopdf)                    date: 2016-05-20 00:22:36
+(epstopdf)                    size: 28387 bytes
+(epstopdf)             Output file: <Astar_man_100-eps-converted-to.pdf>
+(epstopdf)                    date: 2016-05-20 00:31:45
+(epstopdf)                    size: 5086 bytes
+(epstopdf)             Command: <epstopdf --outfile=Astar_man_100-eps-converted
+-to.pdf Astar_man_100.eps>
+(epstopdf)             \includegraphics on input line 85.
+Package epstopdf Info: Output file is already uptodate.
+
+<Astar_man_100-eps-converted-to.pdf, id=272, 421.575pt x 316.18124pt>
+File: Astar_man_100-eps-converted-to.pdf Graphic file (type pdf)
+
+<use Astar_man_100-eps-converted-to.pdf>
+Package pdftex.def Info: Astar_man_100-eps-converted-to.pdf used on input line 
+85.
+(pdftex.def)             Requested size: 237.01411pt x 177.76466pt.
+) [6 <./generategrid-eps-converted-to.pdf>] [7 <./generateobstacles-eps-convert
+ed-to.pdf> <./trav-eps-converted-to.pdf>] [8 <./DijkstraMap-eps-converted-to.pd
+f> <./Dijstra_terrain-eps-converted-to.pdf>] [9 <./Astar_euc_1-eps-converted-to
+.pdf> <./Astar_euc_10-eps-converted-to.pdf> <./Astar_euc_25-eps-converted-to.pd
+f> <./Astar_euc_50-eps-converted-to.pdf> <./Astar_euc_75-eps-converted-to.pdf> 
+<./Astar_euc_100-eps-converted-to.pdf>] [10 <./Astar_man_1-eps-converted-to.pdf
+> <./Astar_man_10-eps-converted-to.pdf> <./Astar_man_25-eps-converted-to.pdf> <
+./Astar_man_50-eps-converted-to.pdf> <./Astar_man_75-eps-converted-to.pdf> <./A
+star_man_100-eps-converted-to.pdf>]
+(AppendixB.tex) [11
+
+]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 192.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 192.
  (Space3_Assign3.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 197.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 197.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 192.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 192.
 Package rerunfilecheck Info: File `Space3_Assign3.out' has not changed.
-(rerunfilecheck)             Checksum: 476762404D06A679E4F601158F7DE1A3;1336.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 197.
+(rerunfilecheck)             Checksum: 5C531608641705B84B7B484466BF64D3;1787.
+
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: There were multiply-defined labels.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 192.
  ) 
 Here is how much of TeX's memory you used:
- 25933 strings out of 493634
- 544171 string characters out of 3135239
- 692057 words of memory out of 3000000
- 28823 multiletter control sequences out of 15000+200000
+ 26086 strings out of 493634
+ 547879 string characters out of 3135239
+ 697923 words of memory out of 3000000
+ 28939 multiletter control sequences out of 15000+200000
  21425 words of font info for 78 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
- 55i,13n,54p,526b,612s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 55i,13n,54p,659b,612s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\Lydia\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\
 tcrm1095.pk> <C:\Users\Lydia\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\public\cm
 \dpi1037\cmbcsc10.pk> <C:\Users\Lydia\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\
@@ -1279,9 +1651,9 @@ ata/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Use
 rs/Lydia/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt1
 2.pfb><C:/Users/Lydia/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsf
 onts/symbols/msbm10.pfb>
-Output written on Space3_Assign3.pdf (8 pages, 341868 bytes).
+Output written on Space3_Assign3.pdf (14 pages, 468431 bytes).
 PDF statistics:
- 346 PDF objects out of 1000 (max. 8388607)
- 36 named destinations out of 1000 (max. 500000)
- 193 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 511 PDF objects out of 1000 (max. 8388607)
+ 58 named destinations out of 1000 (max. 500000)
+ 308 words of extra memory for PDF output out of 10000 (max. 10000000)
 

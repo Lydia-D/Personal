@@ -36,7 +36,7 @@ Park.t0 = 0;
 
 X_orbit = class2orbit(Park.a,Park.e,Park.M0,Park.t0,timestart);
 X0      = orbit2ECI(X_orbit,Park.Rasc,Park.inc,Park.omega);
-global Yscale
+
 Yscale = [pi^(-1);1000^(-1);pi^(-1);pi^(-1);pi^(-1);1000^(-1);pi^(-1);pi^(-1)];
 
 %% plot park orbit - simulate with Universal Conic Section
@@ -54,10 +54,7 @@ switch guess
         Y = [0;2000;0;0;0;2000;0;0];
     case 2
         % Hohmann Transfer Guess
-        Yreal = hohmann(Final,Park);
-        % add errro
-        Yreal = Yreal + [0.001;500;0.001;0.001;0.001;500;0.001;0.001];
-        Y = Yreal.*Yscale;
+        Y = hohmann(Final,Park);
 end
 [Trans,t] = dynamics(Y,X0);  % return each step
 
@@ -89,23 +86,19 @@ updateanimate(3,X,figsim,TimeVec.final);
 end
 
 %%  
-eps = 10^-5;    % sizing?  -> first derrivatve central, second fwd?
-% f = Cost(X0);   % cost   nessesary?
-g = calc_g();   % df/dx  constant?
+eps = 10^-5;
+f = Cost(X0);   % cost
+g = calc_g();   % df/dx
 c = constraints(X0,Y,Final);   % constraints
+G = calcG(Y,eps,X0,Final);
 Lold = inf;
 lambda = ones(size(c));  % initial lambda?
 errL = 10^-6;
-%L = calc_L(Y,X0,lambda,Final); % initial L
-L = 0; % to get into while loop;
-while abs(L - Lold) > errL
-    Lold = L; 
-    c = constraints(X0,Y,Final);   % constraints
-    G = calcG(Y,eps,X0,Final);
-    
+while (L - Lold) < errL
+
+
     % construct lagrangian
     L = calc_L(Y,X0,lambda,Final);
-
     % calculate hessian of lagrangian
     Hl = calcH(Y,X0,lambda,Final,L,eps);
     % solve for direction using KKT
@@ -115,8 +108,7 @@ while abs(L - Lold) > errL
     alpha = 1;
 
     Ynext = Y + alpha*p;
-    Y = Ynext;
-       
+    
 end
 
 % solve for direction

@@ -4,11 +4,15 @@
 \section{Grid Based Robot Motion Planning} \label{Sec:Question1}
 \subsection{Introduction}
 
-output of each function as well as a discussion of your understanding of each section and how
-you implemented the relevant algorithms.
+presents the output of each function\\
+discussion of your understanding of each section\\
+how you implemented the relevant algorithms.
 
 % % % % % % % % % % % % % % % % % % % %
-\subsection{Generate Grid}\label{Sec:gengrid}
+\subsection{Martian Terrain Map}
+nothing
+\subsection{Gridded Map}
+\subsubsection{Generate Grid}\label{Sec:gengrid}
 The function \textbf{generateGrid} calculates the size of the matrix that reflects the discretised map by \textit{mapDim}/\textit{cellDim} and creates the matrix as \textit{map}. The start and end node are calculated using the provided function \textit{pos2cell} and set in \textit{map}. The map is displayed by the predefined function \textbf{showmap}, see Figure \ref{Fig:gengrid}.\\\\
 \textbf{Inputs:}
 \begin{itemize}
@@ -23,7 +27,8 @@ The function \textbf{generateGrid} calculates the size of the matrix that reflec
 \end{itemize}
 
 % % % % % % % % % % % % % % % % % % %
-\subsection{Generate Obstacles} \label{Sec:genobs}
+\subsection{Configuration Space}
+\subsubsection{Generate Obstacles} \label{Sec:genobs}
 The function \textbf{generateObstacles} defines the cells on the map where the rover cannot travel due to predefined obstacles. The map reflects the configuration space of the rover, therefore the radius of the rovers footprint was added to the radius of each obstacle. The x domain of each obstacle was defined in meters \dis by . Using the conic equation for a circle Eq\eqref{conic}, the x domain was to calculate the upper and lower edge of the obstacle in meters.
 \begin{eqnarray}
 y_i = y_c \pm \sqrt{r^2 - (x_i -x_c)^2} \label{conic}
@@ -43,12 +48,14 @@ Where $x_i$ is the \dis domain, $(x_c,y_c)$ is the centre of the obstacle, r is 
 \end{itemize}
 
 % % % % % % % % % % % % % % % % % % % % % % %
-\subsection{Footprint Points}
+\subsection{GESTALT}
+
+\subsubsection{Footprint Points}
 The function \textbf{getRoverFootprintPoints} uses the built-in function \textbf{rangesearch} to identify points in \textit{pointCloud} that fall within the rover's footprint radius from the centre of a cell.
 
 % % % % % % % % % % % % % % % % % % % %
-\subsection{Least Squares Fit of Plane}
-The function \textbf{fitplane} 
+\subsubsection{Least Squares Fit of Plane}
+The function \textbf{fitplane} fits a plane using least squares method with all the points in the current cell. The mean average vector $\vec{p}$ was calculated from the point cloud \textit{points} and the residuals \textit{R} were found. The first eigenvector of \textit{R'R} is the unit vector normal to the plane.
 
 \textbf{Inputs:}
 \begin{itemize}
@@ -61,39 +68,122 @@ The function \textbf{fitplane}
 \end{itemize}
 
 % % % % % % % % % % % % % % % % % % % % % % %
-\subsection{Step Hazard Evaluation}
-The function \textbf{stepHazardEval}
+\subsubsection{Step Hazard Evaluation}
+The function \textbf{stepHazardEval} assigns a cost associated with how much of a step hazard the current cell is. 
 
+\begin{algorithm}
+\caption{Step Hazard Evaluation} \label{PC:step}
+\begin{algorithmic}
+\State max step $\gets$ max z - min z
+\If {max step $<$ threshold/3 }
+\State step hazard $\gets$ 0
+\Else
+\State step hazard $\gets$ 255 $\times$ \% max step from threshold
+\EndIf
+\Return step hazard
+\end{algorithmic}
+\end{algorithm}
 
 % % % % % % % % % % % % % % % % % % %
-\subsection{Pitch Hazard Evaluation}
+\subsubsection{Pitch Hazard Evaluation}
 The function \textbf{pitchHazardEval}
 
+The pitch angle $\theta$ is calculated using the vector normal \textit{n} to the plane of best fit as returned from \textbf{fitplane} using Eq\eqref{theta}.
+\begin{eqnarray}
+\theta = \frac{\pi}{2} - \tan^{-1}\left( \frac{n_z}{\sqrt{n_x^2+n_y^2}} \right) \label{theta}
+\end{eqnarray}
+
+\begin{algorithm}
+\caption{Pitch Hazard Evaluation} \label{PC:pitch}
+\begin{algorithmic}
+\State pitch angle $\gets$ Eq\eqref{theta}
+\If {pitch angle $>$ threshold }
+\State pitch hazard $\gets$ 255
+\Else
+\State pitch hazard $\gets$ 255 $\times$ \% angle from threshold
+\EndIf
+\Return pitch hazard
+\end{algorithmic}
+\end{algorithm}
 
 % % % % % % % % % % % % % % % % % % %
-\subsection{Roughness Hazard Evaluation}
-The function \textbf{roughnessHazardEval}
+\subsubsection{Roughness Hazard Evaluation}
+The function \textbf{roughnessHazardEval} evaluates how rough the current cell is by calculating the standard deviation of the residuals,
 
 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
-\subsection{Identify Neighbours}
-The function \textbf{getNeighbours}
+\subsection{Dijkstra Algorithm}
+The purpose of implementing Dijkstra's Algorithm was to find the path of least cost without having to test every possible combination. It operates by storing the path of minimum cost from a start node to each point on a grid. Dijkstra moves outwards from the start node as a breadth search, regardless of the direction the goal node is in. 
 
 
+
+\subsubsection{Identify Neighbours}
+The function \textbf{getNeighbours} identifies the valid neighbours around the current node based on information from \textit{map}, \textit{mapTraversability} and size of the gridded map. A neighbour is considered invalid if it is outside the global map indices, if it has already been visited or if it was above the traversability threshold. There are two options for how each node is connected to its neighbours; four connections (up,down,left,right) or eight connections (including diagonals). The indices of the valid neighbours are returned from the function and set as 'on list' in \textit{map}.
 
 
 % % % % % % % % % % % % % % % % % % % % % % % % % %
-\subsection{Dijkstra Algorithm}
-The function \textbf{dijkstraBody}
+\subsubsection{Dijkstra Implementation}\label{Sec:Dij}
+The function \textbf{dijkstraBody} identifies if going from the current node to a neighbour is better than any previous calculated paths. 
+
+\begin{algorithm}
+\caption{Dijkstra Body} \label{PC:dij}
+\begin{algorithmic}
+\For {each \textit{neighbour} around \textit{node}} 
+\If {cost from start(\textit{neighbour}) $>$ cost from start(\textit{node}) +  traversability(\textit{neighbour}) }
+\State cost from start(\textit{neighbour}) $\gets$ cost from start(\textit{node}) +  traversability(\textit{neighbour})
+\State best path so far $\gets$ \textit{node} 
+\EndIf
+\State nodes to do $\gets$ \textit{neighbour}
+\EndFor
+\end{algorithmic}
+\end{algorithm}
 
 
 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
 \subsection{A* Algorithm}
-The function \textbf{aStarBpdy}
+The A* algorithm follows the Dijkstra structure, except that it searches towards the goal node first. This was done using a heuristic and implementing cost-to-go and cost-from-start metrics. 
+
+\begin{table}[h]
+\centering
+\label{key}
+\begin{tabular}{ccccc}
+\toprule[0.8pt]
+\textbf{Heuristic} & \textbf{Weighting factor} & \textbf{numExpanded} & \textbf{Cost increase} & \textbf{ \% Cost Increase} \\\midrule[0.2pt]
+Dijstra reference & 0 & 1743 & 60306 & -\\\midrule[0.2pt]
+Euclidean distance & 1 & 1731 & 0 & 0\% \\
+Euclidean distance & 10 & 1612 & 0 & 0\% \\
+Euclidean distance & 25 & 1366 & 587 & 0.97\% \\
+Euclidean distance & 50 & 957 & 8020 & 13.30\% \\
+Euclidean distance & 75 & 159 & 15156 & 25.13\% \\
+Euclidean distance & 100 & 67 & 22644 & 37.55\% \\
+Manhattan distance & 1 & 1730 & 0 & 0\% \\
+Manhattan distance & 10 & 1573 & 0 & 0\% \\
+Manhattan distance & 25 & 1235 & 324 & 0.54\% \\
+Manhattan distance & 50 & 306 & 7891 & 13.08\% \\
+Manhattan distance & 75 & 74 & 26397 & 43.77\% \\
+Manhattan distance & 100 & 53 & 28143 & 46.67\% \\
+\bottomrule[0.8pt]
+\end{tabular}
+\end{table}
+
+\subsubsection{A* Implementation}
+The function \textbf{aStarBody} identifies if going from the current node to a neighbour is better than any previous calculated paths.
 
 
-
+\begin{algorithm}
+\caption{A* Body} \label{PC:A*}
+\begin{algorithmic}
+\For {each \textit{neighbour} around \textit{node}} 
+\If {cost from start(\textit{neighbour}) $>$ cost from start(\textit{node}) +  traversability(\textit{neighbour}) }
+\State cost from start(\textit{neighbour}) $\gets$ cost from start(\textit{node}) +  traversability(\textit{neighbour})
+\State cost to go(\textit{neighbour}) $\gets$ cost to come(\textit{node}) + heuristic to goal(\textit{neighbour})
+\State best path so far $\gets$ \textit{node} 
+\EndIf
+\State nodes to do $\gets$ \textit{neighbour}
+\EndFor
+\end{algorithmic}
+\end{algorithm}
 
 
 

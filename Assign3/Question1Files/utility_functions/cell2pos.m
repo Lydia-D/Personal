@@ -4,8 +4,10 @@ function pos = cell2pos(gridCoords,cellDim,mapDim)
     cellWidth = cellDim(1); cellHeight = cellDim(2);
     mapWidth = mapDim(1); mapHeight = mapDim(2);
     
-    xm = xg*cellWidth-cellWidth;
-    ym = yg*cellHeight-cellHeight;
+    xm = (xg)*cellWidth-cellWidth;
+    ym = (yg)*cellHeight-cellHeight;
+%     xm = (xg-1)*cellWidth;
+%     ym = (yg-1)*cellHeight;
     
     xm = xm - mapWidth/2;
     ym = ym - mapHeight/2;
