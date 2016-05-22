@@ -24,6 +24,8 @@ function H = calcH(Y,X0,lambda,Final,L_Y,eps)
             H(i,j) = (L_ij - L_i - L_j + L_Y)./(eps^2);
         end
     end
-
+    % make symmetric
+    H = H + triu(H,1)';
+    
         
 end
