@@ -4,9 +4,11 @@
 %b hessian of lagrangian
 % do i even need this normally?
 
-function H = calcH(Y,lambda,Final,L_Y,eps)
+function H = calcH_fwd(Y,lambda,L_Y)
 
-    fnL = @(Ypert) calc_L(Ypert,lambda,Final);
+    global eps
+
+    fnL = @(Ypert) calc_L(Ypert,lambda);
 
     H = zeros(length(Y));
     

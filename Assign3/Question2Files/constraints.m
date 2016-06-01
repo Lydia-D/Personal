@@ -3,10 +3,10 @@
 % 14/5/16
 % Inputs -> Y = [dE1,dV1,el1,az1,dE2,dV2,el2,az2]'
 % 
-function C = constraints(X0,Y,Final)
-    
+function C = constraints(Y)
+    global Final
     % propogate to the end
-    [Xall,t] = dynamics(Y,X0);  % final condition in Xall.X4
+    [Xall,t] = dynamics(Y);  % final condition in Xall.X4
     X = Xall.X4;
     
     rmag = norm(X(1:3));

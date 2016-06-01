@@ -4,19 +4,19 @@
 % defaultans = {'20','hsv'};
 % answer = inputdlg(prompt,dlg_title,num_lines,defaultans);
 
-function [hessian,linfn,merit,penalty] = choosedialog
+function flag = choosedialog
 
     d = dialog('Position',[300 300 300 400],'Name','Select type of optimisation process');
 
-    txtHessian = uicontrol('Parent',d,...
+    txtPenalty = uicontrol('Parent',d,...
            'Style','text',...
-           'Position',[0 200 300 20],...
+           'Position',[0 260 300 20],...
            'String','Include Penalty Parameter?');
        
-    popupHessian = uicontrol('Parent',d,...
+    popupPenalty = uicontrol('Parent',d,...
            'Style','popup',...
-           'Position',[50 180 200 20],...
-           'String',{'Yes';'No'},...
+           'Position',[50 240 200 20],...
+           'String',{'No';'Yes'},...
            'Callback',@penalty_callback);
     
     txtHessian = uicontrol('Parent',d,...
@@ -57,31 +57,36 @@ function [hessian,linfn,merit,penalty] = choosedialog
            'String','Close',...
            'Callback','delete(gcf)');
        
+        % Set defaults?
+    flag.hessian = 'Forward Differencing';
+    flag.linefn = 'alphamax';
+    flag.merit = 'No';
+    flag.penalty = 'No';
        
     % Wait for d to close before running to completion
     uiwait(d);
      function hessian_callback(popup,callback)
           idx = popup.Value;
           popup_items = popup.String;
-          hessian = char(popup_items(idx,:));
+          flag.hessian = char(popup_items(idx,:));
      end
  
      function Linefn_callback(popup,callback)
           idx = popup.Value;
           popup_items = popup.String;
-          linfn = char(popup_items(idx,:));
+          flag.linefn = char(popup_items(idx,:));
      end
  
      function merit_callback(popup,callback)
           idx = popup.Value;
           popup_items = popup.String;
-          merit = char(popup_items(idx,:));
+          flag.merit = char(popup_items(idx,:));
      end
  
      function penalty_callback(popup,callback)
           idx = popup.Value;
           popup_items = popup.String;
-          penalty = char(popup_items(idx,:));
+          flag.penalty = char(popup_items(idx,:));
      end
 
 end

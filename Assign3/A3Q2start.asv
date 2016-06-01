@@ -129,15 +129,11 @@ while abs(L - Lold) > errL
             Hl = calcH_center(Y,lambda_store(:,index));
         case 'BFGS'
             if index == 1
-%                 Hl = eye(size(Y,1));
-                Hl = calcH_fwd(Y,lambda_store(:,index),L);
+                Hl = eye(
+%                 Hl = calcH_fwd(Y,lambda_store(:,index),L);
                 Hl_BFGS{index} = Hl;
             else
                 Hl = Hl_BFGS{index};
-                [~, PSDCheck] = chol(Hl);  % check for positive semi-def
-                if PSDCheck > 0
-                    Hl = calcH_fwd(Y,lambda_store(:,index),L);
-                end
             end
     end
     % solve for direction using KKT

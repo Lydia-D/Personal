@@ -63,3 +63,12 @@ d2r = pi/180;
 % colours for plots
 global colours
 colours = 'rgbmyc';
+
+global g0
+g0 = 9.81;
+
+global Isp
+Isp = 600;
+
+global Mass
+Mass = 1; % kgs?
