@@ -4,9 +4,11 @@
 %b hessian of lagrangian
 % do i even need this normally?
 
-function H = calcH_fwd(Y,X0,lambda,Final,L_Y,eps)
+function H = calcH_center(Y,lambda)
 
-    fnL = @(Ypert) calc_L(Ypert,X0,lambda,Final);
+    global eps
+
+    fnL = @(Ypert) calc_L(Ypert,lambda);
 
     H = zeros(length(Y));
     
@@ -18,10 +20,11 @@ function H = calcH_fwd(Y,X0,lambda,Final,L_Y,eps)
             perturbj(j) = eps;
             
             L_ij = fnL(Y+perturbi+perturbj);
-            L_i = fnL(Y+perturbi);
-            L_j = fnL(Y+perturbj);
+            L_i = fnL(Y+perturbi-perturbj);
+            L_j = fnL(Y-perturbi+perturbj);
+            L_nij = fnL(Y-perturbi-perturbj);
             
-            H(i,j) = (L_ij - L_i - L_j + L_Y)./(eps^2);
+            H(i,j) = (L_ij - L_i - L_j + L_nij)./(4*eps^2);
         end
     end
     % make symmetric

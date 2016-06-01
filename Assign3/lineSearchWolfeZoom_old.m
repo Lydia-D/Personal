@@ -1,4 +1,6 @@
 %% function 'lineSearchWolfeZoom'
+%
+%  Credit: AERO4701 Tutors
 
 function alphaOpt = lineSearchWolfeZoom(alpha_lo, alpha_hi,...
         phihdl, phidhdl, c1, c2)
@@ -11,14 +13,13 @@ function alphaOpt = lineSearchWolfeZoom(alpha_lo, alpha_hi,...
     phi2 = zeros(jMax, 1);
     phid2 = zeros(jMax, 1);
 
-    j = 0;
+    j = 1;
 
     alphaOpt = [];
     phi0 = phihdl(0);
     phid0 = phidhdl(0);
     % selection phase
     while j < jMax
-        j = j + 1;
         alpha2(j) = lineSearchWolfeInterpolate(alpha_lo, alpha_hi, ...
             phihdl(alpha_lo), phihdl(alpha_hi), ...
             phidhdl(alpha_lo), phidhdl(alpha_hi));
@@ -41,7 +42,7 @@ function alphaOpt = lineSearchWolfeZoom(alpha_lo, alpha_hi,...
             end
             alpha_lo = alpha2(j);
         end
-        
+        j = j + 1;
     end
 
     alpha2 = alpha2(1:j, 1); % remove entries

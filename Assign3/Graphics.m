@@ -2,16 +2,16 @@
 % L Drabsch
 % 22/5/16
 
-function figsim = Graphics(Plotting,Animation,Y,X0,timestart,dt)
+function figsim = Graphics(Plotting,Animation,Y,timestart,dt)
 
-    global r_earth secs_per_hour
+    global r_earth secs_per_hour ParkX0
     
     
     if Plotting == 1
-        [Trans,t] = dynamics(Y,X0);  % return each step
+        [Trans,t] = dynamics(Y);  % return each step
         animation3Dearth();
         TimeVec.park = timestart:dt:t.t1;
-        X.park = ConicDynamics(X0,TimeVec.park);
+        X.park = ConicDynamics(ParkX0,TimeVec.park);
         % Transfer
         TimeVec.trans = [t.t1:dt:t.t1+t.t3];
         X.trans = ConicDynamics(Trans.X2,TimeVec.trans);

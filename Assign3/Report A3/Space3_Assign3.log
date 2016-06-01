@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.3.10)  20 MAY 2016 01:14
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.3.10)  2 JUN 2016 01:10
 entering extended mode
 **./Space3_Assign3.tex
 (Space3_Assign3.tex
@@ -785,6 +785,103 @@ Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
 \@float@every@algorithm=\toks39
 \c@algorithm=\count141
 )
+("C:\Users\Lydia\AppData\Local\Programs\MiKTeX 2.9\tex\latex\algorithm2e\algori
+thm2e.sty"
+Package: algorithm2e 2013/01/06 v5.00 algorithms environments
+\c@AlgoLine=\count142
+\algocf@hangindent=\skip53
+
+("C:\Users\Lydia\AppData\Local\Programs\MiKTeX 2.9\tex\latex\tools\xspace.sty"
+Package: xspace 2014/10/28 v1.13 Space after command names (DPC,MH)
+)
+("C:\Users\Lydia\AppData\Local\Programs\MiKTeX 2.9\tex\latex\ltxmisc\relsize.st
+y"
+Package: relsize 2003/07/04 ver 3.1
+)
+********************************************************
+Package `algorithm2e' Release 5.1 -- october 19 2015 --
+- algorithm2e-announce@lirmm.fr mailing list for announcement about releases
+- algorithm2e-discussion@lirmm.fr mailing list for discussion about package
+subscribe by emailing sympa@lirmm.fr with 'subscribe <list> <firstname name>'
+- Author: Christophe Fiorio (christophe.fiorio@umontpellier.fr)
+********************************************************
+\skiptotal=\skip54
+\skiplinenumber=\skip55
+\skiprule=\skip56
+\skiphlne=\skip57
+\skiptext=\skip58
+\skiplength=\skip59
+\algomargin=\skip60
+\skipalgocfslide=\skip61
+\algowidth=\dimen267
+\inoutsize=\dimen268
+\inoutindent=\dimen269
+\interspacetitleruled=\dimen270
+\interspacealgoruled=\dimen271
+\interspacetitleboxruled=\dimen272
+\algocf@ruledwidth=\skip62
+\algocf@inoutbox=\box41
+\algocf@inputbox=\box42
+\AlCapSkip=\skip63
+\AlCapHSkip=\skip64
+\algoskipindent=\skip65
+\algocf@nlbox=\box43
+\algocf@hangingbox=\box44
+\algocf@untilbox=\box45
+\algocf@skipuntil=\skip66
+\algocf@capbox=\box46
+\algoheightruledefault=\skip67
+\algoheightrule=\skip68
+\algotitleheightruledefault=\skip69
+\algotitleheightrule=\skip70
+\c@algocfline=\count143
+\c@algocfproc=\count144
+\c@algocf=\count145
+\algocf@algoframe=\box47
+\algocf@algobox=\box48
+
+! LaTeX Error: Command \algorithm already defined.
+               Or name \end... illegal, see p.192 of the manual.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2712 }
+        %
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! LaTeX Error: Command \algorithm* already defined.
+               Or name \end... illegal, see p.192 of the manual.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2720 }
+        %
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! LaTeX Error: Command \listofalgorithms already defined.
+               Or name \end... illegal, see p.192 of the manual.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2727 }
+        %
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+)
 ("C:\Users\Lydia\AppData\Local\Programs\MiKTeX 2.9\tex\latex\algorithmicx\algps
 eudocode.sty"
 Package: algpseudocode 
@@ -794,16 +891,16 @@ ithmicx.sty"
 Package: algorithmicx 2005/04/27 v1.2 Algorithmicx
 
 Document Style algorithmicx 1.2 - a greatly improved `algorithmic' style
-\c@ALG@line=\count142
-\c@ALG@rem=\count143
-\c@ALG@nested=\count144
-\ALG@tlm=\skip53
-\ALG@thistlm=\skip54
-\c@ALG@Lnr=\count145
-\c@ALG@blocknr=\count146
-\c@ALG@storecount=\count147
-\c@ALG@tmpcounter=\count148
-\ALG@tmplength=\skip55
+\c@ALG@line=\count146
+\c@ALG@rem=\count147
+\c@ALG@nested=\count148
+\ALG@tlm=\skip71
+\ALG@thistlm=\skip72
+\c@ALG@Lnr=\count149
+\c@ALG@blocknr=\count150
+\c@ALG@storecount=\count151
+\c@ALG@tmpcounter=\count152
+\ALG@tmplength=\skip73
 )
 Document Style - pseudocode environments for use with the `algorithmicx' style
 )
@@ -817,34 +914,34 @@ LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 )
 ("C:\Users\Lydia\AppData\Local\Programs\MiKTeX 2.9\tex\latex\fancyhdr\fancyhdr.
 sty"
-\fancy@headwidth=\skip56
-\f@ncyO@elh=\skip57
-\f@ncyO@erh=\skip58
-\f@ncyO@olh=\skip59
-\f@ncyO@orh=\skip60
-\f@ncyO@elf=\skip61
-\f@ncyO@erf=\skip62
-\f@ncyO@olf=\skip63
-\f@ncyO@orf=\skip64
+\fancy@headwidth=\skip74
+\f@ncyO@elh=\skip75
+\f@ncyO@erh=\skip76
+\f@ncyO@olh=\skip77
+\f@ncyO@orh=\skip78
+\f@ncyO@elf=\skip79
+\f@ncyO@erf=\skip80
+\f@ncyO@olf=\skip81
+\f@ncyO@orf=\skip82
 )
 ("C:\Users\Lydia\AppData\Local\Programs\MiKTeX 2.9\tex\latex\tools\indentfirst.
 sty"
 Package: indentfirst 1995/11/23 v1.03 Indent first paragraph (DPC)
 )
-\normalparindent=\skip65
+\normalparindent=\skip83
 
 ("C:\Users\Lydia\AppData\Local\Programs\MiKTeX 2.9\tex\latex\titlesec\titlesec.
 sty"
 Package: titlesec 2011/12/15 v2.10.0 Sectioning titles
-\ttl@box=\box41
-\beforetitleunit=\skip66
-\aftertitleunit=\skip67
-\ttl@plus=\dimen267
-\ttl@minus=\dimen268
+\ttl@box=\box49
+\beforetitleunit=\skip84
+\aftertitleunit=\skip85
+\ttl@plus=\dimen273
+\ttl@minus=\dimen274
 \ttl@toksa=\toks40
-\titlewidth=\dimen269
-\titlewidthlast=\dimen270
-\titlewidthfirst=\dimen271
+\titlewidth=\dimen275
+\titlewidthlast=\dimen276
+\titlewidthfirst=\dimen277
 )
 ("C:\Users\Lydia\AppData\Local\Programs\MiKTeX 2.9\tex\latex\bold-extra\bold-ex
 tra.sty"
@@ -857,25 +954,25 @@ Package: mcode 2014/03/06 2.5
 
 ("C:\Users\Lydia\AppData\Local\Programs\MiKTeX 2.9\tex\latex\listings\listings.
 sty"
-\lst@mode=\count149
-\lst@gtempboxa=\box42
+\lst@mode=\count153
+\lst@gtempboxa=\box50
 \lst@token=\toks41
-\lst@length=\count150
-\lst@currlwidth=\dimen272
-\lst@column=\count151
-\lst@pos=\count152
-\lst@lostspace=\dimen273
-\lst@width=\dimen274
-\lst@newlines=\count153
-\lst@lineno=\count154
-\lst@maxwidth=\dimen275
+\lst@length=\count154
+\lst@currlwidth=\dimen278
+\lst@column=\count155
+\lst@pos=\count156
+\lst@lostspace=\dimen279
+\lst@width=\dimen280
+\lst@newlines=\count157
+\lst@lineno=\count158
+\lst@maxwidth=\dimen281
 
 ("C:\Users\Lydia\AppData\Local\Programs\MiKTeX 2.9\tex\latex\listings\lstmisc.s
 ty"
 File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
-\c@lstnumber=\count155
-\lst@skipnumbers=\count156
-\lst@framebox=\box43
+\c@lstnumber=\count159
+\lst@skipnumbers=\count160
+\lst@framebox=\box51
 )
 ("C:\Users\Lydia\AppData\Local\Programs\MiKTeX 2.9\tex\latex\listings\listings.
 cfg"
@@ -970,27 +1067,27 @@ LaTeX Warning: Label `Fig:A*eu' multiply defined.
 )
 \openout1 = `Space3_Assign3.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 117.
-LaTeX Font Info:    ... okay on input line 117.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 117.
-LaTeX Font Info:    ... okay on input line 117.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 117.
-LaTeX Font Info:    ... okay on input line 117.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 117.
-LaTeX Font Info:    ... okay on input line 117.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 117.
-LaTeX Font Info:    ... okay on input line 117.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 117.
-LaTeX Font Info:    ... okay on input line 117.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 117.
-LaTeX Font Info:    ... okay on input line 117.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 117.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 117.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 118.
+LaTeX Font Info:    ... okay on input line 118.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 118.
+LaTeX Font Info:    ... okay on input line 118.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 118.
+LaTeX Font Info:    ... okay on input line 118.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 118.
+LaTeX Font Info:    ... okay on input line 118.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 118.
+LaTeX Font Info:    ... okay on input line 118.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 118.
+LaTeX Font Info:    ... okay on input line 118.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 118.
+LaTeX Font Info:    ... okay on input line 118.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 118.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 118.
 
  ("C:\Users\Lydia\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\ts1cmr.fd"
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 117.
+LaTeX Font Info:    ... okay on input line 118.
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -1029,20 +1126,20 @@ ABD: EveryShipout initializing macros
 ("C:\Users\Lydia\AppData\Local\Programs\MiKTeX 2.9\tex\context\base\supp-pdf.mk
 ii"
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count157
-\scratchdimen=\dimen276
-\scratchbox=\box44
-\nofMPsegments=\count158
-\nofMParguments=\count159
+\scratchcounter=\count161
+\scratchdimen=\dimen282
+\scratchbox=\box52
+\nofMPsegments=\count162
+\nofMParguments=\count163
 \everyMPshowfont=\toks42
-\MPscratchCnt=\count160
-\MPscratchDim=\dimen277
-\MPnumerator=\count161
-\makeMPintoPDFobject=\count162
+\MPscratchCnt=\count164
+\MPscratchDim=\dimen283
+\MPnumerator=\count165
+\makeMPintoPDFobject=\count166
 \everyMPtoPDFconversion=\toks43
 )
-\AtBeginShipoutBox=\box45
-Package hyperref Info: Link coloring OFF on input line 117.
+\AtBeginShipoutBox=\box53
+Package hyperref Info: Link coloring OFF on input line 118.
 
 ("C:\Users\Lydia\AppData\Local\Programs\MiKTeX 2.9\tex\latex\hyperref\nameref.s
 ty"
@@ -1052,11 +1149,11 @@ Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 estring.sty"
 Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
-\c@section@level=\count163
+\c@section@level=\count167
 )
-LaTeX Info: Redefining \ref on input line 117.
-LaTeX Info: Redefining \pageref on input line 117.
-LaTeX Info: Redefining \nameref on input line 117.
+LaTeX Info: Redefining \ref on input line 118.
+LaTeX Info: Redefining \pageref on input line 118.
+LaTeX Info: Redefining \nameref on input line 118.
  (Space3_Assign3.out) (Space3_Assign3.out)
 \@outlinefile=\write4
 \openout4 = `Space3_Assign3.out'.
@@ -1065,7 +1162,7 @@ Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: float package is loaded.
 Package caption Info: listings package is loaded.
 Package caption Info: End \AtBeginDocument code.
-\c@lstlisting=\count164
+\c@lstlisting=\count168
 *geometry* verbose mode - [ newgeometry ] result:
 * driver: pdftex
 * paper: a4paper
@@ -1099,19 +1196,19 @@ Package caption Info: End \AtBeginDocument code.
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 
-<./IMAGEtitle2f.jpg, id=106, 181.6386pt x 542.025pt>
+<./IMAGEtitle2f.jpg, id=110, 181.6386pt x 542.025pt>
 File: ./IMAGEtitle2f.jpg Graphic file (type jpg)
  <use ./IMAGEtitle2f.jpg>
-Package pdftex.def Info: ./IMAGEtitle2f.jpg used on input line 121.
+Package pdftex.def Info: ./IMAGEtitle2f.jpg used on input line 122.
 (pdftex.def)             Requested size: 283.19429pt x 845.04684pt.
 LaTeX Font Info:    Font shape `OT1/cmr/bx/sc' in size <24.88> not available
-(Font)              Font shape `OT1/cmr/b/sc' tried instead on input line 132.
-LaTeX Font Info:    Try loading font information for U+msa on input line 134.
+(Font)              Font shape `OT1/cmr/b/sc' tried instead on input line 133.
+LaTeX Font Info:    Try loading font information for U+msa on input line 135.
 
 ("C:\Users\Lydia\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 134.
+LaTeX Font Info:    Try loading font information for U+msb on input line 135.
 ("C:\Users\Lydia\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
@@ -1151,13 +1248,13 @@ e2f.jpg>]
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
- <./Plag.pdf, id=117, 597.19112pt x 845.19763pt>
+ <./Plag.pdf, id=121, 597.19112pt x 845.19763pt>
 File: ./Plag.pdf Graphic file (type pdf)
  <use ./Plag.pdf>
-Package pdftex.def Info: ./Plag.pdf used on input line 157.
+Package pdftex.def Info: ./Plag.pdf used on input line 158.
 (pdftex.def)             Requested size: 478.86255pt x 677.71953pt.
 LaTeX Font Info:    Font shape `OT1/cmr/bx/sc' in size <17.28> not available
-(Font)              Font shape `OT1/cmr/b/sc' tried instead on input line 163.
+(Font)              Font shape `OT1/cmr/b/sc' tried instead on input line 164.
 
 (Space3_Assign3.toc
 
@@ -1191,13 +1288,13 @@ LaTeX Warning: Reference `Sec:trav' on page ii undefined on input line 3.
 
 
 LaTeX Warning: Hyper reference `Sec:terrain' on page ii undefined on input line
- 7.
+ 5.
 
 
-LaTeX Warning: Reference `Sec:terrain' on page ii undefined on input line 7.
+LaTeX Warning: Reference `Sec:terrain' on page ii undefined on input line 5.
 
 
-LaTeX Warning: Reference `Sec:terrain' on page ii undefined on input line 7.
+LaTeX Warning: Reference `Sec:terrain' on page ii undefined on input line 5.
 
 )
 \tf@lof=\write6
@@ -1220,440 +1317,1607 @@ Underfull \hbox (badness 10000) in paragraph at lines 35--38
 [1]
 Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
 put line 75.
- [2]
-Overfull \hbox (10.00317pt too wide) in paragraph at lines 150--168
- [][] 
+
+! Missing number, treated as zero.
+<to be read again> 
+                   \ALG@b@2@EndIf@0 
+l.82 \EndIf
+           
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+! Extra }, or forgotten \endgroup.
+\@algocf@finish ...ideskip \egroup \hfill \egroup 
+                                                  \ifthenelse {\boolean {alg...
+l.85 \end{algorithm}
+                    
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Extra }, or forgotten \endgroup.
+\@algocf@finish ... {\skipalgocfslide }}{}\egroup 
+                                                  \end {lrbox}\algocf@maketh...
+l.85 \end{algorithm}
+                    
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+
+! LaTeX Error: \begin{algorithm} on input line 74 ended by \end{lrbox}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.85 \end{algorithm}
+                    
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.85 \end{algorithm}
+                    
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Extra }, or forgotten \endgroup.
+\@endfloatbox ...pagefalse \outer@nobreak \egroup 
+                                                  \color@endbox 
+l.85 \end{algorithm}
+                    
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Extra }, or forgotten \endgroup.
+\color@endbox ->\color@endgroup \egroup 
+                                        
+l.85 \end{algorithm}
+                    
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+
+! LaTeX Error: \begin{document} ended by \end{algocf}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.85 \end{algorithm}
+                    
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! LaTeX Error: \begin{document} ended by \end{algocf@algorithm}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.85 \end{algorithm}
+                    
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.85 \end{algorithm}
+                    
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Extra \endgroup.
+<recently read> \endgroup 
+                          
+l.85 \end{algorithm}
+                    
+Things are pretty mixed up, but I think the worst is over.
+
+
+! LaTeX Error: \begin{document} ended by \end{algorithm}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.85 \end{algorithm}
+                    
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Extra \endgroup.
+<recently read> \endgroup 
+                          
+l.85 \end{algorithm}
+                    
+Things are pretty mixed up, but I think the worst is over.
+
+! Undefined control sequence.
+<recently read> \Hy@colorlink 
+                              
+l.91 ...om \textbf{fitplane} using Eq\eqref{theta}
+                                                  .
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+\close@pdflink ->\Hy@endcolorlink 
+                                  \Hy@VerboseLinkStop \pdfendlink 
+l.91 ...om \textbf{fitplane} using Eq\eqref{theta}
+                                                  .
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Overfull \hbox (48.58727pt too wide) in paragraph at lines 91--92
+\OT1/cmr/m/n/10.95 best fit as re-turned from \OT1/cmr/bx/n/10.95 fit-plane \OT
+1/cmr/m/n/10.95 us-ing Eq[]. 
  []
 
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-) (Ques2.tex [3]
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[4]) [5] (AppendixA.tex
-Package epstopdf Info: Source file: <generategrid.eps>
-(epstopdf)                    date: 2016-05-18 15:32:57
-(epstopdf)                    size: 21106 bytes
-(epstopdf)             Output file: <generategrid-eps-converted-to.pdf>
-(epstopdf)                    date: 2016-05-18 15:36:19
-(epstopdf)                    size: 4077 bytes
-(epstopdf)             Command: <epstopdf --outfile=generategrid-eps-converted-
-to.pdf generategrid.eps>
-(epstopdf)             \includegraphics on input line 9.
-Package epstopdf Info: Output file is already uptodate.
-
-<generategrid-eps-converted-to.pdf, id=252, 421.575pt x 316.18124pt>
-File: generategrid-eps-converted-to.pdf Graphic file (type pdf)
-
-<use generategrid-eps-converted-to.pdf>
-Package pdftex.def Info: generategrid-eps-converted-to.pdf used on input line 9
-.
-(pdftex.def)             Requested size: 338.58632pt x 253.944pt.
-Package epstopdf Info: Source file: <generateobstacles.eps>
-(epstopdf)                    date: 2016-05-18 17:12:53
-(epstopdf)                    size: 21213 bytes
-(epstopdf)             Output file: <generateobstacles-eps-converted-to.pdf>
-(epstopdf)                    date: 2016-05-18 17:15:21
-(epstopdf)                    size: 4177 bytes
-(epstopdf)             Command: <epstopdf --outfile=generateobstacles-eps-conve
-rted-to.pdf generateobstacles.eps>
-(epstopdf)             \includegraphics on input line 16.
-Package epstopdf Info: Output file is already uptodate.
-
-<generateobstacles-eps-converted-to.pdf, id=255, 421.575pt x 316.18124pt>
-File: generateobstacles-eps-converted-to.pdf Graphic file (type pdf)
-
-<use generateobstacles-eps-converted-to.pdf>
-Package pdftex.def Info: generateobstacles-eps-converted-to.pdf used on input l
-ine 16.
-(pdftex.def)             Requested size: 338.58632pt x 253.944pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-LaTeX Warning: Hyper reference `Sec:trav' on page 6 undefined on input line 21.
-
-
-
-LaTeX Warning: Reference `Sec:trav' on page 6 undefined on input line 21.
-
-
-LaTeX Warning: Reference `Sec:trav' on page 6 undefined on input line 21.
-
-
-LaTeX Warning: Hyper reference `Sec:trav' on page 6 undefined on input line 21.
-
-
-
-LaTeX Warning: Reference `Sec:trav' on page 6 undefined on input line 21.
-
-
-LaTeX Warning: Reference `Sec:trav' on page 6 undefined on input line 21.
-
-Package epstopdf Info: Source file: <trav.eps>
-(epstopdf)                    date: 2016-05-19 19:23:16
-(epstopdf)                    size: 28958 bytes
-(epstopdf)             Output file: <trav-eps-converted-to.pdf>
-(epstopdf)                    date: 2016-05-20 00:05:25
-(epstopdf)                    size: 7604 bytes
-(epstopdf)             Command: <epstopdf --outfile=trav-eps-converted-to.pdf t
-rav.eps>
-(epstopdf)             \includegraphics on input line 23.
-Package epstopdf Info: Output file is already uptodate.
-<trav-eps-converted-to.pdf, id=256, 421.575pt x 316.18124pt>
-File: trav-eps-converted-to.pdf Graphic file (type pdf)
-
-<use trav-eps-converted-to.pdf>
-Package pdftex.def Info: trav-eps-converted-to.pdf used on input line 23.
-(pdftex.def)             Requested size: 338.58632pt x 253.944pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-Package epstopdf Info: Source file: <DijkstraMap.eps>
-(epstopdf)                    date: 2016-05-19 19:18:06
-(epstopdf)                    size: 28047 bytes
-(epstopdf)             Output file: <DijkstraMap-eps-converted-to.pdf>
-(epstopdf)                    date: 2016-05-19 19:42:48
-(epstopdf)                    size: 4469 bytes
-(epstopdf)             Command: <epstopdf --outfile=DijkstraMap-eps-converted-t
-o.pdf DijkstraMap.eps>
-(epstopdf)             \includegraphics on input line 30.
-Package epstopdf Info: Output file is already uptodate.
-<DijkstraMap-eps-converted-to.pdf, id=259, 421.575pt x 316.18124pt>
-File: DijkstraMap-eps-converted-to.pdf Graphic file (type pdf)
-
-<use DijkstraMap-eps-converted-to.pdf>
-Package pdftex.def Info: DijkstraMap-eps-converted-to.pdf used on input line 30
-.
-(pdftex.def)             Requested size: 338.58632pt x 253.944pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-LaTeX Warning: Hyper reference `Sec:terrain' on page 6 undefined on input line 
-35.
-
-
-LaTeX Warning: Reference `Sec:terrain' on page 6 undefined on input line 35.
-
-
-LaTeX Warning: Reference `Sec:terrain' on page 6 undefined on input line 35.
-
-
-LaTeX Warning: Hyper reference `Sec:terrain' on page 6 undefined on input line 
-35.
-
-
-LaTeX Warning: Reference `Sec:terrain' on page 6 undefined on input line 35.
-
-
-LaTeX Warning: Reference `Sec:terrain' on page 6 undefined on input line 35.
-
-Package epstopdf Info: Source file: <Dijstra_terrain.eps>
-(epstopdf)                    date: 2016-05-20 01:09:11
-(epstopdf)                    size: 821314 bytes
-(epstopdf)             Output file: <Dijstra_terrain-eps-converted-to.pdf>
-(epstopdf)                    date: 2016-05-20 01:14:23
-(epstopdf)                    size: 61375 bytes
-(epstopdf)             Command: <epstopdf --outfile=Dijstra_terrain-eps-convert
-ed-to.pdf Dijstra_terrain.eps>
-(epstopdf)             \includegraphics on input line 37.
-Package epstopdf Info: Output file is already uptodate.
-<Dijstra_terrain-eps-converted-to.pdf, id=260, 421.575pt x 316.18124pt>
-File: Dijstra_terrain-eps-converted-to.pdf Graphic file (type pdf)
-
-<use Dijstra_terrain-eps-converted-to.pdf>
-Package pdftex.def Info: Dijstra_terrain-eps-converted-to.pdf used on input lin
-e 37.
-(pdftex.def)             Requested size: 338.58632pt x 253.944pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-Package epstopdf Info: Source file: <Astar_euc_1.eps>
-(epstopdf)                    date: 2016-05-19 22:15:25
-(epstopdf)                    size: 34464 bytes
-(epstopdf)             Output file: <Astar_euc_1-eps-converted-to.pdf>
-(epstopdf)                    date: 2016-05-19 22:15:44
-(epstopdf)                    size: 5275 bytes
-(epstopdf)             Command: <epstopdf --outfile=Astar_euc_1-eps-converted-t
-o.pdf Astar_euc_1.eps>
-(epstopdf)             \includegraphics on input line 46.
-Package epstopdf Info: Output file is already uptodate.
-<Astar_euc_1-eps-converted-to.pdf, id=261, 421.575pt x 316.18124pt>
-File: Astar_euc_1-eps-converted-to.pdf Graphic file (type pdf)
-
-<use Astar_euc_1-eps-converted-to.pdf>
-Package pdftex.def Info: Astar_euc_1-eps-converted-to.pdf used on input line 46
-.
-(pdftex.def)             Requested size: 237.01411pt x 177.76466pt.
-Package epstopdf Info: Source file: <Astar_euc_10.eps>
-(epstopdf)                    date: 2016-05-19 22:14:55
-(epstopdf)                    size: 34095 bytes
-(epstopdf)             Output file: <Astar_euc_10-eps-converted-to.pdf>
-(epstopdf)                    date: 2016-05-19 22:15:45
-(epstopdf)                    size: 5249 bytes
-(epstopdf)             Command: <epstopdf --outfile=Astar_euc_10-eps-converted-
-to.pdf Astar_euc_10.eps>
-(epstopdf)             \includegraphics on input line 49.
-Package epstopdf Info: Output file is already uptodate.
-
-<Astar_euc_10-eps-converted-to.pdf, id=262, 421.575pt x 316.18124pt>
-File: Astar_euc_10-eps-converted-to.pdf Graphic file (type pdf)
-
-<use Astar_euc_10-eps-converted-to.pdf>
-Package pdftex.def Info: Astar_euc_10-eps-converted-to.pdf used on input line 4
-9.
-(pdftex.def)             Requested size: 237.01411pt x 177.76466pt.
-Package epstopdf Info: Source file: <Astar_euc_25.eps>
-(epstopdf)                    date: 2016-05-19 22:12:18
-(epstopdf)                    size: 33144 bytes
-(epstopdf)             Output file: <Astar_euc_25-eps-converted-to.pdf>
-(epstopdf)                    date: 2016-05-19 22:13:45
-(epstopdf)                    size: 5253 bytes
-(epstopdf)             Command: <epstopdf --outfile=Astar_euc_25-eps-converted-
-to.pdf Astar_euc_25.eps>
-(epstopdf)             \includegraphics on input line 52.
-Package epstopdf Info: Output file is already uptodate.
-
-<Astar_euc_25-eps-converted-to.pdf, id=263, 421.575pt x 316.18124pt>
-File: Astar_euc_25-eps-converted-to.pdf Graphic file (type pdf)
-
-<use Astar_euc_25-eps-converted-to.pdf>
-Package pdftex.def Info: Astar_euc_25-eps-converted-to.pdf used on input line 5
-2.
-(pdftex.def)             Requested size: 237.01411pt x 177.76466pt.
-Package epstopdf Info: Source file: <Astar_euc_50.eps>
-(epstopdf)                    date: 2016-05-19 22:14:25
-(epstopdf)                    size: 31642 bytes
-(epstopdf)             Output file: <Astar_euc_50-eps-converted-to.pdf>
-(epstopdf)                    date: 2016-05-19 22:15:45
-(epstopdf)                    size: 5222 bytes
-(epstopdf)             Command: <epstopdf --outfile=Astar_euc_50-eps-converted-
-to.pdf Astar_euc_50.eps>
-(epstopdf)             \includegraphics on input line 55.
-Package epstopdf Info: Output file is already uptodate.
-
-<Astar_euc_50-eps-converted-to.pdf, id=264, 421.575pt x 316.18124pt>
-File: Astar_euc_50-eps-converted-to.pdf Graphic file (type pdf)
-
-<use Astar_euc_50-eps-converted-to.pdf>
-Package pdftex.def Info: Astar_euc_50-eps-converted-to.pdf used on input line 5
-5.
-(pdftex.def)             Requested size: 237.01411pt x 177.76466pt.
-Package epstopdf Info: Source file: <Astar_euc_75.eps>
-(epstopdf)                    date: 2016-05-19 22:06:48
-(epstopdf)                    size: 28848 bytes
-(epstopdf)             Output file: <Astar_euc_75-eps-converted-to.pdf>
-(epstopdf)                    date: 2016-05-19 22:10:26
-(epstopdf)                    size: 5151 bytes
-(epstopdf)             Command: <epstopdf --outfile=Astar_euc_75-eps-converted-
-to.pdf Astar_euc_75.eps>
-(epstopdf)             \includegraphics on input line 58.
-Package epstopdf Info: Output file is already uptodate.
-
-<Astar_euc_75-eps-converted-to.pdf, id=265, 421.575pt x 316.18124pt>
-File: Astar_euc_75-eps-converted-to.pdf Graphic file (type pdf)
-
-<use Astar_euc_75-eps-converted-to.pdf>
-Package pdftex.def Info: Astar_euc_75-eps-converted-to.pdf used on input line 5
-8.
-(pdftex.def)             Requested size: 237.01411pt x 177.76466pt.
-Package epstopdf Info: Source file: <Astar_euc_100.eps>
-(epstopdf)                    date: 2016-05-19 22:08:57
-(epstopdf)                    size: 28471 bytes
-(epstopdf)             Output file: <Astar_euc_100-eps-converted-to.pdf>
-(epstopdf)                    date: 2016-05-19 22:10:26
-(epstopdf)                    size: 5119 bytes
-(epstopdf)             Command: <epstopdf --outfile=Astar_euc_100-eps-converted
--to.pdf Astar_euc_100.eps>
-(epstopdf)             \includegraphics on input line 61.
-Package epstopdf Info: Output file is already uptodate.
-
-<Astar_euc_100-eps-converted-to.pdf, id=266, 421.575pt x 316.18124pt>
-File: Astar_euc_100-eps-converted-to.pdf Graphic file (type pdf)
-
-<use Astar_euc_100-eps-converted-to.pdf>
-Package pdftex.def Info: Astar_euc_100-eps-converted-to.pdf used on input line 
-61.
-(pdftex.def)             Requested size: 237.01411pt x 177.76466pt.
-Package epstopdf Info: Source file: <Astar_man_1.eps>
-(epstopdf)                    date: 2016-05-20 00:14:15
-(epstopdf)                    size: 34461 bytes
-(epstopdf)             Output file: <Astar_man_1-eps-converted-to.pdf>
-(epstopdf)                    date: 2016-05-20 00:31:41
-(epstopdf)                    size: 5278 bytes
-(epstopdf)             Command: <epstopdf --outfile=Astar_man_1-eps-converted-t
-o.pdf Astar_man_1.eps>
-(epstopdf)             \includegraphics on input line 70.
-Package epstopdf Info: Output file is already uptodate.
-
-<Astar_man_1-eps-converted-to.pdf, id=267, 421.575pt x 316.18124pt>
-File: Astar_man_1-eps-converted-to.pdf Graphic file (type pdf)
-
-<use Astar_man_1-eps-converted-to.pdf>
-Package pdftex.def Info: Astar_man_1-eps-converted-to.pdf used on input line 70
-.
-(pdftex.def)             Requested size: 237.01411pt x 177.76466pt.
-Package epstopdf Info: Source file: <Astar_man_10.eps>
-(epstopdf)                    date: 2016-05-20 00:14:48
-(epstopdf)                    size: 33975 bytes
-(epstopdf)             Output file: <Astar_man_10-eps-converted-to.pdf>
-(epstopdf)                    date: 2016-05-20 00:31:42
-(epstopdf)                    size: 5262 bytes
-(epstopdf)             Command: <epstopdf --outfile=Astar_man_10-eps-converted-
-to.pdf Astar_man_10.eps>
-(epstopdf)             \includegraphics on input line 73.
-Package epstopdf Info: Output file is already uptodate.
-
-<Astar_man_10-eps-converted-to.pdf, id=268, 421.575pt x 316.18124pt>
-File: Astar_man_10-eps-converted-to.pdf Graphic file (type pdf)
-
-<use Astar_man_10-eps-converted-to.pdf>
-Package pdftex.def Info: Astar_man_10-eps-converted-to.pdf used on input line 7
-3.
-(pdftex.def)             Requested size: 237.01411pt x 177.76466pt.
-Package epstopdf Info: Source file: <Astar_man_25.eps>
-(epstopdf)                    date: 2016-05-20 00:16:02
-(epstopdf)                    size: 32648 bytes
-(epstopdf)             Output file: <Astar_man_25-eps-converted-to.pdf>
-(epstopdf)                    date: 2016-05-20 00:31:43
-(epstopdf)                    size: 5228 bytes
-(epstopdf)             Command: <epstopdf --outfile=Astar_man_25-eps-converted-
-to.pdf Astar_man_25.eps>
-(epstopdf)             \includegraphics on input line 76.
-Package epstopdf Info: Output file is already uptodate.
-
-<Astar_man_25-eps-converted-to.pdf, id=269, 421.575pt x 316.18124pt>
-File: Astar_man_25-eps-converted-to.pdf Graphic file (type pdf)
-
-<use Astar_man_25-eps-converted-to.pdf>
-Package pdftex.def Info: Astar_man_25-eps-converted-to.pdf used on input line 7
-6.
-(pdftex.def)             Requested size: 237.01411pt x 177.76466pt.
-Package epstopdf Info: Source file: <Astar_man_50.eps>
-(epstopdf)                    date: 2016-05-20 00:18:52
-(epstopdf)                    size: 29321 bytes
-(epstopdf)             Output file: <Astar_man_50-eps-converted-to.pdf>
-(epstopdf)                    date: 2016-05-20 00:31:44
-(epstopdf)                    size: 5159 bytes
-(epstopdf)             Command: <epstopdf --outfile=Astar_man_50-eps-converted-
-to.pdf Astar_man_50.eps>
-(epstopdf)             \includegraphics on input line 79.
-Package epstopdf Info: Output file is already uptodate.
-
-<Astar_man_50-eps-converted-to.pdf, id=270, 421.575pt x 316.18124pt>
-File: Astar_man_50-eps-converted-to.pdf Graphic file (type pdf)
-
-<use Astar_man_50-eps-converted-to.pdf>
-Package pdftex.def Info: Astar_man_50-eps-converted-to.pdf used on input line 7
-9.
-(pdftex.def)             Requested size: 237.01411pt x 177.76466pt.
-Package epstopdf Info: Source file: <Astar_man_75.eps>
-(epstopdf)                    date: 2016-05-20 00:20:24
-(epstopdf)                    size: 28477 bytes
-(epstopdf)             Output file: <Astar_man_75-eps-converted-to.pdf>
-(epstopdf)                    date: 2016-05-20 00:31:44
-(epstopdf)                    size: 5113 bytes
-(epstopdf)             Command: <epstopdf --outfile=Astar_man_75-eps-converted-
-to.pdf Astar_man_75.eps>
-(epstopdf)             \includegraphics on input line 82.
-Package epstopdf Info: Output file is already uptodate.
-
-<Astar_man_75-eps-converted-to.pdf, id=271, 421.575pt x 316.18124pt>
-File: Astar_man_75-eps-converted-to.pdf Graphic file (type pdf)
-
-<use Astar_man_75-eps-converted-to.pdf>
-Package pdftex.def Info: Astar_man_75-eps-converted-to.pdf used on input line 8
-2.
-(pdftex.def)             Requested size: 237.01411pt x 177.76466pt.
-Package epstopdf Info: Source file: <Astar_man_100.eps>
-(epstopdf)                    date: 2016-05-20 00:22:36
-(epstopdf)                    size: 28387 bytes
-(epstopdf)             Output file: <Astar_man_100-eps-converted-to.pdf>
-(epstopdf)                    date: 2016-05-20 00:31:45
-(epstopdf)                    size: 5086 bytes
-(epstopdf)             Command: <epstopdf --outfile=Astar_man_100-eps-converted
--to.pdf Astar_man_100.eps>
-(epstopdf)             \includegraphics on input line 85.
-Package epstopdf Info: Output file is already uptodate.
-
-<Astar_man_100-eps-converted-to.pdf, id=272, 421.575pt x 316.18124pt>
-File: Astar_man_100-eps-converted-to.pdf Graphic file (type pdf)
-
-<use Astar_man_100-eps-converted-to.pdf>
-Package pdftex.def Info: Astar_man_100-eps-converted-to.pdf used on input line 
-85.
-(pdftex.def)             Requested size: 237.01411pt x 177.76466pt.
-) [6 <./generategrid-eps-converted-to.pdf>] [7 <./generateobstacles-eps-convert
-ed-to.pdf> <./trav-eps-converted-to.pdf>] [8 <./DijkstraMap-eps-converted-to.pd
-f> <./Dijstra_terrain-eps-converted-to.pdf>] [9 <./Astar_euc_1-eps-converted-to
-.pdf> <./Astar_euc_10-eps-converted-to.pdf> <./Astar_euc_25-eps-converted-to.pd
-f> <./Astar_euc_50-eps-converted-to.pdf> <./Astar_euc_75-eps-converted-to.pdf> 
-<./Astar_euc_100-eps-converted-to.pdf>] [10 <./Astar_man_1-eps-converted-to.pdf
-> <./Astar_man_10-eps-converted-to.pdf> <./Astar_man_25-eps-converted-to.pdf> <
-./Astar_man_50-eps-converted-to.pdf> <./Astar_man_75-eps-converted-to.pdf> <./A
-star_man_100-eps-converted-to.pdf>]
-(AppendixB.tex) [11
-
-]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 192.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 192.
- (Space3_Assign3.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 192.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 192.
-Package rerunfilecheck Info: File `Space3_Assign3.out' has not changed.
-(rerunfilecheck)             Checksum: 5C531608641705B84B7B484466BF64D3;1787.
-
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: There were multiply-defined labels.
-
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 192.
- ) 
+! Undefined control sequence.
+\set@color ...\@pdfcolorstack push{\current@color 
+                                                  }\aftergroup \reset@color 
+l.94 \end{eqnarray}
+                   
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+\set@color ...\@pdfcolorstack push{\current@color 
+                                                  }\aftergroup \reset@color 
+l.97 \caption
+             {Pitch Hazard Evaluation} \label{PC:pitch}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+! LaTeX Error: Environment algorithmic undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.98 \begin{algorithmic}
+                        
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Undefined control sequence.
+l.99 \State
+            pitch angle $\gets$ Eq\eqref{theta}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<recently read> \Hy@colorlink 
+                              
+l.99 \State pitch angle $\gets$ Eq\eqref{theta}
+                                               
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+\close@pdflink ->\Hy@endcolorlink 
+                                  \Hy@VerboseLinkStop \pdfendlink 
+l.99 \State pitch angle $\gets$ Eq\eqref{theta}
+                                               
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.100 \eIf
+           {pitch angle $>$ threshold }{
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.101 \State
+             pitch hazard $\gets$ 255
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.102 }\Else
+            {
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.103 \State
+             pitch hazard $\gets$ 255 $\times$ \% angle from threshold
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.104 }\EndIf
+             
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.105 \Return
+              pitch hazard
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+! LaTeX Error: \begin{algorithm} on input line 96 ended by \end{algorithmic}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.106 \end{algorithmic}
+                       
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Undefined control sequence.
+\set@color ...\@pdfcolorstack push{\current@color 
+                                                  }\aftergroup \reset@color 
+l.115 \subsection
+                 {Dijkstra Algorithm}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+\set@color ...\@pdfcolorstack push{\current@color 
+                                                  }\aftergroup \reset@color 
+l.115 \subsection
+                 {Dijkstra Algorithm}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Overfull \vbox (92.71321pt too high) has occurred while \output is active []
+
+
+! Undefined control sequence.
+\set@color ...\@pdfcolorstack push{\current@color 
+                                                  }\aftergroup \reset@color 
+l.115 \subsection
+                 {Dijkstra Algorithm}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+\set@color ...\@pdfcolorstack push{\current@color 
+                                                  }\aftergroup \reset@color 
+l.115 \subsection
+                 {Dijkstra Algorithm}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Overfull \vbox (30.46188pt too high) has occurred while \output is active []
+
+
+! Undefined control sequence.
+\set@color ...\@pdfcolorstack push{\current@color 
+                                                  }\aftergroup \reset@color 
+l.115 \subsection
+                 {Dijkstra Algorithm}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+\set@color ...\@pdfcolorstack push{\current@color 
+                                                  }\aftergroup \reset@color 
+l.115 \subsection
+                 {Dijkstra Algorithm}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Overfull \vbox (30.46188pt too high) has occurred while \output is active []
+
+
+! Undefined control sequence.
+\set@color ...\@pdfcolorstack push{\current@color 
+                                                  }\aftergroup \reset@color 
+l.115 \subsection
+                 {Dijkstra Algorithm}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+\set@color ...\@pdfcolorstack push{\current@color 
+                                                  }\aftergroup \reset@color 
+l.115 \subsection
+                 {Dijkstra Algorithm}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Overfull \vbox (30.46188pt too high) has occurred while \output is active []
+
+
+! Undefined control sequence.
+\set@color ...\@pdfcolorstack push{\current@color 
+                                                  }\aftergroup \reset@color 
+l.115 \subsection
+                 {Dijkstra Algorithm}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+\set@color ...\@pdfcolorstack push{\current@color 
+                                                  }\aftergroup \reset@color 
+l.115 \subsection
+                 {Dijkstra Algorithm}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Overfull \vbox (30.46188pt too high) has occurred while \output is active []
+
+
+! Undefined control sequence.
+\set@color ...\@pdfcolorstack push{\current@color 
+                                                  }\aftergroup \reset@color 
+l.115 \subsection
+                 {Dijkstra Algorithm}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+\set@color ...\@pdfcolorstack push{\current@color 
+                                                  }\aftergroup \reset@color 
+l.115 \subsection
+                 {Dijkstra Algorithm}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Overfull \vbox (30.46188pt too high) has occurred while \output is active []
+
+
+! Undefined control sequence.
+\set@color ...\@pdfcolorstack push{\current@color 
+                                                  }\aftergroup \reset@color 
+l.115 \subsection
+                 {Dijkstra Algorithm}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+\set@color ...\@pdfcolorstack push{\current@color 
+                                                  }\aftergroup \reset@color 
+l.115 \subsection
+                 {Dijkstra Algorithm}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Overfull \vbox (30.46188pt too high) has occurred while \output is active []
+
+
+! Undefined control sequence.
+\set@color ...\@pdfcolorstack push{\current@color 
+                                                  }\aftergroup \reset@color 
+l.115 \subsection
+                 {Dijkstra Algorithm}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+\set@color ...\@pdfcolorstack push{\current@color 
+                                                  }\aftergroup \reset@color 
+l.115 \subsection
+                 {Dijkstra Algorithm}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Overfull \vbox (30.46188pt too high) has occurred while \output is active []
+
+
+! Undefined control sequence.
+\set@color ...\@pdfcolorstack push{\current@color 
+                                                  }\aftergroup \reset@color 
+l.115 \subsection
+                 {Dijkstra Algorithm}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+\set@color ...\@pdfcolorstack push{\current@color 
+                                                  }\aftergroup \reset@color 
+l.115 \subsection
+                 {Dijkstra Algorithm}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Overfull \vbox (30.46188pt too high) has occurred while \output is active []
+
+
+! Undefined control sequence.
+\set@color ...\@pdfcolorstack push{\current@color 
+                                                  }\aftergroup \reset@color 
+l.115 \subsection
+                 {Dijkstra Algorithm}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+\set@color ...\@pdfcolorstack push{\current@color 
+                                                  }\aftergroup \reset@color 
+l.115 \subsection
+                 {Dijkstra Algorithm}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Overfull \vbox (30.46188pt too high) has occurred while \output is active []
+
+
+! Undefined control sequence.
+\set@color ...\@pdfcolorstack push{\current@color 
+                                                  }\aftergroup \reset@color 
+l.115 \subsection
+                 {Dijkstra Algorithm}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+\set@color ...\@pdfcolorstack push{\current@color 
+                                                  }\aftergroup \reset@color 
+l.115 \subsection
+                 {Dijkstra Algorithm}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Overfull \vbox (30.46188pt too high) has occurred while \output is active []
+
+
+! Undefined control sequence.
+\set@color ...\@pdfcolorstack push{\current@color 
+                                                  }\aftergroup \reset@color 
+l.115 \subsection
+                 {Dijkstra Algorithm}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+\set@color ...\@pdfcolorstack push{\current@color 
+                                                  }\aftergroup \reset@color 
+l.115 \subsection
+                 {Dijkstra Algorithm}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Overfull \vbox (30.46188pt too high) has occurred while \output is active []
+
+
+! Undefined control sequence.
+\set@color ...\@pdfcolorstack push{\current@color 
+                                                  }\aftergroup \reset@color 
+l.115 \subsection
+                 {Dijkstra Algorithm}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+\set@color ...\@pdfcolorstack push{\current@color 
+                                                  }\aftergroup \reset@color 
+l.115 \subsection
+                 {Dijkstra Algorithm}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Overfull \vbox (30.46188pt too high) has occurred while \output is active []
+
+
+! Undefined control sequence.
+\set@color ...\@pdfcolorstack push{\current@color 
+                                                  }\aftergroup \reset@color 
+l.115 \subsection
+                 {Dijkstra Algorithm}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+\set@color ...\@pdfcolorstack push{\current@color 
+                                                  }\aftergroup \reset@color 
+l.115 \subsection
+                 {Dijkstra Algorithm}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Overfull \vbox (30.46188pt too high) has occurred while \output is active []
+
+
+! Undefined control sequence.
+\set@color ...\@pdfcolorstack push{\current@color 
+                                                  }\aftergroup \reset@color 
+l.115 \subsection
+                 {Dijkstra Algorithm}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+\set@color ...\@pdfcolorstack push{\current@color 
+                                                  }\aftergroup \reset@color 
+l.115 \subsection
+                 {Dijkstra Algorithm}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Overfull \vbox (30.46188pt too high) has occurred while \output is active []
+
+
+! Undefined control sequence.
+\set@color ...\@pdfcolorstack push{\current@color 
+                                                  }\aftergroup \reset@color 
+l.115 \subsection
+                 {Dijkstra Algorithm}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+\set@color ...\@pdfcolorstack push{\current@color 
+                                                  }\aftergroup \reset@color 
+l.115 \subsection
+                 {Dijkstra Algorithm}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Overfull \vbox (30.46188pt too high) has occurred while \output is active []
+
+
+! Undefined control sequence.
+\set@color ...\@pdfcolorstack push{\current@color 
+                                                  }\aftergroup \reset@color 
+l.115 \subsection
+                 {Dijkstra Algorithm}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+\set@color ...\@pdfcolorstack push{\current@color 
+                                                  }\aftergroup \reset@color 
+l.115 \subsection
+                 {Dijkstra Algorithm}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Overfull \vbox (30.46188pt too high) has occurred while \output is active []
+
+
+! Undefined control sequence.
+\set@color ...\@pdfcolorstack push{\current@color 
+                                                  }\aftergroup \reset@color 
+l.115 \subsection
+                 {Dijkstra Algorithm}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+\set@color ...\@pdfcolorstack push{\current@color 
+                                                  }\aftergroup \reset@color 
+l.115 \subsection
+                 {Dijkstra Algorithm}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Overfull \vbox (30.46188pt too high) has occurred while \output is active []
+
+
+! Undefined control sequence.
+\set@color ...\@pdfcolorstack push{\current@color 
+                                                  }\aftergroup \reset@color 
+l.115 \subsection
+                 {Dijkstra Algorithm}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+\set@color ...\@pdfcolorstack push{\current@color 
+                                                  }\aftergroup \reset@color 
+l.115 \subsection
+                 {Dijkstra Algorithm}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Overfull \vbox (30.46188pt too high) has occurred while \output is active []
+
+
+! Undefined control sequence.
+\set@color ...\@pdfcolorstack push{\current@color 
+                                                  }\aftergroup \reset@color 
+l.115 \subsection
+                 {Dijkstra Algorithm}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+\set@color ...\@pdfcolorstack push{\current@color 
+                                                  }\aftergroup \reset@color 
+l.115 \subsection
+                 {Dijkstra Algorithm}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Overfull \vbox (30.46188pt too high) has occurred while \output is active []
+
+
+! Undefined control sequence.
+\set@color ...\@pdfcolorstack push{\current@color 
+                                                  }\aftergroup \reset@color 
+l.115 \subsection
+                 {Dijkstra Algorithm}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+\set@color ...\@pdfcolorstack push{\current@color 
+                                                  }\aftergroup \reset@color 
+l.115 \subsection
+                 {Dijkstra Algorithm}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Overfull \vbox (30.46188pt too high) has occurred while \output is active []
+
+
+! Undefined control sequence.
+\set@color ...\@pdfcolorstack push{\current@color 
+                                                  }\aftergroup \reset@color 
+l.115 \subsection
+                 {Dijkstra Algorithm}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+\set@color ...\@pdfcolorstack push{\current@color 
+                                                  }\aftergroup \reset@color 
+l.115 \subsection
+                 {Dijkstra Algorithm}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Overfull \vbox (30.46188pt too high) has occurred while \output is active []
+
+
+! Undefined control sequence.
+\set@color ...\@pdfcolorstack push{\current@color 
+                                                  }\aftergroup \reset@color 
+l.115 \subsection
+                 {Dijkstra Algorithm}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+\set@color ...\@pdfcolorstack push{\current@color 
+                                                  }\aftergroup \reset@color 
+l.115 \subsection
+                 {Dijkstra Algorithm}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Overfull \vbox (30.46188pt too high) has occurred while \output is active []
+
+
+! Undefined control sequence.
+\set@color ...\@pdfcolorstack push{\current@color 
+                                                  }\aftergroup \reset@color 
+l.115 \subsection
+                 {Dijkstra Algorithm}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+\set@color ...\@pdfcolorstack push{\current@color 
+                                                  }\aftergroup \reset@color 
+l.115 \subsection
+                 {Dijkstra Algorithm}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Overfull \vbox (30.46188pt too high) has occurred while \output is active []
+
+
+! Undefined control sequence.
+\set@color ...\@pdfcolorstack push{\current@color 
+                                                  }\aftergroup \reset@color 
+l.115 \subsection
+                 {Dijkstra Algorithm}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+\set@color ...\@pdfcolorstack push{\current@color 
+                                                  }\aftergroup \reset@color 
+l.115 \subsection
+                 {Dijkstra Algorithm}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Overfull \vbox (30.46188pt too high) has occurred while \output is active []
+
+
+! Undefined control sequence.
+\set@color ...\@pdfcolorstack push{\current@color 
+                                                  }\aftergroup \reset@color 
+l.115 \subsection
+                 {Dijkstra Algorithm}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+\set@color ...\@pdfcolorstack push{\current@color 
+                                                  }\aftergroup \reset@color 
+l.115 \subsection
+                 {Dijkstra Algorithm}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Overfull \vbox (30.46188pt too high) has occurred while \output is active []
+
+
+! Undefined control sequence.
+\set@color ...\@pdfcolorstack push{\current@color 
+                                                  }\aftergroup \reset@color 
+l.115 \subsection
+                 {Dijkstra Algorithm}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+\set@color ...\@pdfcolorstack push{\current@color 
+                                                  }\aftergroup \reset@color 
+l.115 \subsection
+                 {Dijkstra Algorithm}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Overfull \vbox (30.46188pt too high) has occurred while \output is active []
+
+
+! Undefined control sequence.
+\set@color ...\@pdfcolorstack push{\current@color 
+                                                  }\aftergroup \reset@color 
+l.115 \subsection
+                 {Dijkstra Algorithm}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+\set@color ...\@pdfcolorstack push{\current@color 
+                                                  }\aftergroup \reset@color 
+l.115 \subsection
+                 {Dijkstra Algorithm}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Overfull \vbox (30.46188pt too high) has occurred while \output is active []
+
+
+! Undefined control sequence.
+\set@color ...\@pdfcolorstack push{\current@color 
+                                                  }\aftergroup \reset@color 
+l.115 \subsection
+                 {Dijkstra Algorithm}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+\set@color ...\@pdfcolorstack push{\current@color 
+                                                  }\aftergroup \reset@color 
+l.115 \subsection
+                 {Dijkstra Algorithm}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Overfull \vbox (30.46188pt too high) has occurred while \output is active []
+
+
+! Undefined control sequence.
+\set@color ...\@pdfcolorstack push{\current@color 
+                                                  }\aftergroup \reset@color 
+l.115 \subsection
+                 {Dijkstra Algorithm}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+\set@color ...\@pdfcolorstack push{\current@color 
+                                                  }\aftergroup \reset@color 
+l.115 \subsection
+                 {Dijkstra Algorithm}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Overfull \vbox (30.46188pt too high) has occurred while \output is active []
+
+
+! Undefined control sequence.
+\set@color ...\@pdfcolorstack push{\current@color 
+                                                  }\aftergroup \reset@color 
+l.115 \subsection
+                 {Dijkstra Algorithm}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+\set@color ...\@pdfcolorstack push{\current@color 
+                                                  }\aftergroup \reset@color 
+l.115 \subsection
+                 {Dijkstra Algorithm}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Overfull \vbox (30.46188pt too high) has occurred while \output is active []
+
+
+! Undefined control sequence.
+\set@color ...\@pdfcolorstack push{\current@color 
+                                                  }\aftergroup \reset@color 
+l.115 \subsection
+                 {Dijkstra Algorithm}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+\set@color ...\@pdfcolorstack push{\current@color 
+                                                  }\aftergroup \reset@color 
+l.115 \subsection
+                 {Dijkstra Algorithm}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Overfull \vbox (30.46188pt too high) has occurred while \output is active []
+
+
+! Undefined control sequence.
+\set@color ...\@pdfcolorstack push{\current@color 
+                                                  }\aftergroup \reset@color 
+l.115 \subsection
+                 {Dijkstra Algorithm}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+\set@color ...\@pdfcolorstack push{\current@color 
+                                                  }\aftergroup \reset@color 
+l.115 \subsection
+                 {Dijkstra Algorithm}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Overfull \vbox (30.46188pt too high) has occurred while \output is active []
+
+
+! Undefined control sequence.
+\set@color ...\@pdfcolorstack push{\current@color 
+                                                  }\aftergroup \reset@color 
+l.115 \subsection
+                 {Dijkstra Algorithm}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+\set@color ...\@pdfcolorstack push{\current@color 
+                                                  }\aftergroup \reset@color 
+l.115 \subsection
+                 {Dijkstra Algorithm}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Overfull \vbox (30.46188pt too high) has occurred while \output is active []
+
+
+! Undefined control sequence.
+\set@color ...\@pdfcolorstack push{\current@color 
+                                                  }\aftergroup \reset@color 
+l.115 \subsection
+                 {Dijkstra Algorithm}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+\set@color ...\@pdfcolorstack push{\current@color 
+                                                  }\aftergroup \reset@color 
+l.115 \subsection
+                 {Dijkstra Algorithm}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Overfull \vbox (30.46188pt too high) has occurred while \output is active []
+
+
+! Undefined control sequence.
+\set@color ...\@pdfcolorstack push{\current@color 
+                                                  }\aftergroup \reset@color 
+l.115 \subsection
+                 {Dijkstra Algorithm}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+\set@color ...\@pdfcolorstack push{\current@color 
+                                                  }\aftergroup \reset@color 
+l.115 \subsection
+                 {Dijkstra Algorithm}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Overfull \vbox (30.46188pt too high) has occurred while \output is active []
+
+
+! Undefined control sequence.
+\set@color ...\@pdfcolorstack push{\current@color 
+                                                  }\aftergroup \reset@color 
+l.115 \subsection
+                 {Dijkstra Algorithm}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+\set@color ...\@pdfcolorstack push{\current@color 
+                                                  }\aftergroup \reset@color 
+l.115 \subsection
+                 {Dijkstra Algorithm}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Overfull \vbox (30.46188pt too high) has occurred while \output is active []
+
+
+! Undefined control sequence.
+\set@color ...\@pdfcolorstack push{\current@color 
+                                                  }\aftergroup \reset@color 
+l.115 \subsection
+                 {Dijkstra Algorithm}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+\set@color ...\@pdfcolorstack push{\current@color 
+                                                  }\aftergroup \reset@color 
+l.115 \subsection
+                 {Dijkstra Algorithm}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Overfull \vbox (30.46188pt too high) has occurred while \output is active []
+
+
+! Undefined control sequence.
+\set@color ...\@pdfcolorstack push{\current@color 
+                                                  }\aftergroup \reset@color 
+l.115 \subsection
+                 {Dijkstra Algorithm}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+\set@color ...\@pdfcolorstack push{\current@color 
+                                                  }\aftergroup \reset@color 
+l.115 \subsection
+                 {Dijkstra Algorithm}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Overfull \vbox (30.46188pt too high) has occurred while \output is active []
+
+
+! Undefined control sequence.
+\set@color ...\@pdfcolorstack push{\current@color 
+                                                  }\aftergroup \reset@color 
+l.115 \subsection
+                 {Dijkstra Algorithm}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+\set@color ...\@pdfcolorstack push{\current@color 
+                                                  }\aftergroup \reset@color 
+l.115 \subsection
+                 {Dijkstra Algorithm}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Overfull \vbox (30.46188pt too high) has occurred while \output is active []
+
+
+! Undefined control sequence.
+\set@color ...\@pdfcolorstack push{\current@color 
+                                                  }\aftergroup \reset@color 
+l.115 \subsection
+                 {Dijkstra Algorithm}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+\set@color ...\@pdfcolorstack push{\current@color 
+                                                  }\aftergroup \reset@color 
+l.115 \subsection
+                 {Dijkstra Algorithm}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Overfull \vbox (30.46188pt too high) has occurred while \output is active []
+
+
+! Undefined control sequence.
+\set@color ...\@pdfcolorstack push{\current@color 
+                                                  }\aftergroup \reset@color 
+l.115 \subsection
+                 {Dijkstra Algorithm}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+\set@color ...\@pdfcolorstack push{\current@color 
+                                                  }\aftergroup \reset@color 
+l.115 \subsection
+                 {Dijkstra Algorithm}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Overfull \vbox (30.46188pt too high) has occurred while \output is active []
+
+
+! Undefined control sequence.
+\set@color ...\@pdfcolorstack push{\current@color 
+                                                  }\aftergroup \reset@color 
+l.115 \subsection
+                 {Dijkstra Algorithm}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+\set@color ...\@pdfcolorstack push{\current@color 
+                                                  }\aftergroup \reset@color 
+l.115 \subsection
+                 {Dijkstra Algorithm}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Overfull \vbox (30.46188pt too high) has occurred while \output is active []
+
+
+! Undefined control sequence.
+\set@color ...\@pdfcolorstack push{\current@color 
+                                                  }\aftergroup \reset@color 
+l.115 \subsection
+                 {Dijkstra Algorithm}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+\set@color ...\@pdfcolorstack push{\current@color 
+                                                  }\aftergroup \reset@color 
+l.115 \subsection
+                 {Dijkstra Algorithm}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Overfull \vbox (30.46188pt too high) has occurred while \output is active []
+
+
+! Undefined control sequence.
+\set@color ...\@pdfcolorstack push{\current@color 
+                                                  }\aftergroup \reset@color 
+l.115 \subsection
+                 {Dijkstra Algorithm}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+\set@color ...\@pdfcolorstack push{\current@color 
+                                                  }\aftergroup \reset@color 
+l.115 \subsection
+                 {Dijkstra Algorithm}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Overfull \vbox (30.46188pt too high) has occurred while \output is active []
+
+
+! Undefined control sequence.
+\set@color ...\@pdfcolorstack push{\current@color 
+                                                  }\aftergroup \reset@color 
+l.115 \subsection
+                 {Dijkstra Algorithm}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+\set@color ...\@pdfcolorstack push{\current@color 
+                                                  }\aftergroup \reset@color 
+l.115 \subsection
+                 {Dijkstra Algorithm}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Overfull \vbox (30.46188pt too high) has occurred while \output is active []
+
+
+! Undefined control sequence.
+\set@color ...\@pdfcolorstack push{\current@color 
+                                                  }\aftergroup \reset@color 
+l.115 \subsection
+                 {Dijkstra Algorithm}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+\set@color ...\@pdfcolorstack push{\current@color 
+                                                  }\aftergroup \reset@color 
+l.115 \subsection
+                 {Dijkstra Algorithm}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Overfull \vbox (30.46188pt too high) has occurred while \output is active []
+
+
+! Undefined control sequence.
+\set@color ...\@pdfcolorstack push{\current@color 
+                                                  }\aftergroup \reset@color 
+l.115 \subsection
+                 {Dijkstra Algorithm}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+\set@color ...\@pdfcolorstack push{\current@color 
+                                                  }\aftergroup \reset@color 
+l.115 \subsection
+                 {Dijkstra Algorithm}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Overfull \vbox (30.46188pt too high) has occurred while \output is active []
+
+
+! Undefined control sequence.
+\set@color ...\@pdfcolorstack push{\current@color 
+                                                  }\aftergroup \reset@color 
+l.115 \subsection
+                 {Dijkstra Algorithm}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+\set@color ...\@pdfcolorstack push{\current@color 
+                                                  }\aftergroup \reset@color 
+l.115 \subsection
+                 {Dijkstra Algorithm}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Overfull \vbox (30.46188pt too high) has occurred while \output is active []
+
+
+! Undefined control sequence.
+\set@color ...\@pdfcolorstack push{\current@color 
+                                                  }\aftergroup \reset@color 
+l.115 \subsection
+                 {Dijkstra Algorithm}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+\set@color ...\@pdfcolorstack push{\current@color 
+                                                  }\aftergroup \reset@color 
+l.115 \subsection
+                 {Dijkstra Algorithm}
+(That makes 100 errors; please try again.) 
 Here is how much of TeX's memory you used:
- 26086 strings out of 493634
- 547879 string characters out of 3135239
- 697923 words of memory out of 3000000
- 28939 multiletter control sequences out of 15000+200000
+ 26842 strings out of 493634
+ 559176 string characters out of 3135239
+ 733050 words of memory out of 3000000
+ 29733 multiletter control sequences out of 15000+200000
  21425 words of font info for 78 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
- 55i,13n,54p,659b,612s stack positions out of 5000i,500n,10000p,200000b,50000s
- <C:\Users\Lydia\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\
-tcrm1095.pk> <C:\Users\Lydia\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\public\cm
-\dpi1037\cmbcsc10.pk> <C:\Users\Lydia\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\
-public\cm\dpi1493\cmbcsc10.pk><C:/Users/Lydia/AppData/Local/Programs/MiKTeX 2.9
-/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/Lydia/AppData/Local/Progra
-ms/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/Lydia/AppData
-/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Users
-/Lydia/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.
-pfb><C:/Users/Lydia/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfon
-ts/cm/cmmi10.pfb><C:/Users/Lydia/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/
-public/amsfonts/cm/cmmi6.pfb><C:/Users/Lydia/AppData/Local/Programs/MiKTeX 2.9/
-fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/Lydia/AppData/Local/Programs
-/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmib10.pfb><C:/Users/Lydia/AppData/
-Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Ly
-dia/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb>
-<C:/Users/Lydia/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/c
-m/cmr17.pfb><C:/Users/Lydia/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/publi
-c/amsfonts/cm/cmr6.pfb><C:/Users/Lydia/AppData/Local/Programs/MiKTeX 2.9/fonts/
-type1/public/amsfonts/cm/cmr8.pfb><C:/Users/Lydia/AppData/Local/Programs/MiKTeX
- 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Lydia/AppData/Local/Pr
-ograms/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/Lydia/AppD
-ata/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Use
-rs/Lydia/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt1
-2.pfb><C:/Users/Lydia/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsf
-onts/symbols/msbm10.pfb>
-Output written on Space3_Assign3.pdf (14 pages, 468431 bytes).
-PDF statistics:
- 511 PDF objects out of 1000 (max. 8388607)
- 58 named destinations out of 1000 (max. 500000)
- 308 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 55i,12n,54p,526b,4390s stack positions out of 5000i,500n,10000p,200000b,50000s
 
+!  ==> Fatal error occurred, no output PDF file produced!

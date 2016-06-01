@@ -1,7 +1,0 @@
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Output from Section \hyperref [{Sec:gengrid}]{\ref *{Sec:gengrid} \nameref *{Sec:gengrid}}. The start node is in blue and the goal node is in red\relax }}{6}{figure.caption.4}
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Output from Section \hyperref [{Sec:genobs}]{\ref *{Sec:genobs} \nameref *{Sec:genobs}}. The start node is in blue, the goal node is in red and obstacles are black\relax }}{7}{figure.caption.5}
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Output from Section \hyperref [{Sec:trav}]{\ref *{Sec:trav} \nameref *{Sec:trav}}. Traversability map: Darker colours indicate a higher cost to travel over. White indicates the rover is unable to travel over.\relax }}{7}{figure.caption.6}
-\contentsline {figure}{\numberline {3.4}{\ignorespaces Output from Section \hyperref [{Sec:Dij}]{\ref *{Sec:Dij} \nameref *{Sec:Dij}}. The start node is in blue, the goal node is in red and obstacles are black\relax }}{8}{figure.caption.7}
-\contentsline {figure}{\numberline {3.5}{\ignorespaces Output from Section \hyperref [{Sec:terrain}]{\ref *{Sec:terrain} \nameref *{Sec:terrain}}. \relax }}{8}{figure.caption.8}
-\contentsline {figure}{\numberline {3.6}{\ignorespaces A* Euclidean Distance\relax }}{9}{figure.caption.9}
-\contentsline {figure}{\numberline {3.7}{\ignorespaces A* Manhattan Distance\relax }}{10}{figure.caption.10}

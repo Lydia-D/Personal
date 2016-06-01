@@ -14,7 +14,6 @@ function [Xt,dt] = Cruise(dE,X0)
     
     % Calculate time in orbit
     dt = fnhandle.dt(dE);
-    
     % state at final time
     Xt = zeros(6,1);
     Xt(1:3,1) = fnhandle.f(dE).*X0(1:3) + fnhandle.g(dE)*X0(4:6,1);
