@@ -3,7 +3,7 @@
 % 14/5/16
 % Inputs -> Y = [dE1,dV1,el1,az1,dE2,dV2,el2,az2]'
 % 
-function C = constraints(Y)
+function [C,param] = constraints(Y)
     global Final
     % propogate to the end
     [Xall,t] = dynamics(Y);  % final condition in Xall.X4

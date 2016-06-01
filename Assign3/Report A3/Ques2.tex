@@ -7,11 +7,11 @@
 The final GEO orbit is defined as having a period of one sidereal day, 23 hours 56 minutes 4.0916 seconds. Using Kepler's third law Eq\eqref{kep3} and the vis-viva law Eq\eqref{visviva} the semi-major axis and velocity of the circular orbit were calculated, see Table \ref{Table:orbitpar}.
 
 \begin{eqnarray}
-a = \sqrt[1/3]{\frac{\mu\mathbb{P}^2}{4\pi^2}} \label{kep3}\\
+a = \left(\frac{\mu\mathbb{P}^2}{4\pi^2}\right)^{1/3} \label{kep3}\\
 v = \sqrt{\frac{\mu}{a}} \label{visviva}
 \end{eqnarray}
-
 The satellite parameters in the park orbit are
+
 \begin{table}[h]
 \centering
 \caption{text}
@@ -31,22 +31,52 @@ Epoch & 0 s & free \\\bottomrule\bottomrule
 \end{tabularx}
 \end{table}
 
+The initial guess of the control parameters were modelled on the Hohmann Transfer and orbit plane change manoeuvres\cite{orbmech}. The burns occurred at the nodes of the intersecting planes of the park orbit and final orbit. The first burn in the park orbit was designed to induce a hohmann transfer orbit, which is an elliptical orbit with the perigee as the radius of the park orbit and apogee as the radius of the final orbit. The plane change was modelled to occur only at the second burn at the apogee as the required velocity change was less. 
+
+\begin{eqnarray}
+a_t &=& \frac{a_f+a_p}{2}\\
+e_t &=& \frac{a_f-a_p}{2a_t}\\
+v_{perigee} &=& \sqrt{\mu_{earth}\frac{1+e_t}{a_p}}\\
+v_{appogee} &=& \sqrt{\mu_{earth}\frac{1-e_t}{a_f}}
+\end{eqnarray}
+
+
+\subsection{Dynamic Model}
+The dynamic model used was the Universal Conic Section (UCS) model as it provided an analytical solution for any point in time of the system. This allowed for faster calculations over a propagation model such as the modified equinoctial elements. The Keplerian model is also an analytical solution, contains singularities when the inclination or eccentricity are zero. While other disturbing forces such as atmospheric drag or the oblateness of the Earth are not accounted for, as the model is only used for one period the effects are negligible. The satellite trajectory was modelled in \textbf{dynamics} as Cruise1 ($\Delta E_1$), Burn1 ($\Delta V_1,\theta_1,\phi_1$), Cruise2 ($\Delta E_2$), Burn2 ($\Delta V_2,\theta_2,\phi_2$). The cruise sections used the UCS model and returned the final state vector and the duration in seconds that cruise occurred for. The burn sections applied an instantaneous velocity increase on the given state vector in the ECI frame. 
+
+
+
 \subsection{Cost and Constraints}
+The Goddard rocket equation in Eq\ref{Eq:Grocket} describes the system dynamics of the model; where m is the rocket mass, h is the height above the ground, v is the velocity of the rocket, g is the gravitational constant, u is the engine thrust control parameter and D is the atmospheric drag.
+\begin{eqnarray}
+\dot{v} = \frac{1}{m}(u-D(v,h)) - g \label{Eq:Grocket}
+\Delta v = g_0I_sp\ln(\frac{m_o}{m_o-F}) \label{Eq:delV}
+\end{eqnarray}
+
+\begin{eqnarray}
+F = \frac{dp}{dt}\\
+\int F dt = \int dp \\
+p_1 +\int F dt = p_2 \\
+P_1 + \sum \int F dt = P_2\\
+P_1 +\sum(F\Delta t) = P_2 \\
+\end{eqnarray}
+
+
+
 What are constraints - why are they important.\\
 The constraints on this optimisation problem defines the final GEO orbit. They are  The radius and velocity are enforced by requiring the ratio between the 
 \begin{eqnarray}
 J = |\Delta v_1 | + |\Delta v_2| \label{costfn}
 \end{eqnarray}
 
-\subsection{Local frame of satellite}
-The local frame of the satellite where the burn is applied 
+
 
 
 
 
 \subsection{Methodology}
 
-
+Due to the problem being multidimensional, non-linear and constrained, the system is approximated as quadratic locally and successively solved by the Newton method. This is called Sequential Quadratic Programming.
 
 
 
@@ -60,7 +90,22 @@ s_k &=& x_{k+1} - x_k\\
 y_k &=& \nabla f_{k+1} - \nabla f_k
 \end{eqnarray}
 
-
+\begin{algorithm}
+\caption{Sequential Quadratic Programming} \label{PC:SQR}
+\begin{algorithmic}
+\State{Input:} Initial guess of control (Y0), initial state (X0)
+\State{Output:} Optimal Solution (Y*)
+\State{Initialise:}
+\While {error $>$ tolerance}
+\State (c,g,G) $\gets$ calculate matrices ($Y_i$)
+\State L $\gets$ Calculate Lagrangian ($Y_i,\lambda_i$)
+\State $H_L$ $\gets$ Calculate Hessian of Lagrangian ($Y_i,\lambda_i$)
+\State (p,$\lambda_{i+1}$) $\gets$ Solve KKT for direction and Lagrange multiplier ($H_L$,c,g,G) 
+\State $\alpha_i$ $\gets$ linesearch
+\State $Y_{i+1} \gets$ Calculate next iteration $Y_i + \alpha_ip$
+\EndWhile
+\end{algorithmic}
+\end{algorithm}
 
 
 

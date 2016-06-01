@@ -20,7 +20,7 @@ Plotting = 1;
 Animation = 0;
 
 global flag
-flag = choosedialog;
+flag = chooseopt;
 % flag.hessian = 'Forward Differencing';
 % flag.hessian = 'BFGS';
 % flag.merit = 'Yes';
@@ -31,13 +31,14 @@ global rho
 rho = 0.01;
 %% Final Orbit parameters
 global Final
-Final.P = 23*secs_per_hour + 56*secs_per_min + 4.0916;
+Final = chooseFinal;
+% Final.P = 23*secs_per_hour + 56*secs_per_min + 4.0916;
 Final.a = (mu_earth*Final.P^2/(4*pi^2))^(1/3);
 Final.v = sqrt(mu_earth/Final.a);
-Final.inc = 0;
-Final.Rasc = NaN;
-Final.omega = NaN;
-Final.e = 0;
+% Final.inc = -10*d2r;
+% Final.Rasc = 180*d2r;
+% Final.omega = NaN;
+% Final.e = 0;
 
 X_orbit_final = class2orbit(Final.a,Final.e,0,0,0);
 X_ECI_final = orbit2ECI(X_orbit_final,Final.Rasc,Final.inc,0);
@@ -76,7 +77,7 @@ switch guess
         % Hohmann Transfer Guess
         Yreal = hohmann(Final,Park);
         % add errro
-        Yreal = Yreal + [0.001;500;0.001;0.001;0.001;500;0.001;0.001];
+%         Yreal = Yreal + [0.001;500;0.001;0.001;0.001;500;0.001;0.001];
         Y = Yreal.*Yscale;
 end
 
@@ -85,8 +86,8 @@ end
 figsim = Graphics(Plotting,Animation,Y,timestart,dt);
 %%  
 eps = 10^-5;    % sizing?  -> first derrivatve central, second fwd?
-f_store(1) = Cost(Y);   % cost   nessesary?
-Y_store(:,1) = Y;
+% f_store(1) = Cost(Y);   % cost   nessesary?
+% Y_store(:,1) = Y;
 % g = calc_g();   % df/dx  constant?
 c = constraints(Y);   % constraints
 
@@ -187,10 +188,11 @@ subplot(2,2,2); plot(itteration,Store.error); title('Error'); grid on
 subplot(2,2,3); plot(itteration,Store.cost); title('Cost'); grid on
 subplot(2,2,4); plot(itteration,Store.lagrangian); title('Lagrangian'); grid on
 
+%%
 figure(4)
-plot(itteration,Store.constraints); title('Constraints')
+subplot(4,1,1); plot(itteration,Store.constraints(1,:)); title('Radius Constraint')
+subplot(4,1,2); plot(itteration,Store.constraints(2,:)); title('Velocity Constraint')
+subplot(4,1,3); plot(itteration,Store.constraints(3,:)); title('Eccentricity Constraint')
+subplot(4,1,4); plot(itteration,Store.constraints(4,:)); title('Inclination Constraint')
 
 
-plot(Y_store(2,:),'r')
-hold on
-plot(Y_store(6,:),'b')

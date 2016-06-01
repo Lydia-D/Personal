@@ -4,7 +4,7 @@
 % defaultans = {'20','hsv'};
 % answer = inputdlg(prompt,dlg_title,num_lines,defaultans);
 
-function Final = choosedialog
+function Final = chooseFinal
 
     prompt = {'Final Period (sidereal days)','Final Eccentricity','Final Inclination','Final Right Ascending Node'};
     dlg_title = 'Imput Final Orbit parameters';

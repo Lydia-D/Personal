@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.3.10)  20 MAY 2016 01:14
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.3.10)  2 JUN 2016 07:00
 entering extended mode
 **./Space3_Assign3.tex
 (Space3_Assign3.tex
@@ -970,27 +970,27 @@ LaTeX Warning: Label `Fig:A*eu' multiply defined.
 )
 \openout1 = `Space3_Assign3.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 117.
-LaTeX Font Info:    ... okay on input line 117.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 117.
-LaTeX Font Info:    ... okay on input line 117.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 117.
-LaTeX Font Info:    ... okay on input line 117.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 117.
-LaTeX Font Info:    ... okay on input line 117.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 117.
-LaTeX Font Info:    ... okay on input line 117.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 117.
-LaTeX Font Info:    ... okay on input line 117.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 117.
-LaTeX Font Info:    ... okay on input line 117.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 117.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 117.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 118.
+LaTeX Font Info:    ... okay on input line 118.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 118.
+LaTeX Font Info:    ... okay on input line 118.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 118.
+LaTeX Font Info:    ... okay on input line 118.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 118.
+LaTeX Font Info:    ... okay on input line 118.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 118.
+LaTeX Font Info:    ... okay on input line 118.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 118.
+LaTeX Font Info:    ... okay on input line 118.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 118.
+LaTeX Font Info:    ... okay on input line 118.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 118.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 118.
 
  ("C:\Users\Lydia\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\ts1cmr.fd"
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 117.
+LaTeX Font Info:    ... okay on input line 118.
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -1042,7 +1042,7 @@ ii"
 \everyMPtoPDFconversion=\toks43
 )
 \AtBeginShipoutBox=\box45
-Package hyperref Info: Link coloring OFF on input line 117.
+Package hyperref Info: Link coloring OFF on input line 118.
 
 ("C:\Users\Lydia\AppData\Local\Programs\MiKTeX 2.9\tex\latex\hyperref\nameref.s
 ty"
@@ -1054,9 +1054,9 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
 \c@section@level=\count163
 )
-LaTeX Info: Redefining \ref on input line 117.
-LaTeX Info: Redefining \pageref on input line 117.
-LaTeX Info: Redefining \nameref on input line 117.
+LaTeX Info: Redefining \ref on input line 118.
+LaTeX Info: Redefining \pageref on input line 118.
+LaTeX Info: Redefining \nameref on input line 118.
  (Space3_Assign3.out) (Space3_Assign3.out)
 \@outlinefile=\write4
 \openout4 = `Space3_Assign3.out'.
@@ -1102,16 +1102,16 @@ Package caption Info: End \AtBeginDocument code.
 <./IMAGEtitle2f.jpg, id=106, 181.6386pt x 542.025pt>
 File: ./IMAGEtitle2f.jpg Graphic file (type jpg)
  <use ./IMAGEtitle2f.jpg>
-Package pdftex.def Info: ./IMAGEtitle2f.jpg used on input line 121.
+Package pdftex.def Info: ./IMAGEtitle2f.jpg used on input line 122.
 (pdftex.def)             Requested size: 283.19429pt x 845.04684pt.
 LaTeX Font Info:    Font shape `OT1/cmr/bx/sc' in size <24.88> not available
-(Font)              Font shape `OT1/cmr/b/sc' tried instead on input line 132.
-LaTeX Font Info:    Try loading font information for U+msa on input line 134.
+(Font)              Font shape `OT1/cmr/b/sc' tried instead on input line 133.
+LaTeX Font Info:    Try loading font information for U+msa on input line 135.
 
 ("C:\Users\Lydia\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 134.
+LaTeX Font Info:    Try loading font information for U+msb on input line 135.
 ("C:\Users\Lydia\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
@@ -1154,10 +1154,10 @@ e2f.jpg>]
  <./Plag.pdf, id=117, 597.19112pt x 845.19763pt>
 File: ./Plag.pdf Graphic file (type pdf)
  <use ./Plag.pdf>
-Package pdftex.def Info: ./Plag.pdf used on input line 157.
+Package pdftex.def Info: ./Plag.pdf used on input line 158.
 (pdftex.def)             Requested size: 478.86255pt x 677.71953pt.
 LaTeX Font Info:    Font shape `OT1/cmr/bx/sc' in size <17.28> not available
-(Font)              Font shape `OT1/cmr/b/sc' tried instead on input line 163.
+(Font)              Font shape `OT1/cmr/b/sc' tried instead on input line 164.
 
 (Space3_Assign3.toc
 
@@ -1191,13 +1191,13 @@ LaTeX Warning: Reference `Sec:trav' on page ii undefined on input line 3.
 
 
 LaTeX Warning: Hyper reference `Sec:terrain' on page ii undefined on input line
- 7.
+ 5.
 
 
-LaTeX Warning: Reference `Sec:terrain' on page ii undefined on input line 7.
+LaTeX Warning: Reference `Sec:terrain' on page ii undefined on input line 5.
 
 
-LaTeX Warning: Reference `Sec:terrain' on page ii undefined on input line 7.
+LaTeX Warning: Reference `Sec:terrain' on page ii undefined on input line 5.
 
 )
 \tf@lof=\write6
@@ -1232,7 +1232,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[4]) [5] (AppendixA.tex
+[4] [5]) (Space3_Assign3.bbl) [6] (AppendixA.tex
 Package epstopdf Info: Source file: <generategrid.eps>
 (epstopdf)                    date: 2016-05-18 15:32:57
 (epstopdf)                    size: 21106 bytes
@@ -1244,7 +1244,7 @@ to.pdf generategrid.eps>
 (epstopdf)             \includegraphics on input line 9.
 Package epstopdf Info: Output file is already uptodate.
 
-<generategrid-eps-converted-to.pdf, id=252, 421.575pt x 316.18124pt>
+<generategrid-eps-converted-to.pdf, id=262, 421.575pt x 316.18124pt>
 File: generategrid-eps-converted-to.pdf Graphic file (type pdf)
 
 <use generategrid-eps-converted-to.pdf>
@@ -1262,7 +1262,7 @@ rted-to.pdf generateobstacles.eps>
 (epstopdf)             \includegraphics on input line 16.
 Package epstopdf Info: Output file is already uptodate.
 
-<generateobstacles-eps-converted-to.pdf, id=255, 421.575pt x 316.18124pt>
+<generateobstacles-eps-converted-to.pdf, id=265, 421.575pt x 316.18124pt>
 File: generateobstacles-eps-converted-to.pdf Graphic file (type pdf)
 
 <use generateobstacles-eps-converted-to.pdf>
@@ -1274,24 +1274,24 @@ ine 16.
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-LaTeX Warning: Hyper reference `Sec:trav' on page 6 undefined on input line 21.
+LaTeX Warning: Hyper reference `Sec:trav' on page 7 undefined on input line 21.
 
 
 
-LaTeX Warning: Reference `Sec:trav' on page 6 undefined on input line 21.
+LaTeX Warning: Reference `Sec:trav' on page 7 undefined on input line 21.
 
 
-LaTeX Warning: Reference `Sec:trav' on page 6 undefined on input line 21.
+LaTeX Warning: Reference `Sec:trav' on page 7 undefined on input line 21.
 
 
-LaTeX Warning: Hyper reference `Sec:trav' on page 6 undefined on input line 21.
+LaTeX Warning: Hyper reference `Sec:trav' on page 7 undefined on input line 21.
 
 
 
-LaTeX Warning: Reference `Sec:trav' on page 6 undefined on input line 21.
+LaTeX Warning: Reference `Sec:trav' on page 7 undefined on input line 21.
 
 
-LaTeX Warning: Reference `Sec:trav' on page 6 undefined on input line 21.
+LaTeX Warning: Reference `Sec:trav' on page 7 undefined on input line 21.
 
 Package epstopdf Info: Source file: <trav.eps>
 (epstopdf)                    date: 2016-05-19 19:23:16
@@ -1303,7 +1303,7 @@ Package epstopdf Info: Source file: <trav.eps>
 rav.eps>
 (epstopdf)             \includegraphics on input line 23.
 Package epstopdf Info: Output file is already uptodate.
-<trav-eps-converted-to.pdf, id=256, 421.575pt x 316.18124pt>
+<trav-eps-converted-to.pdf, id=266, 421.575pt x 316.18124pt>
 File: trav-eps-converted-to.pdf Graphic file (type pdf)
 
 <use trav-eps-converted-to.pdf>
@@ -1323,7 +1323,7 @@ Package epstopdf Info: Source file: <DijkstraMap.eps>
 o.pdf DijkstraMap.eps>
 (epstopdf)             \includegraphics on input line 30.
 Package epstopdf Info: Output file is already uptodate.
-<DijkstraMap-eps-converted-to.pdf, id=259, 421.575pt x 316.18124pt>
+<DijkstraMap-eps-converted-to.pdf, id=269, 421.575pt x 316.18124pt>
 File: DijkstraMap-eps-converted-to.pdf Graphic file (type pdf)
 
 <use DijkstraMap-eps-converted-to.pdf>
@@ -1335,24 +1335,24 @@ Package pdftex.def Info: DijkstraMap-eps-converted-to.pdf used on input line 30
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-LaTeX Warning: Hyper reference `Sec:terrain' on page 6 undefined on input line 
+LaTeX Warning: Hyper reference `Sec:terrain' on page 7 undefined on input line 
 35.
 
 
-LaTeX Warning: Reference `Sec:terrain' on page 6 undefined on input line 35.
+LaTeX Warning: Reference `Sec:terrain' on page 7 undefined on input line 35.
 
 
-LaTeX Warning: Reference `Sec:terrain' on page 6 undefined on input line 35.
+LaTeX Warning: Reference `Sec:terrain' on page 7 undefined on input line 35.
 
 
-LaTeX Warning: Hyper reference `Sec:terrain' on page 6 undefined on input line 
+LaTeX Warning: Hyper reference `Sec:terrain' on page 7 undefined on input line 
 35.
 
 
-LaTeX Warning: Reference `Sec:terrain' on page 6 undefined on input line 35.
+LaTeX Warning: Reference `Sec:terrain' on page 7 undefined on input line 35.
 
 
-LaTeX Warning: Reference `Sec:terrain' on page 6 undefined on input line 35.
+LaTeX Warning: Reference `Sec:terrain' on page 7 undefined on input line 35.
 
 Package epstopdf Info: Source file: <Dijstra_terrain.eps>
 (epstopdf)                    date: 2016-05-20 01:09:11
@@ -1364,7 +1364,7 @@ Package epstopdf Info: Source file: <Dijstra_terrain.eps>
 ed-to.pdf Dijstra_terrain.eps>
 (epstopdf)             \includegraphics on input line 37.
 Package epstopdf Info: Output file is already uptodate.
-<Dijstra_terrain-eps-converted-to.pdf, id=260, 421.575pt x 316.18124pt>
+<Dijstra_terrain-eps-converted-to.pdf, id=270, 421.575pt x 316.18124pt>
 File: Dijstra_terrain-eps-converted-to.pdf Graphic file (type pdf)
 
 <use Dijstra_terrain-eps-converted-to.pdf>
@@ -1385,7 +1385,7 @@ Package epstopdf Info: Source file: <Astar_euc_1.eps>
 o.pdf Astar_euc_1.eps>
 (epstopdf)             \includegraphics on input line 46.
 Package epstopdf Info: Output file is already uptodate.
-<Astar_euc_1-eps-converted-to.pdf, id=261, 421.575pt x 316.18124pt>
+<Astar_euc_1-eps-converted-to.pdf, id=271, 421.575pt x 316.18124pt>
 File: Astar_euc_1-eps-converted-to.pdf Graphic file (type pdf)
 
 <use Astar_euc_1-eps-converted-to.pdf>
@@ -1403,7 +1403,7 @@ to.pdf Astar_euc_10.eps>
 (epstopdf)             \includegraphics on input line 49.
 Package epstopdf Info: Output file is already uptodate.
 
-<Astar_euc_10-eps-converted-to.pdf, id=262, 421.575pt x 316.18124pt>
+<Astar_euc_10-eps-converted-to.pdf, id=272, 421.575pt x 316.18124pt>
 File: Astar_euc_10-eps-converted-to.pdf Graphic file (type pdf)
 
 <use Astar_euc_10-eps-converted-to.pdf>
@@ -1421,7 +1421,7 @@ to.pdf Astar_euc_25.eps>
 (epstopdf)             \includegraphics on input line 52.
 Package epstopdf Info: Output file is already uptodate.
 
-<Astar_euc_25-eps-converted-to.pdf, id=263, 421.575pt x 316.18124pt>
+<Astar_euc_25-eps-converted-to.pdf, id=273, 421.575pt x 316.18124pt>
 File: Astar_euc_25-eps-converted-to.pdf Graphic file (type pdf)
 
 <use Astar_euc_25-eps-converted-to.pdf>
@@ -1439,7 +1439,7 @@ to.pdf Astar_euc_50.eps>
 (epstopdf)             \includegraphics on input line 55.
 Package epstopdf Info: Output file is already uptodate.
 
-<Astar_euc_50-eps-converted-to.pdf, id=264, 421.575pt x 316.18124pt>
+<Astar_euc_50-eps-converted-to.pdf, id=274, 421.575pt x 316.18124pt>
 File: Astar_euc_50-eps-converted-to.pdf Graphic file (type pdf)
 
 <use Astar_euc_50-eps-converted-to.pdf>
@@ -1457,7 +1457,7 @@ to.pdf Astar_euc_75.eps>
 (epstopdf)             \includegraphics on input line 58.
 Package epstopdf Info: Output file is already uptodate.
 
-<Astar_euc_75-eps-converted-to.pdf, id=265, 421.575pt x 316.18124pt>
+<Astar_euc_75-eps-converted-to.pdf, id=275, 421.575pt x 316.18124pt>
 File: Astar_euc_75-eps-converted-to.pdf Graphic file (type pdf)
 
 <use Astar_euc_75-eps-converted-to.pdf>
@@ -1475,7 +1475,7 @@ Package epstopdf Info: Source file: <Astar_euc_100.eps>
 (epstopdf)             \includegraphics on input line 61.
 Package epstopdf Info: Output file is already uptodate.
 
-<Astar_euc_100-eps-converted-to.pdf, id=266, 421.575pt x 316.18124pt>
+<Astar_euc_100-eps-converted-to.pdf, id=276, 421.575pt x 316.18124pt>
 File: Astar_euc_100-eps-converted-to.pdf Graphic file (type pdf)
 
 <use Astar_euc_100-eps-converted-to.pdf>
@@ -1493,7 +1493,7 @@ o.pdf Astar_man_1.eps>
 (epstopdf)             \includegraphics on input line 70.
 Package epstopdf Info: Output file is already uptodate.
 
-<Astar_man_1-eps-converted-to.pdf, id=267, 421.575pt x 316.18124pt>
+<Astar_man_1-eps-converted-to.pdf, id=277, 421.575pt x 316.18124pt>
 File: Astar_man_1-eps-converted-to.pdf Graphic file (type pdf)
 
 <use Astar_man_1-eps-converted-to.pdf>
@@ -1511,7 +1511,7 @@ to.pdf Astar_man_10.eps>
 (epstopdf)             \includegraphics on input line 73.
 Package epstopdf Info: Output file is already uptodate.
 
-<Astar_man_10-eps-converted-to.pdf, id=268, 421.575pt x 316.18124pt>
+<Astar_man_10-eps-converted-to.pdf, id=278, 421.575pt x 316.18124pt>
 File: Astar_man_10-eps-converted-to.pdf Graphic file (type pdf)
 
 <use Astar_man_10-eps-converted-to.pdf>
@@ -1529,7 +1529,7 @@ to.pdf Astar_man_25.eps>
 (epstopdf)             \includegraphics on input line 76.
 Package epstopdf Info: Output file is already uptodate.
 
-<Astar_man_25-eps-converted-to.pdf, id=269, 421.575pt x 316.18124pt>
+<Astar_man_25-eps-converted-to.pdf, id=279, 421.575pt x 316.18124pt>
 File: Astar_man_25-eps-converted-to.pdf Graphic file (type pdf)
 
 <use Astar_man_25-eps-converted-to.pdf>
@@ -1547,7 +1547,7 @@ to.pdf Astar_man_50.eps>
 (epstopdf)             \includegraphics on input line 79.
 Package epstopdf Info: Output file is already uptodate.
 
-<Astar_man_50-eps-converted-to.pdf, id=270, 421.575pt x 316.18124pt>
+<Astar_man_50-eps-converted-to.pdf, id=280, 421.575pt x 316.18124pt>
 File: Astar_man_50-eps-converted-to.pdf Graphic file (type pdf)
 
 <use Astar_man_50-eps-converted-to.pdf>
@@ -1565,7 +1565,7 @@ to.pdf Astar_man_75.eps>
 (epstopdf)             \includegraphics on input line 82.
 Package epstopdf Info: Output file is already uptodate.
 
-<Astar_man_75-eps-converted-to.pdf, id=271, 421.575pt x 316.18124pt>
+<Astar_man_75-eps-converted-to.pdf, id=281, 421.575pt x 316.18124pt>
 File: Astar_man_75-eps-converted-to.pdf Graphic file (type pdf)
 
 <use Astar_man_75-eps-converted-to.pdf>
@@ -1583,32 +1583,32 @@ Package epstopdf Info: Source file: <Astar_man_100.eps>
 (epstopdf)             \includegraphics on input line 85.
 Package epstopdf Info: Output file is already uptodate.
 
-<Astar_man_100-eps-converted-to.pdf, id=272, 421.575pt x 316.18124pt>
+<Astar_man_100-eps-converted-to.pdf, id=282, 421.575pt x 316.18124pt>
 File: Astar_man_100-eps-converted-to.pdf Graphic file (type pdf)
 
 <use Astar_man_100-eps-converted-to.pdf>
 Package pdftex.def Info: Astar_man_100-eps-converted-to.pdf used on input line 
 85.
 (pdftex.def)             Requested size: 237.01411pt x 177.76466pt.
-) [6 <./generategrid-eps-converted-to.pdf>] [7 <./generateobstacles-eps-convert
-ed-to.pdf> <./trav-eps-converted-to.pdf>] [8 <./DijkstraMap-eps-converted-to.pd
-f> <./Dijstra_terrain-eps-converted-to.pdf>] [9 <./Astar_euc_1-eps-converted-to
-.pdf> <./Astar_euc_10-eps-converted-to.pdf> <./Astar_euc_25-eps-converted-to.pd
-f> <./Astar_euc_50-eps-converted-to.pdf> <./Astar_euc_75-eps-converted-to.pdf> 
-<./Astar_euc_100-eps-converted-to.pdf>] [10 <./Astar_man_1-eps-converted-to.pdf
-> <./Astar_man_10-eps-converted-to.pdf> <./Astar_man_25-eps-converted-to.pdf> <
-./Astar_man_50-eps-converted-to.pdf> <./Astar_man_75-eps-converted-to.pdf> <./A
-star_man_100-eps-converted-to.pdf>]
-(AppendixB.tex) [11
+) [7 <./generategrid-eps-converted-to.pdf>] [8 <./generateobstacles-eps-convert
+ed-to.pdf> <./trav-eps-converted-to.pdf>] [9 <./DijkstraMap-eps-converted-to.pd
+f> <./Dijstra_terrain-eps-converted-to.pdf>] [10 <./Astar_euc_1-eps-converted-t
+o.pdf> <./Astar_euc_10-eps-converted-to.pdf> <./Astar_euc_25-eps-converted-to.p
+df> <./Astar_euc_50-eps-converted-to.pdf> <./Astar_euc_75-eps-converted-to.pdf>
+ <./Astar_euc_100-eps-converted-to.pdf>] [11 <./Astar_man_1-eps-converted-to.pd
+f> <./Astar_man_10-eps-converted-to.pdf> <./Astar_man_25-eps-converted-to.pdf> 
+<./Astar_man_50-eps-converted-to.pdf> <./Astar_man_75-eps-converted-to.pdf> <./
+Astar_man_100-eps-converted-to.pdf>]
+(AppendixB.tex) [12
 
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 192.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 192.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 197.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 197.
  (Space3_Assign3.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 192.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 192.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 197.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 197.
 Package rerunfilecheck Info: File `Space3_Assign3.out' has not changed.
-(rerunfilecheck)             Checksum: 5C531608641705B84B7B484466BF64D3;1787.
+(rerunfilecheck)             Checksum: F5105681A46023BF3BD653BD9A4AA906;1776.
 
 
 LaTeX Warning: There were undefined references.
@@ -1616,16 +1616,16 @@ LaTeX Warning: There were undefined references.
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 192.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 197.
  ) 
 Here is how much of TeX's memory you used:
- 26086 strings out of 493634
- 547879 string characters out of 3135239
- 697923 words of memory out of 3000000
- 28939 multiletter control sequences out of 15000+200000
+ 26109 strings out of 493634
+ 548211 string characters out of 3135239
+ 698103 words of memory out of 3000000
+ 28953 multiletter control sequences out of 15000+200000
  21425 words of font info for 78 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
- 55i,13n,54p,659b,612s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 55i,12n,54p,1024b,612s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\Lydia\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\
 tcrm1095.pk> <C:\Users\Lydia\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\public\cm
 \dpi1037\cmbcsc10.pk> <C:\Users\Lydia\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\
@@ -1636,24 +1636,22 @@ ms/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/Lydia/AppData
 /Lydia/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.
 pfb><C:/Users/Lydia/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfon
 ts/cm/cmmi10.pfb><C:/Users/Lydia/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/
-public/amsfonts/cm/cmmi6.pfb><C:/Users/Lydia/AppData/Local/Programs/MiKTeX 2.9/
-fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/Lydia/AppData/Local/Programs
-/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmib10.pfb><C:/Users/Lydia/AppData/
-Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Ly
-dia/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb>
+public/amsfonts/cm/cmmi8.pfb><C:/Users/Lydia/AppData/Local/Programs/MiKTeX 2.9/
+fonts/type1/public/amsfonts/cm/cmmib10.pfb><C:/Users/Lydia/AppData/Local/Progra
+ms/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Lydia/AppData/
+Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Ly
+dia/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb>
 <C:/Users/Lydia/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/c
-m/cmr17.pfb><C:/Users/Lydia/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/publi
-c/amsfonts/cm/cmr6.pfb><C:/Users/Lydia/AppData/Local/Programs/MiKTeX 2.9/fonts/
-type1/public/amsfonts/cm/cmr8.pfb><C:/Users/Lydia/AppData/Local/Programs/MiKTeX
- 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Lydia/AppData/Local/Pr
-ograms/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/Lydia/AppD
-ata/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Use
-rs/Lydia/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt1
-2.pfb><C:/Users/Lydia/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsf
-onts/symbols/msbm10.pfb>
-Output written on Space3_Assign3.pdf (14 pages, 468431 bytes).
+m/cmr8.pfb><C:/Users/Lydia/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public
+/amsfonts/cm/cmsy10.pfb><C:/Users/Lydia/AppData/Local/Programs/MiKTeX 2.9/fonts
+/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/Lydia/AppData/Local/Programs/MiKT
+eX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/Lydia/AppData/Local/
+Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt12.pfb><C:/Users/Lydia/A
+ppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb
+>
+Output written on Space3_Assign3.pdf (15 pages, 468773 bytes).
 PDF statistics:
- 511 PDF objects out of 1000 (max. 8388607)
- 58 named destinations out of 1000 (max. 500000)
+ 517 PDF objects out of 1000 (max. 8388607)
+ 64 named destinations out of 1000 (max. 500000)
  308 words of extra memory for PDF output out of 10000 (max. 10000000)
 
