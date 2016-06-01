@@ -1,8 +1,6 @@
 %% Calculate final orbit parameters 
 % L Drabsch
 % 12/5/16
-% QUESTIONS:
-%   what is phi_dot? does it change with alpha? (linesearch pg 15)
 clear
 clc
 close all
@@ -16,7 +14,6 @@ dt = 100; % seconds
 endsim = 24 * secs_per_hour;
 timestart = 0;
 % timevec = timestart:dt:endsim;
-Plotting = 1;
 Animation = 0;
 
 %% Final Orbit parameters
@@ -39,7 +36,7 @@ Park.t0 = 0;
 
 X_orbit = class2orbit(Park.a,Park.e,Park.M0,Park.t0,timestart);
 X0      = orbit2ECI(X_orbit,Park.Rasc,Park.inc,Park.omega);
-global Yscale
+
 Yscale = [pi^(-1);1000^(-1);pi^(-1);pi^(-1);pi^(-1);1000^(-1);pi^(-1);pi^(-1)];
 
 %% plot park orbit - simulate with Universal Conic Section
@@ -57,91 +54,61 @@ switch guess
         Y = [0;2000;0;0;0;2000;0;0];
     case 2
         % Hohmann Transfer Guess
-        Yreal = hohmann(Final,Park);
-        % add errro
-        Yreal = Yreal + [0.001;500;0.001;0.001;0.001;500;0.001;0.001];
-        Y = Yreal.*Yscale;
+        Y = hohmann(Final,Park);
 end
-
+[Trans,t] = dynamics(Y,X0);  % return each step
 
 %% Animations 
 % Park
-if Plotting == 1
-    [Trans,t] = dynamics(Y,X0);  % return each step
+if Animation == 1
     animation3Dearth();
-    TimeVec.park = timestart:dt:t.t1;
-    X.park = ConicDynamics(X0,TimeVec.park);
-    % Transfer
-    TimeVec.trans = [t.t1:dt:t.t1+t.t3];
-    X.trans = ConicDynamics(Trans.X2,TimeVec.trans);
-    X.trans = real(X.trans);
-    % Final calculated
-    TimeVec.final = t.t1+t.t3:dt:t.t1+t.t3+24*secs_per_hour;
-    X.final = ConicDynamics(Trans.X4,TimeVec.final);
-    X.final = real(X.final);
-    
-    if Animation == 1
-        % animate
-        figsim = setup3Danimate('X.park',figsim,1);   
-        figsim = setup3Danimate('X.trans',figsim,2);
-        figsim = setup3Danimate('X.final',figsim,3);
-        updateanimate(1,X,figsim,TimeVec.park);
-        updateanimate(2,X,figsim,TimeVec.trans);
-        updateanimate(3,X,figsim,TimeVec.final);
-    else
-        % just plot
-        plttotal = 3;
-        justplot(1,X,'X.park',figsim,0)
-        justplot(2,X,'X.trans',figsim,0)
-        justplot(3,X,'X.final',figsim,endsim)
-    end
+TimeVec.park = timestart:dt:t.t1;
+X.park = ConicDynamics(X0,TimeVec.park);
+figsim = setup3Danimate('X.park',figsim,1);
+
+% Transfer
+TimeVec.trans = [t.t1:dt:t.t1+t.t3];
+X.trans = ConicDynamics(Trans.X2,TimeVec.trans);
+X.trans = real(X.trans);
+figsim = setup3Danimate('X.trans',figsim,2);
+
+% Final calculated
+TimeVec.final = t.t1+t.t3:dt:t.t1+t.t3+24*secs_per_hour;
+X.final = ConicDynamics(Trans.X4,TimeVec.final);
+X.final = real(X.final);
+figsim = setup3Danimate('X.final',figsim,3);
+
+
+% plot
+updateanimate(1,X,figsim,TimeVec.park);
+updateanimate(2,X,figsim,TimeVec.trans);
+updateanimate(3,X,figsim,TimeVec.final);
 end
 
 %%  
-eps = 10^-5;    % sizing?  -> first derrivatve central, second fwd?
-f_store(1) = Cost(Y);   % cost   nessesary?
-Y_store(1,:) = Y;
-g = calc_g();   % df/dx  constant?
+eps = 10^-5;
+f = Cost(X0);   % cost
+g = calc_g();   % df/dx
 c = constraints(X0,Y,Final);   % constraints
-
-
+G = calcG(Y,eps,X0,Final);
 Lold = inf;
 lambda = ones(size(c));  % initial lambda?
 errL = 10^-6;
+while (L - Lold) < errL
 
-L = 0; % to get into while loop;
 
-index = 2;
-while abs(L - Lold) > errL
-    
-    
-    
-    Lold = L; 
-    c = constraints(X0,Y,Final);   % constraints
-    G = calcG(Y,eps,X0,Final);
-    
     % construct lagrangian
     L = calc_L(Y,X0,lambda,Final);
-
     % calculate hessian of lagrangian
     Hl = calcH(Y,X0,lambda,Final,L,eps);
     % solve for direction using KKT
     [p,lambda] = KKT(Hl,G,g,c);  % get updates lambda
 
     % select step size
-    if index == 2
-        alpha = 1;
-    else
-        alpha = linesearch(Y,p,f_store(index),f_store(index-1));
-    end
-    
+    alpha = 1;
+
     Ynext = Y + alpha*p;
-    Y = Ynext;
     
-    
-    f_store(index) = Cost(Y);
-    Y_store(index) = Y;
-    index = index+1;
 end
 
 % solve for direction

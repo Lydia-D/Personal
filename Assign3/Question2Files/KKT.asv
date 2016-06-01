@@ -1,0 +1,17 @@
+%% Solve KKT
+% L Drabsch
+% 20/5/16
+
+function p = KKT(Hl,G,g,c)
+
+    M = [Hl,G';G,zeros(size(G,2))];
+    m = [g;c];
+    
+    KKT = M\m;
+    
+    % direction
+    p = -KKT(1:length(g));
+
+
+
+end

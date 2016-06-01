@@ -1,7 +1,7 @@
 %% Satellite animation update
 % L Drabsch
 % 28/4/16
-% X must be passed in in order for the figsim to see
+
 function updateanimate(pltno,X,figsim,timevec)
     dt = timevec(2)-timevec(1); % assume uniform dt
     for t = 1:1:length(timevec)
