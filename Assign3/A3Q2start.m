@@ -1,6 +1,8 @@
 %% Calculate final orbit parameters 
 % L Drabsch
 % 12/5/16
+% QUESTIONS:
+%   what is phi_dot? does it change with alpha? (linesearch pg 15)
 clear
 clc
 close all
@@ -14,6 +16,7 @@ dt = 100; % seconds
 endsim = 24 * secs_per_hour;
 timestart = 0;
 % timevec = timestart:dt:endsim;
+Plotting = 1;
 Animation = 0;
 
 %% Final Orbit parameters
@@ -59,46 +62,29 @@ switch guess
         Yreal = Yreal + [0.001;500;0.001;0.001;0.001;500;0.001;0.001];
         Y = Yreal.*Yscale;
 end
-[Trans,t] = dynamics(Y,X0);  % return each step
+
 
 %% Animations 
-% Park
-if Animation == 1
-    animation3Dearth();
-TimeVec.park = timestart:dt:t.t1;
-X.park = ConicDynamics(X0,TimeVec.park);
-figsim = setup3Danimate('X.park',figsim,1);
-
-% Transfer
-TimeVec.trans = [t.t1:dt:t.t1+t.t3];
-X.trans = ConicDynamics(Trans.X2,TimeVec.trans);
-X.trans = real(X.trans);
-figsim = setup3Danimate('X.trans',figsim,2);
-
-% Final calculated
-TimeVec.final = t.t1+t.t3:dt:t.t1+t.t3+24*secs_per_hour;
-X.final = ConicDynamics(Trans.X4,TimeVec.final);
-X.final = real(X.final);
-figsim = setup3Danimate('X.final',figsim,3);
-
-
-% plot
-updateanimate(1,X,figsim,TimeVec.park);
-updateanimate(2,X,figsim,TimeVec.trans);
-updateanimate(3,X,figsim,TimeVec.final);
-end
-
+figsim = Graphics(Plotting,Animation,Y,X0,timestart,dt);
 %%  
 eps = 10^-5;    % sizing?  -> first derrivatve central, second fwd?
-% f = Cost(X0);   % cost   nessesary?
+f_store(1) = Cost(Y);   % cost   nessesary?
+Y_store(:,1) = Y;
 g = calc_g();   % df/dx  constant?
 c = constraints(X0,Y,Final);   % constraints
+
+
 Lold = inf;
 lambda = ones(size(c));  % initial lambda?
 errL = 10^-6;
-%L = calc_L(Y,X0,lambda,Final); % initial L
+
 L = 0; % to get into while loop;
+
+index = 1;
 while abs(L - Lold) > errL
+    
+    
+    
     Lold = L; 
     c = constraints(X0,Y,Final);   % constraints
     G = calcG(Y,eps,X0,Final);
@@ -112,13 +98,21 @@ while abs(L - Lold) > errL
     [p,lambda] = KKT(Hl,G,g,c);  % get updates lambda
 
     % select step size
-    alpha = 1;
-
+    if index == 1
+        alpha = 1;
+    else
+        alpha = linesearch(Y,p,f_store(index),f_store(index-1));
+    end
+    
     Ynext = Y + alpha*p;
     Y = Ynext;
-       
+    
+    index = index+1;
+    f_store(index) = Cost(Y);
+    Y_store(:,index) = Y;
 end
 
-% solve for direction
+%% solve for direction
+figsim2 = Graphics(Plotting,Animation,Y,X0,timestart,dt);
 
 

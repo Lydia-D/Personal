@@ -2,7 +2,7 @@
 % L Drabsch
 % 20/5/16
 
-function L = calc_L(Y,X0,lamda,Final)
+function L = calc_L(Y,X0,lambda,Final)
     c = constraints(X0,Y,Final);
-    L = Cost(Y) - lamda'*c;
+    L = Cost(Y) - lambda'*c;
 end

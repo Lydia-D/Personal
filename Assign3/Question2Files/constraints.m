@@ -27,8 +27,8 @@ function C = constraints(X0,Y,Final)
     
     % final eccentricity constraint  FOR ZERO r dot v = 0
         % normalised
-    C(3,1) = dot(X(1:3),X(4:6));
-    
+    C(3,1) = dot(X(1:3),X(4:6))/(norm(X(1:3))*norm(X(4:6)));
+%     C(3,1) = dot(X(1:3),X(4:6));
     
     % final inclination constraint
     C(4,1) = cos(Final.inc) - W(3);

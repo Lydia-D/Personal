@@ -6,6 +6,8 @@
 function [X,t] = dynamics(Y,X0)
     global Yscale 
     Yreal = Y./Yscale;
+%     Yreal([1,3,4,5,7,8],1) = wrapTo2Pi(Yreal([1,3,4,5,7,8],1));
+    Yreal(1,1) = wrapTo2Pi(Yreal(1));
     [X.X1,t.t1] = Cruise(Yreal(1),X0);
     X.X2 = Burn(Yreal(2),Yreal(3),Yreal(4),X.X1);
     [X.X3,t.t3] = Cruise(Yreal(5),real(X.X2));
