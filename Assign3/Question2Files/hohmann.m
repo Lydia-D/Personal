@@ -23,16 +23,18 @@ function Y = hohmann(Final,Park)
     az1 = 0;
     
     if isnan(Final.Rasc)
-        Final.Rasc = pi;
+        Rasc = pi;
+    else
+        Rasc = Final.Rasc
     end
 %         inc_change = Final.inc-Park.inc;
         
         % direction of thrust vector - assume elevation = 0?
         
         a1 = sin(Park.inc)*cos(Park.Rasc);
-        b1 = sin(Final.inc)*cos(Final.Rasc);
+        b1 = sin(Final.inc)*cos(Rasc);
         a2 = sin(Park.inc)*sin(Park.Rasc);
-        b2 = sin(Final.inc)*sin(Final.Rasc);
+        b2 = sin(Final.inc)*sin(Rasc);
         a3 = cos(Park.inc);
         b3 = cos(Final.inc);
         c1 = a2*b3-a3*b2;

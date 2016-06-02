@@ -32,7 +32,8 @@ rho = 0.01;
 %% Final Orbit parameters
 global Final
 Final = chooseFinal;
-% Final.P = 23*secs_per_hour + 56*secs_per_min + 4.0916;
+
+Final.P = Final.Pdays*secs_per_Sday;
 Final.a = (mu_earth*Final.P^2/(4*pi^2))^(1/3);
 Final.v = sqrt(mu_earth/Final.a);
 % Final.inc = -10*d2r;
@@ -89,25 +90,23 @@ eps = 10^-5;    % sizing?  -> first derrivatve central, second fwd?
 % f_store(1) = Cost(Y);   % cost   nessesary?
 % Y_store(:,1) = Y;
 % g = calc_g();   % df/dx  constant?
-c = constraints(Y);   % constraints
+[c,param] = constraints(Y);   % constraints
 
 cfnhnd = @(Yinput) constraints(Yinput);
 costfn = @(Yinput) Cost(Yinput);
-Lold = inf;
+Lold = Inf;
 lambda_store = ones(size(c));  % initial lambda?
-errL = 10^-6;
+errL = 10^-8;
 
 L = 0; % to get into while loop;
-
 index = 1;
+alpha = 1;
+Store = storage(L,Lold,Y,c,alpha,param,index,[]);
+
 while abs(L - Lold) > errL
     
-    c = constraints(Y);
-    Store.error(:,index) = L-Lold;
-    Store.cost(:,index) = Cost(Y);
-    Store.lagrangian(:,index) = L;
-    Store.Y(:,index) = Y;
-    Store.constraints(:,index) = c;
+    [c,param] = constraints(Y);
+
     
     Lold = L; 
     G = calcG(Y,cfnhnd);
@@ -128,6 +127,10 @@ while abs(L - Lold) > errL
             Hl = calcH_fwd(Y,lambda_store(:,index),L);
         case 'Central Differencing'
             Hl = calcH_center(Y,lambda_store(:,index));
+            [~, PSDCheck] = chol(Hl); 
+            if PSDCheck > 0
+                Hl = eye(size(Hl));
+            end
         case 'BFGS'
             if index == 1
 %                 Hl = eye(size(Y,1));
@@ -170,29 +173,28 @@ while abs(L - Lold) > errL
             Lnext_fnhnd = @(Yinput) calc_L(Yinput,lambda_store(:,index));
             Hl_BFGS{index+1} = calcH_BFGS(Hl,Y,Ynext,Lk_fnhnd,Lnext_fnhnd);
     end
-    
-    
-    Y = Ynext;
-    
     index = index+1;
+    Store = storage(L,Lold,Y,c,alpha,param,index,Store);
+
+    Y = Ynext;
 end
 
 %% solve for direction
-figsim2 = Graphics(Plotting,Animation,Y,timestart,dt);
+figsim2 = Graphics(Plotting,Animation,Store.Y(:,end),timestart,dt);
 
 %% plotting parameters
 figure(3)
-itteration = 1:1:index-1;
-subplot(2,2,1); plot(itteration,Store.alpha); title('Step Size'); grid on
-subplot(2,2,2); plot(itteration,Store.error); title('Error'); grid on
-subplot(2,2,3); plot(itteration,Store.cost); title('Cost'); grid on
-subplot(2,2,4); plot(itteration,Store.lagrangian); title('Lagrangian'); grid on
+itteration = 1:1:index;
+subplot(4,1,1); plot(itteration,Store.alpha); title('Step Size'); grid on
+subplot(4,1,2); plot(itteration,Store.error); title('Error'); grid on
+subplot(4,1,3); plot(itteration,Store.cost); title('Cost'); grid on
+subplot(4,1,4); plot(itteration,Store.lagrangian); title('Lagrangian'); grid on
 
 %%
 figure(4)
-subplot(4,1,1); plot(itteration,Store.constraints(1,:)); title('Radius Constraint')
-subplot(4,1,2); plot(itteration,Store.constraints(2,:)); title('Velocity Constraint')
-subplot(4,1,3); plot(itteration,Store.constraints(3,:)); title('Eccentricity Constraint')
-subplot(4,1,4); plot(itteration,Store.constraints(4,:)); title('Inclination Constraint')
+subplot(4,1,1); plot(itteration,Store.constraints(1,:)); title('Radius Constraint'); grid on
+subplot(4,1,2); plot(itteration,Store.constraints(2,:)); title('Velocity Constraint'); grid on
+subplot(4,1,3); plot(itteration,Store.constraints(3,:)); title('Eccentricity Constraint'); grid on
+subplot(4,1,4); plot(itteration,Store.constraints(4,:)); title('Inclination Constraint'); grid on
 
 

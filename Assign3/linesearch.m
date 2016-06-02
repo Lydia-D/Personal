@@ -5,7 +5,7 @@
 % note: phi'(alpha) = grad_cost(yk + alpha*pk)^T*pk -> pk of dv1 and dv2?
 
 function alphastar = linesearch(Y,p,cost_k,cost_km1,Lfnhnd)
-    
+    alphamax = 1;
     fn_phi = @(alphai) Lfnhnd(Y+alphai*p);  % phi is the lagrangian, lambda included inside this fn handle
     fn_phid = @(alphai) grad_central(Y+alphai*p,Lfnhnd)'*p;   % grad of LAGRANGIAN * pk
     %phid = calc_g()'*p;  % doesnt change with alpha? ASK KELVIN

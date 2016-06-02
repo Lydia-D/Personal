@@ -72,3 +72,6 @@ Isp = 600;
 
 global Mass
 Mass = 1; % kgs?
+
+global secs_per_Sday
+secs_per_Sday = 23*secs_per_hour + 56*secs_per_min + 4.0916;
