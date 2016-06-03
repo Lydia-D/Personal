@@ -7,7 +7,7 @@ function alphaOpt = lineSearchWolfeZoom(alpha_lo, alpha_hi,...
     
 
     % Maximum number of iterations
-    jMax = 100;
+    jMax = 20;
 
     alpha2 = zeros(jMax, 1);
     phi2 = zeros(jMax, 1);
@@ -25,6 +25,14 @@ function alphaOpt = lineSearchWolfeZoom(alpha_lo, alpha_hi,...
         alpha2(j) = lineSearchWolfeInterpolate(alpha_lo, alpha_hi, ...
             phihdl(alpha_lo), phihdl(alpha_hi), ...
             phidhdl(alpha_lo), phidhdl(alpha_hi));
+        fprintf('alpha2j in LineSearch Wolfe Zoom %f\n', alpha2(j))
+        if alpha2(j) > 1
+            alphaOpt = 1;
+            break;
+        elseif alpha2(j) < 0
+            alphaOpt = 0;
+            break
+        end
         phi2(j) = phihdl(alpha2(j)); % evaluate phi(j)   
 
         if ( (phi2(j)>phi0+c1*alpha2(j)*phid0) ...

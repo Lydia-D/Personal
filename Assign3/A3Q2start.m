@@ -28,7 +28,7 @@ flag = chooseopt;
 % flag.linefn = 'Wolfe';
 
 global rho
-rho = 0.01;
+rho = str2double(flag.penalty);
 %% Final Orbit parameters
 global Final
 Final = chooseFinal;
@@ -36,10 +36,7 @@ Final = chooseFinal;
 Final.P = Final.Pdays*secs_per_Sday;
 Final.a = (mu_earth*Final.P^2/(4*pi^2))^(1/3);
 Final.v = sqrt(mu_earth/Final.a);
-% Final.inc = -10*d2r;
-% Final.Rasc = 180*d2r;
-% Final.omega = NaN;
-% Final.e = 0;
+
 
 X_orbit_final = class2orbit(Final.a,Final.e,0,0,0);
 X_ECI_final = orbit2ECI(X_orbit_final,Final.Rasc,Final.inc,0);
@@ -47,7 +44,7 @@ Final.W = cross(X_ECI_final(1:3),X_ECI_final(4:6))./(norm(X_ECI_final(1:3))*norm
 
 %% Park Orbit for initial parameters
 % need X = [x,y,z,vx,vy,vz] in ECI frame from classical elements
-global Park
+global Park ParkX0
 Park.a = 6655937; % m
 Park.e = 0;
 Park.inc = -28.5*d2r;
@@ -57,7 +54,7 @@ Park.M0 = 0;
 Park.t0 = 0;
 
 X_orbit = class2orbit(Park.a,Park.e,Park.M0,Park.t0,timestart);
-X0      = orbit2ECI(X_orbit,Park.Rasc,Park.inc,Park.omega);
+ParkX0      = orbit2ECI(X_orbit,Park.Rasc,Park.inc,Park.omega);
 global Yscale
 Yscale = [pi^(-1);1000^(-1);pi^(-1);pi^(-1);pi^(-1);1000^(-1);pi^(-1);pi^(-1)];
 
@@ -86,6 +83,7 @@ end
 %% Animations 
 figsim = Graphics(Plotting,Animation,Y,timestart,dt);
 %%  
+global eps
 eps = 10^-5;    % sizing?  -> first derrivatve central, second fwd?
 % f_store(1) = Cost(Y);   % cost   nessesary?
 % Y_store(:,1) = Y;
@@ -96,14 +94,14 @@ cfnhnd = @(Yinput) constraints(Yinput);
 costfn = @(Yinput) Cost(Yinput);
 Lold = Inf;
 lambda_store = ones(size(c));  % initial lambda?
-errL = 10^-8;
+errL = 10^-6;
 
 L = 0; % to get into while loop;
 index = 1;
 alpha = 1;
 Store = storage(L,Lold,Y,c,alpha,param,index,[]);
-
-while abs(L - Lold) > errL
+maxiter = 100;
+while (abs(L - Lold) > errL ) && (index < maxiter)
     
     [c,param] = constraints(Y);
 
@@ -127,10 +125,11 @@ while abs(L - Lold) > errL
             Hl = calcH_fwd(Y,lambda_store(:,index),L);
         case 'Central Differencing'
             Hl = calcH_center(Y,lambda_store(:,index));
-            [~, PSDCheck] = chol(Hl); 
-            if PSDCheck > 0
-                Hl = eye(size(Hl));
-            end
+%             [~, PSDCheck] = chol(Hl); 
+%             if PSDCheck > 0
+%                 Hl = eye(size(Hl));
+%                 fprintf('Approximated Hessian to Newton Method\n')
+%             end
         case 'BFGS'
             if index == 1
 %                 Hl = eye(size(Y,1));
@@ -178,7 +177,9 @@ while abs(L - Lold) > errL
 
     Y = Ynext;
 end
-
+if index == maxiter
+    fprintf('Max iterations reached\n')
+end
 %% solve for direction
 figsim2 = Graphics(Plotting,Animation,Store.Y(:,end),timestart,dt);
 
@@ -192,9 +193,15 @@ subplot(4,1,4); plot(itteration,Store.lagrangian); title('Lagrangian'); grid on
 
 %%
 figure(4)
-subplot(4,1,1); plot(itteration,Store.constraints(1,:)); title('Radius Constraint'); grid on
-subplot(4,1,2); plot(itteration,Store.constraints(2,:)); title('Velocity Constraint'); grid on
-subplot(4,1,3); plot(itteration,Store.constraints(3,:)); title('Eccentricity Constraint'); grid on
-subplot(4,1,4); plot(itteration,Store.constraints(4,:)); title('Inclination Constraint'); grid on
-
+if Final.FlagRasc == 0
+    n = 6;
+    subplot(n,1,5); plot(itteration,Store.constraints(5,:)); title('Right Ascending node'); grid on
+    subplot(n,1,6); plot(itteration,Store.constraints(6,:)); title('Right Ascending node'); grid on
+else 
+    n = 4;
+end
+subplot(n,1,1); plot(itteration,Store.constraints(1,:)); title('Radius Constraint'); grid on
+subplot(n,1,2); plot(itteration,Store.constraints(2,:)); title('Velocity Constraint'); grid on
+subplot(n,1,3); plot(itteration,Store.constraints(3,:)); title('Eccentricity Constraint'); grid on
+subplot(n,1,4); plot(itteration,Store.constraints(4,:)); title('Inclination Constraint'); grid on
 

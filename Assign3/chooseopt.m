@@ -14,9 +14,9 @@ function flag = chooseopt
            'String','Include Penalty Parameter?');
        
     popupPenalty = uicontrol('Parent',d,...
-           'Style','popup',...
+           'Style','edit',...
            'Position',[50 240 200 20],...
-           'String',{'No';'Yes'},...
+           'String',{'0'},...
            'Callback',@penalty_callback);
     
     txtHessian = uicontrol('Parent',d,...
@@ -61,7 +61,7 @@ function flag = chooseopt
     flag.hessian = 'Forward Differencing';
     flag.linefn = 'alphamax';
     flag.merit = 'No';
-    flag.penalty = 'No';
+    flag.penalty = '0';
        
     % Wait for d to close before running to completion
     uiwait(d);
@@ -83,10 +83,9 @@ function flag = chooseopt
           flag.merit = char(popup_items(idx,:));
      end
  
-     function penalty_callback(popup,callback)
-          idx = popup.Value;
-          popup_items = popup.String;
-          flag.penalty = char(popup_items(idx,:));
+     function penalty_callback(edit,callback)
+          a = get(edit,'string');
+          flag.penalty = a;
      end
 
 end

@@ -3,13 +3,13 @@
 % 20/5/16
 
 function L = calc_L(Y,lambda)
-    global flag rho
+    global rho
     c = constraints(Y);
     
-    switch flag.penalty
-        case 'No'
+    switch rho
+        case 0
             L = Cost(Y) - lambda'*c;
-        case 'Yes'
+        otherwise
             L = Cost(Y) - lambda'*c + rho/2*(c'*c);
     end
 end

@@ -4,7 +4,9 @@
 
 function [Xt,dVorbit] = Burn(dV,el,az,X0)
     % local cartesian frame 
+%     dV_LG_cart = polar2cartesianREAL([dV;az;el]);
     dV_LG_cart = polar2cartesian([dV;az;el]);
+
 %     dV_LG_cart = [dV*cos(el)*cos(az);
 %                   dV*cos(el)*sin(az);
 %                   dV*sin(el)];

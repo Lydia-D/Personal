@@ -4,7 +4,7 @@
 % The change in eccentric anomoly is given in Y
 function [Xt,dt] = Cruise(dE,X0)
 
-    global mu_earth
+    global mu_earth 
     
     % Univeral Conic Section - state space [r,v]
 %     a = (2/norm(X0(1:3)) - norm(X0(4:6)).^2./mu_earth)^(-1);

@@ -25,7 +25,7 @@ function Y = hohmann(Final,Park)
     if isnan(Final.Rasc)
         Rasc = pi;
     else
-        Rasc = Final.Rasc
+        Rasc = Final.Rasc;
     end
 %         inc_change = Final.inc-Park.inc;
         

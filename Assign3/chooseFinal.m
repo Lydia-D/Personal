@@ -19,7 +19,10 @@ function Final = chooseFinal
     Final.inc = str2double(answer{3})*d2r;
     Final.Rasc = str2double(answer{4})*d2r;
     if isnan(Final.Rasc)
-        Final.Rasc = pi;
+        Final.Rasc = pi; % just for inclination calculation
+        Final.FlagRasc = 1;
+    else
+        Final.FlagRasc = 0;
     end
     
     

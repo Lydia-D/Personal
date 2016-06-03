@@ -21,7 +21,7 @@ function alphastar = linesearch(Y,p,cost_k,cost_km1,Lfnhnd)
     alphatest = 0:0.01:1;
     for i = 1:1:length(alphatest)
         phi_pl(i) = fn_phi(alphatest(i));
-        dphi_pl(i) = fn_phid(alphatest(i));
+%         dphi_pl(i) = fn_phid(alphatest(i));
     end
     
     alpha(2) = initialalpha(cost_k,cost_km1,phid0);  % greater than 0 and alphamax?
@@ -33,7 +33,7 @@ function alphastar = linesearch(Y,p,cost_k,cost_km1,Lfnhnd)
     phid0 = fn_phid(0);
 
     i = 2;
-    while i < maxiter
+    while i < maxiter && alpha(i) <=alphamax
         phi(i) = fn_phi(alpha(i));
         if (phi(i) > phi0 + c1*alpha(i)*phid0) || (phi(i) >= phi(i-1) && i>1)
             alphastar = lineSearchWolfeZoom(alpha(i-1),alpha(i),fn_phi,fn_phid,c1,c2);
@@ -52,8 +52,10 @@ function alphastar = linesearch(Y,p,cost_k,cost_km1,Lfnhnd)
         alpha(i+1) = alpha(i) + (alphamax-alpha(i))*0.1;
         i = i+1;
     end
-    if i >= maxiter
+    if i >= maxiter || alpha(i) >= alphamax
         alphastar = alphamax;
     end
+    
+    
     
 end

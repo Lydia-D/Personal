@@ -40,8 +40,10 @@ function [C,param] = constraints(Y)
 %     C(6,1) = Final.W(1)-W(1);
 
     param.inc = acos(W(3))*r2d;
+%     param.Rasc = atan2(sinRasc,cosRasc)*r2d;
     param.Rasc = atan2(sinRasc,cosRasc)*r2d;
-    if ~isnan(Final.Rasc) || Final.Rasc ~= 0 || Final.Rasc ~= pi
+
+    if Final.FlagRasc == 0
         % final Rasc constraint
         C(5,1) = W(2)-Final.W(2);  % not ratios as /0
         C(6,1) = W(3)-Final.W(3);
